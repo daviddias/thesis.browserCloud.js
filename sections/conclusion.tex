@@ -1,0 +1,51 @@
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+  %
+%%%%%                       CHAPTER
+ %%%
+  %
+
+% $Id: 3200-adipisci-velit.tex,v 1.2 2007/11/23 10:14:56 david Exp $
+% $Log: 3200-adipisci-velit.tex,v $
+% Revision 1.2  2007/11/23 10:14:56  david
+% Bug fixes galore.
+%
+% Revision 1.1  2007/11/23 09:52:43  david
+% *** empty log message ***
+%
+%
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                    HEAD MATTER
+ %%%
+  %
+
+\chapter{Conclusion}
+%\addcontentsline{lof}{chapter}{\thechapter\quad Nihil Molestiae}
+%\addcontentsline{lot}{chapter}{\thechapter\quad Nihil Molestiae}
+\label{ch:conclusion}
+
+%\begin{quotation}
+%  {\small\it Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
+%
+%{\small\it -- Cerico}
+%\end{quotation}
+
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                        FIRST SECTION.
+ %%%
+  %
+
+\section{Concluding remarks}
+
+The work here presented is therefore useful and applicable as flexible consistency model to cloud data stores in cases where bandwidth is precious and cost savings mandatory. Applied to the core of HBase for inter-datacenter scenarios, it provides users and applications with just the quality of data requested. On the other hand, administrators and developers can easily tune the bounds and framework in order to perform replication in a more fine-grained an timely-fashion. The same principle applies to cyclic multi-master scenarios, where each master acts as master and slave all at once. Although we did not test that or configure it in our slaves as we did find it critical in order to provide a feasible proof of concept for the proposal. In the future that would also be a good experiment to perform as well as testing with different set ups on Amazon EC2. To conclude, we have reviewed the most well-known and state of the art in replication for distributed systems, outlined the advantages and disadvantages of each of them. Following that, we performed a deeper introspection into the mechanisms of the selected cloud data store in questions for this work, HBase, where we identify its weaknesses (including currently missing features) and introduce our work later to realize the cost savings obtained in the Evaluation section. This paragraph concludes the thesis. Finally, we believe in the re-usability and possibility to extend and adapt the framework to other cloud data stores, so a wider choice of consistency guarantees can be provided on top of our implementation if further required by applications.
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "tese"
+%%% End: 

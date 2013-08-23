@@ -1,0 +1,84 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: document.aux
+The style file: chicago.bst
+Database file #1: MasterBibliographyThesis.bib
+Warning--entry type for "Memcached" isn't style-file defined
+--line 77 of file MasterBibliographyThesis.bib
+Warning--entry type for "Couchdb" isn't style-file defined
+--line 89 of file MasterBibliographyThesis.bib
+Warning--entry type for "Hypertable" isn't style-file defined
+--line 101 of file MasterBibliographyThesis.bib
+Warning--entry type for "Mongodb" isn't style-file defined
+--line 112 of file MasterBibliographyThesis.bib
+Warning--entry type for "GoogleCloudDataStore" isn't style-file defined
+--line 245 of file MasterBibliographyThesis.bib
+Warning--entry type for "FacebookHBase" isn't style-file defined
+--line 322 of file MasterBibliographyThesis.bib
+Warning--string name "rocq" is undefined
+--line 523 of file MasterBibliographyThesis.bib
+Warning--string name "inria" is undefined
+--line 527 of file MasterBibliographyThesis.bib
+Warning--string name "rr" is undefined
+--line 531 of file MasterBibliographyThesis.bib
+Warning--I didn't find a database entry for "lst:vector-listing"
+Warning--no key, editor or organization in Brewer:2002
+Warning--to sort, need editor, organization, or key in Brewer:2002
+Warning--no key, author in Hypertable
+Warning--no author, editor, or organization in Hypertable
+Warning--to sort, need author or key in Hypertable
+Warning--no key, editor or organization in Brewer:2002
+Warning--no key, editor or organization in Brewer:2002
+Warning--no key, author in Hypertable
+Warning--no author, editor, or organization in Hypertable
+Warning--no key, author in Hypertable
+Warning--no author, editor, or organization in Hypertable
+Warning--no key, editor or organization in Brewer:2002
+Warning--no key, author in Hypertable
+Warning--no author, editor, or organization in Hypertable
+Warning--empty institution in Saphiro:2011
+Warning--no number and no volume in Vfc3:2012
+Warning--page numbers missing in Vfc3:2012
+Warning--empty year in RDBMS
+You've used 38 entries,
+            2861 wiz_defined-function locations,
+            836 strings with 12704 characters,
+and the built_in function-call counts, 34491 in all, are:
+= -- 2548
+> -- 3502
+< -- 13
++ -- 1122
+- -- 1186
+* -- 3401
+:= -- 6378
+add.period$ -- 115
+call.type$ -- 38
+change.case$ -- 370
+chr.to.int$ -- 38
+cite$ -- 64
+duplicate$ -- 829
+empty$ -- 1641
+format.name$ -- 1286
+if$ -- 6420
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 23
+newline$ -- 182
+num.names$ -- 364
+pop$ -- 353
+preamble$ -- 1
+purify$ -- 599
+quote$ -- 0
+skip$ -- 829
+stack$ -- 0
+substring$ -- 1252
+swap$ -- 298
+text.length$ -- 13
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 755
+warning$ -- 18
+while$ -- 333
+width$ -- 0
+write$ -- 519
+(There were 28 warnings)

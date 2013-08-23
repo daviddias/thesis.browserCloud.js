@@ -1,0 +1,145 @@
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+  %
+%%%%%                         CHAPTER
+ %%%
+  %
+
+% $Id: 1020-lorem-ipsum.tex,v 1.2 2009/06/19 15:51:46 david Exp $
+% $Log: 1020-lorem-ipsum.tex,v $
+% Revision 1.2  2009/06/19 15:51:46 
+% *** empty log message ***
+%
+% Revision 1.1  2007/11/23 09:52:39 
+% *** empty log message ***
+%
+%
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                           HEAD MATTER
+ %%%
+  %
+
+\chapter{Introduction}
+%\addcontentsline{lof}{chapter}{\thechapter\quad Lorem Ipsum}
+%\addcontentsline{lot}{chapter}{\thechapter\quad Lorem Ipsum}
+\label{ch:intro}
+
+\begin{quotation}
+"Your system can fail no matter how well you thought you tested it... what users will not tolerate is losing their data".
+{\small\it -- ~\cite{Cosmin2010} }
+\end{quotation}
+
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                        FIRST SECTION
+ %%%
+  %
+  %
+
+\section{Historical Overview}
+The idea of Geo-replication and consistency in distributed systems is not a new concept~\cite{Ferreira:98} ~\cite{Kubiatowicz:2000}. Since we have applications with data distributed across geographically distant locations, it is necessary to improve how applications and users access that information to it is served in a fast and appropriate fashion. In general, there are two components in Geo-replication, at the first tier is the hardware components and in a higher layer is the software, in which we actually focus the thesis here presented.
+
+Nowadays there are not still fully robust tools that are able to simulate and test real world scenarios for issues such as replication, fault-tolerance and consistency in distributed systems. There have been some improvements in that field, and today the Yahoo Cloud Service Benchmarking~\cite{YCSB:2010} is a well-known platform to test different kinds of distributed data stores and their performance against different types of workloads. 
+
+There is a wide variety and at the same time similar type of consistency models that have been proposed so far in distributed systems, whether they are in the form of strong, eventual or weak properties for data replication. Each of them claims to be suitable for different types of applications, providing also different data semantics. Although something they have in common is their trade-offs between one of the three variables defined earlier in the most well-known paradigm of distributed systems~\cite{Brewer:2002}. In some cases, depending of what an application tolerates or caters best for, is more important to have a very consistent systems, highly-available, or very tolerant to partitions in the networks, but as it is stated by Brewer, not the three of them at once would be possible.
+
+% --- This and the above could well go in a more extended % version to the Related work version.
+% 
+% Bayou and Dynamo adopted eventual (optimistic at local, lazily replicated at remote sites)
+% 
+% Azure uses strong consistency
+
+For achieving low-latency one can split the operations in two or more categories in order of importance, therefore having some of them replicated with stronger consistency guarantees or faster with eventual\cite{Li:2012}. This is a good approach for some applications, and the thesis is also inspired in that approach because it creates a more flexible scenario, which allows systems to adapt to the needs over time and data if required.
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                      SECOND SECTION
+ %%%
+  %
+
+\section{Problem Statement}
+
+It is well know that the definition of Replication involves several basic aspects. Firstly, replication not only copies data from one location, but also synchronizes a set of replicas so that the modifications are also reflected to the rest.
+
+If in a system synchronization is a the burden for latency, then it is because performance may matter above consistency. In~\cite{Lloyd:2011}, it is presented the idea of Causal Consistency with a set of properties called ALPS, so in theory one does not need to sacrifice consistency for performance. Although there may be conflicts, one can resolve those, in a higher level of abstraction with approaches such as latest writer wins it is also noted.
+
+On the other hand, systems as PNUTS from Yahoo~\cite{Cooper:2008} introduced a novel approach for consistency on a per-record basis, therefore providing low latency during heavy replication operations for large web scale applications. It is realized how eventual consistency is not enough in the case of social and sharing networks, as having stale replicas can be a problematic concern to users privacy because of data consistency misbehavior.
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Extended motivation and Roadmap}
+In Cloud Computing replication of data in distributed systems is becoming a major challenge with large amounts of information that require consistency and high availability as well as resilience to failures. Nowadays there are several solutions to the problem, none of them applicable in all cases, as they are determined by the type of system built and its final goals. As the CAP theorem states~\cite{Brewer:2002}, one can not ensure the three properties of a distributed system all at once, therefore having to choose two out of three for each application between consistency, availability and tolerate or not partitions in the network. Several relaxed consistency models have also been devised in that area regarding innovative and flexible models of consistency, requiring redesign of application data types~\cite{Saphiro:2011} or via middle-ware intercepting and reflecting APIs~\cite{Vfc3:2012}.
+
+In this thesis work we explore what are the main trends and scenarios of non-relational cloud-based tabular data stores. The main reason is to understand how to make those systems scalable, when and why is availability of data always necessary, and how its level of consistency can determine the application outcomes. For that, we first dive into the fundamentals of several well-known existing consistency models in the area of distributed systems while taking particular attention to the concept of eventual and strong. For that, later a quality of data framework or model is defined, which is mainly characterized by the levels of consistency one can provide in replica nodes to end users and therefore differentiate between updates that are going to be replicated. That is taking into account, whether is during off-peak or high-load network usage scenarios. Given this is our main focus of attention, and that many models exist in the area, we look into retrospective to those first and realize as we will explain that while they have been blended and tuned in different forms, none of them actually reinvents the wheel in technical terms. Following up, a special interest resides into leverage the model for catering of several users and applications that can benefit from our approach in the concept of saving bandwidth and reducing latency during periods of higher activity between data centers or disconnections.
+
+First, we are enhancing the eventual consistency model for inter-site replication in HBase by using an adaptive consistency model that can provide different levels of consistency depending of the Service Level Objective or Agreement required. The idea can be somehow similar to the "pluggable replication framework" proposed within the HBase community~\cite{JIRA-1}, so our work has a two-fold purpose. First present this thesis work and secondly contributing to the open source community of HBase by presenting our proposal with integrated into the core architecture of the system for avoiding another middle-ware layer on top of it. That also simplifies its usage to programmers and HBase developers or administrators.
+
+Thus giving a better understanding of what other replication guarantees can such a system offer, its value to users, and how a flexible consistency model can be applied to the core of a NoSQL distributed data store, it is valuable to users and applications that require differentiating between data semantics for replication. The research is mainly targeting replication mechanisms HBase currently does not provide by assessing how one can extend those already in place and provided within its codebase. It is very interesting to see how there are several discussions opened in this same direction on their community, some of them actually proposing selective replication of updates to peer clusters. So at the client level one user would be able to see something or not depending of the cluster it has access to or requesting reads from. That is far more efficient in terms of resource consumption and bandwidth usage in geo-located data centers and there is a rising interest in the topic for that very same reason, cost savings.
+
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                         ANOTHER SECTION
+ %%%
+  %
+\section{Proposal}
+Distributed HBase deployments have one or more master nodes (HMaster), which coordinate the entire cluster, and many slave nodes (RegionServer), which handle the actual data storage.  Therefore a write-ahead log (WAL) is used for data retention in replication for high availability. Currently the architecture of Apache HBase is designed to provide eventual consistency, updates are replicated asynchronously between data centers. Thus, we can not predict accurately enough or decide when replication takes place or ensure a given level of quality of data for delivery to a remote replica.
+
+The main goal of this work is to incorporate a more flexible, fine-grained and adaptive consistency model at the HBase core architecture level. That can be a feature part of HBase to have bandwidth savings on inter-site datacenter replication, to help avoiding peak transfer loads on time of high update rate, while still enforcing some \emph{quality-of-data} to users regarding recency (or number of pending updates and value divergence between replicas) so enhancing the eventual consistency guarantees.
+
+HBase is an example of a large scale cloud data store and this work looks at its architecture to introduce these levels of consistency with a provided quality of data (QoD). We propose that having a strategy to best serve clients, while keeping control of geo-replicated and distributed databases, can optimize usage of resources while still providing an enhanced experience to the end user. Application behaviour is more efficient but involves a slightly different shift into the consistency paradigm as seen in \cite{Cooper:2008}, which is realized in this paper by modifying the existing eventual consistency framework of Hbase with a more modern and innovative approach for which we tune its replication mechanisms, treating updates in a self-contained manner. 
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                          LAST SECTION
+ %%%
+  %
+
+\section{Contribution}
+The contribution here presented is an accurate understanding of what real advantages can be achieved using that model, which is evaluated later in the section with the same name.  From the architectural point of view, the model can be complemented with the corresponding replication guarantees on top of it that can be among others, causal or causal++ , but none of them offers bounds on staleness of data as we aim to. This is valuable to business users for knowing and learning about how to best serve requests while making datacenters more cost and energy-efficient optimizing existing resources. Therefore, finally it will be realized how the advantages of using flexible mechanisms when it comes to replication at global scale can overcome those that impose strict guarantees of data consistency for highly-synchronized applications. 
+
+%Our result should be positive in terms of both, performance versus quality of the service.
+
+Latency can be reduced by imposing some constraints (time bounds or others regarding number of pending updates and value divergence) on the replication mechanisms of HBase providing a two-fold advantage: i) ensure that a best-effort scenario does not overload a network with thousands of updates that might be too small (can be batched too if desired) and also and more importantly, ii) updates can be prioritized so that systems are still able to achieve an agreed quality of service with the user in resource constrained environments.
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                         ANOTHER SECTION
+ %%%
+  %
+\section{Thesis objectives and expected results}
+
+The main contributions of the thesis are based in the analysis of the existing generic geo-replication mechanisms in the area of distributed systems and more in depth into those for HBase, therefore introducing a new engine in that regard such as the following requirements are met:
+\begin{itemize}
+\item Replication mechanism to control flow of updates.
+\item Quality of Data engine plugging into HBase that validates our idea in enhancing eventual consistency with more controlled guarantees (based on data-semantics).
+\item A validation of the results here obtained is evaluated after the changes implemented. That might include gains in performance or cost savings.
+\end{itemize}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                          FINAL SECTION
+%%%%%                          
+ %%%
+  %
+
+\section{Structure of the thesis}
+
+This thesis is organized in a number chapters, and an appendix. At the beginning of each chapter we outline its structure, and after describing it, we summarize the contents and topics presented. We have a list of figures and appendix for describing the number of items we reference during the text.
+  %
+ %%%
+%%%%%                        THE END
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "tese"
+%%% End: 

@@ -1,0 +1,82 @@
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+  %
+%%%%%                        CHAPTER
+ %%%
+  %
+
+% $Id: 1120-facere-possimus.tex,v 1.1 2007/11/23 09:52:40 david Exp $
+% $Log: 1120-facere-possimus.tex,v $
+% Revision 1.1  2007/11/23 09:52:40  david
+% *** empty log message ***
+%
+%
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                            HEAD MATTER
+ %%%
+  %
+
+\chapter{Motivation}
+%\addcontentsline{lof}{chapter}{\thechapter\quad Facere Possimus}
+%\addcontentsline{lot}{chapter}{\thechapter\quad Facere Possimus}
+\label{ch:motivation}
+
+%\begin{quotation}
+%  {\small\it Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
+%{\small\it -- Cerico}
+%\end{quotation}
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                      FIRST SECTION
+ %%%
+  %
+
+\section{Extended motivation and Roadmap}
+In this thesis work we explore what are the main trends and scenarios of non-relational cloud-based tabular data stores. The main reason is to understand how to make those systems scalable, when and why is availability of data always necessary, and how its level of consistency can determine the application outcomes. For that, we first dive into the fundamentals of several well-known existing consistency models in the area of distributed systems while taking particular attention to the concept of eventual and strong. For that, later a quality of data framework or model is defined, which is mainly characterized by the levels of consistency one can provide in replica nodes to end users and therefore differentiate between updates that are going to be replicated. That is taking into account, whether is during off-peak or high-load network usage scenarios. Given this is our main focus of attention, and that many models exist in the area, we look into retrospective to those first and realize as we will explain that while they have been blended and tuned in different forms, none of them actually reinvents the wheel in technical terms. Following up, a special interest resides into leverage the model for catering of several users and applications that can benefit from our approach in the concept of saving bandwidth and reducing latency during periods of higher activity between datacenters or disconnections.
+
+In Cloud Computing replication of data in distributed systems is becoming a major challenge with large amounts of information that require consistency and high availability as well as resilience to failures. Nowadays there are several solutions to the problem, none of them applicable in all cases, as they are determined by the type of system built and its final goals. As the CAP theorem states~\cite{Brewer:2002}, one can not ensure the three properties of a distributed system all at once, therefore having to choose two out of three for each application between consistency, availability and tolerate or not partitions in the network. Several relaxed consistency models have also been devised in that area regarding innovative and flexible models of consistency, requiring redesign of application data types~\cite{Saphiro:2010} or via middleware intercepting and reflecting APIs~\cite{Vfc3:2012} These are out main motivations, and so are they also the driver of the research presented in this thesis that aims at nonetheless introduce yet another variant that can be applied in real world scenarios and applications too.
+
+First, we are enhancing the eventual consistency model for inter-site replication in HBase by using an adaptive consistency model that can provide different levels of consistency depending of the Service Level Objective or Agreement required. The idea can be somehow similar to the "pluggable replication framework" proposed within the HBase community~\cite{JIRA-1}, so our work has a two-fold purpose. First contributing to the open source community of HBase but also extending it with some extra capabilities rather than building a middleware layer on top of it, which simplifies the its usage for programmers as well.
+
+Therefore giving a better understanding of what other replication guarantees can such a system offer, its value to users, and how a novel consistency model can be applied to the core of a NoSQL distributed data store. Therefore, this research is mainly targeting replication mechanisms HBase currently does not provide by assessing how one can extend those already in place and provided within its codebase.
+
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                         ANOTHER SECTION
+ %%%
+  %
+\section{Proposal}
+Fully distributed HBase deployments have one or more master nodes (HMaster), which coordinate the entire cluster, and many slave nodes (RegionServer), which handle the actual data storage.  Therefore a write-ahead log (WAL) is used for data retention in replication for high availability. Currently the architecture of Apache HBase is prepared to provide eventual consistency, updates are replicated asynchronously between data centers. Thus, we can not predict accurately enough how and when replication takes place or ensure a give level of a quality of service during delivery of data to remote master replicas.
+
+The main goal is to incorporate a more flexible, fine-grained and adaptive consistency model at the HBase core architecture level. That can be a feature part of HBase to have bandwidth savings on inter-site datacenter replication, and help avoiding peak transfer loads on time of high update rate, while still enforcing some \emph{quality-of-data} to users regarding recency (or number of pending updates and value divergence between replicas)
+
+HBase is an example of a large scale cloud data store and this work looks at its architecture to introduce these levels of consistency with a provided quality of data (QoD) We propose that having an strategy to best serve clients while keeping control of geo-replicated and distributed databases can optimize usage of resources while still providing an acceptable experience to the end user. Application behaviour is more efficient but involves an slightly different shift into the consistency paradigm as seen in \cite{Cooper:2008}, which is realized in this paper by modifying the existing eventual consistency framework of Hbase with a more modern and innovative approach for which we tune its replication mechanisms, treating updates in a self-contained manner. 
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                          LAST SECTION
+ %%%
+  %
+
+\section{Contribution}
+The contribution here presented is an accurate understanding of what real advantages can be achieved using that model, which is evaluated later in the section with the same name.  From the architectural point of view, the model can be complemented with the corresponding replication guarantees on top of it that can be among others, causal or causal++ , but none of them offers bounds on staleness of data that can be defined as we do. This is valuable to business users for knowing and learning about how to best serve requests while making datacenters more cost and energy-efficient optimizing existing resources. Therefore, finally will be realized how the advantages in using flexible mechanisms when it comes to replication at global scale can overcome those that impose strict guarantees of data consistency for highly-demanding applications. Our result should be positive in terms of both, performance versus quality of the service.
+
+Latency can be reduced by imposing some constraints (time bounds or others regarding number of pending updates and value divergence) on the replication mechanisms of HBase providing a two-fold advantage: i) ensure that a best-effort scenario does not overload a network with thousands of updates that might be too small (can be batched too if desired) and also and more importantly, ii) updates can be prioritized so that systems are still able to achieve an agreed quality of service with the user in resource constrained environments.
+
+
+  %
+ %%%
+%%%%%                            THE END
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "tese"
+%%% End: 

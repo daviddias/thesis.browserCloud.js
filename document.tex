@@ -1,0 +1,228 @@
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+
+% Edited to submit Master thesis as partial fullfilment as part the EMDC '13
+
+% $Id: tese.tex,v 1.1 2007/11/23 09:53:19  Exp $
+% $Log: tese.tex,v $
+% Revision 1.2  2013/06/21 09:53:19  Alvaro García Recuero
+% *** EMDC thesis ***
+%
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%
+ %%%
+%
+
+\NeedsTeXFormat{LaTeX2e}
+
+\documentclass[a4paper,10pt,twoside,onecolumn,final,openright]{book}
+\usepackage[doublespace,final]{thesis}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{multicol}
+
+%\usepackage[singlespace,final]{thesis}
+%\usepackage[singlespace,draft]{thesis}
+
+%\textheight=18.5cm
+%\textwidth=11.5cm
+
+\usepackage{subfigure}
+% japanese
+%\usepackage[encapsulated]{CJK}
+%\usepackage[overlap, CJK]{ruby}
+
+\usepackage[doublespace,final]{thesis}
+
+%Listings config
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%              M A T E R I A L     I N T R O D U T Ó R I O
+ %%%
+  %
+
+\begin{document}
+%\initfloatingfigs
+
+\input{sections/acknowledgements}       % Páginas iniciais exigidas no formato da tese.
+
+\pagenumbering{arabic}
+\pagestyle{headings}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                          CHAPTERS
+ %%%
+  %
+
+% produces nomenclature appendix: possibly broken
+%\input{0100-terms}                          % index terms and glossary
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                  CHAPTER   I  --  INTRODUCTION
+ %%%
+  %
+
+%\part{Part}
+\thispagestyle{empty}
+%\vbox to\textheight{
+%\vfil
+%\chapter*{Basic idea and motivation}
+\thispagestyle{empty}
+
+%The basic idea of this thesis is reflected in the abstract and most notably derives from the term of vector field consistency as coined by Luís Veiga˜\cite{Vector} in a previous work recognized as best paper aware in its conference of publication~\cite{Santos:2007}
+
+\newpage
+\thispagestyle{empty}
+
+\input{sections/introduction}                   % First chapter of the first part
+%\input{motivation}                  % Motivation
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                P A R T   I I  -- The System
+ %%%
+  %
+
+%\part{Part}
+\thispagestyle{empty}
+%\vbox to\textheight{
+%\vfil
+%\chapter*{Related Work}
+\thispagestyle{empty}
+
+%}
+\newpage
+\thispagestyle{empty}
+
+\input{sections/relatedwork}                    	% state of the art
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%               P A R T   I I I  --  Implementation
+ %%%
+  %
+
+%\part{Part}
+\thispagestyle{empty}
+%\vbox to\textheight{
+%\vfil
+%\chapter*{The System}
+\thispagestyle{empty}
+
+%In this part of the thesis we focus mainly in our system and its technical characteristics, implementation details and relevant points to integrated it into the target architecture, HBase in that case.
+
+%}
+%
+\newpage
+\thispagestyle{empty}
+\input{sections/architecture}
+
+
+\newpage
+\thispagestyle{empty}
+
+\input{sections/implementation}               % the implementation details
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+
+%%%%%                 P A R T E   I V  --  Evaluation
+ %%%
+  %
+
+%\part{Part}
+\thispagestyle{empty}
+%\vbox to\textheight{
+%\vfil
+%\chapter*{Experiments and testing}
+\thispagestyle{empty}
+
+%The chapter describes all the experiments and tests conducted up to the date of the delivery of the thesis.
+
+%}
+\newpage
+\thispagestyle{empty}
+
+\input{sections/evaluation}                 % Evaluation section
+\input{sections/conclusion}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                        SPECIAL
+ %%%
+  %
+%\bibliographystyle{authordate3}             % Bibliography
+%\bibliographystyle{apacitex}
+\bibliographystyle{chicago}
+\bibliography{MasterBibliographyThesis}	
+%---------------------------------------------------------------------------
+%\begin{singlespace}
+%\printindex[autx]\cleardoublepage            % Author index (apacitex)
+%\end{singlespace}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                         APPENDIX
+ %%%
+  %
+
+%\part{Appendices}
+\appendix
+
+%\input{}         % commodo consequat
+
+%\begin{singlespace}
+%\printnomenclature\cleardoublepage               % Glossary
+%\end{singlespace}
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                         SPECIAL
+ %%%
+  %
+\begin{singlespace}
+
+\def\indexname{Index}             % Index
+\printindex\cleardoublepage
+
+\end{singlespace}
+
+\end{document}
+
+  %
+ %%%
+%%%%%                          THE END
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

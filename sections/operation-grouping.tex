@@ -1,0 +1,28 @@
+At the application level, it may be useful for HBase clients to enforce the same consistency level on groups of operations despite affected data containers having different QoD bounds associated. In other words, there may be specific situations where write operations need to be grouped so that they can be all handled at the same consistency level and propagated atomically to slave clusters. 
+
+For example, publication of user statuses in social networks is usually handled at eventual consistency, but if they refer to new friends being added (e.g., an update to the data container holding the friends of a user), they should they should be handled at a stronger consistency level to ensure they are atomically visible along with the list of friends of the user in respect to the semantics we describe here.
+
+In order to not violate QoD bounds and maintain consistency guarantees, all data containers of operations being grouped must be propagated either immediately after the block execution, or when any of the QoD bounds associated to the operations has been reached. When a block is triggered for replication, all respective QoD bounds are naturally reset. 
+
+To enable this behavior we propose extending the HBase client libraries to provide atomically consistent blocks.
+Namely, adding two new methods to HTable class in order to delimit the consistency blocks: \textit{startConsistentBlock} and \textit{endConsistentBlock}. Each block, through the method \textit{startConsistentBlock}, can be parameterized with one of the two options: i) \textit{IMMEDIATE}, which enforces stronger consistency for the whole block of operations within it; and ii) \textit{ANY}, which replicates a whole block as soon as any QoD vector field bound, associated with an operation inside the block is reached.
+
+Next, in Listing~\ref{lst:group-listing} we provide an illustrative simple example of a social network where three containers with different consistency levels are modified. Note that we are not aiming at full transactional support, as it would be possible to change the same data containers modified by a set of grouped operations, at the same time, from other operations individually.
+
+\begin{lstlisting}[language={java}, caption={Operation grouping},label={lst:group-listing}]
+htable.startConsistentBlock(ConsistencyType.IMMEDIATE)
+Put put1 = new Put(Bytes.toBytes("row1"));
+put1.add(Bytes.toBytes("SocialNetTable"),Bytes.toBytes("status"), Bytes.toBytes("friend 12345 added"));
+
+Put put2 = new Put(Bytes.toBytes("row2"));
+put2.add(Bytes.toBytes("SocialNetTable"), Bytes.toBytes("friends"), Bytes.toBytes("12345"));
+
+Put put3 = new Put(Bytes.toBytes("row3"));
+put3.add(Bytes.toBytes("SocialNetTable"), Bytes.toBytes("wall"), Bytes.toBytes("12345 is now a friend"));
+
+htable.put(put1);
+htable.put(put2);
+htable.put(put3);
+
+htable.endConsistentBlock();
+\end{lstlisting}

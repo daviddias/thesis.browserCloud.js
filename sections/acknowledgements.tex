@@ -1,0 +1,318 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                  THESIS EMDC ALVARO GARCIA RECUERO
+%%%
+%
+
+\def\date{June 2013 }
+\def\titulo{QoD-HBase: Vector-Field Consistency for Replicated Cloud Storage}
+
+% hypernavigation in PDF docs
+\hypersetup{colorlinks,
+   debug=false,
+   linkcolor=blue,  %%% cor do tableofcontents, \ref, \footnote, etc
+   citecolor=red,  %%% cor do \cite
+   urlcolor=blue,   %%% cor do \url e \href
+   bookmarksopen=true,
+   pdftitle={\titulo},
+   pdfauthor={Álvaro García Recuero},
+   pdfsubject={European Master in Distributed Systems},
+   pdfkeywords={Cloud Computing, Replication, Consistency, Quality of Data}
+}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                          CAPA DA TESE
+ %%%
+  %
+
+\thispagestyle{empty}
+
+\begin{singlespace}
+\vbox to\textheight{%
+%--------------------------------------------------
+\vskip-1.3in%---------- LOGO AND NAME IST/UTL -------
+%--------------------------------------------------
+\hskip-17mm\vbox to50mm{
+\vfil
+\begin{tabular}{l}
+\includegraphics[width=9cm]{figs/preliminar/Logo_IST_web.eps}
+\end{tabular}
+\vfil
+\vfil
+}%
+%--------------------------------------------------
+\vskip18mm%---------- FIGURES DA CAPA -------------
+%--------------------------------------------------
+\vbox to25mm{\LARGE\sl
+\vfil
+%\centerline{\psfig{file=figs/preliminar/tarantula.eps,height=25mm}}
+\vfil
+}%
+%--------------------------------------------------
+\vskip6mm%---------- TITLE -----------------------
+%--------------------------------------------------
+\vbox to25mm{\LARGE\bf
+\vfil
+\begin{center}
+\titulo
+\end{center}
+\vfil
+}%
+%--------------------------------------------------
+\vskip10mm%---- NAME AND ACTUAL GRADE  -----------
+%--------------------------------------------------
+\vbox to25mm{\large
+\vfil
+\begin{center}
+{\Large\bf Álvaro García Recuero}\\   % author's name
+\end{center}
+\vfil
+}%
+%--------------------------------------------------
+\vskip8mm%---------- GRADE TO OBTAIN  -------------
+%--------------------------------------------------
+\vbox to8mm{\large
+\vfil
+\centerline{Dissertação para obtenção do Grau de Mestre em Sistemas Distribuidos}
+%\vskip6mm
+\centerline{Engenharia Informática e de Computadores}
+\vfil
+}%
+%--------------------------------------------------
+\vskip10mm%---------- ORIENTADOR -------------------
+%--------------------------------------------------
+%\vbox to8mm{\large
+%\vfil
+%\begin{center}
+%\begin{tabular}{p{0.2\textwidth}l}
+%\end{tabular}
+%\end{center}
+%\vfil
+%}%
+%%--------------------------------------------------
+%\vfil
+% %--------------------------------------------------
+% \vskip5mm%---------- JÚRI -------------------------
+% %--------------------------------------------------
+\vbox to7mm{\Large\bf
+\vfil
+\begin{center}
+{\Large\bf Júri}\\
+\end{center}
+\vfil
+}%
+
+\vbox to28mm{\large
+\vfil
+\begin{center}
+\begin{tabular}{p{0.2\textwidth}l}
+Presidente: & Doutor escolher\\
+Orientador: & Doutor Orientador\\
+Vogais: & Doutor Um\\
+        & Doutor Dois\\
+        & Doutor Três\\
+        & Doutor Quatro\\
+\end{tabular}
+\end{center}
+\vfil
+}%
+%--------------------------------------------------
+\vskip28mm%---------- DATA -------------------------
+%--------------------------------------------------
+\vbox to4mm{\Large\bf
+\vfil
+\begin{center}
+\date
+\end{center}
+\vfil
+}%
+%--------------------------------------------------
+}%vbox
+\end{singlespace}
+\newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                             AGRADECIMENTOS
+ %%%
+  %
+
+\chapter*{Acknowledgements}
+%\chapter*{Acknowledgements}
+\thispagestyle{empty}
+
+% AGRADECER!
+
+This is first of all a document in contribution to the shelves of Instituto Superior Técnico in Lisbon, Portugal and the work is solely part of the European Master in Distributed Computing belonging to promotion between the years of 2011 and 2013. 
+
+During that period of my life, I have meet very knowledgeable but also amazing people. I am thankful to all of them, even though I can not mention everyone here as it would be unrealistic and unfair. But more than anything, thanks to all of you, colleagues from IST, for following me on the right track to keep things going and moving forward in the best interest of everyone in these two years. Thank you for your kindness and friendship. I am also thankful to those who challenged me and pushed me to my limits, without them and their positive or negative first impact I managed to make it back and stand up on my feet learning from my mistakes but also discovering new ways of socializing at University.
+
+Special thanks to my advisor and coordinator from the European Master of Distributed Computing Luís Veiga and his PhD student Sergio Esteves. With their help and motivation I am confident to have achieved what I started the Master for, to write a good thesis work and in the end and reflect all my passion and knowledge for that area of Computer Science. In the partnership and companion of the colleagues made at INESC-ID I have been able to evolve fast during my work assignments and also managed to travel to my first conference in United States during February of 2013 to present a partial work of my thoughts in the form of poster and short paper, accepted and presented among many other international candidates at the File And Storage Technologies conference in San José, California, in February of 2013.
+
+I am finally very glad and delighted to have the family that I do. As always, they have been there supporting my work and life decisions in the good and not so good moments during these last two years. Specially to my brother, for having the ability of always getting to make me laugh and relax in the most difficult and tough moments.
+
+Last but not least, to all the professors from IST and KTH that during these last two years challenged me to think out of the box facing always difficulties in despite of any other matters, they taught me to always work towards bigger and better goals. Thank you to Luís Rodrigues, José Monteiro, Paulo Ferreira, João Garcia, Carlos Ribeiro, Miguel Mira Da Silva an Johan Montelius respectively. 
+
+And thank you for your patience administrative staff of the master at IST and KTH, wherever and whoever you are at the time of writing this thesis. I am glad to have been able to meet you all and receive your kindness always positive support.
+
+As a key mention, I would also like to be thankful here to Mr. Lars Hofhansl (larsh@apache.org) from the Apache Foundation, particularly helpful in guiding me in the early stages of this research for directions through the HBase code base and so, I really appreciate his supportive and unselfishness attitude sharing expert advice with me.
+
+Thanks you to all.
+\vfill
+\begin{flushright}
+  \begin{minipage}{8cm}
+    \begin{center}
+      Lisboa, \today
+
+      Álvaro García Recuero
+    \end{center}
+  \end{minipage}
+\end{flushright}
+
+\cleardoublepage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                            DEDICATÓRIAS
+ %%%
+  %
+
+\chapter*{}
+\thispagestyle{empty}
+
+% DEDICAR!
+\vfill
+\mbox{}
+\vfill\Large
+\begin{flushright}
+  \begin{minipage}{8cm}
+    \begin{center}
+
+"The last mile is always the most difficult, and (looking backwards) the best" -- Miguel Mira Da Silva (professor at IST)
+
+    \end{center}
+  \end{minipage}
+\end{flushright}
+\normalsize\vfill
+
+\cleardoublepage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                                RESUMO
+ %%%
+  %
+
+\chapter*{Resumo}
+\thispagestyle{empty}
+
+\newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                            ABSTRACT
+ %%%
+  %
+
+\chapter*{Abstract}
+\thispagestyle{empty}
+
+Many of today's applications deployed in cloud computing environments make use of key-value storage such as BigTable, Cassandra, and many other no-SQL approaches to overcome scalability limits of relational databases. Relevant open-source solutions include Apache HBase. Several works such as Percolator notify applications whenever data is updated by others (e.g., in the context of updating Google's index). For increased performance and scalability, such storage is partitioned across data centers and each node's data is replicated for availability therefore. Furthermore, fragments of the key-value store should be geo-cached as close as possible to the edge of the network location for increased performance and to reduce the load on mega data centers. This work aims at extending HBase with client-centric caching and replication policies in regards to a consistency model based on data divergence bounds and user-defined application semantics, which we define as Quality-of-Data (QoD). Thus, data stored at QoD-HBase will be kept in the master of a data center with possibly several cached replicas on the slaves region servers. Overall, the data may have different consistency guarantees and synchronizations requirements that will be applicable to inter-replication with other master servers or clusters. This reduces the number of messages and bandwidth needed by master servers to notify applications of data changes and replica updates, while still being able to fulfill those data-defined semantics according to a vector-field consistency QoD paradigm.
+
+\newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                 FICHA BIBLIOGRAFICA -- PALAVRAS CHAVE
+ %%%
+  %
+
+\chapter*{Geo-Replication \\ Keywords}
+\thispagestyle{empty}
+
+\section*{Palavras Chave}
+{\large % EM PORTUGUÊS
+
+\noindent Geo-Replication
+
+\noindent NoSQL Databases
+
+\noindent HBase
+
+\noindent Eventual Consistency
+
+\noindent Quality of Data
+
+\noindent Tunable Consistency
+
+\noindent Divergence-bounding
+
+}
+
+\section*{Keywords}
+
+{\large % EM INGLÊS
+
+\noindent Geo-Replication
+
+\noindent NoSQL Databases
+
+\noindent HBase
+
+\noindent Eventual Consistency
+
+\noindent Quality of Data
+
+\noindent Tunable Consistency
+
+\noindent Divergence-bounding
+
+}
+
+\vfill
+%LATEX2HTML}
+
+\cleardoublepage
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                         MUDANÇA DE NUMERAÇÃO
+ %%%
+  %
+
+\pagestyle{plain}
+\pagenumbering{roman}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                             INDICES
+ %%%
+  %
+
+% ``Table of contents'' (índice).
+
+\def\contentsname{Índice}
+\tableofcontents
+\newpage
+
+% Lista de figuras.
+\listoffigures
+\newpage
+
+% Lista de tabelas.
+\listoftables
+
+% Does it always work? I expect so...
+\cleardoublepage
+
+  %
+ %%%
+%%%%%                          F          I          M      
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Local Variables: 
+% mode: latex
+% TeX-master: "tese"
+% End: 
