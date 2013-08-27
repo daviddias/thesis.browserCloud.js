@@ -67,7 +67,7 @@
 \contentsline {section}{\numberline {4.3}How to integrate a Quality of Data (QoD) module into HBase}{31}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Operation Grouping}{34}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Proposed scenario}{35}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Implementation remarks}{37}{section.4.4}
+\contentsline {section}{\numberline {4.4}Implementation remarks}{38}{section.4.4}
 \contentsline {chapter}{\numberline {5}Evaluation}{39}{chapter.5}
 \contentsline {section}{\numberline {5.1}Testbed}{39}{section.5.1}
 \contentsline {section}{\numberline {5.2}Experiments}{39}{section.5.2}

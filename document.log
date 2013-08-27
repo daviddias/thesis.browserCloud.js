@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  27 AUG 2013 17:30
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  27 AUG 2013 17:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1141,21 +1141,21 @@ Package pdftex.def Info: figs/ginja1-grouping-receive.pdf used on input line 55
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.114 
-       <./figs/operation-grouping.pdf>]) [37] (./sections/evaluation.tex
-[38pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2
-}) has been already used, duplicate ignored
+       <./figs/operation-grouping.pdf>] [37pdfTeX warning (ext4): destination w
+ith the same identifier (name{figure.4.2}) has been already used, duplicate ign
+ored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.20 \chapter
-             {Evaluation}pdfTeX warning (ext4): destination with the same ident
-ifier (name{figure.4.3}) has been already used, duplicate ignored
+l.114 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+4.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.20 \chapter
-             {Evaluation} <./figs/ginja2-grouping-send.pdf> <./figs/ginja1-grou
-ping-receive.pdf>]
+l.114 
+       <./figs/ginja2-grouping-send.pdf> <./figs/ginja1-grouping-receive.pdf>])
+[38] (./sections/evaluation.tex
 Chapter 5.
 <figs/bandwidth.pdf, id=1115, 361.35pt x 252.945pt>
 File: figs/bandwidth.pdf Graphic file (type pdf)
@@ -1263,10 +1263,6 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 223.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
 Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: 20CFA072C5D00E55B20282BD173271D3;4703.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
  ) 
 Here is how much of TeX's memory you used:
@@ -1290,7 +1286,7 @@ t/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts
 /type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/
 urw/palatino/uplr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/pal
 atino/uplri8a.pfb>
-Output written on document.pdf (70 pages, 1563966 bytes).
+Output written on document.pdf (70 pages, 1564079 bytes).
 PDF statistics:
  1389 PDF objects out of 1440 (max. 8388607)
  1186 compressed objects within 12 object streams

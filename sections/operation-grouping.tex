@@ -30,7 +30,7 @@ htable.endConsistentBlock();
 \subsection{Proposed scenario}
 One of the key factors for having operations grouping working together with HBase-QoD is the depicted in Figure~\ref{fig-qod-grouping}. We can see that the operations that are grouped need to communicate over the network less often to other clusters, while arriving earlier in some cases than updates shipping as if several individual operations from location Cluster A were performed. This is due to the ability of HBase-QoD to deliver demanded updates in a consistent timely-fashion rather than on a per request arrival basis, which means possibly delaying the replication process by a fraction of the amount of communication that can be saved instead using the mentioned technique.
 
-\begin{figure}[t]
+\begin{figure}
 \centering
 \includegraphics[scale=0.6]{figs/operation-grouping.pdf}
 \caption{Resulting scenario of grouping operations in a time-lined based diagram using HBase-QoD versus a regular HBase deployment at Cluster B}
@@ -41,7 +41,7 @@ Another experiment that has been conclusive in terms of grouping of operations i
 
 %(table_name::columnFamily).
 
-\begin{figure}[b]
+\begin{figure}
 \centering
 \includegraphics[scale=0.6]{figs/ginja2-grouping-send.pdf}
 \caption{Sending from ginja-a2 to ginja-a1}
@@ -50,7 +50,7 @@ Another experiment that has been conclusive in terms of grouping of operations i
 
 In the following Figure~\ref{fig-receiving-grouping}, we observe how the timestamp for each of the items replicated from the grouped operation have the same timestamp (\textbf{1377617765557}) at the receiving side on ginja-a1. That ensures they have arrived at the same time, and actually we verify the correctness of the experiment by leveraging internal HBase mechanisms that are currently being already used to list statistics of the age of updates sent and/or receive. At the sending side on the other hand, each update is grouped until finally they are all due to be replicated as a whole and therefore printing the timestamp only in order to comply with the reality.
 
-\begin{figure}[t]
+\begin{figure}
 \centering
 \includegraphics[scale=.6]{figs/ginja1-grouping-receive.pdf}
 \caption{Receiving from ginja-a2 in ginja-a1}
