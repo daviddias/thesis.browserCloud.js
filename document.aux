@@ -130,12 +130,17 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.3.6}Cassandra}{18}{subsubsection.2.3.3.6}}
 \@writefile{toc}{\contentsline {paragraph}{\numberline {2.3.3.6.1}Scalability:}{18}{paragraph.2.3.3.6.1}}
 \@writefile{toc}{\contentsline {paragraph}{\numberline {2.3.3.6.2}Fault-Tolerance:}{18}{paragraph.2.3.3.6.2}}
+\citation{Lloyd:2011}
+\citation{Duke:2001}
+\citation{JIRA-1}
+\citation{FacebookHBase}
 \citation{GoogleCloudDataStore}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.4}Typical distributed and replicated deployments}{19}{subsection.2.3.4}}
+\newlabel{distributed-architecture}{{2.3.4}{19}{Typical distributed and replicated deployments\relax }{subsection.2.3.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.4.1}Google Cloud Data Store}{19}{subsubsection.2.3.4.1}}
 \citation{Dean:04}
 \citation{Ghemawat:03}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.4}Other related approaches}{19}{subsection.2.3.4}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.4.1}Google Cloud Data Store}{19}{subsubsection.2.3.4.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.4.2}MapReduce Framework}{19}{subsubsection.2.3.4.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.4.2}MapReduce Framework}{20}{subsubsection.2.3.4.2}}
 \citation{Santos:2010}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Architecture}{21}{chapter.3}}
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -146,65 +151,74 @@
 \citation{Birrell:1984}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}From eventual consistency to vector-field bounded consistency}{22}{section.3.2}}
 \newlabel{architecture:requirements}{{3.2}{22}{From eventual consistency to vector-field bounded consistency\relax }{section.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Replicated Storage}{22}{subsection.3.2.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces HBase QoD high-level}}{23}{figure.3.1}}
 \newlabel{fig-high-level}{{3.1}{23}{HBase QoD high-level\relax }{figure.3.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Remote Procedure Calls}{23}{subsection.3.2.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Technologies used and development method}{24}{section.3.3}}
-\newlabel{method}{{3.3}{24}{Technologies used and development method\relax }{section.3.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Extensions to HBase internal mechanisms}{24}{section.3.4}}
-\newlabel{architecture:extensions}{{3.4}{24}{Extensions to HBase internal mechanisms\relax }{section.3.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces HBase QoD operation}}{25}{figure.3.2}}
-\newlabel{fig-qod-module}{{3.2}{25}{HBase QoD operation\relax }{figure.3.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Typically distributed and replicated deployment}{26}{section.3.5}}
-\newlabel{distributed-architecture}{{3.5}{26}{Typically distributed and replicated deployment\relax }{section.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Remote Procedure Calls}{23}{subsection.3.2.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Challenges addressed and solution proposal}{24}{section.3.3}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.3.0.0.1}Buffering in HBase:}{24}{paragraph.3.3.0.0.1}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {3.3.0.0.2}Configurations:}{24}{paragraph.3.3.0.0.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Development method}{25}{section.3.4}}
+\newlabel{method}{{3.4}{25}{Development method\relax }{section.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Extensions to HBase internal mechanisms}{25}{subsection.3.4.1}}
+\newlabel{architecture:extensions}{{3.4.1}{25}{Extensions to HBase internal mechanisms\relax }{subsection.3.4.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces HBase QoD operation}}{26}{figure.3.2}}
+\newlabel{fig-qod-module}{{3.2}{26}{HBase QoD operation\relax }{figure.3.2}{}}
 \citation{FacebookHBase}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Implementation}{27}{chapter.4}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Implementation}{29}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:implemenation}{{4}{27}{Implementation\relax }{chapter.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Roadmap}{27}{section.4.1}}
-\newlabel{roadmap}{{4.1}{27}{Roadmap\relax }{section.4.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Extensions to the HBase internal mechanisms}{28}{section.4.2}}
-\newlabel{proposal}{{4.2}{28}{Extensions to the HBase internal mechanisms\relax }{section.4.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}How to integrate a Quality of Data (QoD) module into HBase}{29}{section.4.3}}
-\newlabel{integration}{{4.3}{29}{How to integrate a Quality of Data (QoD) module into HBase\relax }{section.4.3}{}}
-\newlabel{lst:vector-listing}{{4.1}{29}{K.java\relax }{lstlisting.4.1}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.1}K.java}{29}{lstlisting.4.1}}
+\newlabel{ch:implemenation}{{4}{29}{Implementation\relax }{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Roadmap}{29}{section.4.1}}
+\newlabel{roadmap}{{4.1}{29}{Roadmap\relax }{section.4.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Extensions to the HBase internal mechanisms}{30}{section.4.2}}
+\newlabel{proposal}{{4.2}{30}{Extensions to the HBase internal mechanisms\relax }{section.4.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}How to integrate a Quality of Data (QoD) module into HBase}{31}{section.4.3}}
+\newlabel{integration}{{4.3}{31}{How to integrate a Quality of Data (QoD) module into HBase\relax }{section.4.3}{}}
+\newlabel{lst:vector-listing}{{4.1}{31}{K.java\relax }{lstlisting.4.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.1}K.java}{31}{lstlisting.4.1}}
+\newlabel{lst:filtering-listing}{{4.2}{32}{ReplicationSource.java\relax }{lstlisting.4.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.2}ReplicationSource.java}{32}{lstlisting.4.2}}
 \citation{Santos:2007}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces QoD high-level algorithm for filtering updates}}{31}{algorithm.1}}
-\newlabel{algo1}{{1}{31}{How to integrate a Quality of Data (QoD) module into HBase\relax }{algorithm.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Operation Grouping}{31}{subsection.4.3.1}}
-\newlabel{grouping}{{4.3.1}{31}{Operation Grouping\relax }{subsection.4.3.1}{}}
-\newlabel{lst:group-listing}{{4.2}{32}{Operation grouping\relax }{lstlisting.4.2}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.2}Operation grouping}{32}{lstlisting.4.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Implementation remarks}{32}{section.4.4}}
-\newlabel{summary-implementation}{{4.4}{32}{Implementation remarks\relax }{section.4.4}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces QoD high-level algorithm for filtering updates}}{34}{algorithm.1}}
+\newlabel{algo1}{{1}{34}{How to integrate a Quality of Data (QoD) module into HBase\relax }{algorithm.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Operation Grouping}{34}{subsection.4.3.1}}
+\newlabel{grouping}{{4.3.1}{34}{Operation Grouping\relax }{subsection.4.3.1}{}}
+\newlabel{lst:group-listing}{{4.3}{35}{Operation grouping\relax }{lstlisting.4.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.3}Operation grouping}{35}{lstlisting.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Proposed scenario}{35}{subsection.4.3.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Resulting scenario of grouping operations in a time-lined based diagram using HBase-QoD versus a regular HBase deployment at Cluster B}}{36}{figure.4.1}}
+\newlabel{fig-qod-grouping}{{4.1}{36}{Resulting scenario of grouping operations in a time-lined based diagram using HBase-QoD versus a regular HBase deployment at Cluster B\relax }{figure.4.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Implementation remarks}{37}{section.4.4}}
+\newlabel{summary-implementation}{{4.4}{37}{Implementation remarks\relax }{section.4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Sending from ginja-a2 to ginja-a1}}{38}{figure.4.2}}
+\newlabel{fig-shipping-grouping}{{4.2}{38}{Sending from ginja-a2 to ginja-a1\relax }{figure.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Receiving from ginja-a2 in ginja-a1}}{38}{figure.4.3}}
+\newlabel{fig-receiving-grouping}{{4.3}{38}{Receiving from ginja-a2 in ginja-a1\relax }{figure.4.3}{}}
 \citation{netem:2005}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Evaluation}{33}{chapter.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Evaluation}{39}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:evaluation}{{5}{33}{Evaluation\relax }{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Testbed}{33}{section.5.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Experiments}{33}{section.5.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Bandwidth usage and replication frequency for a typical workload with and very small HBase-QoD constraint for K($\sigma $)}}{34}{figure.5.1}}
-\newlabel{fig-bw-freq}{{5.1}{34}{Bandwidth usage and replication frequency for a typical workload with and very small HBase-QoD constraint for K($\sigma $)\relax }{figure.5.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Workloads for YCSB}{34}{subsection.5.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Throughput for several QoD configurations}}{35}{figure.5.2}}
-\newlabel{fig-throughput}{{5.2}{35}{Throughput for several QoD configurations\relax }{figure.5.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces CPU usage over time with QoD enabled}}{36}{figure.5.3}}
-\newlabel{fig-cpu}{{5.3}{36}{CPU usage over time with QoD enabled\relax }{figure.5.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Bandwidth usage for Workload A using 5M records using QoD bounds of 0.5 and 2\% in the $\sigma $ of K.}}{37}{figure.5.4}}
-\newlabel{fig-bandwidth-worloada}{{5.4}{37}{Bandwidth usage for Workload A using 5M records using QoD bounds of 0.5 and 2\% in the $\sigma $ of K}{figure.5.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Bandwidth usage for Workload A-Modified using 5M records using QoD bounds of 0.5 and 2\% in the $\sigma $ of K.}}{37}{figure.5.5}}
-\newlabel{fig-bandwidth-worloada-modified}{{5.5}{37}{Bandwidth usage for Workload A-Modified using 5M records using QoD bounds of 0.5 and 2\% in the $\sigma $ of K}{figure.5.5}{}}
+\newlabel{ch:evaluation}{{5}{39}{Evaluation\relax }{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Testbed}{39}{section.5.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Experiments}{39}{section.5.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Bandwidth usage and replication frequency for a typical workload with and very small HBase-QoD constraint for K($\sigma $)}}{40}{figure.5.1}}
+\newlabel{fig-bw-freq}{{5.1}{40}{Bandwidth usage and replication frequency for a typical workload with and very small HBase-QoD constraint for K($\sigma $)\relax }{figure.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Workloads for YCSB}{40}{subsection.5.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Throughput for several QoD configurations}}{41}{figure.5.2}}
+\newlabel{fig-throughput}{{5.2}{41}{Throughput for several QoD configurations\relax }{figure.5.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces CPU usage over time with QoD enabled}}{42}{figure.5.3}}
+\newlabel{fig-cpu}{{5.3}{42}{CPU usage over time with QoD enabled\relax }{figure.5.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Bandwidth usage for Workload A using 5M records using QoD bounds of 0.5 and 2\% in the $\sigma $ of K.}}{43}{figure.5.4}}
+\newlabel{fig-bandwidth-worloada}{{5.4}{43}{Bandwidth usage for Workload A using 5M records using QoD bounds of 0.5 and 2\% in the $\sigma $ of K}{figure.5.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Bandwidth usage for Workload A-Modified using 5M records using QoD bounds of 0.5 and 2\% in the $\sigma $ of K.}}{43}{figure.5.5}}
+\newlabel{fig-bandwidth-worloada-modified}{{5.5}{43}{Bandwidth usage for Workload A-Modified using 5M records using QoD bounds of 0.5 and 2\% in the $\sigma $ of K}{figure.5.5}{}}
 \bibstyle{chicago}
 \bibdata{MasterBibliographyThesis}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{39}{chapter.6}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{45}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:conclusion}{{6}{39}{Conclusion\relax }{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Concluding remarks}{39}{section.6.1}}
+\newlabel{ch:conclusion}{{6}{45}{Conclusion\relax }{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Concluding remarks}{45}{section.6.1}}
 \bibcite{Brewer:2002}{\citeauthoryear {Gilbert \& Lynch.}{Bre}{2002}}
 \bibcite{Hypertable}{\citeauthoryear {??}{Hyp}{2013}}
 \bibcite{Aiyer:2012}{\citeauthoryear {Aiyer, Bautin, Chen, Damania, Khemani, Muthukkaruppan, Ranganathan, Spiegelberg, Tang, \& Vaidya}{Aiyer et\nobreakspace  {}al.}{2012}}
@@ -223,6 +237,7 @@
 \bibcite{SlidesLars}{\citeauthoryear {George}{George}{2012}}
 \bibcite{Ghemawat:03}{\citeauthoryear {Ghemawat, Gobioff, \& Leung}{Ghemawat et\nobreakspace  {}al.}{2003}}
 \bibcite{GoogleCloudDataStore}{\citeauthoryear {Google}{Google}{2013}}
+\bibcite{Duke:2001}{\citeauthoryear {Haifeng Yu ; Dept.\nobreakspace  {}of Comput.\nobreakspace  {}Sci.}{Haifeng Yu ; Dept.\nobreakspace  {}of Comput.\nobreakspace  {}Sci.}{2001}}
 \bibcite{HBase}{\citeauthoryear {HBase}{HBase}{2004}}
 \bibcite{netem:2005}{\citeauthoryear {Hemminger}{Hemminger}{2005}}
 \bibcite{Hunt:2010}{\citeauthoryear {Hunt, Konar, Junqueira, \& Reed}{Hunt et\nobreakspace  {}al.}{2010}}

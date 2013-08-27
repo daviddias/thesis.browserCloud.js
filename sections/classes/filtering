@@ -1,0 +1,23 @@
+\begin{lstlisting}[caption={ReplicationSource.java},label={lst:filtering-listing}]
+        Entry[] filteredUpdates = filterEntriesToReplicate(Arrays.copyOf(entriesArray,currentNbEntries));
+        
+        //Print contents in cache 
+        System.out.println(cache.toString());
+
+
+                if(filteredUpdates.length > 0) {
+                  try {
+                      // Propagate changes now according to QoD constraints in filteredUpdates.
+
+                      long now = System.currentTimeMillis();
+                      System.out.println("*** Latest update sent at timestamp : " + now + " ***\n");
+      
+                      rrs.replicateLogEntries(Arrays.copyOf(filteredUpdates, filteredUpdates.length));
+                      //getRS().replicateLogEntries(Arrays.copyOf(filteredUpdates, filteredUpdates.length));
+                      } catch (IOException e) 
+                      {
+                              System.out.println("IOEXception caught while replicating: " + e.getStackTrace());
+                      }
+                }
+\end{lstlisting}
+

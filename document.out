@@ -39,26 +39,28 @@
 \BOOKMARK [3][]{subsubsection.2.3.3.6}{Cassandra}{subsection.2.3.3}% 39
 \BOOKMARK [4][]{paragraph.2.3.3.6.1}{Scalability:}{subsubsection.2.3.3.6}% 40
 \BOOKMARK [4][]{paragraph.2.3.3.6.2}{Fault-Tolerance:}{subsubsection.2.3.3.6}% 41
-\BOOKMARK [2][]{subsection.2.3.4}{Other related approaches}{section.2.3}% 42
+\BOOKMARK [2][]{subsection.2.3.4}{Typical distributed and replicated deployments}{section.2.3}% 42
 \BOOKMARK [3][]{subsubsection.2.3.4.1}{Google Cloud Data Store}{subsection.2.3.4}% 43
 \BOOKMARK [3][]{subsubsection.2.3.4.2}{MapReduce Framework}{subsection.2.3.4}% 44
 \BOOKMARK [0][]{chapter.3}{Architecture}{}% 45
 \BOOKMARK [1][]{section.3.1}{System overview}{chapter.3}% 46
 \BOOKMARK [1][]{section.3.2}{From eventual consistency to vector-field bounded consistency}{chapter.3}% 47
-\BOOKMARK [2][]{subsection.3.2.1}{Replicated Storage}{section.3.2}% 48
-\BOOKMARK [2][]{subsection.3.2.2}{Remote Procedure Calls}{section.3.2}% 49
-\BOOKMARK [1][]{section.3.3}{Technologies used and development method}{chapter.3}% 50
-\BOOKMARK [1][]{section.3.4}{Extensions to HBase internal mechanisms}{chapter.3}% 51
-\BOOKMARK [1][]{section.3.5}{Typically distributed and replicated deployment}{chapter.3}% 52
-\BOOKMARK [0][]{chapter.4}{Implementation}{}% 53
-\BOOKMARK [1][]{section.4.1}{Roadmap}{chapter.4}% 54
-\BOOKMARK [1][]{section.4.2}{Extensions to the HBase internal mechanisms}{chapter.4}% 55
-\BOOKMARK [1][]{section.4.3}{How to integrate a Quality of Data \(QoD\) module into HBase}{chapter.4}% 56
-\BOOKMARK [2][]{subsection.4.3.1}{Operation Grouping}{section.4.3}% 57
-\BOOKMARK [1][]{section.4.4}{Implementation remarks}{chapter.4}% 58
-\BOOKMARK [0][]{chapter.5}{Evaluation}{}% 59
-\BOOKMARK [1][]{section.5.1}{Testbed}{chapter.5}% 60
-\BOOKMARK [1][]{section.5.2}{Experiments}{chapter.5}% 61
-\BOOKMARK [2][]{subsection.5.2.1}{Workloads for YCSB}{section.5.2}% 62
-\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 63
-\BOOKMARK [1][]{section.6.1}{Concluding remarks}{chapter.6}% 64
+\BOOKMARK [2][]{subsection.3.2.1}{Remote Procedure Calls}{section.3.2}% 48
+\BOOKMARK [1][]{section.3.3}{Challenges addressed and solution proposal}{chapter.3}% 49
+\BOOKMARK [2][]{paragraph.3.3.0.0.1}{Buffering in HBase:}{section.3.3}% 50
+\BOOKMARK [3][]{paragraph.3.3.0.0.2}{Configurations:}{paragraph.3.3.0.0.1}% 51
+\BOOKMARK [1][]{section.3.4}{Development method}{chapter.3}% 52
+\BOOKMARK [2][]{subsection.3.4.1}{Extensions to HBase internal mechanisms}{section.3.4}% 53
+\BOOKMARK [0][]{chapter.4}{Implementation}{}% 54
+\BOOKMARK [1][]{section.4.1}{Roadmap}{chapter.4}% 55
+\BOOKMARK [1][]{section.4.2}{Extensions to the HBase internal mechanisms}{chapter.4}% 56
+\BOOKMARK [1][]{section.4.3}{How to integrate a Quality of Data \(QoD\) module into HBase}{chapter.4}% 57
+\BOOKMARK [2][]{subsection.4.3.1}{Operation Grouping}{section.4.3}% 58
+\BOOKMARK [2][]{subsection.4.3.2}{Proposed scenario}{section.4.3}% 59
+\BOOKMARK [1][]{section.4.4}{Implementation remarks}{chapter.4}% 60
+\BOOKMARK [0][]{chapter.5}{Evaluation}{}% 61
+\BOOKMARK [1][]{section.5.1}{Testbed}{chapter.5}% 62
+\BOOKMARK [1][]{section.5.2}{Experiments}{chapter.5}% 63
+\BOOKMARK [2][]{subsection.5.2.1}{Workloads for YCSB}{section.5.2}% 64
+\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 65
+\BOOKMARK [1][]{section.6.1}{Concluding remarks}{chapter.6}% 66

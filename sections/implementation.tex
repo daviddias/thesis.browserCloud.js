@@ -51,18 +51,21 @@ The QoD paradigm implemented allows for entries to be evaluated prior to replica
   %
 
 \section{How to integrate a Quality of Data (QoD) module into HBase}\label{integration}
-
-In Hbase it is necessary therefore to modify its inner workings by creating, populating and sorting a custom priority queue of items to be replicated. At a later stage, those items will be picked up by a thread which triggers replication one at time or by grouping them into a single operation. In order to do that, we devised a first experimentation with a vector-field data structure below described in Listing~\ref{lst:vector-listing}.
+To achieve that, it is necessary to modify HBase inner workings by creating, populating and sorting a custom priority queue of items to be replicated. At a later stage, those items will be picked up by a thread which triggers replication one at time or by grouping them into a single operation. In order to do that, we devised a first experiment with a vector-field data structure as described below in Listing~\ref{lst:vector-listing}.
 
 \input{sections/classes/vectorK}
+Regarding grouping of operations, we aim at finding a suitable way to enforce related updates in a single and timely replicated batch. This is possible, keeping in mind that individual updates using regular eventual consistency used in HBase can still arrive earlier, although not together and therefore causing bandwidth consumption more often.  into \emph{ReplicationSource.java} we have the following listing showing the main modifications in Listing~\ref{lst:filtering-listing}
 
-%to pick up one at a time and then copy the relevant entries into another queue that will ship the rows to the remote location with the usual HBase mechanism.
+\input{sections/classes/filtering}
 
 %% Build up here on WAL, ReplicationSource, etc. Also architecture drawings.
-In order to provide bounded consistency guarantees with QoD, we add it to the inner workings of Hbase. There are existing command line tools as CopyTable in HBase where one can manually define what is going to be replayed to the log and this is useful for cases where new replicas need to be put up to date or in disaster recovery too. We focus our implementation efforts into organising a list of items in memory (extending the original structure reflected for the updates to be shipped), where we can apply our QoD principles and directly enforce constraints. We do that by defining our bounded model over data which is indexed and queried by key (containerId), and can be enforced through time constraints (T), sequence (number of pending updates) and value ( percentage of changes). For the prototype just sequence. In other words \texttt{HBaseQoD.enforce(containerId)}.
+
+%In order to provide bounded consistency guarantees with QoD, we add it to the inner workings of Hbase. There are existing command line tools as CopyTable in HBase where one can manually define what is going to be replayed to the log and this is useful for cases where new replicas need to be put up to date or in disaster recovery too. 
+
+We focus the implementation efforts into the correctness of the list of items in memory (extending the original structure reflected for the updates to be shipped), which we can apply to our QoD model therefore directly in order to enforce desired consistency constraints. We do that by defining our bounded model over data which is indexed and queried by key (containerId), and can be enforced through time constraints (T), sequence (number of pending updates) and value ( percentage of changes). For the prototype just sequence. In other words \texttt{HBaseQoD.enforce(containerId)}.
 
 % Keep building on it here. Talk about the WALPlayer and possibly how to replay messages but not only.
-Every new update is checked for QoD and shipped for replication, or retained for later and immediate replication at the moment of reaching the QoD triggering condition defined at runtime by the developer. The QoD allows for entries to be evaluated by one or several of the three parameters as seen in vector field consistency \emph{K (time, sequence value)}~\cite{Santos:2007} Any new updates over previous ones (same data) can be also checked for number of pending updates or value difference from previously replicated update, and then shipped or kept on the data structure accordingly.
+Every new update is checked for QoD and shipped for replication, or buffered as usual in HBase for replication, with the difference that using the QoD vector-field model one can immediate replicate updates at the moment of reaching a defined QoD condition. The QoD allows for entries to be evaluated by one or several of the three parameters as seen in vector field consistency \emph{K (time, sequence value)}~\cite{Santos:2007} Any new updates over previous ones (same data) can be also checked for number of pending updates or value difference from previously replicated update, and then shipped or kept on the data structure accordingly.
 
 The original HBase architecture has built-in properties derived from the underlying HDFS layer. As part of it, the WALEdit data structure is used to store data temporarily before being replicated, useful to copy data between several HBase locations. The QoD algorithm (shown in Algorithm.~\ref{algo1}) uses that data structure, although we extend it to contain more meaningful information that help us in the management of the outgoing updates marked for replication.
 
@@ -107,6 +110,7 @@ The original HBase architecture has built-in properties derived from the underly
 
 
 \section{Implementation remarks}\label{summary-implementation}
+The main problems and proposed solutions have been introduced in this section. In the following chapter we will evaluate our proposal and show some insights about the correlation between expected and actual results.
 
 %%% Local Variables: 
 %%% mode: latex

@@ -132,6 +132,12 @@ Ghemawat, S., H.~Gobioff, \& S.-T. Leung (2003).
 Google (2013, August).
 \newblock Google cloud datastore.
 
+\bibitem[\protect\citeauthoryear{Haifeng Yu ; Dept.~of Comput.~Sci.}{Haifeng Yu
+  ; Dept.~of Comput.~Sci.}{2001}]{Duke:2001}
+Haifeng Yu ; Dept.~of Comput.~Sci., Duke~Univ., D. N. U. . V.~A. (2001, April).
+\newblock Combining generality and practicality in a conit-based continuous
+  consistency model for wide-area replication.
+
 \bibitem[\protect\citeauthoryear{HBase}{HBase}{2004}]{HBase}
 HBase (2004).
 \newblock Hbase.

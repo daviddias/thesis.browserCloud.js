@@ -49,26 +49,28 @@
 \contentsline {subsubsection}{\numberline {2.3.3.6}Cassandra}{18}{subsubsection.2.3.3.6}
 \contentsline {paragraph}{\numberline {2.3.3.6.1}Scalability:}{18}{paragraph.2.3.3.6.1}
 \contentsline {paragraph}{\numberline {2.3.3.6.2}Fault-Tolerance:}{18}{paragraph.2.3.3.6.2}
-\contentsline {subsection}{\numberline {2.3.4}Other related approaches}{19}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.4}Typical distributed and replicated deployments}{19}{subsection.2.3.4}
 \contentsline {subsubsection}{\numberline {2.3.4.1}Google Cloud Data Store}{19}{subsubsection.2.3.4.1}
-\contentsline {subsubsection}{\numberline {2.3.4.2}MapReduce Framework}{19}{subsubsection.2.3.4.2}
+\contentsline {subsubsection}{\numberline {2.3.4.2}MapReduce Framework}{20}{subsubsection.2.3.4.2}
 \contentsline {chapter}{\numberline {3}Architecture}{21}{chapter.3}
 \contentsline {section}{\numberline {3.1}System overview}{21}{section.3.1}
 \contentsline {section}{\numberline {3.2}From eventual consistency to vector-field bounded consistency}{22}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Replicated Storage}{22}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Remote Procedure Calls}{23}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Technologies used and development method}{24}{section.3.3}
-\contentsline {section}{\numberline {3.4}Extensions to HBase internal mechanisms}{24}{section.3.4}
-\contentsline {section}{\numberline {3.5}Typically distributed and replicated deployment}{26}{section.3.5}
-\contentsline {chapter}{\numberline {4}Implementation}{27}{chapter.4}
-\contentsline {section}{\numberline {4.1}Roadmap}{27}{section.4.1}
-\contentsline {section}{\numberline {4.2}Extensions to the HBase internal mechanisms}{28}{section.4.2}
-\contentsline {section}{\numberline {4.3}How to integrate a Quality of Data (QoD) module into HBase}{29}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Operation Grouping}{31}{subsection.4.3.1}
-\contentsline {section}{\numberline {4.4}Implementation remarks}{32}{section.4.4}
-\contentsline {chapter}{\numberline {5}Evaluation}{33}{chapter.5}
-\contentsline {section}{\numberline {5.1}Testbed}{33}{section.5.1}
-\contentsline {section}{\numberline {5.2}Experiments}{33}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Workloads for YCSB}{34}{subsection.5.2.1}
-\contentsline {chapter}{\numberline {6}Conclusion}{39}{chapter.6}
-\contentsline {section}{\numberline {6.1}Concluding remarks}{39}{section.6.1}
+\contentsline {subsection}{\numberline {3.2.1}Remote Procedure Calls}{23}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Challenges addressed and solution proposal}{24}{section.3.3}
+\contentsline {paragraph}{\numberline {3.3.0.0.1}Buffering in HBase:}{24}{paragraph.3.3.0.0.1}
+\contentsline {paragraph}{\numberline {3.3.0.0.2}Configurations:}{24}{paragraph.3.3.0.0.2}
+\contentsline {section}{\numberline {3.4}Development method}{25}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Extensions to HBase internal mechanisms}{25}{subsection.3.4.1}
+\contentsline {chapter}{\numberline {4}Implementation}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Roadmap}{29}{section.4.1}
+\contentsline {section}{\numberline {4.2}Extensions to the HBase internal mechanisms}{30}{section.4.2}
+\contentsline {section}{\numberline {4.3}How to integrate a Quality of Data (QoD) module into HBase}{31}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Operation Grouping}{34}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Proposed scenario}{35}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Implementation remarks}{37}{section.4.4}
+\contentsline {chapter}{\numberline {5}Evaluation}{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Testbed}{39}{section.5.1}
+\contentsline {section}{\numberline {5.2}Experiments}{39}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Workloads for YCSB}{40}{subsection.5.2.1}
+\contentsline {chapter}{\numberline {6}Conclusion}{45}{chapter.6}
+\contentsline {section}{\numberline {6.1}Concluding remarks}{45}{section.6.1}
