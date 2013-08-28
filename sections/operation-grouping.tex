@@ -37,7 +37,7 @@ One of the key factors for having operations grouping working together with HBas
 \label{fig-qod-grouping}
 \end{figure}
 
-Another experiment that has been conclusive in terms of grouping of operations is the comparison between different QoD levels, in the case of values for vector field K (-, $\sigma$, -). Setting the operation grouping for a small number of updates still shows that a timestamp in the receiving server is the same for every item in the group. The following set of operations is reflect in Figures~\ref{fig-shipping-grouping} and ~\ref{fig-receiving-grouping}. The same principle can be applied and has been demonstrated to work in the same fashion for different sets of containers.
+Another experiment that has been conclusive in terms of grouping of operations is the comparison between different QoD levels, in the case of values for vector field K (-, $\sigma$, -). Setting the operation grouping for a small number of updates still shows that a timestamp in the receiving server is the same for every item in the group. The following set of operations is ed in Figures~\ref{fig-shipping-grouping} and ~\ref{fig-receiving-grouping}. The same principle can be applied and has been demonstrated to work in the same fashion for different sets of containers.
 
 %(table_name::columnFamily).
 
@@ -48,7 +48,7 @@ Another experiment that has been conclusive in terms of grouping of operations i
 \label{fig-shipping-grouping}
 \end{figure}
 
-In the following Figure~\ref{fig-receiving-grouping}, we observe how the timestamp for each of the items replicated from the grouped operation have the same timestamp (\textbf{1377617765557}) at the receiving side on ginja-a1. That ensures they have arrived at the same time, and actually we verify the correctness of the experiment by leveraging internal HBase mechanisms that are currently being already used to list statistics of the age of updates sent and/or receive. At the sending side on the other hand, each update is grouped until finally they are all due to be replicated as a whole and therefore printing the timestamp only in order to comply with the reality.
+In the following Figure~\ref{fig-receiving-grouping}, we observe how the time-stamps for each of the items replicated in a group of operations are the same actually (\textbf{1377617765557}) at the receiving side (Cluster 3 is at server ginja-a1). That is, ensuring they arrive at the same time, once can actually verify the correctness of the solution. Pin-pointing the internal HBase mechanisms we print the time-stamps at the Source and Sink locations by using default built-in reporting mechanisms of the data store. We do not "reinvent the wheel" in that regard. All work is done by leveraging that, and this could be also added to the lists of statistics that is kept into HBase server for tracking the age of updates sent and/or receive. Previously to that, at the sending side, each update is grouped until they are due for replication as a block. Therefore, they only propagate all at once, as showed with the time-stamp below printed for each update~\ref{fig-shipping-grouping}.
 
 \begin{figure}
 \centering
