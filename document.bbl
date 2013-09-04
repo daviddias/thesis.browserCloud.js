@@ -5,10 +5,6 @@
 \newblock {\em Brewer's Conjecture and the Feasibility of Consistent Available
   Partition-Tolerant Web Services.}
 
-\bibitem[\protect\citeauthoryear{??}{Hyp}{2013}]{Hypertable}
- (2013, August).
-\newblock Hypertable.
-
 \bibitem[\protect\citeauthoryear{Aiyer, Bautin, Chen, Damania, Khemani,
   Muthukkaruppan, Ranganathan, Spiegelberg, Tang, \& Vaidya}{Aiyer
   et~al.}{2012}]{Aiyer:2012}
@@ -90,10 +86,6 @@ Corbett, J.~C., J.~Dean, M.~Epstein, A.~Fikes, C.~Frost, J.~J. Furman,
   Systems Design and Implementation}, OSDI'12, Berkeley, CA, USA, pp.\
   251--264. USENIX Association.
 
-\bibitem[\protect\citeauthoryear{CouchDB}{CouchDB}{2013}]{Couchdb}
-CouchDB (2013, August).
-\newblock Couchdb.
-
 \bibitem[\protect\citeauthoryear{Dean \& Ghemawat}{Dean \&
   Ghemawat}{2004}]{Dean:04}
 Dean, J. \& S.~Ghemawat (2004).
@@ -138,11 +130,6 @@ Haifeng Yu ; Dept.~of Comput.~Sci., Duke~Univ., D. N. U. . V.~A. (2001, April).
 \newblock Combining generality and practicality in a conit-based continuous
   consistency model for wide-area replication.
 
-\bibitem[\protect\citeauthoryear{HBase}{HBase}{2004}]{HBase}
-HBase (2004).
-\newblock Hbase.
-\newblock http://hbase.apache.org.
-
 \bibitem[\protect\citeauthoryear{Hemminger}{Hemminger}{2005}]{netem:2005}
 Hemminger, S. (2005).
 \newblock Netem-emulating real networks in the lab.
@@ -156,6 +143,12 @@ Hunt, P., M.~Konar, F.~P. Junqueira, \& B.~Reed (2010).
 \newblock In {\em Proceedings of the 2010 USENIX conference on USENIX annual
   technical conference}, USENIXATC'10, Berkeley, CA, USA, pp.\  11--11. USENIX
   Association.
+
+\bibitem[\protect\citeauthoryear{Kraska, Hentschel, Alonso, \& Kossmann}{Kraska
+  et~al.}{2009}]{Kraska:2009}
+Kraska, T., M.~Hentschel, G.~Alonso, \& D.~Kossmann (2009, August).
+\newblock Consistency rationing in the cloud: pay only when it matters.
+\newblock {\em Proc. VLDB Endow.\/}~{\em 2\/}(1), 253--264.
 
 \bibitem[\protect\citeauthoryear{Kubiatowicz, Bindel, Chen, Czerwinski, Eaton,
   Geels, Gummadi, Rhea, Weatherspoon, Weimer, Wells, \& Zhao}{Kubiatowicz
@@ -207,17 +200,17 @@ Marc~Shapiro, N.~P. \& M.~Z. Carlos~Baquero (2011, July).
 \newblock Conflict-free replicated data types.
 \newblock Technical Report RR-7687.
 
-\bibitem[\protect\citeauthoryear{MemCached}{MemCached}{2013}]{Memcached}
-MemCached (2013, August).
-\newblock Memcached.
-
-\bibitem[\protect\citeauthoryear{MongoDB}{MongoDB}{2013}]{Mongodb}
-MongoDB (2013, August).
-\newblock Mongodb.
-
 \bibitem[\protect\citeauthoryear{Muthukkaruppan}{Muthukkaruppan}{2010}]{FacebookHBase}
 Muthukkaruppan, K. (2010, November).
 \newblock The underlying technology of messages.
+
+\bibitem[\protect\citeauthoryear{P~N, Sivakumar, Rao, \& Tawarmalani}{P~N
+  et~al.}{2013}]{PN:2013}
+P~N, S., A.~Sivakumar, S.~Rao, \& M.~Tawarmalani (2013).
+\newblock D-tunes: self tuning datastores for geo-distributed interactive
+  applications.
+\newblock In {\em Proceedings of the ACM SIGCOMM 2013 conference on SIGCOMM},
+  SIGCOMM '13, New York, NY, USA, pp.\  483--484. ACM.
 
 \bibitem[\protect\citeauthoryear{Purtell}{Purtell}{2011}]{JIRA-1}
 Purtell, A. (2011, August).
@@ -246,6 +239,13 @@ Stoica, I., R.~Morris, D.~Karger, M.~F. Kaashoek, \& H.~Balakrishnan (2001).
 \newblock In {\em Proceedings of the 2001 conference on Applications,
   technologies, architectures, and protocols for computer communications},
   SIGCOMM '01, New York, NY, USA, pp.\  149--160. ACM.
+
+\bibitem[\protect\citeauthoryear{Sumbaly, Kreps, Gao, Feinberg, Soman, \&
+  Shah}{Sumbaly et~al.}{2012}]{Sumbaly:2012}
+Sumbaly, R., J.~Kreps, L.~Gao, A.~Feinberg, C.~Soman, \& S.~Shah (2012).
+\newblock Serving large-scale batch computed data with project voldemort.
+\newblock In {\em Proceedings of the 10th USENIX conference on File and Storage
+  Technologies}, FAST'12, Berkeley, CA, USA, pp.\  18--18. USENIX Association.
 
 \bibitem[\protect\citeauthoryear{Veiga \& Esteves}{Veiga \&
   Esteves}{2012}]{Vfc3:2012}

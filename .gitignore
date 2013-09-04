@@ -4,3 +4,11 @@
 *.gz
 
 *.aux
+
+*.bak
+
+*.pdf
+
+*.log
+
+*.gz

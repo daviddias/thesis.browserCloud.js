@@ -3,16 +3,18 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Transactional Storage for geo-replicated systems from \cite {Sovran:2011}}}{13}{figure.2.1}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces The main HBase architecture from \cite {SlidesLars}}}{16}{figure.2.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces HBase QoD high-level}}{23}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces HBase QoD operation}}{26}{figure.3.2}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces HBase QoD high-level}}{24}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Replication Flow of updates}}{25}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces HBase QoD operation}}{27}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces HBase-QoD class diagram}}{28}{figure.3.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Resulting scenario of grouping operations in a time-lined based diagram using HBase-QoD versus a regular HBase deployment at Cluster B}}{36}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Sending from ginja-a2 to ginja-a1}}{37}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Receiving from ginja-a2 in ginja-a1}}{37}{figure.4.3}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Resulting scenario of grouping operations in a time-lined based diagram using HBase-QoD versus a regular HBase deployment at Cluster B}}{40}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Sending from ginja-a2 to ginja-a1}}{41}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Receiving from ginja-a2 in ginja-a1}}{41}{figure.4.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Bandwidth usage and replication frequency for a typical workload with and very small HBase-QoD constraint for K($\sigma $)}}{40}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Throughput for several QoD configurations}}{41}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces CPU usage over time with QoD enabled}}{42}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Bandwidth usage for Workload A using 5M records using QoD bounds of 0.5 and 2\% in the $\sigma $ of K.}}{43}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Bandwidth usage for Workload A-Modified using 5M records using QoD bounds of 0.5 and 2\% in the $\sigma $ of K.}}{43}{figure.5.5}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Bandwidth usage and replication frequency for a typical workload with and very small HBase-QoD constraint for K($\sigma $)}}{44}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Throughput for several QoD configurations}}{45}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces CPU usage over time with QoD enabled}}{46}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Bandwidth usage for Workload A using 5M records using QoD bounds of 0.5 and 2\% in the $\sigma $ of K.}}{47}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Bandwidth usage for Workload A-Modified using 5M records using QoD bounds of 0.5 and 2\% in the $\sigma $ of K.}}{47}{figure.5.5}
 \addvspace {10\p@ }

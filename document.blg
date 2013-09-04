@@ -3,29 +3,20 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: document.aux
 The style file: chicago.bst
 Database file #1: MasterBibliographyThesis.bib
-Warning--entry type for "Memcached" isn't style-file defined
---line 77 of file MasterBibliographyThesis.bib
-Warning--entry type for "Couchdb" isn't style-file defined
---line 89 of file MasterBibliographyThesis.bib
-Warning--entry type for "Hypertable" isn't style-file defined
---line 101 of file MasterBibliographyThesis.bib
-Warning--entry type for "Mongodb" isn't style-file defined
---line 112 of file MasterBibliographyThesis.bib
 Warning--entry type for "GoogleCloudDataStore" isn't style-file defined
---line 245 of file MasterBibliographyThesis.bib
+--line 301 of file MasterBibliographyThesis.bib
 Warning--entry type for "FacebookHBase" isn't style-file defined
---line 322 of file MasterBibliographyThesis.bib
+--line 378 of file MasterBibliographyThesis.bib
 Warning--string name "rocq" is undefined
---line 523 of file MasterBibliographyThesis.bib
+--line 579 of file MasterBibliographyThesis.bib
 Warning--string name "inria" is undefined
---line 527 of file MasterBibliographyThesis.bib
+--line 583 of file MasterBibliographyThesis.bib
 Warning--string name "rr" is undefined
---line 531 of file MasterBibliographyThesis.bib
+--line 587 of file MasterBibliographyThesis.bib
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "fig-class-diagram"
 Warning--no key, editor or organization in Brewer:2002
 Warning--to sort, need editor, organization, or key in Brewer:2002
-Warning--no key, author in Hypertable
-Warning--no author, editor, or organization in Hypertable
-Warning--to sort, need author or key in Hypertable
 Too many commas in name 1 of "Haifeng Yu ; Dept. of Comput. Sci., Duke Univ., Durham, NC, USA ; Vahdat, A." for entry Duke:2001
 while executing---line 1568 of file chicago.bst
 Too many commas in name 1 of "Haifeng Yu ; Dept. of Comput. Sci., Duke Univ., Durham, NC, USA ; Vahdat, A." for entry Duke:2001
@@ -70,13 +61,7 @@ Too many commas in name 1 of "Haifeng Yu ; Dept. of Comput. Sci., Duke Univ., Du
 while executing---line 1613 of file chicago.bst
 Too many commas in name 1 of "Haifeng Yu ; Dept. of Comput. Sci., Duke Univ., Durham, NC, USA ; Vahdat, A." for entry Duke:2001
 while executing---line 1613 of file chicago.bst
-Warning--no key, author in Hypertable
-Warning--no author, editor, or organization in Hypertable
-Warning--no key, author in Hypertable
-Warning--no author, editor, or organization in Hypertable
 Warning--no key, editor or organization in Brewer:2002
-Warning--no key, author in Hypertable
-Warning--no author, editor, or organization in Hypertable
 Too many commas in name 1 of "Haifeng Yu ; Dept. of Comput. Sci., Duke Univ., Durham, NC, USA ; Vahdat, A." for entry Duke:2001
 while executing---line 1650 of file chicago.bst
 Too many commas in name 1 of "Haifeng Yu ; Dept. of Comput. Sci., Duke Univ., Durham, NC, USA ; Vahdat, A." for entry Duke:2001
@@ -99,45 +84,45 @@ Warning--empty institution in Saphiro:2011
 Warning--no number and no volume in Vfc3:2012
 Warning--page numbers missing in Vfc3:2012
 Warning--empty year in RDBMS
-You've used 39 entries,
+You've used 37 entries,
             2861 wiz_defined-function locations,
-            839 strings with 12889 characters,
-and the built_in function-call counts, 34956 in all, are:
-= -- 2587
-> -- 3528
-< -- 13
-+ -- 1128
-- -- 1196
-* -- 3431
-:= -- 6471
+            846 strings with 13470 characters,
+and the built_in function-call counts, 35668 in all, are:
+= -- 2635
+> -- 3692
+< -- 15
++ -- 1188
+- -- 1240
+* -- 3571
+:= -- 6579
 add.period$ -- 117
-call.type$ -- 39
+call.type$ -- 37
 change.case$ -- 376
-chr.to.int$ -- 39
-cite$ -- 65
-duplicate$ -- 844
-empty$ -- 1672
-format.name$ -- 1296
-if$ -- 6500
+chr.to.int$ -- 37
+cite$ -- 50
+duplicate$ -- 848
+empty$ -- 1658
+format.name$ -- 1352
+if$ -- 6679
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 23
-newline$ -- 186
-num.names$ -- 374
-pop$ -- 358
+missing$ -- 26
+newline$ -- 180
+num.names$ -- 364
+pop$ -- 357
 preamble$ -- 1
-purify$ -- 611
+purify$ -- 599
 quote$ -- 0
-skip$ -- 846
+skip$ -- 838
 stack$ -- 0
-substring$ -- 1272
-swap$ -- 303
-text.length$ -- 13
+substring$ -- 1309
+swap$ -- 310
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 775
-warning$ -- 18
-while$ -- 343
+type$ -- 735
+warning$ -- 9
+while$ -- 329
 width$ -- 0
-write$ -- 530
+write$ -- 521
 (There were 30 error messages)

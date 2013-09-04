@@ -1,13 +1,6 @@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
   %
-%%%%%                         CHAPTER
- %%%
-  %
-
-% $Id: 2200-irure-dolor.tex,v 1.1 2007/11/23 09:52:42 david Exp $
-% $Log: 2200-irure-dolor.tex,v $
-% Revision 1.1  2007/11/23 09:52:42  david
-% *** empty log message ***
+%%%%%                         CHAPTER RELATED WORK
 %
 %
 
@@ -27,29 +20,31 @@ No sensible decision can be made any longer without taking into account not only
 {\small\it -- Isaac Asimov, writer and scientist (1919 - 1992)}
 \end{quotation}
 
-NoSQL databases are the evolution of traditional RDBMSs, they are the current underlying technology that powers many of the distributed applications we find nowadays on the web. Particularly, what it was called Web 2.0. The reason to use them instead of the usual SQL systems is to have more flexibility and be able to scale accordingly among other things.
+The database market is currently divided in three major segments. DataWarehouses (used for business intelligence), OLTP systems and lastly another set of systems which are currently the most innovative and fast-evolving in that market. In this thesis work, the focus is therefore on the third type, so called NoSQL systems for instance.
 
-Next is a set of desired key properties one is usually willing to have in one of such systems:
+NoSQL databases are the evolution of traditional RDBMSs, they are the current underlying technology that powers many of the distributed applications we find nowadays on the web. Particularly, what it was called Web 2.0. The reason to use them instead of the usual SQL systems is to have higher flexibility and massive scalability.
+
+Next is a set of desired key properties one is usually seeking to have in such systems:
 \begin{itemize}
 	\item Simplicity means not to implement more than it is necessary (replace strict consistency for in-memory replicas)
-	\item High Throughput, as it is very usual to achieve better than with traditional RDBMSs. Hypertable for instance~\cite{Hypertable} follows Google Big Table\cite{Chang:2006} approach and it is able to store large amounts of information. Also MapReduce with BigTable to process Big Data.
-	\item Horizontal Scaling, so one is able to handle large volumes of data by scaling on commodity hardware it is necessary and actually cheaper than former approaches. That is, scale out. Some of them like Mongo even have the ability to support automatically sharding. In terms of costs these databases are more effective alternatives to systems from large corporations such as Oracle.
-	\item Reliability vs Performance: Usually databases of this type store data in memory more often than traditional RDBMSs but lately there has been a tendency, specially with HDFS, to support better persistent storage. This is a great asset to NoSQL data stores, and it is rather a growing disadvantage to systems as MySQL.
-	\item Low cost and administration overhead: One the most fundamental reasons for companies to adopt NoSQL systems is among other things the low-cost of infrastructure set up and administration, although the learning curve could be relatively high.
+	\item High Throughput, as it is very usual to achieve better than with traditional RDBMSs. Hypertable~\footnote{Hypertable, http://hypertable.org/} for instance follows Google Big Table\cite{Chang:2006} approach and it is able to store large amounts of information. Also MapReduce with BigTable to process Big Data.
+	\item Horizontal Scaling, so one is able to handle large volumes of data by scaling on commodity hardware it is necessary and actually cheaper than former approaches. That is, scale out. Some of them, like MongoDB~\footnote{MongoDB, www.mongodb.org}, even have the ability to support automatically sharding. In terms of costs these databases are more effective alternatives to systems from large corporations such as Oracle.
+	\item Reliability versus Performance: Usually databases of this type store data in memory more often than traditional RDBMSs but lately there has been a tendency, specially with HDFS, to support better persistent storage. This is a great asset to NoSQL data stores, and it is rather a growing disadvantage to systems as MySQL.
+	\item Low cost of administration overhead. Mainly, the cost of changing schema and the need to restart databases and applications when those are extended. One the most fundamental reasons for companies to adopt NoSQL systems is that low-overhead on the infrastructure set up and administration, even if the learning curve could be relatively higher at first.
 \end{itemize}
 
 \section{Types of Storage} % conceptual models
 The most important and interesting conceptual difference between NoSQL systems is the data model the implement, so it is necessary to know what are the key differences and advantages or disadvantages among them.
 
-\subsection{Distributed Data Stores}
 All of them implement a de-normalized data model so it is important to understand that, as it is the key to be able to perform better in distributed environments. The term \emph{data store} applies to a large "set of files" distributed physically across multiple machines.
-	\subsubsection{Key-Value Stores}
-	Redis for example implements this sort of model. Using data structures such as Map or Dictionaries, which are both similar, the data is addressed by unique key when a query is performed. Usually in this type of model, data is kept in memory as much as it is required and the proof is that some implementations such as~\cite{Memcached} have been oriented and are used as a caching layer in web applications in order to save requests to the main database system.
-	\subsubsection{Document Stores:}
-	That is case with~\cite{Mongodb} and~\cite{Couchdb}. They are, in contrast to key value stores, implemented using values as relevant to the system for individual queries.
-	\subsubsection{Column-Family Stores (or extensible record stores:}
+
+	\subsection{Key-Value Stores}
+	Redis for example implements this sort of model. Using data structures such as Map or Dictionaries, which are both similar, the data is addressed by unique key when a query is performed. Usually in this type of model, data is kept in memory as much as it is required and the proof is that some implementations such as Memcached~\footnote{Memcached, www.memcached.com} have been oriented and are used as a caching layer in web applications in order to save requests to the main database system.
+	\subsection{Document Stores:}
+	That is case with MongoDB and CouchDB~\footnote{CouchDB, www.couchdb.com}. They are, in contrast to key value stores, implemented using values as relevant to the system for individual queries.
+	\subsection{Column-Family Stores (or extensible record stores:}
 	One important aspect of this type of data stores is the column-family paradigm, so data can be organized and efficiently partitioned among several replica locations. HBase is an example of this type of data store (most of them are inspired in the first idea that came from BigTable)
-	\subsubsection{Graph Databases:}
+	\subsection{Graph Databases:}
 	We are much interested in the details of this type of data stores model, although we just point it here to make sure it is classified as such. Even though, the main idea that it brings with it, is the management of large amounts of linked data.
 
 \section{Design Issues}
@@ -59,7 +54,7 @@ All of them implement a de-normalized data model so it is important to understan
 	With distribution we mean partitioning of data across database clusters. That is the way non-relational databases are implemented, to allow their size to scale horizontally and fulfill modern applications requirements in terms of performance but also capacity. Even though, would be best if partitioning was not used in order to achieve better read latency, but instead replication can be a good approach to resolve that issue. Regarding partitioning, we can distinguish between two main types as shown in Table~\ref{table:partitioning}, range-based and by using hashing:
 	
 	\subparagraph{Range-based partitioning:}
-	First of all, one can distribute data based on ranges of keys. This first approach is used by systems such as ~\cite{HBase}, ~\cite{Mongodb}, ~\cite{Hypertable}. Range queries are managed very efficiently as most of the keys are in the neighboring keys are usually stored in the same node  and table. Although it lacks on availability as there is a single point of failure in the routing server that directs the rest of nodes to the key ranges defined.
+	First of all, one can distribute data based on ranges of keys. This first approach is used by systems such as ~\footnote{HBase, http://hbase.apache.org/}, Mongodb, hHypertable. Range queries are managed very efficiently as most of the keys are in the neighboring keys are usually stored in the same node  and table. Although it lacks on availability as there is a single point of failure in the routing server that directs the rest of nodes to the key ranges defined.
 		
 	\subparagraph{Consistent hashing:}
 	Secondly, one can use consistent hashing for achieving distributing through hash keys. There is not single point of failure and queries are resolved faster by querying the right set of addresses in the cluster. The main issue with this approach is having to query ranges of addresses, as this introduced an extra overhead in the network that can lead to poor performance and problems of overloading the network due to the random placement of keys across the cluster key-space. Examples of this approach as for instance ~\cite{Lakshman:2010} and Dynamo~\cite{DeCandia:2007}.
@@ -69,18 +64,18 @@ All of them implement a de-normalized data model so it is important to understan
     			\begin{tabular}{ | p{5cm} | l | l | l | l |}
    			\hline
 			Key-Value Store & Name & Range Based & Consistent Hashing \\ \hline   		
-			 & Voldemort & - & yes \\ \hline
-			 & Redis & - & yes \\ \hline
-			 & Membase & - & yes \\ \hline
+			 & Voldemort~\footnote{Project Voldemort, http://project-voldemort.com/} & - & yes \\ \hline
+			 & Redis~\cite{} & - & yes \\ \hline
+			 & Membase~\cite{} & - & yes \\ \hline
 			
 			Document Store &  &  &  \\ \hline
-			 & Riak & - & yes \\ \hline			
-			 & MongoDB & yes & - \\ \hline
-			 & CouchDB & - & yes \\ \hline
+			 & Riak~\cite{} & - & yes \\ \hline			
+			 & MongoDB~\cite{} & yes & - \\ \hline
+			 & CouchDB~\cite{} & - & yes \\ \hline
 			Column Family Store &  & \\ \hline
 			 & Cassandra & - & yes \\ \hline
-			 & HBase & yes & - \\ \hline
-			 & HyperTable & yes & - \\ \hline
+			 & HBase~\cite{} & yes & - \\ \hline
+			 & HyperTable~\cite{} & yes & - \\ \hline
     			\end{tabular}
 		\end{center}
 		\caption{Partitioning models}
@@ -88,14 +83,16 @@ All of them implement a de-normalized data model so it is important to understan
 		\end{table}	
 	
 	\subsubsection{Indexing}
-	Regarding indexing, NoSQL databases are usually sorted by unique key. Most of them do not provide secondary indexes. Although, recently for instance~\cite{Mongodb} has supported them, that is not the norm. 
+	Indexes provide high performance read operations for frequently used queries. Regarding NoSQL databases, they are usually sorted by unique key. Most of them do not provide secondary indexes. Although and even though, recently for instance document stores such as MongoDB supports them, that is not the norm among distributed data stores. %%% build up here on quick referencing to other tables. 
 	
 	\subsubsection{Querying languages}
 	The data model should be tightly coupled to the sort of queries a database will need to support in a regular basis. Key-value stores offer weaker semantics to support those, as usually they are intended mainly for put, get operations. Some Document stores can deal richer queries on values, secondary indexes and nested operations. Some possibilities to make this interaction more user friendly is using JSON syntax for querying the data store. As with column-stores, only row keys and indexed values can be used for where-style clauses. Therefore, there is no common language available for those.
 
 \subsection{Semantics and Enforcement}
 
-	\subsubsection{Consistency}
+Regarding data semantics, there are several aspects one might have to consider when choosing among distributed data stores. For instance types of Consistency(~\ref{sub-consistency}) and Concurrency Control(~\ref{sub-concurrency}) methods are the most common and relevant in this matter. Therefore we show here an overview of those and the options that are available within each of them.
+
+	\subsubsection{Consistency}\label{sub-consistency}
 	Having a distributed data store implies the management of data somehow so serving the latest and most up to data write operations to clients that demand them. That is a problem in itself, to have global clocks that synchronize within few milliseconds might not be enough for some operations. Therefore, there are several existing models in the spectrum of consistency that have been developed and used over the years in distributed systems.
 
 		\subparagraph{Sequential Consistency:}
@@ -133,13 +130,13 @@ All of them implement a de-normalized data model so it is important to understan
 		\label{table:consistency}
 		\end{table}	
 
-	\subsubsection{Concurrency}
+	\subsubsection{Concurrency Control}\label{sub-concurrency}
 	There are evident problems for concurrency control in distributed systems. To address these issues, systems use different approaches such as Locks, Multi-version concurrency control, ACID properties, or in the worst case scenario none of them. In some cases, it is also necessary to ensure serializability while performance is not compromised. Therefore, it is necessary to simplify the management of write-write conflicts while the system is still able to perform fast enough. For that, systems as Walter~\cite{Sovran:2011} implement parallel snapshot isolation, which in their case is quite efficient in terms of implementation (they use preferred sites and counting sets). It is clear the need for these sort of approaches since web applications are becoming bigger and demanding more capacity. Due to that, more than just a data centre or site is required in order to be able to satisfy demanded capacity, locality and fault tolerance.
 	
 		\subparagraph{MVCC:}
 		Multi-version concurrency control aims at simplifying the stricter model of consistency to provide a better performance. There are no locks but instead ordered versions of data allow resolution of conflicting writes and also higher concurrent read operations are possible. The complexity of the system increases, like in in HBase, where it is helpful to have multi-versioning but that adds more storage requirements in space as requests need to be processed in parallel. We can appreciate the different types of concurrency across existing data stores in Table~\ref{table:concurrency}.
 		
-		\begin{table}[b]
+		\begin{table}
 		\begin{center}
     			\begin{tabular}{ | p{5cm} | l | l | l | l |}
    			\hline
@@ -163,7 +160,7 @@ All of them implement a de-normalized data model so it is important to understan
 		\end{table}		
 	
 		\subparagraph{Locks:}
-		With locks we mean reserving several sets of data for exclusive access during operations in a data store. A more flexible approach is optimistic locking, where just the latest changes are checked for conflicts and if so, there is a rollback which allows the state of the database to be available earlier on. It is important to note that optimistic locking is supported by some data stores like Voldemor, Redis and Membase, while others are preferable in order to achieve a different level of concurrency control.
+		With locks we mean reserving several sets of data for exclusive access during operations in a data store. A more flexible approach is optimistic locking, where just the latest changes are checked for conflicts and if so, there is a rollback which allows the state of the database to be available earlier on. It is important to note that optimistic locking is supported by some data stores like Voldemort~\cite{Sumbaly:2012}, Redis and Membase, while others are preferable in order to achieve a different level of concurrency control.
 		
 		\subparagraph{ACID properties:}
 		ACID (Atomicity, Consistency, Isolation, Durability) properties are typical of Relational Database Management Systems (RDBMSs) in order to provide better durability. Some NoSQL systems such as CouchDB implement these properties with a combination of MVCC and flush-commit of new changes to the end of data files so that new operations are completely executed or rolled-back.
@@ -212,7 +209,7 @@ A full list of the types of data stores described is presented in the following 
 \subsection{Key-Value Stores}
 
 	\subsubsection{Voldemort}	
-	Open-source follow up of Dynamo, Voldemort is being used for instance at LinkedIn for providing high-scalability. The system is built for efficient but simple queries, so there is no need or support for joins (implemented at the application level). Constraints on foreign keys are also unsupported and not possible. Obviously, no triggers or views can be set up as in traditional relational database systems. These are the trade-offs that allow the system to have better performance in terms of queries, distribution of data storage, separation of concerns between logic and data model. This is as we say, in contrast to RDBMs more practical and efficient for distributed systems with need for simple APIs and object oriented paradigms in applications.
+	Open-source follow up of Dynamo, Voldemort~\cite{Sumbaly:2012} is being used for instance at LinkedIn for providing high-scalability. The system is built for efficient but simple queries, so there is no need or support for joins (implemented at the application level). Constraints on foreign keys are also unsupported and not possible. Obviously, no triggers or views can be set up as in traditional relational database systems. These are the trade-offs that allow the system to have better performance in terms of queries, distribution of data storage, separation of concerns between logic and data model. This is as we say, in contrast to RDBMs more practical and efficient for distributed systems with need for simple APIs and object oriented paradigms in applications.
 	
 	One interesting aspect of Voldemort is the concept of \emph{stores}, which are namespaces of key-value pairs stored with unique key and each of them associate to only one value. Values can be still lists, maps or scalars. In one thing it resembles Amazon Dymano, as it is highly available during write operations, can tolerate concurrency during updates and causality of versions is implemented though vector clocks.
 
@@ -287,9 +284,13 @@ Cassandra uses replication Quorums for ensuring data is fault tolerant. In the r
 
 %Read-repair ensures that obsolete data is updated in a request basis. That data will be up to date. Select, Insert, ...
 \subsection{Typical distributed and replicated deployments}\label{distributed-architecture}
+There is extensive work in this area of geo-replicated data stores. For instance, in proposals of systems such as D-Tunes~\cite{PN:2013} there is a clear relationship between having a self-tuning and adaptive data model that allows adjusting geo-distributed data store needs automatically, depending of a set of previously gathered statistics, to meet strict application SLAs while still achieving optimal data store performance for all, consistency, latency and high-availability.
+
+There is an evident need for having tailored replication mechanisms that target applications that require custom levels of consistency, that has been described among others in~\cite{Kraska:2009}, where for instance a buffer is used to keep lists of pending updates for that purpose. It is also worth to mention what other techniques have or are being used for a similar purpose, such as for instance Snapshot Isolation or ALPS properties in systems like COPS~\cite{Lloyd:2011} which present novel ideas on the subject regarding consistency. Or in the well-known \emph{conit consistency model} from Duke University \cite{Duke:2001}, a system built with these same premises is also presented, but focused on generality rather than practicality. The thesis work refers more specifically to the later, as it is more rewarding to users that need to integrate a fully functional system with a replication framework that optimizes Geo-Replication. Actually there is an opened issue reported on the HBase community~\cite{JIRA-1}. In distributed clusters, Facebook is also using HBase to manage the messaging of the platform across data centers. That is in despite of Cassandra~\cite{FacebookHBase}, previously devised internally at their own company. That may be well be because of the simplicity of the consistency model as well as the ability of HBase to handle both a short set of volatile data and an ever-growing data set that rarely gets accessed more than once. In practice, their architecture comprises a Key for each element is the userID as RowKey, word as Colum and messageID as Version and finally the value like offset of word in message (Data is sorted as: userId, word, messageID). That implicitly means that searching for the top messageIDs of an specific user and word is easily supported, and therefore queries can run faster in the backend.
+
 %In distributed clusters Facebook is currently using HBase to manage the messaging information across data centers. That is because of the simplicity of its consistency model, as well as the ability of HBase to handle both a short set of volatile data and ever-growing data, that rarely gets accessed more than once. More specifically, in their architecture reports, a Key for each element is the userID as RowKey, word as Colum and messageID as Version and finally the value like offset of word in message (Data is sorted as: \emph{userId, word, messageID}). That implicitly means that searching for the top messageIDs of a specific user and word is easily supported, and therefore queries run faster in the backend.
 
-We can seee therefore the need for having a tailored replication mechanism that targets applications which require those levels of consistency previously described, and it is worth to mention that others have also previously used different techniques, such as for instance Snapshot Isolation or ALPS properties like in COPS~\cite{Lloyd:2011} to present novel ideas on this subject matter. In for the instance the well-known as the \emph{conit consistency model} from Duke University \cite{Duke:2001}, a system built with these same premises is also presented, but focused on generality rather than practicality. The thesis work refers more specifically to the later, as it is more rewarding to users that need to integrate a fully functional system with a replication framework that optimizes Geo-Replication. Actually there is an opened issue reported on the HBase community~\cite{JIRA-1}. In distributed clusters, Facebook is also using HBase to manage the messaging of the platform across data centers. That is in despite of Cassandra~\cite{FacebookHBase}, previously devised internally at their own company. That may be well be because of the simplicity of the consistency model as well as the ability of HBase to handle both a short set of volatile data and an ever-growing data set that rarely gets accessed more than once. In practice, their architecture comprises a Key for each element is the userID as RowKey, word as Colum and messageID as Version and finally the value like offset of word in message (Data is sorted as: userId, word, messageID). That implicitly means that searching for the top messageIDs of an specific user and word is easily supported, and therefore queries can run faster in the backend.
+
 %So, for filtering purposes, with our new proposal and implementation, that could directly enable administrators of the clusters to create quality-of-data policies that can analyze fetched data  isrt by inspecting some given bounds or semantics, and then receiving them on the master server at the other end of the replication chain if a match occurs. At first, we will be enhancing the eventual consistency model for inter-site replication in HBase by using an adaptive consistency model based on Service Level Objectives agreed or defined. The idea can be somehow similar to the "pluggable replication framework" proposed within the HBase community [ref here], so our work is two-fold purpose. First contributing to the open source community of HBase but also extending it with some extra capabilities, for that later we will implement batching of updates within our QoD framework.
 
 
