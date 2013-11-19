@@ -1,3 +1,16 @@
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+  %
+%%%%%                       CHAPTER
+ %%%
+  %
+
+% $Id: 3100-nihil-molestiae.tex,v 1.1 2007/11/23 09:52:43 david Exp $
+% $Log: 3100-nihil-molestiae.tex,v $
+% Revision 1.1  2007/11/23 09:52:43  david
+% *** empty log message ***
+%
+%
+
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%                    HEAD MATTER
@@ -21,9 +34,9 @@
  %%%
   %
 \section{Overview}
-In this section we introduce the results obtained from the performance of the HBase-QoD framework. There are several ways of testing distributed systems, usually against each other, or compared to benchmark, or even to a centralized system. In this work, we compare mainly  the performance between the original version of HBase (or also called No-QoD in some parts of the graphs) and our proposal, HBase-QoD, by resorting to widely adopted benchmarks found in the literature.
+In this chapter we introduce the results obtained from the performance of the HBase-QoD framework. There are several ways of testing distributed systems, usually against each other, or compared to benchmark, or even to a centralized system. In this work we compare mainly  the performance between the original version of HBase (or also called No-QoD in some parts of the graphs) and our proposal, HBase-QoD, by resorting to widely adopted benchmarks found in the literature.
 
-Typically, performance in HBase improves as the number of servers increases due to more memory available~\cite{Carstoiu:2010}. In spite of that, scaling up HBase in cluster scenarios it is not always that trivial. Therefore, having alternatives for providing different levels of consistency to users, regarding data quality in cloud environments, may translate into substantial traffic savings. The associated cost savings to potential service providers or even customers, is a very relevant matter,  as seen in~\cite{chihoub:2013} for consistency-cost efficiency. Thus, it can be convenient to evaluate how selective replication (with a HBase-QoD in this case) can support that statement in distributed deployments with HBase.
+Typically, performance in HBase improves as the number of servers increases due to more memory available~\cite{Carstoiu:2010}. In spite of that, scaling up HBase in cluster scenarios it is not always that trivial. Therefore, having alternatives for providing different levels of consistency to users, regarding data quality in cloud environments, may translate into substantial traffic savings. The associated cost saving to potential service providers or even customers, are a very relevant matter,  as seen in~\cite{chihoub:2013} for consistency-cost efficiency. Thus, it can be convenient to evaluate how selective replication (with a HBase-QoD in this case) can support that statement in distributed deployments with HBase.
 
 \section{Experimental Testbed}
 During evaluation of the HBase-QoD prototype a test-bed with several HBase cluster has been deployed at INESC-ID and IST in Lisbon, some of them with an HBase-QoD enabled engine for quality of data between replicas, and others running a regular implementation of HBase 0.94.8.
@@ -46,7 +59,7 @@ In this section, we show the result of the experiments performed using with the 
 One of the most relevant performance metrics is throughput, and for us the aggregated average latency during insertions or transactions in the data store. Although, that does not fully show the real bandwidth usage we aim to represent. Therefore, and for the measurement of network bandwidth consumption and lag of replicated updates, an additional benchmark scripting module was developed by the author, as an additional assessment tool. Use of UNIX built-in tools such as \emph{tcpdump}~\footnote{http://www.tcpdump.org/} is extensively integrated into the script. Output data is represented with well-known tools such \emph{gnuplot}~\footnote{http://www.gnuplot.info/}.
 
 \subsection{Workloads from YCSB}
-First of all and for taking measurements, the CoreWorkload package of YCSB is used. A number of read/write workloads have been tested with the implementation of HBase-QoD and original HBase (no QoD bound). In addition, another custom workload with 100\% of writes (workload A-modified) is used in order to stress the database more intensively with writes. That is a more realistic and related testing scenario, as in the case of social networks (composed of mainly changes) , offering a continuous stream of updates so that simulations can be performed for the occasion. Later on, another two workloads with zipfian distribution are also tested using a more read focused percentage of operations (workload B). We perform these in order to realize what is the impact and differences between them and previous ones.
+First of all and for taking measurements, the CoreWorkload package of YCSB is used. A number of read/write workloads have been tested with the implementation of HBase-QoD and original HBase (no QoD bound). A built-in workload (workload A) plus another custom workload with 100\% of writes (workload A-modified) in order to stress the database with updates. That would be mostly the expected behavior (of continuous updates) in a social network, and here it is simulated for that purpose (that is composed of mainly modifications and new additions from users). Later, another workload with a zipfian distribution is also tested with a more read focused percentage of operations (workload B).
 
 \begin{enumerate}
 \item{YCSB workload A (R/W - 50/50)}
@@ -59,7 +72,7 @@ First of all and for taking measurements, the CoreWorkload package of YCSB is us
 	\item HBase-QoD fulfillment of $\sigma$=2\% of total updates to be replicated.
 	\end{itemize}
 
-On the other hand, with HBase-QoD integrated into HBase, it is possible to have control over traffic of updates, which will go from being unbounded to up to a certain threshold, and subject to adjustments accordingly if there are needs for saving in resource utilization. We observe that a higher QoD (more updates are stored in Cache) exhibits less frequent network communication during the replication process, although peaks reach maximum values (on Bytes) as they need to send more data together. A lower QoD reduces peak-bandwidth usage but instead sends updates more frequently (this could be the case with wall posts in a social network).
+On the other hand, with HBase-QoD integrated into HBase, it is possible to have control over the traffic of updates, from being unbounded, up to a limited threshold, and ready to be adjusted accordingly to needs for saving resource utilization. We observe that higher QoD requires replication traffic less frequently, although interactions reach higher values on Bytes as they need to send more data. Smaller QoD optimizes the usage of resources while sending priority updates more frequently (this could be the case of wall posts in a social network).
 
 \begin{figure*}
 \centering
@@ -68,7 +81,7 @@ On the other hand, with HBase-QoD integrated into HBase, it is possible to have 
 \label{fig-bandwidth-worloada}
 \end{figure*}
 
-Figure~\ref{fig-bandwidth-worloada} shows the results of three different sets of quality-of-data for \emph{workload A}. During the execution of the workload A, in Figure~\ref{fig-bandwidth-worloada}, the highest peaks in replication traffic are observed without any type of HBase-QoD, i.e. just using plain HBase. This is due to the nature of eventual consistency itself, and the internal buffering mechanisms in HBase. Naturally, without HBase-QoD updates are being replicated such as in best-effort~\footnote{Best-Effort delivery, http://en.wikipedia.org/wiki/Best-effort\_delivery} scenarios, where there is an unbounded limit on the number of updates shipped at a time and usually no data-semantics on which ones first or later. Therefore, the module here presented can adapt these limitations in cases of high traffic-loads, choosing first what matters more also.
+Figure~\ref{fig-bandwidth-worloada} shows the results of three different sets of Qualities of Data for \emph{workload A}. During the execution of the workload A, in Figure~\ref{fig-bandwidth-worloada}, the highest peaks in replication traffic are observed without any type of HBase-QoD, i.e. just using plain HBase. This is due to the nature of eventual consistency itself, and the internal buffering mechanisms in HBase. Naturally, without HBase-QoD updates are being replicated such in best-effort~\footnote{Best-Effort delivery, http://en.wikipedia.org/wiki/Best-effort\_delivery} scenarios, where there is an unbounded limit on the number of updates shipped at a time and usually no data-semantics on which ones first or later. Therefore, the module here presented can adapt these limitations in cases of high traffic-loads, choosing first what matters more also.
 
 %******************** TODO STOP ADD MORE text regarding this figure, one paragraph "readingT the graph" ***** DONE: A.G.R
 
@@ -90,10 +103,10 @@ Figure~\ref{fig-bandwidth-worloada} shows the results of three different sets of
 \label{fig-bandwidth-worloada-modified}
 \end{figure*}
 
-In Figure ~\ref{fig-bandwidth-worloada-modified} we can see how a write intensive workload performs using a HBase-QoD deployment. Results obtained are outlined in the mentioned graph (please note the scale of the Y axis has been modified on each of the plots in order to make it convenient for showing the relevant difference in size more clearly).
+In Figure ~\ref{fig-bandwidth-worloada-modified} we can see how a write intensive workload performs using a HBase-QoD deployment. Similar results were expected and later also confirmed in this graph (please note the scale of the Y axis is modified in order to show the relevant difference in Bytes more accurately).
   For smaller QoD (0.5\%), we see lower peaks in bandwidth usage, as well as in the following measurement used (2.0\%). Finally HBase with no modifications shows a much larger number of Bytes when it comes to maximum bandwidth consumption.
 
-Note we are not measuring, or find relevant in any of these scenarios, to realize any kind of claims based on average bandwidth usage. The principal source of motivation of the work is to offer more flexible consistency semantics to users/developers, while also providing a way of controlling the usage of the resources in a data center; this resulting from  ensuring a uniform distribution of replication of updates across time. Also being able to trade strong consistency for grouping of operations that are treated atomically for shipment to a destination cluster location at a given point in time, or when the bounds on data-semantics are reached.\\
+Note we are not measuring, or find relevant in any of these scenarios, to realize any kind of claims based on average bandwidth usage. The principal source of motivation of the work is to offer more flexible consistency semantics to users/developers, while also providing a way of controlling the usage of the resources in a data center; this resulting from  ensuring a uniform distribution of replication of updates across time. Also being able to trade strong consistency for grouping of operations that are treated atomically for shipment to a destination cluster location at a given point in time, or when the bounds on data-semantics are reached.
 
 
 \item{YCSB - Workload B:}
@@ -159,63 +172,59 @@ In Figure~\ref{fig-freshness-letters}, we show how the latency varies by referri
 \subsection{Data arrival measured in a per update basis}
 In this setup there is a client writing to a master HBase server using HBase-QoD ,which writes 1000 updates randomly mixed between critical and non-critical. We are introducing a delay of 40ms in the network in order to realize that wide are network assumption: the delay is set between master and slave cluster communication. For best readability, we are just showing a subset of the updates sent over time, from client 1 to the master cluster, and later read by client 2 from the replica at the slave cluster.
 
-In Figure~\ref{fig-baseline-non-critical} it is represented the arrival of non-critical updates with QoD applied onto two different data containers, in each with a different QoD applied. It is important to note there are two types of updates for each QoD so one needs to take into account that not all the rest of updates not represented in this graph will exhibit the same behavior, but approximately non-critical should arrive later on or near the baseline of No-QoD while critical ones are rather earlier.
-
-\begin{figure*}[h]
+\begin{figure*}[b]
 \centering
-\includegraphics[width=1.0\textwidth]{figs/timestamps-non-critical-updates-false.pdf}
-\caption{Difference in arrival times with and without QoD for non-critical updates}
-\label{fig-baseline-non-critical}
+\includegraphics[width=1.0\textwidth]{figs/portion-criticalvsnon-timestamps.pdf}
+\caption{Difference in arrival times with and without QoD for all updates}
+\label{fig-baseline-critical-vs-non-critical}
 \end{figure*}
 
-Regarding maximum delay given the type of update, non-critical updates have higher timestamps than the others and therefore arrive later as verified in graph~\ref{fig-baseline-non-critical}, so in the case of critical actually they do get read earlier in comparison to the baseline No-QoD (Figure~\ref{fig-timestamps-critical-updates}) in most of the occasions.
+Regarding maximum delay given the type of update, critical updates have lower values. In Figure~\ref{fig-baseline-critical-vs-non-critical} we represent the arrival times for all types of updates, critical and non-critical. Non-critical updates with a more loose QoD will arrive later at the slave cluster, having a higher timestamp due to the mechanisms used into HBase-QoD such as the Cache, where items get temporarily stored and ready for later replication.
 
-\begin{figure*}[h]
+\begin{figure*}[b]
 \centering
 \includegraphics[width=1.0\textwidth]{figs/timestamps-critical-updates.pdf}
 \caption{Difference in arrival time with and without QoD bounds for critical updates}
 \label{fig-timestamps-critical-updates}
 \end{figure*}
 
-In Figure~\ref{fig-timestamps-critical-updates}, the graph highlights how more critical updates arriving earlier in a per update basis over time. The more stringent is the QoD bound, the earlier critical updates are received, made available to, and read by another client from the slave cluster. The more latency or network overhead there is, the higher this difference appears to be.
+In Figure~\ref{fig-timestamps-critical-updates}, the graph highlights how more critical updates arrive earlier in a per update basis over time. The more stringent is the QoD bound, the earlier critical updates are received, made available to, and read by another client from the slave cluster. The more latency or network overhead are there, the higher this difference appears to be.
 
 \section{Overall Performance and Resource Utilization}
-In Figure~\ref{fig-bw-freq}, for a very small QoD of K using $\sigma$, we observe that there is a lowest limit where latency can not be reduced any further. Previous figures measuring bandwidth indicate the same tendency. Please note updates that need to be applied prior to replication (QoD percentage), are so in relation to the total number of operations in the workload (a very small value means a more stringent QoD, the lowest possible value for that is of approximately of 0.00\% and that would be just the strictest bound possible used on QoD).
 
-We can see the peaks during replication, and therefore measure usage of bandwidth in the network over time, which decreases with the increase of the QoD bound; in the order of magnitude of 1MB per second, as we experimentally verify from the graphs obtained. That is due to the batching of updates in our consistency model, so items are not replicated until any or a set of the constraints time, sequence or value is met. Basically, overall we can see less communication between clusters at replication time with increasing QoD, which is a good measurement of how one can optimize bandwidth. During that time then, we take advantage of our caching mechanisms inside HBase-QoD while sending all the information demanded in a timely fashion once recent data becomes being considered necessary to the application (depending on the QoD).
+In Figure~\ref{fig-bw-freq}, for a very small QoD of K using $\sigma$, we observe naturally that there is a lowest limit where latency can not be reduced any further. We have measured that same value in the subsequent Figure~\ref{fig-bandwidth-worloada-modified} using a larger QoD of K using $\sigma$ = 0.5\%. So updates to be applied in relation to total number of records before replication is triggered (still a very small value, strict consistency would mean 0.00\%).
+
+We can see the bandwidth peaks, and therefore measure average usage of the bandwidth, which decreases with the increase of the QoD bound; in the order of magnitude of 1MB per second, as we experimentally verify from the graphs obtained. That is due to the batching of updates in our consistency model, so items are not replicated until one of the constraints time, sequence or value is met. Basically, overall we can see less communication between clusters at replication time with increasing QoD, which is a good measurement of how one can optimize bandwidth. During that time then, we take advantage of our caching mechanisms inside HBase-QoD while sending all the information demanded in a timely fashion once recent data becomes being considered necessary to the application (depending on the QoD).
 
 We also confirm that HBase-QoD does not hurt performance, as we observe from the throughput achieved for the several levels of HBase-QoD chosen during the evaluation of the throughput with the benchmark for our modified version with HBase-QoD enabled, in Figure~\ref{fig-throughput}. The differences in throughput are irrelevant and mostly due to noise in the network, that is the conclusion after obtaining similar results to that one in several rounds of tests, with the same input workload on the data store.
 
 Additionally, we also conducted an experiment to monitor the comparative CPU usage load, in a HBase system using HBase-QoD. This is shown in Figure~\ref{fig-cpu}, and \emph{dstat} presents. CPU consumption and performance remains roughly equivalent, and therefore stable in the cluster machines.
 
-Finally there is an "overhead", if it can be called like that, regarding the wide-spread of replication activity over time if information is kept into memory (caching mechanism of HBase-QoD) for too long before actually replicating occurs. But that is expected and acceptable, namely taking into consideration the results obtained and traded for reduced maximum peak-values in network bandwidth.
+Finally there is an "overhead", if it can be called like that, regarding the wide-spread of replication activity over time if information is kept into memory (Caching mechanisms) for too long before actually replicating it. But that is expected and acceptable, namely taking into consideration the results obtained and traded for reduced maximum peak-values in network bandwidth.
 
-\begin{figure}[b]
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{figs/bandwidth.pdf}
 \caption{Bandwidth usage and replication frequency for a typical workload with and very small HBase-QoD constraint for K($\sigma$)}
 \label{fig-bw-freq}
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.8\linewidth]{figs/throughput.pdf}
 \caption{Throughput for several HBase-QoD configurations}
 \label{fig-throughput}
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.8\linewidth]{figs/cpu.pdf}
 \caption{CPU usage over time with HBase-QoD enabled}
 \label{fig-cpu}
 \end{figure}
 
+
+
 %In Figure 1, we appreciate that our HBase-QoD helps to control peak bounds of updates, and therefore the eventual consistency approach of leaving replication of the items at the odds of the RPC mechanisms of the system in question. We %can control that, and the graph shows how a maximum threshold of around 1000 is constantly reached for the modified version of HBase, but no more. Obviously the timespan of updates with HBase-QoD might be longer depending of the values %chosen, but that is a built-in property of our work on purpose for only propagating updates when they are strictly necessary and to satisfy a given SLO.
 
 %In Figure 4 (for batches of updates of 5M) we can see the bandwidth peaks and therefore measure average usage of the former, which decreases with the increase of the HBase-QoD bound in the order of magnitude of 1MB per second as we experimentally verify from the graphs obtained. That is due to the batching of updates in our vector model, so items are not replicated until one of the constraints time, sequence or value is met. Overall we see less communication between clusters at replication time if there is an increasing value of sigma in the HBase-QoD, which is a good measurement of how one can optimize for bandwidth while non-key data semantics are presented to the application at just the required instant in time but not earlier unless a critical update. During the time where replication is not triggered we take advantage of the caching mechanisms inside HBase-QoD, later sending data as it necessary to the application.
-
-\subsection*{Summary}
-In this chapter, we described the evaluation of the presented HBase-QoD framework, regarding its performance, semantics, and resource utilization. This was carried out by comparative assessment between the original version of HBase (No-QoD) and HBase-QoD, making use of widely adopted benchmarks found in the literature.
-The HBase-QoD prototype was evaluated with a test-bed of HBase clusters at INESC-ID and IST in Lisbon, some of them with an HBase-QoD enabled engine for quality of data between replicas, and others running a regular implementation of HBase 0.94.8.
-Globally, the results reinforce the purpose of HBase-QoD and are in line with what was expected, across a variety of YCSB-derived workloads, regarding overall bandwidth utilization and its peak usage, update latency (and application semantics), as well as CPU utilization.

@@ -3,7 +3,7 @@
 %%%
 %
 
-\def\date{20th of September of 2013}
+\def\date{September 2013}
 \def\titulo{HBase-QoD: Vector-Field Consistency for Replicated Cloud Storage}
 
 % hypernavigation in PDF docs
@@ -35,7 +35,7 @@
 \hskip-17mm\vbox to50mm{
 \vfil
 \begin{tabular}{l}
-\includegraphics[width=9cm]{figs/preliminar/Logo_IST_web.eps}
+\includegraphics[width=5cm]{figs/preliminar/Logo_IST_web.eps}
 \end{tabular}
 \vfil
 \vfil
@@ -73,9 +73,9 @@
 %--------------------------------------------------
 \vbox to8mm{\large
 \vfil
-\centerline{Dissertação para obtenção do Grau de Mestre em Sistemas Distribuidos}
+\centerline{Thesis to obtain the Master of Science Degree in}
 %\vskip6mm
-\centerline{Engenharia Informática e de Computadores}
+{\LARGE\bf \centerline{Information Systems and Computer Engineering}}
 \vfil
 }%
 %--------------------------------------------------
@@ -97,7 +97,7 @@
 \vbox to7mm{\Large\bf
 \vfil
 \begin{center}
-{\Large\bf Júri}\\
+{\Large\bf Examination Committee}\\
 \end{center}
 \vfil
 }%
@@ -105,14 +105,14 @@
 \vbox to28mm{\large
 \vfil
 \begin{center}
-\begin{tabular}{p{0.2\textwidth}l}
-Presidente: & Doutor escolher\\
-Orientador: & Doutor Orientador\\
-Vogais: & Doutor Um\\
-        & Doutor Dois\\
-        & Doutor Três\\
-        & Doutor Quatro\\
-\end{tabular}
+%\begin{tabular}{p{0.2\textwidth}l}
+%Chairman: & Lu\'{i}s Eduardo Teixeira Rodrigues\\
+%Supervisor: & Lu\'{i}s Manuel Antunes Veiga\\
+%Member: & Johan Montelius\\
+%\end{tabular}
+Chairperson: Prof. Doutor. Lu\'{i}s Eduardo Teixeira Rodrigues\\
+Supervisor: Prof. Doutor. Lu\'{i}s Manuel Antunes Veiga\\
+Member of the Committee: Prof. Doutor. Johan Montelius\\
 \end{center}
 \vfil
 }%
@@ -122,7 +122,7 @@ Vogais: & Doutor Um\\
 \vbox to4mm{\Large\bf
 \vfil
 \begin{center}
-\date
+\fontsize{14pt}{12pt}\selectfont \date
 \end{center}
 \vfil
 }%
@@ -137,33 +137,30 @@ Vogais: & Doutor Um\\
  %%%
   %
 
+
 \chapter*{Acknowledgements}
 %\chapter*{Acknowledgements}
 \thispagestyle{empty}
 
 % AGRADECER!
-
+%\vspace{-40pt}
 The work here presented is delivered as final thesis report at Instituto Superior Técnico (IST) in Lisbon, Portugal and it is in partial fulfillment of the European Master in Distributed Computing belonging to promotion of 2011-2013. The Master programme has been composed of a first year at IST, a second year's first semester at Royal Institute of Technology (KTH) and for this work and last academic term, based at the research lab INESC-ID Lisbon with the support of a the scientific grant PTDC/EIA-EIA/108963/2008 as part of a national project (RepComp) funded by FCT Portugal.
 
-%During that period of my life, I have meet very knowledgeable but also amazing people. I am thankful to all of them, even though I can not mention everyone here as it would be unrealistic and unfair. But more than anything, thanks to all of you, colleagues from IST, for following me on the right track to keep things going and moving forward in the best interest of everyone in these two years. Thank you for your kindness and friendship. 
-I am mainly thankful to all those who challenged me and pushed me to my limits, without them these experience would not have been the possible and so rewarding.
+Special thanks to my thesis supervisor and coordinator from the European Master of Distributed Computing Luís Veiga. I am also grateful to Sergio Esteves for sharing advice and brainstorming sessions with me during this period at INESC-ID.
 
-Special thanks to my advisor and coordinator from the European Master of Distributed Computing Luís Veiga. During my work assignments I also managed to travel to my first conference in United States during February of 2013 to present a partial work of my thoughts in the form of poster and short paper, accepted and presented among many other international candidates at the File And Storage Technologies (FAST 2013) conference in San José, California, as of February of 2013.
+I am thankful for having a family which always supports my decision. Thank you for always been been there and supporting me in the most difficult moments during the last two years. I also feel lucky for having a brother who has the ability to always making me get a laugh and relax so I keep going in despite of the most stressing or demanding situation.
 
-I am finally very glad and delighted to have the family that supports me. Thank you for having always been there to support me in tough moment during the last years in general. Key mention to my brother, for having the ability to always making me have a laugh and relax in despite of the most stressing and demanding situation.
+Last but not least, to all the professors from IST and KTH that during these last two years challenged me to think out of the box and face always the difficulties in despite of any other matters, they taught me to always work towards bigger and better goals. Thank you to Luís Eduardo Teixeira Rodrigues, Paulo Jorge Pires Ferreira, João Coelho Garcia, Carlos Nuno da Cruz Ribeiro and Johan Montelius respectively.
 
-Last but not least, to all the professors from IST and KTH that during these last two years challenged me to think out of the box facing always difficulties in despite of any other matters, they taught me to always work towards bigger and better goals. Thank you to Luís Rodrigues, José Monteiro, Paulo Ferreira, João Garcia, Carlos Ribeiro, Miguel Mira Da Silva an Johan Montelius respectively. 
+As a key mention, I would also like to be thankful here to Lars Hofhansl (larsh@apache.org) from the Apache Foundation, particularly helpful in guiding me in the early stages of this research for directions through the HBase code base and so, I really appreciate his supportive and unselfishness attitude sharing expert advice with me.
 
-And thank you for your patience administrative staff of the master at IST and KTH, wherever and whoever you are at the time of writing this thesis. I am glad to have been able to meet you all and receive your kindness always positive support.
-
-As a key mention, I would also like to be thankful here to Mr. Lars Hofhansl (larsh@apache.org) from the Apache Foundation, particularly helpful in guiding me in the early stages of this research for directions through the HBase code base and so, I really appreciate his supportive and unselfishness attitude sharing expert advice with me.
+\vspace{15pt}
 \vfill
 \begin{flushright}
   \begin{minipage}{8cm}
     \begin{center}
-      Lisboa, \today
-
-      Álvaro García Recuero
+    20th of September, Lisbon \\ 
+	Álvaro García Recuero
     \end{center}
   \end{minipage}
 \end{flushright}
@@ -187,7 +184,8 @@ As a key mention, I would also like to be thankful here to Mr. Lars Hofhansl (la
   \begin{minipage}{8cm}
     \begin{center}
 
-"The last mile is always the most difficult, and (looking backwards) the best" -- Miguel Mira Da Silva (professor at IST)
+--To my family
+%"The last mile is always the most difficult, and (looking backwards) the best" -- Miguel Mira Da Silva (professor at IST)
 
     \end{center}
   \end{minipage}
@@ -202,10 +200,6 @@ As a key mention, I would also like to be thankful here to Mr. Lars Hofhansl (la
  %%%
   %
 
-\chapter*{Resumo}
-\thispagestyle{empty}
-
-\newpage
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
@@ -216,36 +210,64 @@ As a key mention, I would also like to be thankful here to Mr. Lars Hofhansl (la
 \chapter*{Abstract}
 \thispagestyle{empty}
 
-Many of today's applications deployed in cloud computing environments make use of key-value storage such as BigTable, Cassandra, and many other no-SQL approaches to overcome scalability limits of relational databases. Relevant open-source solutions include Apache HBase. Several works such as Percolator notify applications whenever data is updated by others (e.g., in the context of updating Google's index). For increased performance and scalability, such storage is partitioned across data centers and each node's data is replicated for availability therefore. Furthermore, fragments of the key-value store should be geo-cached as close as possible to the edge of the network location for increased performance and to reduce the load on mega data centers. This work aims at extending HBase with client-centric caching and replication policies in regards to a consistency model based on data divergence bounds and user-defined application semantics, which we define as Quality-of-Data (QoD). Thus, data stored at QoD-HBase will be kept in the master of a data center with possibly several cached replicas on the slaves region servers. Overall, the data may have different consistency guarantees and synchronizations requirements that will be applicable to inter-replication with other master servers or clusters. This reduces the number of messages and bandwidth needed by master servers to notify applications of data changes and replica updates, while still being able to fulfill those data-defined semantics according to a vector-field consistency QoD paradigm.
+Many of today's applications deployed in cloud computing environments make use of key-value storage such as BigTable, Cassandra, and many other no-SQL approaches to overcome scalability limits of relational databases. Relevant open-source solutions include Apache HBase. Several works such as Percolator notify applications whenever data is updated by others (e.g., in the context of updating Google's web index).
+
+For increased performance and scalability, such storage is partitioned across machines and data centers, and each node's data is replicated for availability therefore. Furthermore, fragments of the key-value store should be geo-cached as close as possible to the edge of the network location for increased performance and to reduce the load on mega data centers.
+
+This work aims at extending HBase with client-centric caching and replication policies in regards to a consistency model based on data divergence bounds and user-defined application semantics, which we define as Quality-of-Data (QoD). Thus, data stored at HBase-QoD will be kept in the master of a data center with possibly several cached replicas on the slaves region servers.
+
+Overall, the data may have different consistency guarantees and synchronization requirements that will be applicable to inter-replication with other master servers or clusters. This reduces the number of messages and bandwidth needed by master servers to notify applications of data changes and replica updates, while still being able to fulfill those data-defined semantics according to a vector-field consistency named HBase-QoD.
+
+%Using this paradigm we can realize bandwidth savings in simulated peak loads scenarios in regard to high overhead of replication between data centers. We still provide different levels of consistency to different users or applications needs (e.g., regarding timeliness, number of pending updates and divergence bounds). We verify the implementation of the Quality-of-Data based vector on a set of distributed clusters. Levels of data consistency are enforced while performance of the cluster is monitored to ensure it remains stable, and updates can be tagged and grouped atomically in logical batches, akin to transactions.
+%
+%
+%
+%There has been extensive recent research in distributed systems regarding consistency in geo-replicated systems. NoSQL databases have introduced a new paradigm in this field, where user data location and replication mechanisms work together to be able to offer best-in-class distributed applications. As such, that means running costly operations under lower system latency while still ensuring data read is still valid for application logic processing. Therefore, several consistency models (like the eventual) use a flexible data consistency approach, that consists in taking advantage of those where staleness of data can be tolerated temporarily.
+%
+%We materialize that the idea in the context of an extensible record store. We assign priority to data depending of data semantics and serve it to applications when it is just required, avoiding overloading the network during large periods of disconnection or partitions. It is a practical and flexible approach that currently is not implemented in HBase as such, but even though, it is a desired feature in some community forums of the Apache project itself.
+%
+%We introduce the data semantics used for non-relational data stores and built around the core architecture of an existing well-known system as such, enabling it to trigger data replication selectively with the support of a three-dimensional field vector. In addition, grouping of operations is possible, ensuring atomic changes and therefore valid updates are propagated.
+%
+%Using this paradigm we can realize bandwidth savings in simulated peak loads scenarios in regard to high overhead of replication between data centers. We still provide different levels of consistency to different users or applications needs (e.g., regarding timeliness, number of pending updates and divergence bounds). We verify the implementation of the Quality-of-Data based vector on a set of distributed clusters. Levels of data consistency are enforced while performance of the cluster is monitored to ensure it remains stable, and updates can be tagged and grouped atomically in logical batches, akin to transactions.
 
 \newpage
+\chapter*{Resumo}
+\thispagestyle{empty}
 
+Muitas das aplicações actualmente disponibilizadas em ambientes de computação em nuvem fazem uso de sistemas de armazenamento associativo chave-valor, tais como o BigTable, Cassandra, e muitos outros baseados em abordagens no-SQL para contornar as limitações de escalabilidade das bases de dados relacionais.
+
+%Implementações open-source relevantes incluem o Apache HBase. Alguns projectos como o Percolator notificam as aplicações sempre que os dados são actualizados por outras aplicações (por ex. no contexto do cálulo do web index Google).
+
+Para melhorar o desempenho e a escalabilidade, os sistemas de armazenamento são particionados por vários servidores, e centros de dados, com os dados de cada servidor replicados para assegurar disponibilidade. Além disso, parcelas do repositório chave-valor devem ser mantidas geo-cached tão perto quanto possível da periferia da rede, para maior desempenho e para reduzir a carga nos mega centros de dados.
+
+Este trabalho tem como objectivo estender o HBase com políticas de caching e de replicação centradas no cliente, com um modelo de consistência baseado em limitação da divergência dos dados e na semântica das aplicações, que definimos como Quality-of-Data (QoD). Assim, os dados armazenados no HBase-QoD serão mantidos na réplica principal de um centro de dados com possivelmente várias replicas  secundárias denominadas region servers.
+
+Globalmente, os dados podem obedecer a diferentes garantias de consistência e requisitos de sincronização, que serão aplicados na replicação entre centros de dados. Isto reduz o número de mensagens e largura de banda necessárias às réplicas para notificar aplicações de modificações nos dados ou actualizações. Isto, enquanto sendo capaz de fazer cumprir a semânctica definida pelas aplicações de acordo com um modelo vectorial de consistência denominado HBase-QoD.
+
+\newpage
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%                 FICHA BIBLIOGRAFICA -- PALAVRAS CHAVE
  %%%
   %
 
-\chapter*{Geo-Replication \\ Keywords}
+\chapter*{}
 \thispagestyle{empty}
 
 \section*{Palavras Chave}
 {\large % EM PORTUGUÊS
 
-\noindent Geo-Replication
+\noindent Geo-Replica\c{c}\~ao
 
-\noindent NoSQL Databases
+\noindent Bases de Dados NoSQL
 
 \noindent HBase
 
-\noindent Eventual Consistency
+\noindent Consist\^encia Adapt\'avel %Tunable Consistency
 
-\noindent Quality of Data
+\noindent Qualidade de Dados
 
-\noindent Tunable Consistency
-
-\noindent Divergence-bounding
-
+\noindent Divergência de Réplicas em Sistemas Geo-replicados
 }
 
 \section*{Keywords}
@@ -307,11 +329,11 @@ Many of today's applications deployed in cloud computing environments make use o
 
   %
  %%%
-%%%%%                          F          I          M      
+%%%%%                          F          I          M
   %
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Local Variables: 
+% Local Variables:
 % mode: latex
 % TeX-master: "tese"
-% End: 
+% End:

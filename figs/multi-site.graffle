@@ -516,8 +516,8 @@ QoD 1}</string>
 					<real>2.0559005737304688</real>
 					<key>Points</key>
 					<array>
-						<string>{464.14868, 264.26007}</string>
-						<string>{441.00046, 236.34828}</string>
+						<string>{464.14871, 264.26007}</string>
+						<string>{441.00052, 236.34828}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -557,8 +557,8 @@ QoD 1}</string>
 					<real>1.9431381225585938</real>
 					<key>Points</key>
 					<array>
-						<string>{408.74167, 264.14731}</string>
-						<string>{411.44724, 236.46104}</string>
+						<string>{408.74173, 264.14731}</string>
+						<string>{411.44736, 236.46104}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -597,7 +597,7 @@ QoD 1}</string>
 					<key>Points</key>
 					<array>
 						<string>{364.99625, 264.26007}</string>
-						<string>{388.14441, 236.34828}</string>
+						<string>{388.14447, 236.34828}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -677,8 +677,8 @@ QoD 1}</string>
 					<integer>304</integer>
 					<key>Points</key>
 					<array>
-						<string>{452.1637, 448.47043}</string>
-						<string>{481.01447, 472.06793}</string>
+						<string>{452.16302, 448.47043}</string>
+						<string>{481.01294, 472.06793}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -710,8 +710,8 @@ QoD 1}</string>
 					<integer>305</integer>
 					<key>Points</key>
 					<array>
-						<string>{404.2045, 448.47214}</string>
-						<string>{374.45267, 473.0278}</string>
+						<string>{404.20395, 448.47214}</string>
+						<string>{374.45145, 473.02777}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -1864,11 +1864,11 @@ DFS client\
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{227, 52}, {122, 14}}</string>
+			<string>{{199.00002, 38.615417}, {178, 14}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
-			<string>YES</string>
+			<string>Vertical</string>
 			<key>Flow</key>
 			<string>Resize</string>
 			<key>ID</key>
@@ -1907,23 +1907,16 @@ DFS client\
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
-			<key>Wrap</key>
-			<string>NO</string>
 		</dict>
 		<dict>
 			<key>Class</key>
 			<string>LineGraphic</string>
-			<key>Head</key>
-			<dict>
-				<key>ID</key>
-				<integer>34</integer>
-			</dict>
 			<key>ID</key>
 			<integer>38</integer>
 			<key>Points</key>
 			<array>
-				<string>{188.56682, 69.92308}</string>
-				<string>{387.1955, 69.92308}</string>
+				<string>{182.08949, 52.615417}</string>
+				<string>{387.6955, 53.615417}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1931,16 +1924,9 @@ DFS client\
 				<dict>
 					<key>HeadArrow</key>
 					<string>FilledArrow</string>
-					<key>Pattern</key>
-					<integer>1</integer>
 					<key>TailArrow</key>
 					<string>FilledArrow</string>
 				</dict>
-			</dict>
-			<key>Tail</key>
-			<dict>
-				<key>ID</key>
-				<integer>33</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -2091,7 +2077,7 @@ DFS client\
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-08-30 18:19:55 +0000</string>
+	<string>2013-09-23 06:20:35 +0000</string>
 	<key>Modifier</key>
 	<string>Alvaro Garcia Recuero</string>
 	<key>NotesVisible</key>

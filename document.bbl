@@ -165,11 +165,6 @@ Lakshman, A. \& P.~Malik (2010, April).
 \newblock Cassandra: a decentralized structured storage system.
 \newblock {\em SIGOPS Oper. Syst. Rev.\/}~{\em 44\/}(2), 35--40.
 
-\bibitem[\protect\citeauthoryear{Lehene}{Lehene}{2010}]{Cosmin2010}
-Lehene, C. (2010).
-\newblock {Why we are using Hbase part 2}.
-\newblock \url{http://hstack.org/why-were-using-hbase-part-2/}.
-
 \bibitem[\protect\citeauthoryear{Li, Porto, Clement, Gehrke, Pregui\c{c}a, \&
   Rodrigues}{Li et~al.}{2012}]{Li:2012}
 Li, C., D.~Porto, A.~Clement, J.~Gehrke, N.~Pregui\c{c}a, \& R.~Rodrigues
@@ -211,6 +206,15 @@ P~N, S., A.~Sivakumar, S.~Rao, \& M.~Tawarmalani (2013).
   applications.
 \newblock In {\em Proceedings of the ACM SIGCOMM 2013 conference on SIGCOMM},
   SIGCOMM '13, New York, NY, USA, pp.\  483--484. ACM.
+
+\bibitem[\protect\citeauthoryear{Patil, Polte, Ren, Tantisiriroj, Xiao,
+  L\'{o}pez, Gibson, Fuchs, \& Rinaldi}{Patil et~al.}{2011}]{Patil:2011}
+Patil, S., M.~Polte, K.~Ren, W.~Tantisiriroj, L.~Xiao, J.~L\'{o}pez, G.~Gibson,
+  A.~Fuchs, \& B.~Rinaldi (2011).
+\newblock Ycsb++: benchmarking and performance debugging advanced features in
+  scalable table stores.
+\newblock In {\em Proceedings of the 2nd ACM Symposium on Cloud Computing},
+  SOCC '11, New York, NY, USA, pp.\  9:1--9:14. ACM.
 
 \bibitem[\protect\citeauthoryear{Purtell}{Purtell}{2011}]{JIRA-1}
 Purtell, A. (2011, August).
@@ -261,9 +265,5 @@ Veiga, L., A.~Negr{\~a}o, N.~Santos, \& P.~Ferreira (2010).
   systems with vector-field consistency.
 \newblock {\em Journal of Internet Services and Applications\/}~{\em 1\/}(2),
   95--115.
-
-\bibitem[\protect\citeauthoryear{Webopedia}{Webopedia}{}]{RDBMS}
-Webopedia.
-\newblock Relational database management systems.
 
 \end{thebibliography}

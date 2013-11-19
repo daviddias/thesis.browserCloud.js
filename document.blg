@@ -4,17 +4,15 @@ The top-level auxiliary file: document.aux
 The style file: chicago.bst
 Database file #1: MasterBibliographyThesis.bib
 Warning--entry type for "GoogleCloudDataStore" isn't style-file defined
---line 301 of file MasterBibliographyThesis.bib
+--line 323 of file MasterBibliographyThesis.bib
 Warning--entry type for "FacebookHBase" isn't style-file defined
---line 378 of file MasterBibliographyThesis.bib
+--line 400 of file MasterBibliographyThesis.bib
 Warning--string name "rocq" is undefined
---line 579 of file MasterBibliographyThesis.bib
+--line 601 of file MasterBibliographyThesis.bib
 Warning--string name "inria" is undefined
---line 583 of file MasterBibliographyThesis.bib
+--line 605 of file MasterBibliographyThesis.bib
 Warning--string name "rr" is undefined
---line 587 of file MasterBibliographyThesis.bib
-Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "fig-class-diagram"
+--line 609 of file MasterBibliographyThesis.bib
 Warning--no key, editor or organization in Brewer:2002
 Warning--to sort, need editor, organization, or key in Brewer:2002
 Too many commas in name 1 of "Haifeng Yu ; Dept. of Comput. Sci., Duke Univ., Durham, NC, USA ; Vahdat, A." for entry Duke:2001
@@ -83,46 +81,45 @@ while executing---line 1650 of file chicago.bst
 Warning--empty institution in Saphiro:2011
 Warning--no number and no volume in Vfc3:2012
 Warning--page numbers missing in Vfc3:2012
-Warning--empty year in RDBMS
-You've used 37 entries,
+You've used 36 entries,
             2861 wiz_defined-function locations,
-            846 strings with 13470 characters,
-and the built_in function-call counts, 35668 in all, are:
-= -- 2635
-> -- 3692
-< -- 15
-+ -- 1188
-- -- 1240
-* -- 3571
-:= -- 6579
-add.period$ -- 117
-call.type$ -- 37
-change.case$ -- 376
-chr.to.int$ -- 37
-cite$ -- 50
-duplicate$ -- 848
-empty$ -- 1658
-format.name$ -- 1352
-if$ -- 6679
+            842 strings with 13609 characters,
+and the built_in function-call counts, 36157 in all, are:
+= -- 2657
+> -- 3803
+< -- 16
++ -- 1230
+- -- 1274
+* -- 3668
+:= -- 6648
+add.period$ -- 116
+call.type$ -- 36
+change.case$ -- 378
+chr.to.int$ -- 36
+cite$ -- 48
+duplicate$ -- 850
+empty$ -- 1655
+format.name$ -- 1390
+if$ -- 6792
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 26
-newline$ -- 180
-num.names$ -- 364
-pop$ -- 357
+missing$ -- 27
+newline$ -- 176
+num.names$ -- 354
+pop$ -- 353
 preamble$ -- 1
-purify$ -- 599
+purify$ -- 595
 quote$ -- 0
-skip$ -- 838
+skip$ -- 843
 stack$ -- 0
-substring$ -- 1309
-swap$ -- 310
-text.length$ -- 15
+substring$ -- 1324
+swap$ -- 314
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 735
-warning$ -- 9
-while$ -- 329
+type$ -- 715
+warning$ -- 8
+while$ -- 318
 width$ -- 0
-write$ -- 521
+write$ -- 515
 (There were 30 error messages)

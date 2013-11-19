@@ -15,14 +15,14 @@
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-This chapter deals with all the topics related to the implementation of the solution that was proposed in Chapter 3. Important points are reviewed and will explained in more detail such as the the working tools, the QoD module and the process follow to develop and introduce the necessary changes made into the original HBase implementation before this action took place. The chapter is organized as follows. Firstly we give an overview of the itinerary followed in~\ref{roadmap}. Section~\ref{proposal} describes the architecture of the existing and proposed system very briefly. In Section~\ref{integration} the integration process is outlined for HBase-QoD into HBase and \ref{extensions} showcases the inner-workings and main extensions introduced, namely modifications to existing classes in HBase and addition of new ones to the source code of the system. That is, the QoD module and some of its most important aspects. In addition to that, in part~\ref{grouping} we also explain how to group updates and what are the benefits of it. The final section~\ref{summary-implementation} summarizes the chapter and some of the most important points made.
+This chapter deals with all the topics related to the implementation of the solution that was proposed in Chapter 3. Important points are reviewed and will explained in more detail such as the the working tools, the HBase-QoD module and the process follow to develop and introduce the necessary changes made into the original HBase implementation before this action took place. The chapter is organized as follows. Firstly we give an overview of the itinerary followed in~\ref{approach}. In Section~\ref{integration} the integration process for HBase-QoD is described and~\ref{extensions} showcases the inner-workings and main extensions introduced, namely modifications to existing classes in HBase and addition of new ones to the code base of the system. The end of the chapter summarizes the chapter and some of the most important points made.
 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%                        SECTION
  %%%
   %
-\section{Roadmap}\label{roadmap}
+\section{Overall implementation approach}\label{approach}
 In distributed scenarios, Facebook is currently using HBase to manage very large number of messages across data centers for their users, and not Cassandra~\cite{FacebookHBase} That is because of the simplicity of consistency model, as well as the ability of HBase to handle both a short set of volatile data and an ever-growing amount, that rarely gets accessed more than once. More specifically, in their architecture reports, a Key for each element is the userID as RowKey, word as Column and messageID as Version and finally the value like offset of word in message (Data is sorted as \emph{userId, word, messageID} ). That implicitly means that searching for the top messageIDs of an specific user and word is easily supported, and therefore queries run faster in the backend.
 
 With eventual consistency, updates and insertions are propagated asynchronously between clusters so Zookeeper is used for storing their positions in log files that hold the next log entry to be shipped in Hbase. To ensure cyclic replication (master to master) and prevent from copying same data back to the source, a sink location with remote procedure calls invoked is already into place with HBase. Therefore if we can control the edits to be shipped, we can also decide what is replicated, when or in other words how often. Keeping that in mind, we leverage the internal mechanisms of VFC$^{3}$ to tune HBase consistency, without requiring intrusion to the data schema and avoiding middle-ware overhead.
@@ -32,8 +32,7 @@ For filtering purposes, with our new proposal and implementation, we will enable
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%% FROM HERE IS IMPLEMENTATION SECTION NEW PROPOSAL
 
-\section{Extensions to the HBase internal mechanisms}\label{proposal}
-The initial approach follows built-in properties of HBase in regards to HDFS. We use the WALEdit data structure of Hbase rather than reinventing the wheel. A WALEdit structure contains information about the incoming updates to the tables in the system and it is later saved in the form of HLog entry in a write ahead log that needs to be be committed to persistent storage later, HDFS.
+%\section{Extensions to the HBase internal mechanisms}\label{proposal}
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
@@ -41,7 +40,10 @@ The initial approach follows built-in properties of HBase in regards to HDFS. We
  %%%
   %
 
-\section{How to integrate a Quality of Data (QoD) module into HBase}\label{integration}
+\section{Integrating a HBase-QoD module}\label{integration}
+
+The initial approach follows built-in properties of HBase in regards to HDFS. We use the WALEdit data structure of Hbase rather than reinventing the wheel. A WALEdit structure contains information about the incoming updates to the tables in the system and it is later saved in the form of HLog entry in a write ahead log that needs to be be committed to persistent storage later, HDFS.
+
 To achieve that, it is necessary to modify HBase inner workings by creating, populating and sorting a custom priority queue of items to be replicated. At a later stage, those items will be picked up by a thread which triggers replication one at time or by grouping them into a single operation. In order to do that, we devised a first experiment with a vector-field data structure as described below in Listing~\ref{lst:vector-listing}.
 
 \input{sections/classes/vectorK}
@@ -51,12 +53,12 @@ Regarding grouping of operations, we aim at finding a suitable way to enforce re
 
 %% Build up here on WAL, ReplicationSource, etc. Also architecture drawings.
 
-%In order to provide bounded consistency guarantees with QoD, we add it to the inner workings of Hbase. There are existing command line tools as CopyTable in HBase where one can manually define what is going to be replayed to the log and this is useful for cases where new replicas need to be put up to date or in disaster recovery too. 
+%In order to provide bounded consistency guarantees with QoD, we add it to the inner workings of Hbase. There are existing command line tools as CopyTable in HBase where one can manually define what is going to be replayed to the log and this is useful for cases where new replicas need to be put up to date or in disaster recovery too.
 
-We focus the implementation efforts into the correctness of the list of items in memory (extending the original structure reflected for the updates to be shipped), which we can apply to our QoD model therefore directly in order to enforce desired consistency constraints. We do that by defining our bounded model over data which is indexed and queried by key (containerId), and can be enforced through time constraints (T), sequence (number of pending updates) and value ( percentage of changes). For the prototype just sequence. In other words \texttt{HBaseQoD.enforce(containerId)}.
+We focus the implementation efforts into the correctness of the list of items in memory (extending the original structure reflected for the updates to be shipped), which we can apply to our HBase-QoD model therefore directly in order to enforce desired consistency constraints. We do that by defining our bounded model over data which is indexed and queried by key (containerId), and can be enforced through time constraints (T), sequence (number of pending updates) and value ( percentage of changes). For the prototype just sequence. In other words \texttt{HBaseQoD.enforce(containerId)}.
 
 % Keep building on it here. Talk about the WALPlayer and possibly how to replay messages but not only.
-Every new update is checked for QoD and shipped for replication, or buffered as usual in HBase for replication, with the difference that using the QoD vector-field model one can immediate replicate updates at the moment of reaching a defined QoD condition. The QoD allows for entries to be evaluated by one or several of the three parameters as seen in vector field consistency \emph{K (time, sequence value)}~\cite{Santos:2007} Any new updates over previous ones (same data) can be also checked for number of pending updates or value difference from previously replicated update, and then shipped or kept on the data structure accordingly.
+Every new update is checked for HBase-QoD and shipped for replication, or buffered as usual in HBase for replication, with the difference that using the vector-field model one can immediately replicate updates at the moment of reaching a defined given bound condition into the HBase-QoD. The HBase-QoD allows for entries to be evaluated by one or several of the three parameters as seen in vector field consistency \emph{K (time, sequence value)}~\cite{Santos:2007} Any new updates over previous ones (same data) can be also checked for number of pending updates or value difference from previously replicated update, and then shipped or kept on the data structure accordingly.
 
 
 
@@ -66,33 +68,35 @@ Every new update is checked for QoD and shipped for replication, or buffered as 
  %%%
   %
 \subsection{Extensions to HBase internal mechanisms}\label{extensions}
-The section focuses on the reasoning behind the internal changes to the HBase mechanisms proposed to include into the system in order to rule updates selectively during replication.
+The section focuses on details on the reasoning behind the internal changes to the HBase mechanisms proposed to include into the system in order to rule updates selectively during replication.
 
 %continue
 
 \paragraph*{Filtering:}
-\emph{ReplicationSource.java} is a key part of HBase in these regard, and it has unveiled to be the central point of the coding efforts after researching the system in depth. In that location, it is in fact modified the logic of the shipment of edits in order to control replication according to a given or selected QoD. For that purpose we design a custom data structure in HBase reusing the existing classes WALEdits (from HBase), ConcurrentHashMap (a Java library) so we are able to set up the storage locations for the updates and identify them according to a container identifier. Later, there we apply each given QoD (e.g. tablename:columnFamily) and the actual value of the vector while we check for the condition that triggers replication once it matches or surpasses the given bound in the container id. As soon as we have some incoming input from clients we process the updates feeding the QoD.
+\emph{ReplicationSource.java} is a key part of HBase for shipping updates to a remote location, and it has been unveiled to be the central point for replication logic. After researching the system in depth, this is the location in fact where we modify the logic of the shipment of edits in order to control replication. For that purpose we design a custom data structure outside, a new class into HBase which is reusing existing classes WALEdits (from HBase), ConcurrentHashMap (a Java library) that supports data storage and handling of updates in order to identify them accordingly. Later, we apply each HBase-QoD bound to the container (e.g. tablename:columnFamily) , and the actual value of the vector is constantly checked for the condition that meets its upper limit so triggers replication. That is, once it matches or surpasses the given bound in a given container-id. As soon as we have some incoming input from clients, the processing of updates feeding HBase-QoD starts.
 
 \paragraph*{Cache:}
-By modifying the inner-workings of HBase, it is possible to create and populate a sorted queue which provides custom priority on updates that arrive for replication from clients to the cluster. Therefore, saving items in temporal queues such as described in~\cite{Kraska:2009} can be a feasible approach to resolving merges of updates that are due to be shipped for replication only later, but which also has disadvantages that are related to their need for acquiring locks on those queues beforehand. To the contrary, the mechanism here described using HBase-QoD do not require such locks to ensure correctness but can still provide with the latest consistent updates to remote clients when necessary. These mechanisms are identified as the \emph{Unified Cache} in the HBase-QoD diagram in Figure~\ref{fig-qod-module}.
+By modifying the inner-workings of HBase, it is possible to create and populate a custom sorted priority queue for updates that arrive. First being checked and evaluated, later replicated. Therefore, saving items in temporal queues such as described in~\cite{Kraska:2009} can be a feasible approach to resolving merges of updates that are due to be shipped for replication only later, but which also has disadvantages that are related to their need for acquiring locks on those queues beforehand. To the contrary, the mechanism here described using HBase-QoD do not require such locks to ensure correctness but can still provide with the latest consistent updates to remote clients when necessary. These mechanisms are identified as the \emph{Unified Cache} in the HBase-QoD diagram in Figure~\ref{fig-qod-module}.
 
 \paragraph*{Vector constraints:}
-In order to provide bounded consistency guarantees with QoD, we add it to the inner workings of HBase. There are existing command line tools as CopyTable in HBase where one can manually define what is going to be replayed to the log and this is useful for cases where new replicas need to be put up to date or in disaster recovery too. In particular, next chapter focuses on those implementation efforts in regard to organizing a list of items in memory (extending the original structure reflected for the updates to be shipped), where we can apply our QoD principles and directly enforce constraints. We do that by defining our bounded divergence model over data which is indexed and queried by key (containerId), and can be enforced through time constraints (T), sequence (number of pending updates) and value (percentage of changes).
+In order to provide bounded consistency guarantees with QoD, we add it to the inner workings of HBase. There are existing command line tools as CopyTable in HBase where one can manually define what is going to be replayed to the log and this is useful for cases where new replicas need to be put up to date or in disaster recovery too. In particular, next chapter focuses on those implementation efforts in regard to organizing a list of items in memory (extending the original structure reflected for the updates to be shipped), where we can apply our QoD principles and directly enforce constraints. We do that by defining our bounded divergence model over data which is indexed and queried by key (container-id), and can be enforced through time constraints (T), sequence (number of pending updates) and value (percentage of changes).
 
-
-\subsection{Operation Grouping}\label{grouping}
-\input{sections/operation-grouping} 
   %
  %%%
 %%%%%                           SECTION
   %
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\subsection*{Summary}\label{summary-implementation}
 
-\section{Implementation remarks}\label{summary-implementation}
-The main problems and proposed solutions have been introduced in this section. In the following chapter we will evaluate our proposal and show some insights about the correlation between expected and actual results.
+In this Chapter, we highlighted the most relevant implementation details, regarding the integration of the QoD consistency model as a module, into the inner workings of a fully operational HBase deployment. We also offer detail on the extensions of the more relevant inner HBase mechanisms, filtering, cache and consistency constrains upholding.
 
-%%% Local Variables: 
+
+%%****** TODO STOP *******
+%The overall implementation is based on the defined architecture of HBase. Novel and new concepts are applied to it with the HBase-QoD module. In the following chapter we will evaluate our proposal and show some insights about the results obtained and what is expected from them. Regarding technical implementation this work has been done using Java as main programming language, and bash shell and python for scripting.
+
+%%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "tese"
-%%% End: 
+%%% End:
+

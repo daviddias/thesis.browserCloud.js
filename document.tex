@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
 
-% Edited to submit Master thesis as partial fullfilment as part the EMDC '13
+% Edited to submit Master thesis as partial fullfilment of EMDC 2011-2013
 
 % $Id: tese.tex,v 1.1 2007/11/23 09:53:19  Exp $
 % $Log: tese.tex,v $
@@ -16,7 +16,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 
-\documentclass[a4paper,10pt,twoside,onecolumn,final,openright]{book}
+\documentclass[a4paper,11pt,twoside,onecolumn,final,openright]{book}
 \usepackage[doublespace,final]{thesis}
 \usepackage{amsmath}
 \usepackage{mathtools}
@@ -24,6 +24,7 @@
 \usepackage{algorithmic}
 \usepackage{algorithm}
 \usepackage{multicol}
+\usepackage{multirow}
 
 %\usepackage[singlespace,final]{thesis}
 %\usepackage[singlespace,draft]{thesis}
@@ -151,11 +152,11 @@
 \thispagestyle{empty}
 \input{sections/implementation}               % the implementation details
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 
-%%%%%                 P A R T E   I V  --  Evaluation
- %%%
+%%%%%                 P A R T E   VI  --  Evaluation
+%%%
   %
 
 %\part{Part}
@@ -172,11 +173,25 @@
 %\thispagestyle{empty}
 %\newpage
 \thispagestyle{empty}
-\input{sections/evaluation}                 % Evaluation section
+\input{sections/evaluation}
 
 %\newpage
 \thispagestyle{empty}
 \input{sections/conclusion}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%
+	%%%%%                 P A R T E  VII  --  Future Work
+
+\thispagestyle{empty}
+%\vbox to\textheight{
+%\vfil
+%\chapter*{Experiments and testing}
+\thispagestyle{empty}
+
+%\newpage
+\thispagestyle{empty}
+\input{sections/future}
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  4 SEP 2013 01:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  24 OCT 2013 15:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -18,8 +18,8 @@ lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian,
 welsh, loaded.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/bk10.clo
-File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -43,9 +43,11 @@ Package: thesis 2009/06/14 21:04 David's excellent thesis package!
 \nwdefspace=\dimen106
 \equivbox=\box26
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 77.
+(Font)              <10.95> on input line 77.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 77.
+(Font)              <8> on input line 77.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 77.
 \plusequivbox=\box27
 \nwcodetopsep=\skip43
 \nwcodepenalty=\count88
@@ -698,13 +700,16 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@algorithm=\toks29
 \c@algorithm=\count149
 )
+(/usr/local/texlive/2012/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen157
+)
 (/usr/local/texlive/2012/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip59
 \subfigcapskip=\skip60
-\subfigcaptopadj=\dimen157
+\subfigcaptopadj=\dimen158
 \subfigbottomskip=\skip61
-\subfigcapmargin=\dimen158
+\subfigcapmargin=\dimen159
 \subfiglabelskip=\skip62
 \c@subfigure=\count150
 \c@lofdepth=\count151
@@ -723,14 +728,14 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \lst@gtempboxa=\box67
 \lst@token=\toks30
 \lst@length=\count155
-\lst@currlwidth=\dimen159
+\lst@currlwidth=\dimen160
 \lst@column=\count156
 \lst@pos=\count157
-\lst@lostspace=\dimen160
-\lst@width=\dimen161
+\lst@lostspace=\dimen161
+\lst@width=\dimen162
 \lst@newlines=\count158
 \lst@lineno=\count159
-\lst@maxwidth=\dimen162
+\lst@maxwidth=\dimen163
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
@@ -749,20 +754,20 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (./document.aux)
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -784,19 +789,19 @@ e
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count162
-\scratchdimen=\dimen163
+\scratchdimen=\dimen164
 \scratchbox=\box69
 \nofMPsegments=\count163
 \nofMParguments=\count164
 \everyMPshowfont=\toks31
 \MPscratchCnt=\count165
-\MPscratchDim=\dimen164
+\MPscratchDim=\dimen165
 \MPnumerator=\count166
 \makeMPintoPDFobject=\count167
 \everyMPtoPDFconversion=\toks32
 )
 \AtBeginShipoutBox=\box70
-Package hyperref Info: Link coloring ON on input line 73.
+Package hyperref Info: Link coloring ON on input line 74.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
@@ -805,9 +810,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count168
 )
-LaTeX Info: Redefining \ref on input line 73.
-LaTeX Info: Redefining \pageref on input line 73.
-LaTeX Info: Redefining \nameref on input line 73.
+LaTeX Info: Redefining \ref on input line 74.
+LaTeX Info: Redefining \pageref on input line 74.
+LaTeX Info: Redefining \nameref on input line 74.
 
 (./document.out) (./document.out)
 \@outlinefile=\write6
@@ -831,43 +836,41 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 37.
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 Package epstopdf Info: Source file: <figs/preliminar/Logo_IST_web.eps>
-(epstopdf)                    date: 2013-06-02 21:44:56
-(epstopdf)                    size: 278528 bytes
+(epstopdf)                    date: 2012-06-21 16:32:16
+(epstopdf)                    size: 651034 bytes
 (epstopdf)             Output file: <figs/preliminar/Logo_IST_web-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2013-06-02 21:44:56
-(epstopdf)                    size: 19612 bytes
+(epstopdf)                    date: 2013-10-02 17:38:52
+(epstopdf)                    size: 15509 bytes
 (epstopdf)             Command: <repstopdf --outfile=figs/preliminar/Logo_IST_w
 eb-eps-converted-to.pdf figs/preliminar/Logo_IST_web.eps>
 (epstopdf)             \includegraphics on input line 38.
 Package epstopdf Info: Output file is already uptodate.
 
-<figs/preliminar/Logo_IST_web-eps-converted-to.pdf, id=289, 459.7175pt x 117.43
-875pt>
+<figs/preliminar/Logo_IST_web-eps-converted-to.pdf, id=281, 500.87125pt x 193.7
+2375pt>
 File: figs/preliminar/Logo_IST_web-eps-converted-to.pdf Graphic file (type pdf)
 
  <use figs/preliminar/Logo_IST_web-eps-converted-to.pdf>
 Package pdftex.def Info: figs/preliminar/Logo_IST_web-eps-converted-to.pdf used
  on input line 38.
-(pdftex.def)             Requested size: 256.0748pt x 65.41939pt.
+(pdftex.def)             Requested size: 142.26378pt x 55.02264pt.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 67.
 
-Overfull \vbox (3.36363pt too high) detected at line 80
+Overfull \vbox (12.57602pt too high) detected at line 80
  []
 
 
-Overfull \vbox (9.23721pt too high) detected at line 103
+Overfull \vbox (8.42929pt too high) detected at line 103
  []
 
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 125.
 
-Overfull \vbox (20.33229pt too high) detected at line 118
- []
-
-
-Overfull \vbox (18.68036pt too high) detected at line 128
+Overfull \vbox (20.28976pt too high) detected at line 128
  []
 
 
@@ -896,28 +899,28 @@ map/pdftex.map} <./figs/preliminar/Logo_IST_web-eps-converted-to.pdf>] [2
 ] [11] [12
 
 ] (./document.toc
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
  [1
 
-] [2])
+] [2] [3])
 \tf@toc=\write7
 \openout7 = `document.toc'.
 
- [3]
-[4
 
-] (./document.lof)
+[4] (./document.lof [5
+
+])
 \tf@lof=\write8
 \openout8 = `document.lof'.
 
- [5] [6
-
-] (./document.lot)
+ [6] (./document.lot)
 \tf@lot=\write9
 \openout9 = `document.lot'.
 
- [7] [8
+ [7
+
+] [8
 
 ])
 (./sections/introduction.tex
@@ -926,410 +929,515 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.63 \section
-             {Problem Statement} [1
+l.48 
+      [1
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.77 
-      [2]pdfTeX warning (ext4): destination with the same identifier (name{page
-.3}) has been already used, duplicate ignored
+l.74 \section
+             {Extended motivation and Roadmap} [2]pdfTeX warning (ext4): destin
+ation with the same identifier (name{page.3}) has been already used, duplicate 
+ignored
 <to be read again> 
                    \relax 
-l.93 
+l.82 
       [3]pdfTeX warning (ext4): destination with the same identifier (name{page
 .4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.119 \begin{itemize}
-                      [4]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 120.
+l.99 T
+      he main goal of this work is to incorporate a more flexible, fine-grai...
+[4]pdfTeX warning (ext4): destination with the same identifier (name{page.5}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.116 
+       [5]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 127.
 
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omsppl.fd
+ (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
-LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 120.
-)
-(./sections/relatedwork.texpdfTeX warning (ext4): destination with the same ide
-ntifier (name{page.5}) has been already used, duplicate ignored
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 127.
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.167 
+       [6]) (./sections/relatedwork.texpdfTeX warning (ext4): destination with 
+the same identifier (name{page.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.14 \chapter
-             {Related Work} [5]pdfTeX warning (ext4): destination with the same
- identifier (name{page.6}) has been already used, duplicate ignored
+             {Related Work} [7]pdfTeX warning (ext4): destination with the same
+ identifier (name{page.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.14 \chapter
-             {Related Work} [6
+             {Related Work} [8
 
 ]
 Chapter 2.
-pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 \end{itemize}
-                   [7]
+l.32 	\item R
+             eliability versus Performance: Usually databases of this type s...
+[9]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 41.
-pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.49 
-      [8]pdfTeX warning (ext4): destination with the same identifier (name{page
-.9}) has been already used, duplicate ignored
+l.43 	\subsection
+                 {Document Stores} [10]pdfTeX warning (ext4): destination with 
+the same identifier (name{page.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.88 	\subsubsection
-                    {Querying languages} [9]pdfTeX warning (ext4): destination 
-with the same identifier (name{page.10}) has been already used, duplicate ignor
-ed
+l.58 
+      [11]pdfTeX warning (ext4): destination with the same identifier (name{pag
+e.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.98 		\subparagraph
-                    {Sequential Consistency:} [10pdfTeX warning (ext4): destina
-tion with the same identifier (name{table.2.1}) has been already used, duplicat
-e ignored
+l.91 
+      [12pdfTeX warning (ext4): destination with the same identifier (name{tabl
+e.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.98 		\subparagraph
-                    {Sequential Consistency:}]pdfTeX warning (ext4): destinatio
-n with the same identifier (name{page.11}) has been already used, duplicate ign
-ored
-<to be read again> 
-                   \relax 
-l.136 		\subparagraph
-                     {MVCC:} [11]pdfTeX warning (ext4): destination with the sa
-me identifier (name{page.12}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.165 		\subparagraph
-                     {ACID properties:} [12pdfTeX warning (ext4): destination w
-ith the same identifier (name{table.2.2}) has been already used, duplicate igno
-red
+l.91 
+     ] [13] [14pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.2.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.165 		\subparagraph
-                     {ACID properties:}pdfTeX warning (ext4): destination with 
-the same identifier (name{table.2.3}) has been already used, duplicate ignored
+l.137 
+      ] [15pdfTeX warning (ext4): destination with the same identifier (name{ta
+ble.2.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.165 		\subparagraph
-                     {ACID properties:}]
-<figs/consistency.pdf, id=613, 573.14125pt x 217.81375pt>
+l.167 
+      ] <figs/consistency.pdf, id=641, 573.14125pt x 217.81375pt>
 File: figs/consistency.pdf Graphic file (type pdf)
 
 <use figs/consistency.pdf>
-Package pdftex.def Info: figs/consistency.pdf used on input line 173.
+Package pdftex.def Info: figs/consistency.pdf used on input line 176.
 (pdftex.def)             Requested size: 227.62204pt x 86.50577pt.
- [13pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+ [16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.181 
-       <./figs/consistency.pdf>] [14]
-LaTeX Font Info:    Try loading font information for OML+ppl on input line 217.
+l.184 
+       <./figs/consistency.pdf>] [17]
+LaTeX Font Info:    Try loading font information for OML+ppl on input line 220.
 
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omlppl.fd
 File: omlppl.fd 
 )
-LaTeX Font Info:    Font shape `OML/ppl/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 217.
- [15]
-<figs/hbase-main-architecture.pdf, id=664, 525.40291pt x 333.88742pt>
+LaTeX Font Info:    Font shape `OML/ppl/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 220.
+ [18] [19]
+<figs/hbase-main-architecture.pdf, id=702, 525.40291pt x 333.88742pt>
 File: figs/hbase-main-architecture.pdf Graphic file (type pdf)
 
 <use figs/hbase-main-architecture.pdf>
-Package pdftex.def Info: figs/hbase-main-architecture.pdf used on input line 23
-8.
+Package pdftex.def Info: figs/hbase-main-architecture.pdf used on input line 24
+6.
 (pdftex.def)             Requested size: 227.62204pt x 144.65396pt.
- [16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-2}) has been already used, duplicate ignored
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
+[]\OT1/ppl/m/n/10.95 Hbase is an open-source dis-tributed, ver-sioned, column-s
+tore de-signed af-ter
+ []
+
+[20] [21pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.2.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.246 
-       <./figs/hbase-main-architecture.pdf>] [17] [18] [19] [20])
-(./sections/architecture.tex [21] [22
-
-]
+l.257 
+       <./figs/hbase-main-architecture.pdf>] [22] [23] [24] [25])
+(./sections/architecture.tex [26]
 Chapter 3.
-[23] <figs/highlevel.pdf, id=757, 446.66875pt x 440.64626pt>
+[27
+
+] <figs/highlevel.pdf, id=794, 446.66875pt x 440.64626pt>
 File: figs/highlevel.pdf Graphic file (type pdf)
 
 <use figs/highlevel.pdf>
-Package pdftex.def Info: figs/highlevel.pdf used on input line 26.
+Package pdftex.def Info: figs/highlevel.pdf used on input line 37.
 (pdftex.def)             Requested size: 364.19664pt x 359.29498pt.
-
-
-Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 31.
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 35.
-
-<figs/ReplicationFlow.pdf, id=759, 574.145pt x 524.96124pt>
-File: figs/ReplicationFlow.pdf Graphic file (type pdf)
-
-<use figs/ReplicationFlow.pdf>
-Package pdftex.def Info: figs/ReplicationFlow.pdf used on input line 45.
-(pdftex.def)             Requested size: 364.19664pt x 333.00224pt.
- [24pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+ [28pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.53 
-      <./figs/highlevel.pdf>]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 57.
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [25pdfTeX warning (ext4): destination with the same identifier (name{figure.3
-.2}) has been already used, duplicate ignored
+l.47 \item S
+            econdly, defining a QoD vector-model based on the schema design ...
+ <./figs/highlevel.pdf>] [29] [30pdfTeX warning (ext4): destination with the sa
+me identifier (name{table.3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.58 
-      <./figs/ReplicationFlow.pdf>]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 64.
+l.95 
+     ]
+Underfull \hbox (badness 1496) in paragraph at lines 101--102
+[]\OT1/ppl/m/n/10.95 Partitioning al-lowed with even-tual con-sis-tency al-low-
+ing to rec-on-cile changes au-
+ []
 
-<figs/multi-site.pdf, id=948, 558.085pt x 494.84875pt>
+[31] <figs/ReplicationFlow.pdf, id=912, 574.145pt x 524.96124pt>
+File: figs/ReplicationFlow.pdf Graphic file (type pdf)
+
+<use figs/ReplicationFlow.pdf>
+Package pdftex.def Info: figs/ReplicationFlow.pdf used on input line 145.
+(pdftex.def)             Requested size: 364.19664pt x 333.00224pt.
+
+<figs/multi-site.pdf, id=913, 558.085pt x 494.84875pt>
 File: figs/multi-site.pdf Graphic file (type pdf)
 
 <use figs/multi-site.pdf>
-Package pdftex.def Info: figs/multi-site.pdf used on input line 94.
+Package pdftex.def Info: figs/multi-site.pdf used on input line 156.
 (pdftex.def)             Requested size: 364.19664pt x 322.93906pt.
- [26]
-<figs/HBaseQoD-class-diagram.pdf, id=972, 1122.1925pt x 1176.395pt>
-File: figs/HBaseQoD-class-diagram.pdf Graphic file (type pdf)
-
-<use figs/HBaseQoD-class-diagram.pdf>
-Package pdftex.def Info: figs/HBaseQoD-class-diagram.pdf used on input line 107
-.
-(pdftex.def)             Requested size: 455.24408pt x 477.22719pt.
- [27pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
-3}) has been already used, duplicate ignored
+ [32] [33pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.3.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.120 W
-       ith eventual consistency enforcement in place, updates and insertions...
- <./figs/multi-site.pdf>] [28pdfTeX warning (ext4): destination with the same i
-dentifier (name{figure.3.4}) has been already used, duplicate ignored
+l.177 
+       <./figs/ReplicationFlow.pdf>]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 178.
+
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [34pdfTeX warning (ext4): destination with the same identifier (name{figure.3
+.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.120 W
-       ith eventual consistency enforcement in place, updates and insertions...
- <./figs/HBaseQoD-class-diagram.pdf>] [29] [30]) (./sections/implementation.tex
-[31] [32
-
-]
-Chapter 4.
-[33] (./sections/classes/vectorK
+l.179 
+       <./figs/multi-site.pdf>]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 185.
+ [35] (./sections/operation-grouping.tex
+[36]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 1.
- [34] [35]) (./sections/classes/filtering
-[36]) [37] (./sections/operation-grouping.tex [38] [39]
-<figs/operation-grouping.pdf, id=1225, 370.38374pt x 345.29pt>
+nput line 12.
+ [37] <figs/operation-grouping.pdf, id=1128, 370.38374pt x 345.29pt>
 File: figs/operation-grouping.pdf Graphic file (type pdf)
 
 <use figs/operation-grouping.pdf>
 Package pdftex.def Info: figs/operation-grouping.pdf used on input line 35.
 (pdftex.def)             Requested size: 222.23195pt x 207.17558pt.
 
-<figs/ginja2-grouping-send.pdf, id=1228, 560.0925pt x 397.485pt>
+<figs/ginja2-grouping-send.pdf, id=1131, 560.0925pt x 397.485pt>
 File: figs/ginja2-grouping-send.pdf Graphic file (type pdf)
 
 <use figs/ginja2-grouping-send.pdf>
 Package pdftex.def Info: figs/ginja2-grouping-send.pdf used on input line 46.
 (pdftex.def)             Requested size: 336.05809pt x 238.49283pt.
 
-<figs/ginja1-grouping-receive.pdf, id=1231, 289.08pt x 200.75pt>
+<figs/ginja1-grouping-receive.pdf, id=1134, 289.08pt x 200.75pt>
 File: figs/ginja1-grouping-receive.pdf Graphic file (type pdf)
 
 <use figs/ginja1-grouping-receive.pdf>
 Package pdftex.def Info: figs/ginja1-grouping-receive.pdf used on input line 55
 .
 (pdftex.def)             Requested size: 173.44933pt x 120.45091pt.
-) [40pdfTeX warning (ext4): destination with the same identifier (name{figure.4
-.1}) has been already used, duplicate ignored
+) [38pdfTeX warning (ext4): destination with the same identifier (name{figure.3
+.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.94 
-      <./figs/operation-grouping.pdf>] [41pdfTeX warning (ext4): destination wi
-th the same identifier (name{figure.4.2}) has been already used, duplicate igno
-red
+l.214 
+       <./figs/operation-grouping.pdf>] [39pdfTeX warning (ext4): destination w
+ith the same identifier (name{figure.3.5}) has been already used, duplicate ign
+ored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.94 
-     pdfTeX warning (ext4): destination with the same identifier (name{figure.4
-.3}) has been already used, duplicate ignored
+l.214 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+3.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.94 
-      <./figs/ginja2-grouping-send.pdf> <./figs/ginja1-grouping-receive.pdf>])
-(./sections/evaluation.tex [42]
-Chapter 5.
-<figs/bandwidth.pdf, id=1283, 361.35pt x 252.945pt>
-File: figs/bandwidth.pdf Graphic file (type pdf)
- <use figs/bandwidth.pdf>
-Package pdftex.def Info: figs/bandwidth.pdf used on input line 47.
-(pdftex.def)             Requested size: 364.19664pt x 254.9398pt.
+l.214 
+       <./figs/ginja2-grouping-send.pdf> <./figs/ginja1-grouping-receive.pdf>]
+<figs/HBaseQoD-class-diagram.pdf, id=1180, 1122.1925pt x 1176.395pt>
+File: figs/HBaseQoD-class-diagram.pdf Graphic file (type pdf)
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figs/throughput.pdf, id=1286, 361.35pt x 252.945pt>
-File: figs/throughput.pdf Graphic file (type pdf)
- <use figs/throughput.pdf>
-Package pdftex.def Info: figs/throughput.pdf used on input line 60.
-(pdftex.def)             Requested size: 364.19664pt x 254.9398pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[43
-
-] <figs/cpu.pdf, id=1294, 361.35pt x 252.945pt>
-File: figs/cpu.pdf Graphic file (type pdf)
- <use figs/cpu.pdf>
-Package pdftex.def Info: figs/cpu.pdf used on input line 69.
-(pdftex.def)             Requested size: 364.19664pt x 254.9398pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[44pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+<use figs/HBaseQoD-class-diagram.pdf>
+Package pdftex.def Info: figs/HBaseQoD-class-diagram.pdf used on input line 220
+.
+(pdftex.def)             Requested size: 455.24408pt x 477.22719pt.
+) (./sections/implementation.tex [40]
+[41pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.88 		\item Q
-              oD fulfillment of $\sigma$=0.5\% of total updates to be replic...
- <./figs/bandwidth.pdf>]
-<figs/plot-packets-size-workloada-allbounds-latest.pdf, id=1317, 361.35pt x 252
+l.7 \chapter
+            {Implementation} <./figs/HBaseQoD-class-diagram.pdf>] [42
+
+]
+Chapter 4.
+[43] (./sections/classes/vectorK.tex [44] [45])
+(./sections/classes/filtering.tex
+Overfull \hbox (26.75568pt too wide) in paragraph at lines 2--4
+[][][][][][][][][][][][][]  
+ []
+
+[46]
+Overfull \hbox (9.75525pt too wide) in paragraph at lines 16--17
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][] 
+ []
+
+) [47] [48]) (./sections/evaluation.tex [49] [50
+
+]
+Chapter 5.
+[51] [52]
+<figs/plot-packets-size-workloada-allbounds-latest.pdf, id=1365, 361.35pt x 252
 .945pt>
 File: figs/plot-packets-size-workloada-allbounds-latest.pdf Graphic file (type 
 pdf)
  <use figs/plot-packets-size-workloada-allbounds-latest.pdf>
 Package pdftex.def Info: figs/plot-packets-size-workloada-allbounds-latest.pdf 
-used on input line 100.
-(pdftex.def)             Requested size: 364.19664pt x 254.9398pt.
+used on input line 66.
+(pdftex.def)             Requested size: 469.75496pt x 328.82846pt.
 
-<figs/plot-packets-size-workloada-modified-allbounds-30threads.pdf, id=1318, 64
-2.4pt x 481.8pt>
-File: figs/plot-packets-size-workloada-modified-allbounds-30threads.pdf Graphic
- file (type pdf)
+Overfull \hbox (14.51088pt too wide) in paragraph at lines 66--67
+ [][] 
+ []
 
-<use figs/plot-packets-size-workloada-modified-allbounds-30threads.pdf>
-Package pdftex.def Info: figs/plot-packets-size-workloada-modified-allbounds-30
-threads.pdf used on input line 115.
-(pdftex.def)             Requested size: 364.19664pt x 273.15115pt.
+[53] [54pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.5.1}) has been already used, duplicate ignored
 
-[45pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.72 
+      <./figs/plot-packets-size-workloada-allbounds-latest.pdf>]
+<figs/plot-packets-size-workloada-modified-allbounds-latest.pdf, id=1402, 361.3
+5pt x 252.945pt>
+File: figs/plot-packets-size-workloada-modified-allbounds-latest.pdf Graphic fi
+le (type pdf)
+
+<use figs/plot-packets-size-workloada-modified-allbounds-latest.pdf>
+Package pdftex.def Info: figs/plot-packets-size-workloada-modified-allbounds-la
+test.pdf used on input line 88.
+(pdftex.def)             Requested size: 469.75496pt x 328.82846pt.
+
+Overfull \hbox (14.51088pt too wide) in paragraph at lines 88--89
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+[55] [56pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.5.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.102 	\item D
+              efault data size: 1 KB records (10 fields, 100 bytes each, plu...
+ <./figs/plot-packets-size-workloada-modified-allbounds-latest.pdf>]
+<figs/multiplot-size-workloadb-allbounds.pdf, id=1437, 361.35pt x 252.945pt>
+File: figs/multiplot-size-workloadb-allbounds.pdf Graphic file (type pdf)
+
+<use figs/multiplot-size-workloadb-allbounds.pdf>
+Package pdftex.def Info: figs/multiplot-size-workloadb-allbounds.pdf used on in
+put line 111.
+(pdftex.def)             Requested size: 469.75496pt x 328.82846pt.
+
+Overfull \hbox (14.51088pt too wide) in paragraph at lines 111--112
+ [][] 
+ []
+
+[57pdfTeX warning (ext4): destination with the same identifier (name{figure.5.3
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.118 \end{figure*}
-                    <./figs/throughput.pdf>]) (./sections/conclusion.tex
-[46pdfTeX warning (ext4): destination with the same identifier (name{figure.5.3
+l.117 
+       <./figs/multiplot-size-workloadb-allbounds.pdf>]
+<figs/multiplot-size-workloadf-allbounds.pdf, id=1468, 361.35pt x 252.945pt>
+File: figs/multiplot-size-workloadf-allbounds.pdf Graphic file (type pdf)
+
+<use figs/multiplot-size-workloadf-allbounds.pdf>
+Package pdftex.def Info: figs/multiplot-size-workloadf-allbounds.pdf used on in
+put line 134.
+(pdftex.def)             Requested size: 469.75496pt x 328.82846pt.
+
+Overfull \hbox (14.51088pt too wide) in paragraph at lines 134--135
+ [][] 
+ []
+
+[58] [59pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.5.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.147 
+       <./figs/multiplot-size-workloadf-allbounds.pdf>]
+<figs/freshness-latest.pdf, id=1503, 361.35pt x 252.945pt>
+File: figs/freshness-latest.pdf Graphic file (type pdf)
+
+<use figs/freshness-latest.pdf>
+Package pdftex.def Info: figs/freshness-latest.pdf used on input line 150.
+(pdftex.def)             Requested size: 469.75496pt x 328.82846pt.
+
+Overfull \hbox (14.51088pt too wide) in paragraph at lines 150--151
+ [][] 
+ []
+
+
+<figs/timestamps-non-critical-updates-false.pdf, id=1506, 794.97pt x 614.295pt>
+File: figs/timestamps-non-critical-updates-false.pdf Graphic file (type pdf)
+<use figs/timestamps-non-critical-updates-false.pdf>
+Package pdftex.def Info: figs/timestamps-non-critical-updates-false.pdf used on
+ input line 166.
+(pdftex.def)             Requested size: 455.24408pt x 351.79211pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figs/timestamps-critical-updates.pdf, id=1509, 794.97pt x 614.295pt>
+File: figs/timestamps-critical-updates.pdf Graphic file (type pdf)
+
+<use figs/timestamps-critical-updates.pdf>
+Package pdftex.def Info: figs/timestamps-critical-updates.pdf used on input lin
+e 175.
+(pdftex.def)             Requested size: 455.24408pt x 351.79211pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[60] [61] <figs/bandwidth.pdf, id=1522, 361.35pt x 252.945pt>
+File: figs/bandwidth.pdf Graphic file (type pdf)
+
+<use figs/bandwidth.pdf>
+Package pdftex.def Info: figs/bandwidth.pdf used on input line 195.
+(pdftex.def)             Requested size: 364.19664pt x 254.9398pt.
+ <figs/throughput.pdf, id=1523, 361.35pt x 252.945pt>
+File: figs/throughput.pdf Graphic file (type pdf)
+
+<use figs/throughput.pdf>
+Package pdftex.def Info: figs/throughput.pdf used on input line 202.
+(pdftex.def)             Requested size: 364.19664pt x 254.9398pt.
+ <figs/cpu.pdf, id=1524, 361.35pt x 252.945pt>
+File: figs/cpu.pdf Graphic file (type pdf)
+
+<use figs/cpu.pdf>
+Package pdftex.def Info: figs/cpu.pdf used on input line 209.
+(pdftex.def)             Requested size: 364.19664pt x 254.9398pt.
+) (./sections/conclusion.tex [62] [63pdfTeX warning (ext4): destination with th
+e same identifier (name{figure.5.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.23 \chapter
+             {Conclusion} <./figs/freshness-latest.pdf>] [64pdfTeX warning (ext
+4): destination with the same identifier (name{figure.5.6}) has been already us
+ed, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.23 \chapter
+             {Conclusion} <./figs/timestamps-non-critical-updates-false.pdf>]
+[65pdfTeX warning (ext4): destination with the same identifier (name{figure.5.7
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.23 \chapter
-             {Conclusion} <./figs/cpu.pdf>] [47pdfTeX warning (ext4): destinati
-on with the same identifier (name{figure.5.4}) has been already used, duplicate
- ignored
+             {Conclusion} <./figs/timestamps-critical-updates.pdf>] [66pdfTeX w
+arning (ext4): destination with the same identifier (name{figure.5.8}) has been
+ already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.23 \chapter
              {Conclusion}pdfTeX warning (ext4): destination with the same ident
-ifier (name{figure.5.5}) has been already used, duplicate ignored
+ifier (name{figure.5.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.23 \chapter
-             {Conclusion} <./figs/plot-packets-size-workloada-allbounds-latest.
-pdf> <./figs/plot-packets-size-workloada-modified-allbounds-30threads.pdf>]
-[48
+             {Conclusion} <./figs/bandwidth.pdf> <./figs/throughput.pdf>]
+[67pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+0}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.23 \chapter
+             {Conclusion} <./figs/cpu.pdf>] [68
 
 ]
 Chapter 6.
-) [49] (./sections/bibliography.tex (./document.bbl [50
+[69]) (./sections/future.tex) [70] (./sections/bibliography.tex (./document.bbl
+[71
 
-] [51] [52]
-Underfull \hbox (badness 4120) in paragraph at lines 169--172
-[]\OT1/ppl/m/n/10 Lehene, C. (2010).  Why we are us-ing Hbase part 2.  [][]$\OT
-1/pcr/m/n/10 http : / / hstack . org /
+]
+Overfull \hbox (14.17833pt too wide) in paragraph at lines 114--117
+[]\OT1/ppl/m/n/10.95 George, L. (2012).  Ad-vanced Hbase.  http://www.slideshar
+e.net/jaxlondon2012/hbase-
  []
 
-[53]))
+[72] [73]))
 No file document.ind.
-[54]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 226.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 226.
+[74]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
  (./document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 226.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 226.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 3EDC1943D947CEB95F4C3B8A0362282E;4988.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 226.
+(rerunfilecheck)             Checksum: F3992569DF61847724A3E38662107210;4878.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
  ) 
 Here is how much of TeX's memory you used:
- 10424 strings out of 493488
- 147600 string characters out of 3141326
- 301336 words of memory out of 3000000
- 13123 multiletter control sequences out of 15000+200000
- 29102 words of font info for 83 fonts, out of 3000000 for 9000
+ 10533 strings out of 493488
+ 149780 string characters out of 3141326
+ 296556 words of memory out of 3000000
+ 13168 multiletter control sequences out of 15000+200000
+ 33586 words of font info for 94 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 39i,15n,40p,1953b,1923s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.4.4} has been referenced but does not exist,
- replaced by a fixed one
-
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texl
-ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
-e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
-012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-12/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/
-2012/texmf-dist/fonts/type1/public/hfbright/hfbr8.pfb></usr/local/texlive/2012/
-texmf-dist/fonts/type1/public/hfbright/hfbrsl8.pfb></usr/local/texlive/2012/tex
-mf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2012/texmf-dist/
-fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/t
-ype1/urw/palatino/uplr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/ur
-w/palatino/uplr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palat
-ino/uplri8a.pfb>
-Output written on document.pdf (74 pages, 1819217 bytes).
+ 39i,13n,40p,1262b,1866s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
+ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2012/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texliv
+e/2012/texmf-dist/fonts/type1/public/hfbright/hfbr8.pfb></usr/local/texlive/201
+2/texmf-dist/fonts/type1/public/hfbright/hfbrsl8.pfb></usr/local/texlive/2012/t
+exmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2012/texmf-dis
+t/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts
+/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/
+urw/palatino/uplr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/pal
+atino/uplri8a.pfb>
+Output written on document.pdf (94 pages, 2060086 bytes).
 PDF statistics:
- 1562 PDF objects out of 1728 (max. 8388607)
- 1308 compressed objects within 14 object streams
- 347 named destinations out of 1000 (max. 500000)
- 644 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1844 PDF objects out of 2073 (max. 8388607)
+ 1534 compressed objects within 16 object streams
+ 393 named destinations out of 1000 (max. 500000)
+ 653 words of extra memory for PDF output out of 10000 (max. 10000000)
 

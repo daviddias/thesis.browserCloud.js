@@ -1,11 +1,11 @@
-At the application level, it may be useful for HBase clients to enforce the same consistency level on groups of operations despite affected data containers having different QoD bounds associated. In other words, there may be specific situations where write operations need to be grouped so that they can be all handled at the same consistency level and propagated atomically to slave clusters. 
+At the application level, it may be useful for HBase clients to enforce the same consistency level on groups of operations despite affected data containers having different HBase-QoD bounds associated. In other words, there may be specific situations where write operations need to be grouped so that they can be all handled at the same consistency level and propagated atomically to slave clusters.
 
 For example, publication of user statuses in social networks is usually handled at eventual consistency, but if they refer to new friends being added (e.g., an update to the data container holding the friends of a user), they should they should be handled at a stronger consistency level to ensure they are atomically visible along with the list of friends of the user in respect to the semantics we describe here.
 
-In order to not violate QoD bounds and maintain consistency guarantees, all data containers of operations being grouped must be propagated either immediately after the block execution, or when any of the QoD bounds associated to the operations has been reached. When a block is triggered for replication, all respective QoD bounds are naturally reset. 
+In order to not violate HBase-QoD bounds and maintain consistency guarantees, all data containers of operations being grouped must be propagated either immediately after the block execution, or when any of the HBase-QoD bounds associated to the operations has been reached. When a block is triggered for replication, all respective HBase-QoD bounds are naturally reset.
 
 To enable this behavior we propose extending the HBase client libraries to provide atomically consistent blocks.
-Namely, adding two new methods to HTable class in order to delimit the consistency blocks: \textit{startConsistentBlock} and \textit{endConsistentBlock}. Each block, through the method \textit{startConsistentBlock}, can be parameterized with one of the two options: i) \textit{IMMEDIATE}, which enforces stronger consistency for the whole block of operations within it; and ii) \textit{ANY}, which replicates a whole block as soon as any QoD vector field bound, associated with an operation inside the block is reached.
+Namely, adding two new methods to HTable class in order to delimit the consistency blocks: \textit{startConsistentBlock} and \textit{endConsistentBlock}. Each block, through the method \textit{startConsistentBlock}, can be parameterized with one of the two options: i) \textit{IMMEDIATE}, which enforces stronger consistency for the whole block of operations within it; and ii) \textit{ANY}, which replicates a whole block as soon as any HBase-QoD vector field bound, associated with an operation inside the block is reached.
 
 Next, in Listing~\ref{lst:group-listing} we provide an illustrative simple example of a social network where three containers with different consistency levels are modified. Note that we are not aiming at full transactional support, as it would be possible to change the same data containers modified by a set of grouped operations, at the same time, from other operations individually.
 
@@ -27,7 +27,7 @@ htable.put(put3);
 htable.endConsistentBlock();
 \end{lstlisting}
 
-\subsection{Proposed scenario}
+\subsection{Prototypical Example}
 One of the key factors for having operations grouping working together with HBase-QoD is the depicted in Figure~\ref{fig-qod-grouping}. We can see that the operations that are grouped need to communicate over the network less often to other clusters, while arriving earlier in some cases than updates shipping as if several individual operations from location Cluster A were performed. This is due to the ability of HBase-QoD to deliver demanded updates in a consistent timely-fashion rather than on a per request arrival basis, which means possibly delaying the replication process by a fraction of the amount of communication that can be saved instead using the mentioned technique.
 
 \begin{figure}
@@ -37,7 +37,7 @@ One of the key factors for having operations grouping working together with HBas
 \label{fig-qod-grouping}
 \end{figure}
 
-Another experiment that has been conclusive in terms of grouping of operations is the comparison between different QoD levels, in the case of values for vector field K (-, $\sigma$, -). Setting the operation grouping for a small number of updates still shows that a timestamp in the receiving server is the same for every item in the group. The following set of operations is ed in Figures~\ref{fig-shipping-grouping} and ~\ref{fig-receiving-grouping}. The same principle can be applied and has been demonstrated to work in the same fashion for different sets of containers.
+Another experiment that has been conclusive in terms of grouping of operations is the comparison between different HBase-QoD levels, in the case of values for vector field K (-, $\sigma$, -). Setting the operation grouping for a small number of updates still shows that a timestamp in the receiving server is the same for every item in the group. The following set of operations is ed in Figures~\ref{fig-shipping-grouping} and ~\ref{fig-receiving-grouping}. The same principle can be applied and has been demonstrated to work in the same fashion for different sets of containers.
 
 %(table_name::columnFamily).
 
@@ -56,3 +56,6 @@ In the following Figure~\ref{fig-receiving-grouping}, we observe how the time-st
 \caption{Receiving from ginja-a2 in ginja-a1}
 \label{fig-receiving-grouping}
 \end{figure}
+
+
+The grouping of operations is efficient in terms of ensuring certain data arrives at the same given time to a destination cluster or remote peer we want to enforce it to due to any sort of Service Level Agreement or objectives. That is a new feature in itself into HBase.
