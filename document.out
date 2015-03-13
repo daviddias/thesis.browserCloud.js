@@ -7,63 +7,16 @@
 \BOOKMARK [1][]{section.1.6}{Publications}{chapter.1}% 7
 \BOOKMARK [1][]{section.1.7}{Structure of the thesis}{chapter.1}% 8
 \BOOKMARK [0][]{chapter.2}{Related Work}{}% 9
-\BOOKMARK [1][]{section.2.1}{Types of Storage}{chapter.2}% 10
-\BOOKMARK [2][]{subsection.2.1.1}{Key-Value Stores}{section.2.1}% 11
-\BOOKMARK [2][]{subsection.2.1.2}{Document Stores}{section.2.1}% 12
-\BOOKMARK [2][]{subsection.2.1.3}{Column-Family Stores \(or extensible record stores\)}{section.2.1}% 13
-\BOOKMARK [2][]{subsection.2.1.4}{Graph Databases}{section.2.1}% 14
-\BOOKMARK [1][]{section.2.2}{Design Issues}{chapter.2}% 15
-\BOOKMARK [2][]{subsection.2.2.1}{Organization}{section.2.2}% 16
-\BOOKMARK [3][]{subsubsection.2.2.1.1}{Distribution}{subsection.2.2.1}% 17
-\BOOKMARK [3][]{subsubsection.2.2.1.2}{Indexing}{subsection.2.2.1}% 18
-\BOOKMARK [3][]{subsubsection.2.2.1.3}{Querying languages}{subsection.2.2.1}% 19
-\BOOKMARK [2][]{subsection.2.2.2}{Semantics and Enforcement}{section.2.2}% 20
-\BOOKMARK [3][]{subsubsection.2.2.2.1}{Consistency}{subsection.2.2.2}% 21
-\BOOKMARK [3][]{subsubsection.2.2.2.2}{Concurrency Control}{subsection.2.2.2}% 22
-\BOOKMARK [2][]{subsection.2.2.3}{Dependability}{section.2.2}% 23
-\BOOKMARK [3][]{subsubsection.2.2.3.1}{Replication}{subsection.2.2.3}% 24
-\BOOKMARK [1][]{section.2.3}{Typical distributed data stores in use}{chapter.2}% 25
-\BOOKMARK [2][]{subsection.2.3.1}{Key-Value Stores}{section.2.3}% 26
-\BOOKMARK [3][]{subsubsection.2.3.1.1}{Voldemort}{subsection.2.3.1}% 27
-\BOOKMARK [3][]{subsubsection.2.3.1.2}{Dynamo}{subsection.2.3.1}% 28
-\BOOKMARK [2][]{subsection.2.3.2}{Redis}{section.2.3}% 29
-\BOOKMARK [2][]{subsection.2.3.3}{MemBase \(namely CouchDB\)}{section.2.3}% 30
-\BOOKMARK [2][]{subsection.2.3.4}{Document Stores}{section.2.3}% 31
-\BOOKMARK [3][]{subsubsection.2.3.4.1}{MongoDB}{subsection.2.3.4}% 32
-\BOOKMARK [3][]{subsubsection.2.3.4.2}{CouchDB}{subsection.2.3.4}% 33
-\BOOKMARK [2][]{subsection.2.3.5}{Column-Stores}{section.2.3}% 34
-\BOOKMARK [3][]{subsubsection.2.3.5.1}{HBase}{subsection.2.3.5}% 35
-\BOOKMARK [3][]{subsubsection.2.3.5.2}{Spanner}{subsection.2.3.5}% 36
-\BOOKMARK [3][]{subsubsection.2.3.5.3}{PNUTS}{subsection.2.3.5}% 37
-\BOOKMARK [3][]{subsubsection.2.3.5.4}{Megastore}{subsection.2.3.5}% 38
-\BOOKMARK [3][]{subsubsection.2.3.5.5}{Azure}{subsection.2.3.5}% 39
-\BOOKMARK [3][]{subsubsection.2.3.5.6}{Cassandra}{subsection.2.3.5}% 40
-\BOOKMARK [2][]{subsection.2.3.6}{Relevant distributed and replicated deployments}{section.2.3}% 41
-\BOOKMARK [3][]{subsubsection.2.3.6.1}{Google Cloud Data Store}{subsection.2.3.6}% 42
-\BOOKMARK [3][]{subsubsection.2.3.6.2}{MapReduce Framework}{subsection.2.3.6}% 43
-\BOOKMARK [0][]{chapter.3}{Architecture}{}% 44
-\BOOKMARK [1][]{section.3.1}{System Architecture Overview}{chapter.3}% 45
-\BOOKMARK [1][]{section.3.2}{From eventual consistency to QoD consistency}{chapter.3}% 46
-\BOOKMARK [2][]{subsection.3.2.1}{Challenges addressed in HBase-QoD}{section.3.2}% 47
-\BOOKMARK [1][]{section.3.3}{Network Architecture and Protocols}{chapter.3}% 48
-\BOOKMARK [1][]{section.3.4}{QoD Consistency Enforcement}{chapter.3}% 49
-\BOOKMARK [2][]{subsection.3.4.1}{Caching updates}{section.3.4}% 50
-\BOOKMARK [2][]{subsection.3.4.2}{Operation Grouping}{section.3.4}% 51
-\BOOKMARK [2][]{subsection.3.4.3}{Prototypical Example}{section.3.4}% 52
-\BOOKMARK [1][]{section.3.5}{Software Architecture}{chapter.3}% 53
-\BOOKMARK [0][]{chapter.4}{Implementation}{}% 54
-\BOOKMARK [1][]{section.4.1}{Overall implementation approach}{chapter.4}% 55
-\BOOKMARK [1][]{section.4.2}{Integrating a HBase-QoD module}{chapter.4}% 56
-\BOOKMARK [2][]{subsection.4.2.1}{Extensions to HBase internal mechanisms}{section.4.2}% 57
-\BOOKMARK [0][]{chapter.5}{Evaluation}{}% 58
-\BOOKMARK [1][]{section.5.1}{Overview}{chapter.5}% 59
-\BOOKMARK [1][]{section.5.2}{Experimental Testbed}{chapter.5}% 60
-\BOOKMARK [1][]{section.5.3}{Performance benchmarking suite}{chapter.5}% 61
-\BOOKMARK [2][]{subsection.5.3.1}{Workloads from YCSB}{section.5.3}% 62
-\BOOKMARK [1][]{section.5.4}{Assessing data "freshness"}{chapter.5}% 63
-\BOOKMARK [2][]{subsection.5.4.1}{Data arrival measured on sets of updates received}{section.5.4}% 64
-\BOOKMARK [2][]{subsection.5.4.2}{Data arrival measured in a per update basis}{section.5.4}% 65
-\BOOKMARK [1][]{section.5.5}{Overall Performance and Resource Utilization}{chapter.5}% 66
-\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 67
-\BOOKMARK [1][]{section.6.1}{Concluding remarks}{chapter.6}% 68
-\BOOKMARK [1][]{section.6.2}{Future Work}{chapter.6}% 69
+\BOOKMARK [1][]{section.2.1}{yo}{chapter.2}% 10
+\BOOKMARK [0][]{chapter.3}{Architecture}{}% 11
+\BOOKMARK [1][]{section.3.1}{System Architecture Overview}{chapter.3}% 12
+\BOOKMARK [0][]{chapter.4}{Implementation}{}% 13
+\BOOKMARK [1][]{section.4.1}{Overall implementation approach}{chapter.4}% 14
+\BOOKMARK [1][]{section.4.2}{Integrating a HBase-QoD module}{chapter.4}% 15
+\BOOKMARK [0][]{chapter.5}{Evaluation}{}% 16
+\BOOKMARK [1][]{section.5.1}{Overview}{chapter.5}% 17
+\BOOKMARK [1][]{section.5.2}{Experimental Testbed}{chapter.5}% 18
+\BOOKMARK [1][]{section.5.3}{Performance benchmarking suite}{chapter.5}% 19
+\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 20
+\BOOKMARK [1][]{section.6.1}{Concluding remarks}{chapter.6}% 21
+\BOOKMARK [1][]{section.6.2}{Future Work}{chapter.6}% 22

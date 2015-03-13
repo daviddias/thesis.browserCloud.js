@@ -1,25 +1,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Transactional Storage for geo-replicated systems from \cite {Sovran:2011}}}{16}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The main HBase architecture from \cite {SlidesLars}}}{21}{figure.2.2}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces HBase QoD high-level}}{28}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Replication Flow of updates}}{33}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces HBase QoD operation}}{34}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Resulting scenario of grouping operations in a time-lined based diagram using HBase-QoD versus a regular HBase deployment at Cluster B}}{38}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Sending from ginja-a2 to ginja-a1}}{39}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Receiving from ginja-a2 in ginja-a1}}{39}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces HBase-QoD class diagram}}{41}{figure.3.7}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Transactional Storage for geo-replicated systems from \cite {Sovran:2011}}}{3}{figure.2.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Bandwidth usage for Workload A using 5M records using HBase-QoD bounds of 0.5 and 2\% for $\sigma $ of K.}}{54}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Bandwidth usage for Workload A-Modified using 5M records using HBase-QoD bounds of 0.5 and 2\% for $\sigma $ of K.}}{56}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Bandwidth usage for Workload B using 500K operations in a total of 500K records using different HBase-QoD bounds for $\sigma $ in K.}}{57}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Bandwidth usage for Workload F using 500K operations in a total of 500K records using different HBase-QoD bounds for $\sigma $ in K.}}{59}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Freshness of updates with several HBase-QoD bounds}}{63}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Difference in arrival times with and without QoD for non-critical updates}}{64}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Difference in arrival time with and without QoD bounds for critical updates}}{65}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Bandwidth usage and replication frequency for a typical workload with and very small HBase-QoD constraint for K($\sigma $)}}{66}{figure.5.8}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Throughput for several HBase-QoD configurations}}{66}{figure.5.9}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces CPU usage over time with HBase-QoD enabled}}{67}{figure.5.10}
+\addvspace {10\p@ }
 \addvspace {10\p@ }

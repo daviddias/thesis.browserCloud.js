@@ -1,0 +1,204 @@
+\def\date{MONTH YEAR}
+\def\titulo{YOUR AWESOME THESIS TITLE}
+
+\hypersetup{colorlinks,
+   debug=false,
+   linkcolor=blue,
+   citecolor=red,
+   urlcolor=blue,
+   bookmarksopen=true,
+   pdftitle={\titulo},
+   pdfauthor={YOUR NAME}
+   pdfsubject={YOUR MASTERS NAME (like MSc in advanced lullaby},
+   pdfkeywords={KEYWORD1,ANOTHERKEYWORD}
+}
+
+\thispagestyle{empty}
+\begin{singlespace}
+\vbox to\textheight{%
+\vskip-1.3in
+\hskip-17mm\vbox to50mm{
+\vfil
+\begin{tabular}{l}
+\includegraphics[width=5cm]{figs/preliminar/Logo_IST_web.eps}
+\end{tabular}
+\vfil
+\vfil
+}%
+\vskip18mm%---------- COVER IMAGE -------------
+\vbox to25mm{\LARGE\sl
+\vfil
+%\centerline{\psfig{file=figs/preliminar/tarantula.eps,height=25mm}}
+\vfil
+}%
+\vskip6mm%---------- TITLE -----------------------
+\vbox to25mm{\LARGE\bf
+\vfil
+\begin{center}
+\titulo
+\end{center}
+\vfil
+}%
+\vskip10mm%---- NAME AND ACTUAL GRADE  -----------
+\vbox to25mm{\large
+\vfil
+\begin{center}
+{\Large\bf YOUR NAME AGAIN}\\
+\end{center}
+\vfil
+}
+\vskip8mm%---------- GRADE TO OBTAIN  -------------
+\vbox to8mm{\large
+\vfil
+\centerline{Thesis to obtain the Master of Science Degree in}
+%\vskip6mm
+{\LARGE\bf \centerline{YOUR DEGREE}}
+\vfil
+}
+\vskip10mm%---------- JURI -----------
+\vbox to7mm{\Large\bf
+\vfil
+\begin{center}
+{\Large\bf Examination Committee}\\
+\end{center}
+\vfil
+}
+
+\vbox to28mm{\large
+\vfil
+\begin{center}
+Chairperson: Prof. Doutor. Lu\'{i}s Eduardo Teixeira Rodrigues\\
+Supervisor: Prof. Doutor. Lu\'{i}s Manuel Antunes Veiga\\
+Member of the Committee: Prof. Doutor. Johan Montelius\\
+\end{center}
+\vfil
+}
+\vskip28mm%---------- DATE -------------------------
+\vbox to4mm{\Large\bf
+\vfil
+\begin{center}
+\fontsize{14pt}{12pt}\selectfont \date
+\end{center}
+\vfil
+}
+}
+\end{singlespace}
+\newpage
+
+
+
+
+\chapter*{Acknowledgements}
+\thispagestyle{empty}
+
+WHO YOU ARE THANKFUL TO :D
+
+\vspace{15pt}
+\vfill
+\begin{flushright}
+  \begin{minipage}{8cm}
+    \begin{center}
+    20th of September, Lisbon \\ 
+	YOUR NAME AGAIN
+    \end{center}
+  \end{minipage}
+\end{flushright}
+
+\cleardoublepage
+
+\chapter*{}
+\thispagestyle{empty}
+\vfill
+\mbox{}
+\vfill\Large
+\begin{flushright}
+  \begin{minipage}{8cm}
+    \begin{center}
+
+--CHEESY INSCRIPTION (dedicatória)
+
+    \end{center}
+  \end{minipage}
+\end{flushright}
+\normalsize\vfill
+
+\cleardoublepage
+
+
+
+
+
+\chapter*{Abstract}
+\thispagestyle{empty}
+
+ABSTRACT 
+ABSTRACT 
+ABSTRACT 
+ABSTRACT 
+ABSTRACT 
+ABSTRACT 
+ABSTRACT 
+ABSTRACT 
+ABSTRACT 
+ABSTRACT 
+ABSTRACT 
+
+
+\newpage
+\chapter*{Resumo}
+\thispagestyle{empty}
+
+IGUAL AO ABSTRACT MAS EM PORTUGUÊS
+IGUAL AO ABSTRACT MAS EM PORTUGUÊS
+IGUAL AO ABSTRACT MAS EM PORTUGUÊS
+IGUAL AO ABSTRACT MAS EM PORTUGUÊS
+IGUAL AO ABSTRACT MAS EM PORTUGUÊS
+IGUAL AO ABSTRACT MAS EM PORTUGUÊS
+IGUAL AO ABSTRACT MAS EM PORTUGUÊS
+IGUAL AO ABSTRACT MAS EM PORTUGUÊS
+IGUAL AO ABSTRACT MAS EM PORTUGUÊS
+IGUAL AO ABSTRACT MAS EM PORTUGUÊS
+
+
+
+\newpage
+
+\chapter*{}
+\thispagestyle{empty}
+
+\section*{Palavras Chave}
+{\large % EM PORTUGUÊS
+
+\noindent Geo-Replica\c{c}\~ao
+\noindent Bases de Dados NoSQL
+\noindent HBase
+\noindent Consist\^encia Adapt\'avel %Tunable Consistency
+\noindent Qualidade de Dados
+\noindent Divergência de Réplicas em Sistemas Geo-replicados
+}
+
+\section*{Keywords}
+
+{\large % EM INGLÊS
+\noindent Geo-Replication
+\noindent NoSQL Databases
+\noindent HBase
+\noindent Eventual Consistency
+\noindent Quality of Data
+\noindent Tunable Consistency
+\noindent Divergence-bounding
+
+}
+
+\vfill
+
+\cleardoublepage
+\pagestyle{plain}
+\pagenumbering{roman}
+\def\contentsname{Index}
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\cleardoublepage
