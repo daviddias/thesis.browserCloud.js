@@ -4,11 +4,11 @@ The top-level auxiliary file: document.aux
 The style file: chicago.bst
 Database file #1: bibliography.bib
 Warning--string name "rocq" is undefined
---line 601 of file bibliography.bib
+--line 590 of file bibliography.bib
 Warning--string name "inria" is undefined
---line 605 of file bibliography.bib
+--line 594 of file bibliography.bib
 Warning--string name "rr" is undefined
---line 609 of file bibliography.bib
+--line 598 of file bibliography.bib
 Warning--empty institution in Saphiro:2011
 You've used 2 entries,
             2861 wiz_defined-function locations,
