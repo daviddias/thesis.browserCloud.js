@@ -3,52 +3,48 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: document.aux
 The style file: chicago.bst
 Database file #1: bibliography.bib
-Warning--string name "rocq" is undefined
---line 590 of file bibliography.bib
-Warning--string name "inria" is undefined
---line 594 of file bibliography.bib
-Warning--string name "rr" is undefined
---line 598 of file bibliography.bib
-Warning--empty institution in Saphiro:2011
-You've used 2 entries,
+Warning--I didn't find a database entry for "Sovran:2011"
+Warning--I didn't find a database entry for "Saphiro:2011"
+Warning--empty year in Shirky.
+You've used 1 entry,
             2861 wiz_defined-function locations,
-            627 strings with 5248 characters,
-and the built_in function-call counts, 1657 in all, are:
-= -- 143
-> -- 130
-< -- 2
-+ -- 40
-- -- 44
-* -- 145
-:= -- 296
-add.period$ -- 7
-call.type$ -- 2
-change.case$ -- 16
-chr.to.int$ -- 2
-cite$ -- 3
-duplicate$ -- 49
-empty$ -- 90
-format.name$ -- 52
-if$ -- 319
+            620 strings with 5007 characters,
+and the built_in function-call counts, 476 in all, are:
+= -- 39
+> -- 26
+< -- 0
++ -- 6
+- -- 10
+* -- 26
+:= -- 99
+add.period$ -- 2
+call.type$ -- 1
+change.case$ -- 6
+chr.to.int$ -- 1
+cite$ -- 2
+duplicate$ -- 15
+empty$ -- 31
+format.name$ -- 10
+if$ -- 80
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 1
-newline$ -- 13
-num.names$ -- 20
-pop$ -- 14
+missing$ -- 0
+newline$ -- 7
+num.names$ -- 10
+pop$ -- 13
 preamble$ -- 1
-purify$ -- 28
+purify$ -- 12
 quote$ -- 0
-skip$ -- 54
+skip$ -- 10
 stack$ -- 0
-substring$ -- 72
-swap$ -- 19
-text.length$ -- 2
+substring$ -- 20
+swap$ -- 5
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 40
+type$ -- 20
 warning$ -- 1
-while$ -- 19
+while$ -- 10
 width$ -- 0
-write$ -- 32
-(There were 4 warnings)
+write$ -- 12
+(There were 3 warnings)

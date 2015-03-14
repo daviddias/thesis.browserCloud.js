@@ -1,16 +1,8 @@
 \begin{thebibliography}{}
 
-\bibitem[\protect\citeauthoryear{Marc~Shapiro \& Carlos~Baquero}{Marc~Shapiro
-  \& Carlos~Baquero}{2011}]{Saphiro:2011}
-Marc~Shapiro, N.~P. \& M.~Z. Carlos~Baquero (2011, July).
-\newblock Conflict-free replicated data types.
-\newblock Technical Report RR-7687.
-
-\bibitem[\protect\citeauthoryear{Sovran, Power, Aguilera, \& Li}{Sovran
-  et~al.}{2011}]{Sovran:2011}
-Sovran, Y., R.~Power, M.~K. Aguilera, \& J.~Li (2011).
-\newblock Transactional storage for geo-replicated systems.
-\newblock In {\em Proceedings of the Twenty-Third ACM Symposium on Operating
-  Systems Principles}, SOSP '11, New York, NY, USA, pp.\  385--400. ACM.
+\bibitem[\protect\citeauthoryear{Shirky.}{Shirky.}{}]{Shirky.}
+Shirky., C.
+\newblock {Clay shirky’s writings about the internet. In
+  http://www.shirky.com/}.
 
 \end{thebibliography}
