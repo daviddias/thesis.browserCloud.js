@@ -3,48 +3,111 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: document.aux
 The style file: chicago.bst
 Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "Sovran:2011"
-Warning--I didn't find a database entry for "Saphiro:2011"
+Warning--I didn't find a database entry for "Anderson2015"
+Warning--no journal in Anderson2002
+Warning--page numbers missing in Anderson2002
+Warning--no journal in Bakhtiari
+Warning--no number and no volume in Bakhtiari
+Warning--empty year in Bharambe
+Warning--no journal in Bharambe
+Warning--no number and no volume in Bharambe
+Warning--no number and no volume in Costa2012
+Warning--no journal in Decandia2007
+Warning--no number and no volume in Decandia2007
+Warning--no number and no volume in Definition2003
+Warning--no number and no volume in Desmedt;1998
+Warning--page numbers missing in Desmedt;1998
+Warning--no number and no volume in Duda2013
+Warning--page numbers missing in Duda2013
+Warning--no journal in Filipe2011
+Warning--no number and no volume in Filipe2011
+Warning--page numbers missing in Filipe2011
+Warning--no journal in Golle2001
+Warning--no number and no volume in Golle2001
+Warning--can't use both volume and number fields in Handley
+Warning--empty year in JeffreyDean;SanjayGhemawat
+Warning--no number and no volume in Karger2004
+Warning--no journal in Koloniari2005
+Warning--no number and no volume in Korpela2001
+Warning--no journal in Larson2002
+Warning--no number and no volume in Larson2002
+Warning--page numbers missing in Larson2002
+Warning--no volume for Marti
+Warning--empty year in Maymounkov
+Warning--no journal in Maymounkov
+Warning--no number and no volume in Maymounkov
+Warning--page numbers missing in Maymounkov
+Warning--no journal in Merelo2007
+Warning--no number and no volume in Merelo2007
+Warning--empty institution in Milojicic2003
+Warning--empty year in Navarro
+Warning--empty institution in Navarro
+Warning--no number and no volume in Nurmi2009
+Warning--no journal in Preneel1999
+Warning--no number and no volume in Preneel1999
+Warning--no number and no volume in Ranjan2006
+Warning--no journal in Rao2003
+Warning--empty year in Rieche
+Warning--no number and no volume in Rieche
+Warning--no number and no volume in Ripeanu2002a
+Warning--empty year in Rodrigues
+Warning--no journal in Rodrigues
+Warning--no number and no volume in Rodrigues
+Warning--page numbers missing in Rodrigues
+Warning--no number and no volume in Rowstron2001a
+Warning--no volume for Ruellan2013
 Warning--empty year in Shirky.
-You've used 1 entry,
+Warning--no journal in Stoica2001
+Warning--no number and no volume in Stoica2001
+Warning--empty note in Thomson2013
+Warning--no journal in Tilkov2010
+Warning--no number and no volume in Tilkov2010
+Warning--page numbers missing in Tilkov2010
+Warning--no journal in Vishnumurthy
+Warning--no number and no volume in Vishnumurthy
+Warning--page numbers missing in Vishnumurthy
+Warning--no number and no volume in Vogt
+Warning--page numbers missing in Vogt
+Warning--empty publisher in Wallach
+You've used 57 entries,
             2861 wiz_defined-function locations,
-            620 strings with 5007 characters,
-and the built_in function-call counts, 476 in all, are:
-= -- 39
-> -- 26
-< -- 0
-+ -- 6
-- -- 10
-* -- 26
-:= -- 99
-add.period$ -- 2
-call.type$ -- 1
-change.case$ -- 6
-chr.to.int$ -- 1
-cite$ -- 2
-duplicate$ -- 15
-empty$ -- 31
-format.name$ -- 10
-if$ -- 80
-int.to.chr$ -- 1
+            955 strings with 14289 characters,
+and the built_in function-call counts, 41628 in all, are:
+= -- 3446
+> -- 3364
+< -- 17
++ -- 1010
+- -- 1140
+* -- 3677
+:= -- 7621
+add.period$ -- 162
+call.type$ -- 57
+change.case$ -- 443
+chr.to.int$ -- 56
+cite$ -- 122
+duplicate$ -- 1101
+empty$ -- 2292
+format.name$ -- 1299
+if$ -- 7770
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 7
-num.names$ -- 10
-pop$ -- 13
+missing$ -- 44
+newline$ -- 273
+num.names$ -- 578
+pop$ -- 403
 preamble$ -- 1
-purify$ -- 12
+purify$ -- 782
 quote$ -- 0
-skip$ -- 10
+skip$ -- 1172
 stack$ -- 0
-substring$ -- 20
-swap$ -- 5
-text.length$ -- 0
+substring$ -- 1899
+swap$ -- 399
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 20
-warning$ -- 1
-while$ -- 10
+type$ -- 1136
+warning$ -- 65
+while$ -- 556
 width$ -- 0
-write$ -- 12
-(There were 3 warnings)
+write$ -- 724
+(There were 66 warnings)

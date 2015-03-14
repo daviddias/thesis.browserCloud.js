@@ -6,5 +6,6 @@ all:
 	rm *.log
 clean:
 	rm document.pdf
+	rm document.aux
 open:
 	open document.pdf

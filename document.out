@@ -8,33 +8,40 @@
 \BOOKMARK [1][]{section.1.7}{Structure of the thesis}{chapter.1}% 8
 \BOOKMARK [0][]{chapter.2}{Related Work}{}% 9
 \BOOKMARK [1][]{section.2.1}{Cloud computing and Open Source Cloud Platforms}{chapter.2}% 10
-\BOOKMARK [2][]{subsection.2.1.1}{3.1.1 Cloud interoperability}{section.2.1}% 11
-\BOOKMARK [3][]{paragraph.2.1.1.0.1}{IEEE Intercloud}{subsection.2.1.1}% 12
-\BOOKMARK [4][]{paragraph.2.1.1.0.2}{pkgcloud}{paragraph.2.1.1.0.1}% 13
-\BOOKMARK [4][]{paragraph.2.1.1.0.3}{Eucalyptus}{paragraph.2.1.1.0.1}% 14
+\BOOKMARK [2][]{subsection.2.1.1}{Cloud interoperability}{section.2.1}% 11
+\BOOKMARK [3][]{subsubsection.2.1.1.1}{IEEE Intercloud}{subsection.2.1.1}% 12
+\BOOKMARK [3][]{subsubsection.2.1.1.2}{pkgcloud}{subsection.2.1.1}% 13
+\BOOKMARK [3][]{subsubsection.2.1.1.3}{Eucalyptus}{subsection.2.1.1}% 14
 \BOOKMARK [1][]{section.2.2}{Volunteered resource sharing}{chapter.2}% 15
-\BOOKMARK [2][]{subsection.2.2.1}{3.2.1 Hybrid and Community Clouds}{section.2.2}% 16
-\BOOKMARK [2][]{subsection.2.2.2}{3.2.2 Cycle and Storage Sharing, using Volunteer Resource Systems}{section.2.2}% 17
-\BOOKMARK [2][]{subsection.2.2.3}{3.2.3 Peer-to-Peer Networks and Architectures -}{section.2.2}% 18
-\BOOKMARK [3][]{paragraph.2.2.3.0.1}{Unstructured -}{subsection.2.2.3}% 19
-\BOOKMARK [4][]{paragraph.2.2.3.0.2}{Structured with Distributed Hash Tables -}{paragraph.2.2.3.0.1}% 20
-\BOOKMARK [4][]{paragraph.2.2.3.0.3}{Structured without Distributed Hash Tables -}{paragraph.2.2.3.0.1}% 21
-\BOOKMARK [2][]{subsection.2.2.4}{3.2.4 Fault Tolerance, Load Balancing, Assurance and Trust -}{section.2.2}% 22
-\BOOKMARK [3][]{paragraph.2.2.4.0.1}{Fault Tolerance, Persistence and Availability}{subsection.2.2.4}% 23
-\BOOKMARK [4][]{paragraph.2.2.4.0.2}{Load Balancing}{paragraph.2.2.4.0.1}% 24
-\BOOKMARK [4][]{paragraph.2.2.4.0.3}{Assurance and Trust}{paragraph.2.2.4.0.1}% 25
+\BOOKMARK [2][]{subsection.2.2.1}{Hybrid and Community Clouds}{section.2.2}% 16
+\BOOKMARK [2][]{subsection.2.2.2}{Cycle and Storage Sharing, using Volunteer Resource Systems}{section.2.2}% 17
+\BOOKMARK [2][]{subsection.2.2.3}{Peer-to-Peer Networks and Architectures -}{section.2.2}% 18
+\BOOKMARK [3][]{subsubsection.2.2.3.1}{Unstructured -}{subsection.2.2.3}% 19
+\BOOKMARK [3][]{subsubsection.2.2.3.2}{Structured with Distributed Hash Tables -}{subsection.2.2.3}% 20
+\BOOKMARK [3][]{subsubsection.2.2.3.3}{Structured without Distributed Hash Tables -}{subsection.2.2.3}% 21
+\BOOKMARK [2][]{subsection.2.2.4}{Fault Tolerance, Load Balancing, Assurance and Trust -}{section.2.2}% 22
+\BOOKMARK [3][]{subsubsection.2.2.4.1}{Fault Tolerance, Persistence and Availability}{subsection.2.2.4}% 23
+\BOOKMARK [3][]{subsubsection.2.2.4.2}{Load Balancing}{subsection.2.2.4}% 24
+\BOOKMARK [3][]{subsubsection.2.2.4.3}{Assurance and Trust}{subsection.2.2.4}% 25
 \BOOKMARK [1][]{section.2.3}{Resource sharing using the Web platform}{chapter.2}% 26
-\BOOKMARK [2][]{subsection.2.3.1}{3.3.1 Web Platform}{section.2.3}% 27
-\BOOKMARK [2][]{subsection.2.3.2}{3.3.2 Previous attempts on cycle sharing through web platform}{section.2.3}% 28
-\BOOKMARK [0][]{chapter.3}{Architecture}{}% 29
-\BOOKMARK [1][]{section.3.1}{System Architecture Overview}{chapter.3}% 30
-\BOOKMARK [0][]{chapter.4}{Implementation}{}% 31
-\BOOKMARK [1][]{section.4.1}{Overall implementation approach}{chapter.4}% 32
-\BOOKMARK [1][]{section.4.2}{Integrating a HBase-QoD module}{chapter.4}% 33
-\BOOKMARK [0][]{chapter.5}{Evaluation}{}% 34
-\BOOKMARK [1][]{section.5.1}{Overview}{chapter.5}% 35
-\BOOKMARK [1][]{section.5.2}{Experimental Testbed}{chapter.5}% 36
-\BOOKMARK [1][]{section.5.3}{Performance benchmarking suite}{chapter.5}% 37
-\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 38
-\BOOKMARK [1][]{section.6.1}{Concluding remarks}{chapter.6}% 39
-\BOOKMARK [1][]{section.6.2}{Future Work}{chapter.6}% 40
+\BOOKMARK [2][]{subsection.2.3.1}{Web Platform}{section.2.3}% 27
+\BOOKMARK [2][]{subsection.2.3.2}{Previous attempts on cycle sharing through web platform}{section.2.3}% 28
+\BOOKMARK [1][]{section.2.4}{Analysis and discussion}{chapter.2}% 29
+\BOOKMARK [0][]{chapter.3}{Architecture}{}% 30
+\BOOKMARK [1][]{section.3.1}{Software Architecture at the node level}{chapter.3}% 31
+\BOOKMARK [2][]{subsection.3.1.1}{Storage -}{section.3.1}% 32
+\BOOKMARK [2][]{subsection.3.1.2}{Distributed Job Scheduling -}{section.3.1}% 33
+\BOOKMARK [2][]{subsection.3.1.3}{Reputation Mechanism -}{section.3.1}% 34
+\BOOKMARK [1][]{section.3.2}{Network Architecture Details}{chapter.3}% 35
+\BOOKMARK [2][]{subsection.3.2.1}{Structured Overlay Network -}{section.3.2}% 36
+\BOOKMARK [2][]{subsection.3.2.2}{Rendezvous points -}{section.3.2}% 37
+\BOOKMARK [1][]{section.3.3}{browserCloud.js usage}{chapter.3}% 38
+\BOOKMARK [2][]{subsection.3.3.1}{Application Programming Interface \(API\) -}{section.3.3}% 39
+\BOOKMARK [2][]{subsection.3.3.2}{Command Line Interface \(CLI\) -}{section.3.3}% 40
+\BOOKMARK [0][]{chapter.4}{Implementation}{}% 41
+\BOOKMARK [0][]{chapter.5}{Evaluation}{}% 42
+\BOOKMARK [1][]{subsection.5.0.1}{Qualitative Evaluation of data consistency, availability and partition tolerance}{chapter.5}% 43
+\BOOKMARK [2][]{subsection.5.0.2}{Quantitative Evaluation of system performance when executing jobs and storing/fetching data}{subsection.5.0.1}% 44
+\BOOKMARK [2][]{subsection.5.0.3}{Envisioned final comparative analysis}{subsection.5.0.1}% 45
+\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 46
+\BOOKMARK [1][]{section.6.1}{Future Work}{chapter.6}% 47
