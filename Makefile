@@ -7,7 +7,6 @@ all:
 clean:
 	rm document.pdf
 	rm document.aux
-	rm document.bbl
 	rm document.blg
 	rm document.glo
 	rm document.idx
@@ -17,6 +16,8 @@ clean:
 	rm document.toc
 	rm document.adx
 	rm document.out
+	rm document.bbl
+
 open:
 	open document.pdf
 

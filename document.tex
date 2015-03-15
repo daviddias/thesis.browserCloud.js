@@ -1,8 +1,6 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
-
 \NeedsTeXFormat{LaTeX2e}
 \documentclass[a4paper,11pt,twoside,onecolumn,final,openright]{book}
-\usepackage[doublespace,final]{thesis}
+%\usepackage[doublespace,final]{thesis}
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{fixltx2e}
@@ -45,57 +43,32 @@
   breakatwhitespace=true
   tabsize=3
 }
+
 \begin{document}
+    \input{sections/01_cover}
+    \input{sections/02_acknowledgements}
+    \input{sections/03_abstract-keywords}
 
-\input{sections/1_acknowledgements}
-\pagenumbering{arabic}
-\pagestyle{headings}
+    \pagenumbering{arabic}
+    \pagestyle{headings}
 
+    \input{sections/04_introduction}
+    %\input{sections/05_relatedwork}
+    %\input{sections/06_architecture}
+    %\input{sections/07_implementation}
+    %\input{sections/08_evaluation}
+    %\input{sections/09_conclusion}
+    %\input{sections/11_future}
+    %
+    \newpage
+    \thispagestyle{empty}
+    \input{sections/11_bibliography}
 
-\thispagestyle{empty}
-\thispagestyle{empty}
-\thispagestyle{empty}
-\input{sections/2_introduction}
+    \appendix
 
-\thispagestyle{empty}
-\thispagestyle{empty}
-\input{sections/3_relatedwork}
-
-\thispagestyle{empty}
-\thispagestyle{empty}
-
-\thispagestyle{empty}
-\input{sections/4_architecture}
-
-\thispagestyle{empty}
-\input{sections/5_implementation}
-
-\thispagestyle{empty}
-\thispagestyle{empty}
-
-\thispagestyle{empty}
-\input{sections/6_evaluation}
-
-\thispagestyle{empty}
-\input{sections/7_conclusion}
-
-\thispagestyle{empty}
-\thispagestyle{empty}
-
-\thispagestyle{empty}
-\input{sections/8_future}
-
-\newpage
-\thispagestyle{empty}
-\input{sections/9_bibliography}
-
-\appendix
-
-\begin{singlespace}
-
-\def\indexname{Index}
-\printindex\cleardoublepage
-
-\end{singlespace}
+    \begin{singlespace}
+        \def\indexname{Index}
+        \printindex\cleardoublepage
+    \end{singlespace}
 \end{document}
 
