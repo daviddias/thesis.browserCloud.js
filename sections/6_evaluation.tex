@@ -1,8 +1,5 @@
 %!TEX root = ../document.tex
-
-
-\chapter{Evaluation}
-\label{ch:evaluation}
+\chapter{Evaluation}\label{ch:evaluation}
 
 \begin{quotation}
   {\small\it }"Everything that can be counted does not necessarily count; everything that counts cannot necessarily be counted"{\small\it -- Albert Einstein }
@@ -11,7 +8,7 @@
 The proposed system will be evaluated with the goal of comparing to existing centralized non P2P cloud and P2P distributed voluntary job computing and storage. The desired outcome of this analysis will be to produce a quantifiable set of comparable metrics to other systems, taking into account issues such as: scalability, resilience, availability, processing power and latency. In the end, we expect to have an assessment, ``a new type of application/solution'', mentioning the advantages present using browserCloud.js in comparison with the other systems, presented in table~\ref{tbl:cloudcomparisson}.
 
 
-\subsection{Qualitative Evaluation of data consistency, availability and partition tolerance}
+\section{Qualitative Evaluation of data consistency, availability and partition tolerance}
 
 In browserCloud.js files are immutable, any operation that involves data manipulation will create a new file with the changes. This means that once the file is ready to be read, it is by default, the most current version. Any transactional semantics of writing(PUT) and deleting(DELETE) files are maintained on the application, developed by a user, using browserCloud.js platform. 
 
@@ -23,7 +20,7 @@ These tests will be executed in two different stages: the first one, ``in lab'',
 
 After realizing how the system can perform best, a ``field'' trial will be executed, this will be executed by approaching volunteers that might want to contribute to the experiment, loading the code into their browser so real world tests can be performed.
 
-\subsection{Quantitative Evaluation of system performance when executing jobs and storing/fetching data}
+\section{Quantitative Evaluation of system performance when executing jobs and storing/fetching data}
 
 One of the key factors for an App ready cloud platform is its latency; storing and fetching data has to be rapid enough that it does not limit the performance of the applications using browserCloud.js. The system performance varies depending on its usage; in order to evaluate it correctly, tests will be performed, changing several factors that will impact latency:
 
@@ -49,7 +46,7 @@ The tuning of this system evaluation parameters will enable us to asses how this
 
 The tests will be executed in two different phases: 1) the first in a controlled environment, being able to modify the churn rate on demand and evaluation its behavior, these tests will be essential to evaluate and tune browserCloud.js to the 2) real world tests, using pure voluntary browsers, which are a non controlled environment. These tests will permit us to assess quantifiable results. Both regarding adequate operation and stress testing in small scale, as well as efficiency and scalability in the large. They will also be compared with other cloud like platforms.
 
-\subsection{Envisioned final comparative analysis}
+\section{Envisioned final comparative analysis}
 
 Once the evaluation of each component it i s done, we envisioned a one by one comparison between browserCloud.js and some of the most used, or known systems for distributed computing jobs and storage to pinpoint which excels the best for each type of task with the respective relative trade offs, classifying with a numeric value in the range [-1,1] for each of the respective dimensions of comparison: \textbf{Q - Quality of results/functional compliance}, \textbf{P - Performance} , \textbf{C - Cost}. In Table~\ref{tbl:cloudcomparisson}, we can see an example.
 

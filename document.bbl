@@ -11,6 +11,11 @@ Anderson, B. D.~P., J.~Cobb, E.~Korpela, \& M.~Lebofsky (2002).
 \newblock {SETI@Home, an Experiment in Public-Resource Computing}.
 \newblock ~{\em 45\/}(11).
 
+\bibitem[\protect\citeauthoryear{Anderson}{Anderson}{2004}]{Anderson2015}
+Anderson, D. (2004).
+\newblock {Boinc: A system for public-resource computing and storage}.
+\newblock In {\em Grid Computing, 2004. Proceedings.}
+
 \bibitem[\protect\citeauthoryear{Armbrust, Stoica, Zaharia, Fox, Griffith,
   Joseph, Katz, Konwinski, Lee, Patterson, \& Rabkin}{Armbrust
   et~al.}{2010}]{Armbrust}

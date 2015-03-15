@@ -40,8 +40,8 @@
 \BOOKMARK [2][]{subsection.3.3.2}{Command Line Interface \(CLI\) -}{section.3.3}% 40
 \BOOKMARK [0][]{chapter.4}{Implementation}{}% 41
 \BOOKMARK [0][]{chapter.5}{Evaluation}{}% 42
-\BOOKMARK [1][]{subsection.5.0.1}{Qualitative Evaluation of data consistency, availability and partition tolerance}{chapter.5}% 43
-\BOOKMARK [2][]{subsection.5.0.2}{Quantitative Evaluation of system performance when executing jobs and storing/fetching data}{subsection.5.0.1}% 44
-\BOOKMARK [2][]{subsection.5.0.3}{Envisioned final comparative analysis}{subsection.5.0.1}% 45
+\BOOKMARK [1][]{section.5.1}{Qualitative Evaluation of data consistency, availability and partition tolerance}{chapter.5}% 43
+\BOOKMARK [1][]{section.5.2}{Quantitative Evaluation of system performance when executing jobs and storing/fetching data}{chapter.5}% 44
+\BOOKMARK [1][]{section.5.3}{Envisioned final comparative analysis}{chapter.5}% 45
 \BOOKMARK [0][]{chapter.6}{Conclusion}{}% 46
-\BOOKMARK [1][]{section.6.1}{Future Work}{chapter.6}% 47
+\BOOKMARK [0][]{chapter.7}{Future work}{}% 47

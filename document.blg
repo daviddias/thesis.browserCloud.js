@@ -3,7 +3,6 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: document.aux
 The style file: chicago.bst
 Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "Anderson2015"
 Warning--no journal in Anderson2002
 Warning--page numbers missing in Anderson2002
 Warning--no journal in Bakhtiari
@@ -69,45 +68,45 @@ Warning--page numbers missing in Vishnumurthy
 Warning--no number and no volume in Vogt
 Warning--page numbers missing in Vogt
 Warning--empty publisher in Wallach
-You've used 57 entries,
+You've used 58 entries,
             2861 wiz_defined-function locations,
-            955 strings with 14289 characters,
-and the built_in function-call counts, 41628 in all, are:
-= -- 3446
-> -- 3364
+            958 strings with 14394 characters,
+and the built_in function-call counts, 42153 in all, are:
+= -- 3489
+> -- 3390
 < -- 17
-+ -- 1010
-- -- 1140
-* -- 3677
-:= -- 7621
-add.period$ -- 162
-call.type$ -- 57
-change.case$ -- 443
-chr.to.int$ -- 56
-cite$ -- 122
-duplicate$ -- 1101
-empty$ -- 2292
-format.name$ -- 1299
-if$ -- 7770
++ -- 1016
+- -- 1150
+* -- 3708
+:= -- 7720
+add.period$ -- 165
+call.type$ -- 58
+change.case$ -- 449
+chr.to.int$ -- 57
+cite$ -- 123
+duplicate$ -- 1124
+empty$ -- 2336
+format.name$ -- 1309
+if$ -- 7868
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 44
-newline$ -- 273
-num.names$ -- 578
-pop$ -- 403
+missing$ -- 45
+newline$ -- 278
+num.names$ -- 588
+pop$ -- 413
 preamble$ -- 1
-purify$ -- 782
+purify$ -- 794
 quote$ -- 0
-skip$ -- 1172
+skip$ -- 1189
 stack$ -- 0
-substring$ -- 1899
-swap$ -- 399
+substring$ -- 1919
+swap$ -- 404
 text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1136
+type$ -- 1156
 warning$ -- 65
-while$ -- 556
+while$ -- 566
 width$ -- 0
-write$ -- 724
-(There were 66 warnings)
+write$ -- 737
+(There were 65 warnings)

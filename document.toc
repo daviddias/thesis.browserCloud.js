@@ -21,7 +21,7 @@
 \contentsline {subsubsection}{\numberline {2.2.3.3}\textbf {Structured without Distributed Hash Tables -}}{15}{subsubsection.2.2.3.3}
 \contentsline {subsection}{\numberline {2.2.4}Fault Tolerance, Load Balancing, Assurance and Trust -}{16}{subsection.2.2.4}
 \contentsline {subsubsection}{\numberline {2.2.4.1}\textbf {Fault Tolerance, Persistence and Availability}}{16}{subsubsection.2.2.4.1}
-\contentsline {subsubsection}{\numberline {2.2.4.2}\textbf {Load Balancing}}{17}{subsubsection.2.2.4.2}
+\contentsline {subsubsection}{\numberline {2.2.4.2}\textbf {Load Balancing}}{16}{subsubsection.2.2.4.2}
 \contentsline {subsubsection}{\numberline {2.2.4.3}\textbf {Assurance and Trust}}{18}{subsubsection.2.2.4.3}
 \contentsline {section}{\numberline {2.3}Resource sharing using the Web platform}{20}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Web Platform}{20}{subsection.2.3.1}
@@ -40,8 +40,8 @@
 \contentsline {subsection}{\numberline {3.3.2}Command Line Interface (CLI) -}{36}{subsection.3.3.2}
 \contentsline {chapter}{\numberline {4}Implementation}{39}{chapter.4}
 \contentsline {chapter}{\numberline {5}Evaluation}{41}{chapter.5}
-\contentsline {subsection}{\numberline {5.0.1}Qualitative Evaluation of data consistency, availability and partition tolerance}{41}{subsection.5.0.1}
-\contentsline {subsection}{\numberline {5.0.2}Quantitative Evaluation of system performance when executing jobs and storing/fetching data}{42}{subsection.5.0.2}
-\contentsline {subsection}{\numberline {5.0.3}Envisioned final comparative analysis}{43}{subsection.5.0.3}
+\contentsline {section}{\numberline {5.1}Qualitative Evaluation of data consistency, availability and partition tolerance}{41}{section.5.1}
+\contentsline {section}{\numberline {5.2}Quantitative Evaluation of system performance when executing jobs and storing/fetching data}{42}{section.5.2}
+\contentsline {section}{\numberline {5.3}Envisioned final comparative analysis}{43}{section.5.3}
 \contentsline {chapter}{\numberline {6}Conclusion}{45}{chapter.6}
-\contentsline {section}{\numberline {6.1}Future Work}{45}{section.6.1}
+\contentsline {chapter}{\numberline {7}Future work}{47}{chapter.7}
