@@ -70,39 +70,36 @@ The lack of portability has already been identified as a major problem by growin
 Although OpenStack is free and open source, there is an underlying illusion that is the fact that you still have to use OpenStack in order to have portability, it is just a more generalized and free version of the `lock-in syndrome'. We have currently other solutions available that give application developer an abstraction on top of different Cloud Providers, instead of changing the architecture of each Cloud, such as: IEEE Intercloud\footnote{http://cloudcomputing.ieee.org/intercloud - seen on December 2013}, pkgcloud\footnote{https://github.com/nodejitsu/pkgcloud - seen on December 2013} and Eucalyptus\cite{Nurmi2009}, described in the following two paragraphs.
 
 
-\subsubsection{\textbf{IEEE Intercloud}} % (fold)
-\label{par:IEEE Intercloud}
+\subsubsection{IEEE Intercloud}\label{par:IEEE Intercloud}
 
 pushes forward a new Cloud Computing design pattern, with the possibility to federate several clouds operated by enterprise or other providers, increasing the scalability and portability of applications. This federation is known as `Intercloud' in which IEEE is creating technical standards (IEEE P2302) with interoperability in its core goals. Currently IEEE has already available an Testbed, the IEEE Intercloud Testbed, which provides a global lab for testing Intercloud interoperability features.
 
 The envisioned Intercloud architecture categorizes its components into three main parts, see in Figure~\ref{fig:IEEE Intercloud Testbed Architecture}:
 
 \begin{itemize}
-  \item Intercloud Gateways: analogous to an Internet router that connects an Intranet to the Internet.
-  \item Intercloud Exchanges: analogous to Internet exchanges and peering points (known as brokers in the US NIST Reference Architecture) where clouds can interoperate.
-  \item Intercloud Roots: A set of core essential services such as: Naming Authority, Trust Authority, Messaging, Semantic Directory Services, and other “root” capabilities. This services work with an hierarchical structure and resembles the Internet backbone.
+    \item Intercloud Gateways: analogous to an Internet router that connects an Intranet to the Internet.
+    \item Intercloud Exchanges: analogous to Internet exchanges and peering points (known as brokers in the US NIST Reference Architecture) where clouds can interoperate.
+    \item Intercloud Roots: A set of core essential services such as: Naming Authority, Trust Authority, Messaging, Semantic Directory Services, and other “root” capabilities. This services work with an hierarchical structure and resembles the Internet backbone.
 \end{itemize}
 
  
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=0.78\textwidth]{img/testbed-technology.jpg}
-  \caption{IEEE Intercloud Testbed Architecture}
-  \label{fig:IEEE Intercloud Testbed Architecture}
+\begin{figure}[hb]
+    \centering
+    \includegraphics[width=0.78\textwidth]{img/testbed-technology.jpg}
+    \caption{IEEE Intercloud Testbed Architecture}
+    \label{fig:IEEE Intercloud Testbed Architecture}
 \end{figure}
 
-% paragraph IEEE Intercloud - (end)
 
-
-\subsubsection{\textbf{pkgcloud}}\label{par:pkgcloud }
+\subsubsection{pkgcloud}\label{par:pkgcloud}
 
 is an open source standard library that abstracts differences between several cloud providers, by offering a unified vocabulary for services like storage, compute, DNS, load balancers, so the application developer does not have to be concerned with creating different implementations for each cloud. Instead, just make the provision in the one that is most cost-effective. Currently, it only supports applications built using Node.js.
 
-\subsubsection{\textbf{Eucalyptus}}\label{par:Eucalyptus}
+\subsubsection{Eucalyptus}\label{par:Eucalyptus}
 
 is a free and open source software to build Amazon Web Services Cloud like architectures for a private and/or hybrid Clouds. From the three solutions described, Eucalyptus is the one that is more deeply entangled with the concept of a normal Cloud, packing a: Client-side API, a Cloud Controller, S3 storage compliant modules, a cluster controller and a node controller, as seen in Figure~\ref{fig:eucalyptus}. Eucalyptus has all the components to build an entire cloud, however, since its compatible, specially, with Amazon Cloud, we can use Eucalyptus to migrate our services, or provision Amazon services, and work without having to deal with the application or the system itself.
 
-\begin{figure}[h!]
+\begin{figure}[hb]
   \centering
   \includegraphics[width=0.95\textwidth]{img/eucalyptus-architecture.png}
   \caption{Eucalyptus Architecture}
@@ -125,7 +122,6 @@ The type of computations performed in this Application-level networks (ALN), are
 % Island Model - The population is divided in subpopulation that can run in heterogeneous machines (this is the most common in distributed computing)
 % Master-Salve Model - One central pop that communicates and collects data from others              
 
-
 \subsection{Hybrid and Community Clouds}
 
 A community cloud is a network of large scale, self-organized and essentially decentralized computing and storage resources. The main focus is on free economic and censorship wise, putting the user back in control of the information, giving them freedom to share content without censorship or a company interest. The term `User Centric Cloud' appears on \cite{Barraca2011}, where the resources are made available by individuals, but with a common API, similar to a centralized Cloud, where users that participate in the effort can also use others resources.
@@ -147,7 +143,7 @@ The second category is that of systems that fit into the domain of Public Comput
 
 Another interesting research on this field is moving the logic necessary for processing some data, alongside the data, this is known as Gridlet\cite{Costa2012}\cite{Rodrigues}, a unit of workload. This approach enables a more dynamic use of volunteer resource systems with the possibility of: having different goals for the same Grid, optimize the resources available of one machine by gathering different type of tasks in one machine, reduce the cost to start using a Grid for distributed computation.
 
-\subsection{Peer-to-Peer Networks and Architectures -}  
+\subsection{Peer-to-Peer Networks and Architectures}  
 Efficient resource discovery mechanisms are fundamental for a distributed system success, such as grid computing, cycle sharing or web application's infrastructures\cite{Ranjan2006}, although in the centralized model, by keeping data bounded inside a data center, we have a stable and scalable way for resource discovery, this does not happen in a P2P network, where peers churn rate can vary greatly, there is no way to start new machines on demand for high periods of activity, the machines present are heterogeneous and so is their Internet connectivity, creating an unstable and unreliable environment. To overcome these challenges, several researches have been made to optimize how data is organized across all the nodes, improving the performance, stability and the availability of resources. The following paragraphs will describe the current state of the art P2P organizations, typically categorized in P2P literature as Unstructured or Structured\cite{Milojicic2003}, illustrated in Figure~\ref{fig:Different types of P2P Overlay networks organizations}.
 
 \begin{figure}[bh!]
@@ -159,7 +155,7 @@ Efficient resource discovery mechanisms are fundamental for a distributed system
 \end{figure}
 
 
-\subsubsection{\textbf{Unstructured -}}\label{par:Unstructured}
+\subsubsection{Unstructured}\label{par:Unstructured}
 
 We call `Unstructured' to a P2P system that doesn't require or define any constraint for the placement of data, these include Napster, Kazaa and Gnutella, famous for its file sharing capabilities, where nodes can share their local files directly, without storing the file in any specific Node. There is however a `caveat' in the Unstructured networks, by not having an inherent way of indexing the data present in the network, performing a lookup results of the cost of asking several nodes the whereabouts of a specific file or chunk of the file, creating a huge performance impact with an increasing number of nodes. 
 
@@ -167,8 +163,7 @@ In order to calibrate the performance, Unstructured P2P networks offer several d
 
 Unstructured networks are classified\cite{Ranjan2006} in two types: deterministic and non-deterministic, defining that in a deterministic system, we can calculate before hand the number of hops needed to perform a lookup, knowing the predefined bounds, this includes systems such as Napster and BitTorrent\cite{Cohen2009}, in which the file transfers are decentralized, the object lookup remains centralized, keeping the data for the lookup tables stored in one place, which can be gathered by one of two ways: (i) peers inform directly the index server the files they have; or (ii) the index server performs a crawling in the network, just like a common web search engine, this gives this network a complexity of O(1) to perform a search, however systems like Gnutella 0.6, which added the super node concept, remain non deterministic because it's required to execute a query flood across all the super nodes to perform the search.
 
-\subsubsection{\textbf{Structured with Distributed Hash Tables -}}
-\label{par:Structured with Distributed Hash Tables}
+\subsubsection{Structured with Distributed Hash Tables}\label{par:Structured with Distributed Hash Tables}
 
 Structured P2P networks have an implicit way of allocating nodes for files and replicas storage, without the need of having any specie of centralized system for indexing, this is done by taking the properties of a cryptographic hash function \cite{Bakhtiari}\cite{Kargerl}\cite{Preneel1999}, such as SHA-1\cite{D.Eastlake3rdMotorola;P.JonesSystems2001}, which applies a transformation to any set of data with a uniform distribution of possibilities, creating an index with O(log(n)) peers, where the hash of the file represents the key and gives a reference to the position of the file in the network.
 
@@ -176,60 +171,84 @@ DHT's such as Chord\cite{Stoica2001}, Pastry\cite{Rowstron2001} and Tapestry\cit
 
 Evaluating the DHT Structured P2P networks raises identifiable issues, that result as the trade-off of not having an centralized infrastructure, responsible for railing new nodes or storing the meta-data, these are: (i) generation of unique node-ids is not easy achievable, we need always to verify that the node-id generated does not exist, in order to avoid collisions; (ii) the routing table is partitioned across the nodes, increasing the lookup time as it scales.
 
-Table \ref{table:Complexity of structured P2P systems using a DHT}, showcases a comparison of the studied DHT algorithms.
+Table \ref{table:p2pdht}, showcases a comparison of the studied DHT algorithms.
 
-\begin{table}
-  \centering
-  \begin{tabular}{| p{1.3cm} | p{2.0cm} | p{2.9cm} | p{3.2cm} | p{1.6cm} | p{1.8cm} | p{1.8cm} |}
-    \hline                        
-    \textbf{P2P system} & \textbf{Overlay Structure} & \textbf{Lookup Protocol} & \textbf{Networking parameter} & \textbf{Routing table size} & \textbf{Routing complexity} & \textbf{Join/leave overhead} \\
-    
-    \hline
-    Chord & 1 dimension, Hash ring & Matching key and NodeID & n= number of nodes in the network & O(log(n)) & O(log(n)) & O(log(n)\textsuperscript{2}) \\
-    
-    \hline
-    Pastry & Plaxton style mesh structure & Matching key and prefix in NodeID & n= number of nodes in the network, b=base of identifier & \texorpdfstring{O(log\textsubscript{b} (n))} & \texorpdfstring{O(b log \textsubscript{b}(n)+b)}& O(log(n)) \\
-    
-    \hline
-    CAN & d-dimensional ID Space & Key value pair map to a point P in the D-dimensional space & n= number of nodes in the network, d=number of dimensions & O(2d) & O(d n\textsuperscript{1/2}) & O(2d) \\
-    
-    \hline
-    Tapestry & Plaxton style mesh structure & Matching suffix in NodeID & n=number of nodes in the network, b=base of the identifier & \texorpdfstring{O(log\textsubscript{b}(n))} & \texorpdfstring{O(b log \textsubscript{b} (n)+b)} & O(log(n)) \\
-    
-    \hline  
-    Kademlia & Binary tree & XOR metric & n=number of nodes, m=number of different bits (prefix) & O(log(n)) &  \texorpdfstring{O(log\textsubscript{2}(n))} & not stable \\
-    \hline      
-  \end{tabular}
-  \caption{Summary of complexity of structured P2P systems}
-  \label{table:Complexity of structured P2P systems using a DHT}
-\end{table}
 
-\subsubsection{\textbf{Structured without Distributed Hash Tables -}}\label{par:Structured without Non-Distributed Hash Tables}
+\begin{table}[hb]
+    \begin{center}
+
+        \begin{tabular}{| p{1.3cm} | p{2.0cm} | p{2.9cm} | p{3.2cm} | p{1.6cm} | p{1.8cm} | p{1.8cm} |}
+        \hline
+        \bf{P2P Algorithym} & 
+        \bf{Overlay Structure} & 
+        \bf{Lookup Protocol} & 
+        \bf{Networking parameter} & 
+        \bf{Routing table size} & 
+        \bf{Routing complexity} & 
+        \bf{Join/leave overhead} \\ \hline
+
+        Chord & 
+        1 dimension, hash ring & 
+        Matching key and NodeID & 
+        n=number of nodes in the network & 
+        O(log(n)) & 
+        O(log(n)) & 
+        O(log(n)\textsuperscript{2}) \\ \hline
+
+        Pastry & 
+        Plaxton style mesh structure & 
+        Matching key and prefix in NodeID & 
+        n= number of nodes in the network, b=base of identifier & 
+        O(log\textsubscript{b}(n) & 
+        O(b log\textsubscript{b}(n) + b) & 
+        g \\ \hline
+
+        CAN & 
+        d-dimensional ID Space & 
+        Key value pair map to a point P in D-dimensional space & 
+        n=number of nodes in the network, d=number of dimensions & 
+        0(2d) & 
+        O(d n\textsuperscript{1/2}) & 
+        O(2d) \\ \hline
+
+        Tapestry & 
+        Plaxton style mesh structure & 
+        Matching suffix in NodeID & 
+        n=number of nodes in the network, b=base of the identifier & 
+        O(log\textsubscript{b}(n)) & 
+        O(b log\textsubscript{b} (n)+b) & 
+        O(log(n)) \\ \hline
+
+        Kademlia & 
+        Binary tree & 
+        XOR metric & 
+        n=number of nodes, m=number of bits(prefix) & 
+        O(log(n)) & 
+        O(log\textsubscript{2}(n)) & 
+        not stable \\ \hline
+
+        \end{tabular}
+    \end{center}
+\caption{Summary of complexity of structured P2P systems}
+\label{table:p2pdht}
+\end{table}	
+
+
+\subsubsection{Structured without Distributed Hash Tables}\label{par:Structured without Non-Distributed Hash Tables}
 
 Mercury\cite{Bharambe}, a structured P2P network that uses a non DHT model, was designed to enable range queries over several attributes that data can be dimensioned on, which is desired on searches over keywords in several documents of text. Mercury design offers an explicit load balancing without the use of cryptographic hash functions, organizing the data in a circular way, named `attribute hubs'.
 
-% \subsubsection{\textbf{Hybrid -}}\label{par:Hybrid}
-
-% %TODO Structella , Kelips
-
-% NOTE: Not sure if should include this, doesn't really include anything that new
-
-% In recent developments, new generation P2P systems have evolved to combine both unstructured and structured P2P networks. We refer to this class of systems as hybrid. Structella [27] is one such P2P system that replaces the random graph model of an unstructured overlay (Gnutella) with a structured overlay, while still adopting the search and content placement mechanism of unstructured overlays to support complex queries. Other hybrid P2P design includes Kelips [60] and its variants. Nodes in Kelips overlay periodically gossip to discover new members of the network, and during this process nodes may also learn about other nodes as a result of lookup
-% 12
-% communication. Other variant of Kelips [56] allows routing table entries to store information for every other node in the system. However, this approach is based on assumption that system experiences low churn rate [70]. Gossiping and one-hop routing approach has been used for maintaining the routing overlay in the work [108]. In Table 4, we summarize the different P2P routing substrate that are utilized by the existing algorithms for organizing a GRIS.
-
-
-\subsection{Fault Tolerance, Load Balancing, Assurance and Trust -}
+\subsubsection{Fault Tolerance, Load Balancing, Assurance and Trust}
 
 Volunteer resource sharing means that we no longer have our computational infrastructure confined in a well monitored place, introducing new challenges that we have to address \cite{Koloniari2005} to maintain the system running with the minimum service quality. These issues can be: scalability, fault tolerance, persistence, availability and security\cite{Wallach} of the data and that the system doesn't get compromised. This part of the document serves to describe the techniques implemented in previous non centralized systems to address this issues.
 
-\subsubsection{\textbf{Fault Tolerance, Persistence and Availability}}\label{par:Fault Tolerance, Persistence and Availability}
+\subsubsection{Fault Tolerance, Persistence and Availability}\label{par:Fault Tolerance, Persistence and Availability}
 
 are one of the key challenges in P2P community networks, due to it's churn uncertainty, making the system unable to assume the availability of Node storing a certain group of files. Previous P2P systems offer a Fault Tolerance and Persistence by creating file replicas, across several Nodes in the network, one example is PAST\cite{Rowstron2001}\cite{Rowstron2001a}, a system that uses PASTRY routing algorithm, to determine which nodes are responsible to store a certain file, creating several different hashes which corresponds to different Nodes, guaranteeing an even distribution of files across all the nodes in the network. DynamoDB\cite{Decandia2007}, a database created by Amazon to provided an scalable NOSQL solution, uses a storage algorithm, inspired by the Chord routing algorithm, in which stores file replicas in the consequent Nodes, in order to guarantee easy lookup if one of the Nodes goes down.
 
 The strategy presented by the authors of PAST to provide high availability, is an intelligent Node system, that use a probabilistic model, able to verify if there is an high request for a file, deciding to keep a copy and avoiding to overload the standard Node with every request that is made.
 
-\subsubsection{\textbf{Load Balancing}}\label{par:load_balancing}
+\subsubsection{Load Balancing}\label{par:load_balancing}
 
 in an optimal state, can be defined as having each node sharing roughly 1/N of the total load inside the network, if a Node has a significantly hight load compared with the optimal distribution, we call it a `heavy' node. There has been some research to find a optimal way to balance the load inside a P2P network, namely:
 
@@ -242,14 +261,14 @@ in an optimal state, can be defined as having each node sharing roughly 1/N of t
 
 S. Rieche, H. Niedermayer, S. Götz and  K. Wehrle from the University of Tübingen, made a study comparing this different approaches in a scenario using the CHORD routing algorithm, using a SHA-1 as the hashing function, with 4096 nodes and 100.000 to 1.000.000 documents and executing up to 25 runs per test, the results can be observed in the Figure ~\ref{fig:lbcomp}
 
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=1\textwidth]{img/lb.jpg}
-  \caption{Load balancing approaches comparison}
-  \label{fig:lbcomp}
+\begin{figure}[hb]
+    \centering
+    \includegraphics[width=1\textwidth]{img/lb.jpg}
+    \caption{Load balancing approaches comparison}
+    \label{fig:lbcomp}
 \end{figure}
 
-\subsubsection{\textbf{Assurance and Trust}}\label{par:Assurance and Trust}
+\subsubsection{Assurance and Trust}\label{par:Assurance and Trust}
 
 in a P2P network is an interesting challenge due to the lack of control over the machines that are willing to share with their resources, in order to achieve it, several strategies have been developed to maintain the integrity of the data using Cryptography, Reputation modeling schemes based on it's node previous record and also economic models, that resemble our own economy, but to share and trade computational resources.
 
@@ -258,25 +277,25 @@ Starting with the Cryptographic techniques, storage systems such as PAST give th
 Trust in a P2P system, as mentioned, is fundamental to it's well behaved functioning, not only in terms of data privacy, but also in giving the deserved resources to the executions that mostly need them, avoiding misbehaved peer intentions that can be a result of an Attack to jeopardize the network, one example is the known Sybil attack\cite{Douceura}. To achieve a fair trust sharing system, several metrics for a reputation mechanism have been developed \cite{Marti}, these can be seen in Table \ref{table:reputation}.
 
 \begin{table}
-  \centering
-  \begin{tabular}{| c | c | c |}
-    \hline                        
-    \multicolumn{3}{|c|}{Reputation Systems} \\
+    \centering
+    \begin{tabular}{| c | c | c |}
+        \hline                        
+        \multicolumn{3}{|c|}{Reputation Systems} \\
 
-    \hline                        
-    Information Gathering & Scoring and Ranking & Response \\
-    
-    \hline                        
-    Identity Scheme & Good vs. Bad Behavior & Incentives \\
-    Info. Sources & Quantity vs. Quality & Punishment \\
-    Info. Aggregation & Time-dependence &   \\ 
-    Stranger Policy & Selection Threshold &   \\ 
-      & Peer Selection &   \\ 
+        \hline                        
+        Information Gathering & Scoring and Ranking & Response \\
 
-    \hline                           
-  \end{tabular}
-  \caption{Reputation system components and metric}
-  \label{table:reputation}
+        \hline                        
+        Identity Scheme & Good vs. Bad Behavior & Incentives \\
+        Info. Sources & Quantity vs. Quality & Punishment \\
+        Info. Aggregation & Time-dependence &   \\ 
+        Stranger Policy & Selection Threshold &   \\ 
+            & Peer Selection &   \\ 
+
+        \hline                           
+    \end{tabular}
+    \caption{Reputation system components and metric}
+    \label{table:reputation}
 \end{table}
 
 Incentives for sharing resources\cite{Golle2001} can in the form of money rewards, greater speed access(used in Napster and some bittorrent networks) or it can be converted to a interchangeable rate to trade for more access to resources, giving the birth of economic models\cite{Filipe2011}\cite{Vishnumurthy}, that model the traded resources as a currency in which a peer has to trade in order to use the network.
@@ -292,10 +311,10 @@ Incentives for sharing resources\cite{Golle2001} can in the form of money reward
 
 One of the main focuses with the proposed work, is to take advantage of the more recent developments of the Web platform to make the intended design viable (presented in section 4), the system depends on very lower level components such as:
 \begin{itemize}
-  \item High dynamic runtime for ongoing updates to the platform and specific assets for job execution
-  \item Close-to-native performance for highly CPU-bound jobs
-  \item Peer-to-peer interconnectivity
-  \item Scalable storage and fast indexing
+    \item High dynamic runtime for ongoing updates to the platform and specific assets for job execution
+    \item Close-to-native performance for highly CPU-bound jobs
+    \item Peer-to-peer interconnectivity
+    \item Scalable storage and fast indexing
 \end{itemize}
 
 Therefore, we present in this section the relevant components present or undergoing a development process for the Web platform, such as: Javascript, Emscripten, IndexedDB, WebRTC and HTTP2.0. These will coexist as key enablers for  the necessary features to such a distributed shared resource system:
@@ -306,7 +325,7 @@ Since the introduction of AJAX\cite{Google/Mozzila/Opera}, the web has evolved i
 
 \textbf{Emscripten}\cite{Zakai2011}, a LLVM(Low Level Virtual Machine) to JavaScript compiler, enabled native performance on Web apps by compiling any language that can be converted to LLVM bytecode, for example C/C++, into JavaScript. This tool enabled native game speed on the browser, where two of the major examples are the project Codename: ``BananaBread''\footnote{Mozilla, BananaBread,  URL: https://developer.mozilla.org/en/demos/detail/bananabread, seen in December 2013} and ``Epic Citadel''\footnote{Mozilla, Epic Citadel,  URL: http://www.unrealengine.com/html5/, seen in December 2013}, in which Mozilla used Ecmascripten to port the entire Unreal Engine 3 to JavaScript. In Figure~\ref{fig:dan}, we can see a comparison of the performance of several algorithms, running on Dalvik, Android Java runtime, asm.js, the subset of Javascript that the code in C/C++ is transformed into when compiled with Emscripten and Native, the same C/C++ but running on a native environment. The results are very interesting, specially in the first test, where asm.js outperforms native. The explanation for this is due to the fact that BinaryTrees use a significant amount of `malloc' invocations, which is an expensive system call, where in asm.js, the code uses typed arrays, using `machine memory', which is flat allocated in the beginning of the execution for the entire run.
 
-\begin{figure}[h!]
+\begin{figure}[hb]
   \centering
   \includegraphics[width=0.7\textwidth]{img/Dalvik-vs-ASM-vs-Native-edited}
   \caption{Dalvik vs. ASM.js vs. Native performance}
@@ -315,7 +334,7 @@ Since the introduction of AJAX\cite{Google/Mozzila/Opera}, the web has evolved i
 
 \textbf{WebRTC}\cite{IanHickson2013}, a technology being developed by Google, Mozilla and Opera, with the goal of enabling Real-Time Communications in the browser via a JavaScript API. WebRTC brings to the browser the possibility of peer-to-peer interoperability. Peers perform their handshake through a `Signaling Server'. The signaling server will exchange the `ICE(Interactive Connectivity Establishment) candidates' of each peer as this serves as an invite so a data-channel can be opened, a visualization of this process can be seen in Figure~\ref{fig:webrtc}. Since most of the browsers sit behind NAT, there is another server, named `Turn'(Relay), which tells to each browser their public IP in the network. WebRTC, although being built with the goal of real-time voice and video communications, has also been shown as a viable technology do distribute content, as seen in PeerCDN and SwarmCDN\cite{Vogt}.
 
-\begin{figure}[h!]
+\begin{figure}[hb]
   \centering
   \includegraphics[width=0.7\textwidth]{img/webrtc.png}
   \caption{Example of a WebRTC session initiation}
@@ -341,14 +360,14 @@ One of the latest improvements being built for the Web Platform is the new HTTP 
   \item Retrocompatibility - HTTP2.0 respects the common headers defined by HTTP1.1, it doesn't include any change in the semantics.
 \end{itemize}
 
-\begin{figure}[htbp]
+\begin{figure}[hb]
   \centering
   \includegraphics[width=0.75\textwidth]{img/http2binaryframing.png}
   \caption{HTTP2.0 Binary framing}
   \label{fig:binaryframing}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[hb]
   \centering
   \includegraphics[width=0.75\textwidth]{img/http2dataflow.png}
   \caption{Example of an HTTP2.0 dataflow}

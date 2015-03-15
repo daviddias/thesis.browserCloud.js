@@ -1,1 +1,20 @@
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces IEEE Intercloud Testbed Architecture}}{8}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Eucalyptus Architecture}}{22}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Different types of P2P Overlay networks organizations}}{22}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Load balancing approaches comparison}}{23}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Dalvik vs. ASM.js vs. Native performance}}{24}{figure.2.5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Example of a WebRTC session initiation}}{24}{figure.2.6}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces HTTP2.0 Binary framing}}{24}{figure.2.7}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Example of an HTTP2.0 dataflow}}{25}{figure.2.8}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces browserCloud.js overall architecture}}{28}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces browserCloud.js Node}}{29}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces A file partitioned in several chunks, each with its corresponding hashes that correspond to nodeIds}}{30}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Representation of the Node responsible for the file(sKeeper) and it's individual chunk holders(sHolders)}}{31}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces browserCloud.js network architecture}}{34}{figure.3.5}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
