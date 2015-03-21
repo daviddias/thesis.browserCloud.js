@@ -2,16 +2,20 @@
 \chapter{Introduction}\label{ch:intro}
 
 \begin{quotation}
-    "Your system can fail no matter how well you thought you tested it... what users will not tolerate is losing their data".
+    "OUT OF THIS WORLD QUOTE".
     {\small\it 
         -- ~\footnote{Lehene C. HStack, http://hstack.org/why-were-using-hbase-part-2} }
 \end{quotation}
 
-Today, in the information communications technology landscape, with the introduction of social networks, search engines, Internet of things, which eventually will drive home and vehicle automation, user data has been growing at a large pace. The store, transfer, processing and analysis of all this data brings considerable new knowledge breakthroughs, enabling us to optimize systems towards a better and enhanced experience. However, how to use the information available to achieve these breakthroughs has been one of the main challenges since then. 
+\section{Overview}
 
-Another challenges, is the fact that typically today, user generated data is controlled by some entity, company or organization, which holds the right to keep this information private, exploiting user data for their own goals and business. In order to enable more people to use Big Data analysis, we need to reduce the cost that is inherent to process all this user information, which typically need big amounts of CPU cycles for processing, analysis and inference.
+Today, in the information communications technology landscape, with the introduction of social networks, search engines, Internet of things, which led to innovation on home and vehicle automation, user data has been growing at a large pace. The store, transfer, processing and analysis of all this data brings considerable new knowledge breakthroughs, enabling us to optimize systems towards a better and enhanced experience. However, how to use the information available to achieve these breakthroughs has been one of the main challenges since then. 
 
-Currently addressing this issues in part, Cloud computing has revolutionized the computing landscape mainly due to key advantages to developers/users over pre-existing computing paradigms, the main reasons are:
+\section{Problem Statement}
+
+The resources required to execute a contiguous and significant analysis of the data available are controlled by a small subset of comapnies and organizations. In order to enable more people to use Big Data analysis, we need to reduce the cost that is inherent to process all this user information, which typically need big amounts of CPU cycles for processing, analysis and inference.
+
+Currently addressing this issues in part, Cloud Computing has revolutionized the computing landscape due to key advantages to developers/users over pre-existing computing paradigms, the main reasons are:
 
 \begin{itemize}
     \item Virtually unlimited scalability of resources, avoiding disruptive infrastructure replacements.
@@ -27,20 +31,6 @@ Still, even though we are able to integrate several Cloud providers into an open
 Unlike the conventional approach to make Cloud Computing `green' (i.e. Green Computing) by improving datacenter's efficiency through expensive and strictly centralized control, our vision entails a shift in perspective, by enabling each user to contribute to this effort, leveraging his/her idle computing resources (sometimes up to 70\% of power wasted), and thus reducing overall environmental footprint. Thus browserCloud.js resources are provided in a voluntary manner by common Internet users that want to share their idle computer cycles and storage available, while browsing the web, without having the concern to setup any application or system to do so.
 
 Community Clouds are not a novelty in the Distributed Systems research area. However, existing models have been developed to follow the client-server model, transporting the data to the place where the computation will take place, which causes big bottlenecks in network traffic, limiting the amount of computed units done in a delimited window of time. One of browserCloud.js goals is exactly to mitigate this bottleneck by taking the computation (the algorithms that will perform operations over the data) to the machines where the data is stored.
-
-To accomplish this, we propose a new approach to abandon the classic centralized Cloud Computing paradigm, towards a common, dynamic, and privacy-aware cloud infrastructure. This, by means of a fully decentralized architecture, federating freely ad-hoc distributed and heterogeneous resources, with instant effective resource usage and progress. Additional goals may include: arbitration, service-level agreements, resource handover, compatibility and maximization of host's and user's criteria, and cost- and carbon-efficiency models.
-
-This work will address extending the Web Platform with technologies such as: WebRTC, Emscripten, Javascript and IndexedDB to create a structured peer-to-peer overlay network, federating ad-hoc personal resources into a geo-distributed cloud infrastructure, representing the definition made by C.Shirky of what an peer-to-peer means:
-
-  \textit{``An application is peer-to-peer if it aggregates resources at the network’s edge, and those resources can be anything. It can be content, it can be cycles, it can be storage space, it can be human presence.''}, C.Shirky \cite{Shirky.}
-
-Finally, browserCloud.js has the possibility to grow organically with the number of users. The management of these resources is done by an RESTful API, enabling desktop and mobile apps to use the resources available in a way that's familiar to developers. 
-
-\section{Overview}
-
-
-\section{Problem Statement}
-
 
 \section{Extended motivation and Roadmap}
 
@@ -60,9 +50,22 @@ These components are fully described in section 4. After its development, a prop
 
 \section{Research Proposal}
 
+To accomplish this, we propose a new approach to abandon the classic centralized Cloud Computing paradigm, towards a common, dynamic, and privacy-aware cloud infrastructure. This, by means of a fully decentralized architecture, federating freely ad-hoc distributed and heterogeneous resources, with instant effective resource usage and progress. Additional goals may include: arbitration, service-level agreements, resource handover, compatibility and maximization of host's and user's criteria, and cost- and carbon-efficiency models.
+
+This work will address extending the Web Platform with technologies such as: WebRTC, Emscripten, Javascript and IndexedDB to create a structured peer-to-peer overlay network, federating ad-hoc personal resources into a geo-distributed cloud infrastructure, representing the definition made by C.Shirky of what an peer-to-peer means:
+
+  \textit{``An application is peer-to-peer if it aggregates resources at the network’s edge, and those resources can be anything. It can be content, it can be cycles, it can be storage space, it can be human presence.''}, C.Shirky \cite{Shirky.}
+
+Finally, browserCloud.js has the possibility to grow organically with the number of users. The management of these resources is done by an RESTful API, enabling desktop and mobile apps to use the resources available in a way that's familiar to developers. 
+
 \section{Contributions}
 
+List of open source modules
+tecnology inspired by
+
 \section{Publications}
+
+Talks Delivered 
 
 \section{Structure of the thesis}
 
