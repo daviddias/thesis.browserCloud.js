@@ -2,9 +2,60 @@
 \chapter{Architecture}\label{ch:architecture}
 
 \begin{quotation}
-“The greatest pleasure in life is doing what people say you cannot do.”
-{\small\it -- Walter Bagehot (British political Analyst, Economist and Editor, one of the most influential journalists of the mid-Victorian period.1826-1877) }
+“Some fantastic quote”
+{\small\it --  }
 \end{quotation}
+
+This section describes the architecture designed for the browserCloud.js system. browserCloud.js was designed with with the Unix philosophy, that is, subtracting the unnecessary from a subsystem until it is constructed to perform one thing and one thing well, building more cohese abstractions through composition.
+
+browserCloud.js was architectured to meet the following requirements:
+
+\begin{itemize}
+    \item \textbf{Membership management} - The system has to enable peers to join and leave a current network of browserCloud.js peers or a subset of it. A peer should only have the knowledge of a small of other peers in the network and be available to rail in any other peer that wants to be part of the P2P network.
+    \item \textbf{Message routing} - Peers must have a way to communicate with every other peer in the network without the necessity of contacting a centralized service to do so. Messages should be routed between peers, having each peer knowing a subset of the network, guaranteeing in full coverage in this manner.
+    \item \textbf{job scheduling and results aggregation} - The discovery of computational resources must be performed using a distributed fashing, peers interact between each other to send tasks and retrieve the results for the peer executing the job. 
+\end{itemize}
+
+The overview of the network architecture can be seen in Figure~\ref{fig:n-a-o}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{figs/network-architecture-overview}
+  \caption{browserCloud.js Network Architecture Overview}
+  \label{fig:n-a-o}
+\end{figure}
+
+
+\section{Architecture of the Software stack}
+
+explain how each peer software is built (layers)
+how signalling server is separate
+
+
+\section{Interaction design details}
+
+explain the algorithms in these sections
+
+\subsection{Peer joins and leaves}
+
+\subsection{Message routing}
+
+Explain CHORD routing
+
+\subsection{Job Scheduling}
+
+\section{API design details}
+
+explain how the API works
+
+
+This system
+
+
+
+
+
+OLD OLD OLD OLD OLD
 
 In this section we describe our proposed architecture for the remaining implementation work. The software stack is composed by several subsystems that have one specific goal, exposing a well known API, this way the subsystems become interchangeable. These subsystems include:
 
