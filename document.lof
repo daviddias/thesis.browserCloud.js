@@ -10,12 +10,11 @@
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Example of an HTTP2.0 dataflow}}{27}{figure.2.8}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces browserCloud.js Network Architecture Overview}}{30}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Software layers at the peer level}}{31}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces browserCloud.js overall architecture}}{33}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces browserCloud.js Node}}{34}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces A file partitioned in several chunks, each with its corresponding hashes that correspond to nodeIds}}{35}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Representation of the Node responsible for the file(sKeeper) and it's individual chunk holders(sHolders)}}{36}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces browserCloud.js network architecture}}{39}{figure.3.7}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Registration of a peer, signaling itself as available to be part of the P2P network}}{32}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces A peer is notified to update his finger table}}{32}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Hole punching through NAT to obtain a public IP and create a SDP offer}}{33}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Establishment of a RTCPeerConnection through the custom Signalling Server}}{33}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Software layers at the peer level}}{34}{figure.3.6}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

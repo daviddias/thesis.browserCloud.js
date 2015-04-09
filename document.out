@@ -37,20 +37,11 @@
 \BOOKMARK [2][]{subsection.3.2.2}{Service router}{section.3.2}% 37
 \BOOKMARK [2][]{subsection.3.2.3}{Job scheduler}{section.3.2}% 38
 \BOOKMARK [1][]{section.3.3}{API design details}{chapter.3}% 39
-\BOOKMARK [1][]{section.3.4}{Software Architecture at the node level}{chapter.3}% 40
-\BOOKMARK [2][]{subsection.3.4.1}{Storage -}{section.3.4}% 41
-\BOOKMARK [2][]{subsection.3.4.2}{Distributed Job Scheduling -}{section.3.4}% 42
-\BOOKMARK [2][]{subsection.3.4.3}{Reputation Mechanism -}{section.3.4}% 43
-\BOOKMARK [1][]{section.3.5}{Network Architecture Details}{chapter.3}% 44
-\BOOKMARK [2][]{subsection.3.5.1}{Structured Overlay Network -}{section.3.5}% 45
-\BOOKMARK [2][]{subsection.3.5.2}{Rendezvous points -}{section.3.5}% 46
-\BOOKMARK [1][]{section.3.6}{browserCloud.js usage}{chapter.3}% 47
-\BOOKMARK [2][]{subsection.3.6.1}{Application Programming Interface \(API\) -}{section.3.6}% 48
-\BOOKMARK [2][]{subsection.3.6.2}{Command Line Interface \(CLI\) -}{section.3.6}% 49
-\BOOKMARK [0][]{chapter.4}{Implementation}{}% 50
-\BOOKMARK [0][]{chapter.5}{Evaluation}{}% 51
-\BOOKMARK [1][]{section.5.1}{Qualitative Evaluation of data consistency, availability and partition tolerance}{chapter.5}% 52
-\BOOKMARK [1][]{section.5.2}{Quantitative Evaluation of system performance when executing jobs and storing/fetching data}{chapter.5}% 53
-\BOOKMARK [1][]{section.5.3}{Envisioned final comparative analysis}{chapter.5}% 54
-\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 55
-\BOOKMARK [0][]{chapter.7}{Future work}{}% 56
+\BOOKMARK [1][]{section.3.4}{Summary}{chapter.3}% 40
+\BOOKMARK [0][]{chapter.4}{Implementation}{}% 41
+\BOOKMARK [0][]{chapter.5}{Evaluation}{}% 42
+\BOOKMARK [1][]{section.5.1}{Qualitative Evaluation of data consistency, availability and partition tolerance}{chapter.5}% 43
+\BOOKMARK [1][]{section.5.2}{Quantitative Evaluation of system performance when executing jobs and storing/fetching data}{chapter.5}% 44
+\BOOKMARK [1][]{section.5.3}{Envisioned final comparative analysis}{chapter.5}% 45
+\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 46
+\BOOKMARK [0][]{chapter.7}{Future work}{}% 47
