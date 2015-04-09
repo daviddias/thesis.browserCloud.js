@@ -2,72 +2,86 @@
 \chapter{Evaluation}\label{ch:evaluation}
 
 \begin{quotation}
-  {\small\it }"Everything that can be counted does not necessarily count; everything that counts cannot necessarily be counted"{\small\it -- Albert Einstein }
+  {\small\it }"ANOTHER FANTASTIC QUOTE"{\small\it -- FROM SOMEONE FANTASTIC }
 \end{quotation}
 
-The proposed system will be evaluated with the goal of comparing to existing centralized non P2P cloud and P2P distributed voluntary job computing and storage. The desired outcome of this analysis will be to produce a quantifiable set of comparable metrics to other systems, taking into account issues such as: scalability, resilience, availability, processing power and latency. In the end, we expect to have an assessment, ``a new type of application/solution'', mentioning the advantages present using browserCloud.js in comparison with the other systems, presented in table~\ref{tbl:cloudcomparisson}.
 
+In this section we evaluate browserCloud.js via real executions on top of increasing number of browsers executing locally, to assess the limits of current Javascript engines on typical desktop machines, and with micro-benchmarks to determine the speedups that can be achieved in distributed executions with one browser per individual desktop machine.
 
-\section{Qualitative Evaluation of data consistency, availability and partition tolerance}
+This, in order to assess the potential of the proposed system, we have built a ray-tracing application, adapted from algorithms available, written in full vanilla JavaScript, that can be run on any  typical modern browser engine. This algorithm allows us to stress-test the CPU,  and the possibility to obtain advantages through processing parallelism. We need this to understand whether the expected speeds up resulting from distributing the tasks through the browserCloud.js peers network, are not hindered by loosing efficiency due to message routing on the overlay Network.
 
-In browserCloud.js files are immutable, any operation that involves data manipulation will create a new file with the changes. This means that once the file is ready to be read, it is by default, the most current version. Any transactional semantics of writing(PUT) and deleting(DELETE) files are maintained on the application, developed by a user, using browserCloud.js platform. 
+When distributing a job through a multiple node network, one of the aspects we observed was that we can influence overall efficiency by adjusting how much resources we are going to take from the network to process the job, in this case, how much browsers. We also can influence it by deciding how much fine-grained each task it will be: the smaller the computation unit, the more we can distribute tasks through the network, with a natural trade-off of adding more task generation and messaging overhead, with diminishing returns when more and more, and  smaller tasks are created.
 
-In this evaluation, our target is to test how the system behaves in different conditions, in order to assess the data consistency semantics possible (Eventual Consistency, Monotonic Read Consistency, Immediate Consistency, etc).
+The standard ray-tracing job using the algorithm developed, running in a single browser takes as median 2361.434s to complete (around 40 minutes). As we can see in Figures~\ref{fig:ray2500}~and~\ref{fig:ray2500time}, our system excels in delivering faster results by dividing the job up to 2500 computational units (or tasks) and requesting from the browsers available in the network to compute those (i.e., a rectangle of the resulting output image). This is expected as ray-tracing is a known case of an embarrassingly parallel application.
 
-Another point that we want to evaluate how tolerant is browserCloud.js is for data partition, taking into account we are limited by the available storage that the browser provides and enables access to, and of course, the need to have smaller chunks to be quickly transfered when churn rate is high.
+One fact interesting to note is that we obtained much better results by reducing the granularity of which ray-tracing job was divided into, as we can see on Figures~\ref{fig:ray25}~and~\ref{fig:ray25time}. This happens due to two factors: a) the first is that since we have a lower number of tasks to be run by other browsers, we reduce the message routing overhead between nodes (i.e., resource discovery does not take so long); b) the second factor is that since this system was tested using a single machine and a networked simulated delay. When the number of tasks is too large, the workers in the browser are in fact competing for CPU resources (to execute tasks and to forward messages among them). This creates a scenario, where more nodes/workers actually  make the system slower, since this is a much more strict and resource constrained scenario, than a real example with browsers executing in different machines.
 
-These tests will be executed in two different stages: the first one, ``in lab'', will be a controlled P2P environment, where different browsers and computers will be used for tests, in order to evaluate and calculate the factors that are used to calculate values such as: reputation, threshold to ascend one Node, and block size. 
+In a real world example, the actual execution time would be bounded by:\\
 
-After realizing how the system can perform best, a ``field'' trial will be executed, this will be executed by approaching volunteers that might want to contribute to the experiment, loading the code into their browser so real world tests can be performed.
+$\textbf{jobTime}=slowestDelayFromResourceDiscovery+timeOfExecutingSlowestTask+slowestDelayFromResultReply (1)$ \\
 
-\section{Quantitative Evaluation of system performance when executing jobs and storing/fetching data}
+with full parallelism, where in our test scenario we have: \\
 
-One of the key factors for an App ready cloud platform is its latency; storing and fetching data has to be rapid enough that it does not limit the performance of the applications using browserCloud.js. The system performance varies depending on its usage; in order to evaluate it correctly, tests will be performed, changing several factors that will impact latency:
+$\textbf{jobTime}=\sum{DelayFromResourceDiscovery}+(TimeOfExecuting\_N\_Tasks\_on\_M\_Resources)+\sum{DelayFromResultReply} (2)$\\
 
-\textbf{System evaluation parameters:}
-\begin{itemize}
-  \item Churn Rate - Varying the churn rate will create instability in the availability and readability of the overall computing power of the platform, creating scenarios where job tasks have to be resent to another node to be completed, adding delay to the estimated time of the job. We can also loose the point of contact to the network, which requires need to reconnect again, adding more time for any request.
-  \item Number of nodes - The greater the network, the more distributed can be its load, which favors faster request handling by the node; however, as the network grows, the number of messages traded between the nodes grows and these have impact as well. 
-  \item Number of parallel connections performing requests - With this variance, we want to make sure how much traffic and load the system is able to cope with.
-  \item Number of requests - This is related with the number of parallel connections, however, more focused on number per each application using browserCloud.js API.
-  \item Number of jobs running - Jobs manipulate data and consume the processing power of the system, which also influences latency.
-  \item Different volumes of file storage - Different types of data have different needs, serving big volumes of data is an harder task because it must be served by several nodes
-\end{itemize}
+where N=2500 and M=8 hardware threads, therefore contention for CPU becomes higher with more nodes (browsers) as more messaging is taking place, besides the parallelized computation.
 
-The tuning of this system evaluation parameters will enable us to asses how this system behaves, using the following metrics of evaluation, comparable to other Cloud systems:
-
-\textbf{System performance metrics:}
-\begin{itemize}
-  \item Resource utilization - How much, in percentage, is possible to utilize from all the potentially available resources using this approach.
-  \item Load Balancing - If the load is well distributed among all the nodes or if it is imbalanced.
-  \item Cost - What is the cost associated with the set up of browserCloud.js and what are the costs of using it, regarding CPU, memory and bandwidth usage overhead.
-  \item Execution speed - Time necessary to perform a job with different levels of complexity, and comparative speedups.
-\end{itemize}
-
-The tests will be executed in two different phases: 1) the first in a controlled environment, being able to modify the churn rate on demand and evaluation its behavior, these tests will be essential to evaluate and tune browserCloud.js to the 2) real world tests, using pure voluntary browsers, which are a non controlled environment. These tests will permit us to assess quantifiable results. Both regarding adequate operation and stress testing in small scale, as well as efficiency and scalability in the large. They will also be compared with other cloud like platforms.
-
-\section{Envisioned final comparative analysis}
-
-Once the evaluation of each component it i s done, we envisioned a one by one comparison between browserCloud.js and some of the most used, or known systems for distributed computing jobs and storage to pinpoint which excels the best for each type of task with the respective relative trade offs, classifying with a numeric value in the range [-1,1] for each of the respective dimensions of comparison: \textbf{Q - Quality of results/functional compliance}, \textbf{P - Performance} , \textbf{C - Cost}. In Table~\ref{tbl:cloudcomparisson}, we can see an example.
-
-\begin{table}
+\begin{figure}[]
   \centering
-  \begin{tabular}{| c | c | c | c | c | c | }
-  \hline
-  Type of Task & AWS & SETI@Home & community-lab & browserCloud.js & Obs. \\
-  \hline
-  Genome Sequencing & [Q,P,C] & [Q,P,C] & [Q,P,C] & [Q,P,C] & ... \\ 
-  \hline
-  Photo Storage & [Q,P,C] & [Q,P,C] & [Q,P,C] & [Q,P,C] & ... \\
-  \hline  
-  Realtime Application & [Q,P,C] & [Q,P,C] & [Q,P,C] & [Q,P,C] & ... \\
-  \hline
-  ...  & ... & ... & ... & ... & ... \\
-  \hline
-  \end{tabular}
-  \caption{Outline for summary comparison table of browserCloud.js against other Cloud and distributed computing platforms.}
-  \label{tbl:cloudcomparisson}
-\end{table}
+  \includegraphics[width=0.5\textwidth]{figs/1.png}
+  \caption{Time elapsed on a ray-tracing job divided in 2500 computing units}
+  \label{fig:ray2500}
+\end{figure}
+
+\begin{figure}[]
+  \centering
+  \includegraphics[width=0.5\textwidth]{figs/2.png}
+  \caption{Time elapsed on a ray-tracing job divided in 25 computing units}
+  \label{fig:ray25}
+\end{figure}
+
+\begin{figure}[]
+  \centering
+  \includegraphics[width=0.5\textwidth]{figs/3.png}
+  \caption{Time elapsed on a ray-tracing job divided in 2500 computing units (with induced web RTT delay)}
+  \label{fig:ray2500time}
+\end{figure}
+
+\begin{figure}[]
+  \centering
+  \includegraphics[width=0.5\textwidth]{figs/4.png}
+  \caption{Time elapsed on a ray-tracing job divided in 25 computing units (with induced web RTT delay)}
+  \label{fig:ray25time}
+\end{figure}
+
+In a real world scenario, with more browsers from more machines, the total execution time (makespan) of a ray-tracing job would be closer to that described by Equation 1. It would be influenced by the maximum round trip time between any two nodes (so that the information for every task can be received and processed by another node), plus the time it would take to execute the most of CPU intensive task (e.g., the rectangle in the frame that has the more complex geometry and light reflections to be processed). Figures~\ref{fig:avgtimeexec}~and~\ref{fig:rtt} show what is the average task length and RTT between any two nodes, being the maximum for the first 61ms and the second 11174ms, creating a total of 11235ms (or 11.296s overall). This is a significant increase of efficiency, comparing to the sequential execution (a speedup of about 209 times fold) and also to the previous single-machine experiments.
+
+It is important to note that in Figure~\ref{fig:avgtimeexec}, we can see several task execution lengths due to the complexity of each task, with more or less light reflections. With this microbenchmark we see that the execution time of each task, without any resource contention (1 node = 1 browser per machine), the task duration has an even lower upper bound (lower than 5s). This would entail the upper bound of total task execution time to be under 5061 ms (around just 5s), with a theoretical speedup of about 466 times (take into account that we would be using 2500 nodes then, so speedups are not perfectly linear due to communication overhead, as expected).
+
+\begin{figure}[]
+  \centering
+  \includegraphics[width=0.5\textwidth]{figs/avg_time_exec.png}
+  \caption{Average time for a task execution for a job fragmented in 2500 computing units}
+  \label{fig:avgtimeexec}
+\end{figure}
+
+\begin{figure}[]
+  \centering
+  \includegraphics[width=0.5\textwidth]{figs/rtt.png}
+  \caption{Average Round Trip Time between an two nodes in a 10 browser network}
+  \label{fig:rtt}
+\end{figure}
+
+
+There are also some other performance bottlenecks we noticed that arise from the single threaded nature of JavaScript engines. These aspects are considered in our performance evaluation, such as:
+
+\begin{itemize}
+  \item Logging - Since V8 runs in a single thread, any synchronous operation will block the event loop and add delay to the whole processing, although these logs are essential for us to assess the efficiency of the infrastructure, they are not vital to the job.
+  \item Delay added - One technique we used to simulate the network delay is to use the `setTimeout' native function of V8's JavaScript implementation, since this function is unable to receive floating millisecond values. Moreover, since `setTimeout' does not necessarily guarantee that the function will be executed in X amount of milliseconds, due to the nature of the event loop, there is always an extra delay added implicitly to the operation in the order of 1 to 3 ms.
+  \item Tasks can not be sent in parallel - A node has to send each individual computing unit sequentially and independently, meaning that if we divide a job into 2000 for e.g, each task will have to wait for the previous to be sent.
+\end{itemize}
+
+These bottlenecks were studied and will be tackled in future work, one of the solutions proposed is to use Service Workers\cite{ServiceWorkers} for full multithreaded operation inside browserCloud.js.
 
 
 \section*{Summary}

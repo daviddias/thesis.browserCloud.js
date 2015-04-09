@@ -3,6 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: document.aux
 The style file: chicago.bst
 Database file #1: bibliography.bib
+Warning--I didn't find a database entry for "ServiceWorkers"
 Warning--no journal in Anderson2002
 Warning--page numbers missing in Anderson2002
 Warning--no journal in Bakhtiari
@@ -72,7 +73,7 @@ Warning--page numbers missing in Vogt
 Warning--empty publisher in Wallach
 You've used 58 entries,
             2861 wiz_defined-function locations,
-            958 strings with 14394 characters,
+            960 strings with 14422 characters,
 and the built_in function-call counts, 42082 in all, are:
 = -- 3483
 > -- 3386
@@ -111,4 +112,4 @@ warning$ -- 67
 while$ -- 565
 width$ -- 0
 write$ -- 735
-(There were 67 warnings)
+(There were 68 warnings)

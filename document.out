@@ -39,9 +39,15 @@
 \BOOKMARK [1][]{section.3.3}{API design details}{chapter.3}% 39
 \BOOKMARK [1][]{section.3.4}{Summary}{chapter.3}% 40
 \BOOKMARK [0][]{chapter.4}{Implementation}{}% 41
-\BOOKMARK [0][]{chapter.5}{Evaluation}{}% 42
-\BOOKMARK [1][]{section.5.1}{Qualitative Evaluation of data consistency, availability and partition tolerance}{chapter.5}% 43
-\BOOKMARK [1][]{section.5.2}{Quantitative Evaluation of system performance when executing jobs and storing/fetching data}{chapter.5}% 44
-\BOOKMARK [1][]{section.5.3}{Envisioned final comparative analysis}{chapter.5}% 45
-\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 46
-\BOOKMARK [0][]{chapter.7}{Future work}{}% 47
+\BOOKMARK [1][]{section.4.1}{Implementation details}{chapter.4}% 42
+\BOOKMARK [2][]{subsection.4.1.1}{Browser module}{section.4.1}% 43
+\BOOKMARK [2][]{subsection.4.1.2}{Signalling server}{section.4.1}% 44
+\BOOKMARK [1][]{section.4.2}{first experiment and key learnings- webrtc-ring}{chapter.4}% 45
+\BOOKMARK [1][]{section.4.3}{Implementation collaterals}{chapter.4}% 46
+\BOOKMARK [2][]{subsection.4.3.1}{Testing browserCloud.js}{section.4.3}% 47
+\BOOKMARK [2][]{subsection.4.3.2}{Visualize the network state}{section.4.3}% 48
+\BOOKMARK [2][]{subsection.4.3.3}{Simulate a browserCloud.js network}{section.4.3}% 49
+\BOOKMARK [1][]{section.4.4}{Summary}{chapter.4}% 50
+\BOOKMARK [0][]{chapter.5}{figs}{}% 51
+\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 52
+\BOOKMARK [0][]{chapter.7}{Future work}{}% 53
