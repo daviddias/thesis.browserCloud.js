@@ -14,7 +14,13 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces A peer is notified to update his finger table}}{32}{figure.3.3}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Hole punching through NAT to obtain a public IP and create a SDP offer}}{33}{figure.3.4}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Establishment of a RTCPeerConnection through the custom Signalling Server}}{33}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Software layers at the peer level}}{34}{figure.3.6}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces How the ID namespace is visualized in the DHT}}{34}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Example of a DHT with 4 peers for case study}}{34}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Responsability interval for each Peer}}{35}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Minimum number of connections for messages to be routed properly}}{35}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Example of peer with ID = 0 fingers}}{36}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Peer with ID=0 finger table}}{36}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Software layers at the peer level}}{37}{figure.3.12}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

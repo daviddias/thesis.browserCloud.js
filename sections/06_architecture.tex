@@ -83,11 +83,63 @@ The meta state of the network is always hold in memory by the signalling server,
 
 \subsection{Message routing}
 
-"""ON THIS SECTION"""
+For message routing, we've designed an adaptation of the Chord routing algorithm, a P2P Structured Overlay network, a DHT studied in the related work, with the goal of keeping an efficiency routing and resource lookup with the increase of the number of peers in the network.
 
-TODO
-Explain CHORD routing
-Adaptable finger tables due to expensive Peer Connections
+The ID namespace available in our DHT consists of 48 bit IDs (Figure~\ref{fig:c-1}),this decision was made due to the fact that Javascript only supports 53 bit numbers, to support a greater variaty of IDs, we would have to resort to a big integer third party library, adding unnecessary consuption of computing resources. However, for demonstration purposes, we will explain using a 3 bit ID namespace.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.4\textwidth]{figs/chord-1}
+  \caption{How the ID namespace is visualized in the DHT}
+  \label{fig:c-1}
+\end{figure}
+
+In Figure~\ref{fig:c-2}, we a DHT composed of 4 different peers, with IDs 0, 1, 3 and 6. Each one of these peers will be responsible for a segment of the DHT, in another words what this means is that every message that is destined to their segment, will be delivered to respective peer responsabile. A peer is responsible for a segment of IDs greater than the peer that is its predecessor and lesser or equal than its own ID, represented in Figure ~\ref{fig:c-3}. When a peer enters in the network, its ID is generated through a crop of a SHA-1 hash from a random generated number, creating a natural uniform distribution.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.4\textwidth]{figs/chord-2}
+  \caption{Example of a DHT with 4 peers for case study}
+  \label{fig:c-2}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.4\textwidth]{figs/chord-3}
+  \caption{Responsability interval for each Peer}
+  \label{fig:c-3}
+\end{figure}
+
+In order for messages to find its righteous destination, each peer has to know at minimum the peer that is next to it on the DHT, also called "successor" (Figure~\ref{fig:c-4}). Messages will be forward until they reach the peer which compromisses the responsability of being responsible for that message ID.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.4\textwidth]{figs/chord-4}
+  \caption{Minimum number of connections for messages to be routed properly}
+  \label{fig:c-4}
+\end{figure}
+
+However, as specified earlier in the document, we want to achieve a good and stable efficiency when it comes to routing messages inside the DHT as the network grows. To achieve that, we introduce fingers to our peers. A finger is a direct connection to another peer in the network(Figure ~\ref{fig:c-5}, that was picked following a specific distribution, each peer will have 1 to N fingers, where N is the number of bits of the IDs (for this example, N = 3). A finger is always the peer responsible for the "start" value of the interval(see Figure ~\ref{fig:c-6} for reference and formula) and a message will be routed to that finger if it falls inside the interval.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.4\textwidth]{figs/chord-5}
+  \caption{Example of peer with ID = 0 fingers}
+  \label{fig:c-5}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.4\textwidth]{figs/chord-6}
+  \caption{Peer with ID=0 finger table}
+  \label{fig:c-6}
+\end{figure}
+
+The number of fingers and the fingers we use for a given instance of browserCloud.js are configurable, the reason behind this design decision was that RTCPeerConnections have a significant memory cost, so we have to be considerate in the number of data channels we keep open. In order to give greater flexibility to the developer, we've let the option of picking how many rows of the finger table will be filled by the developer creating a browserCloud.js application, this is also perfect since WebRTC is still a working draft and there might be good developments in resource consumption.
+
+******** EXPLAIN HERE WHAT CAN BE THE BEST STRATEGY FOR FINGER PICKING ******
+
+
 
 \subsection{Job Scheduling}
 
