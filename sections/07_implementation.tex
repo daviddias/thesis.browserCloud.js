@@ -53,8 +53,11 @@ piri-piri
 
 \subsection{Simulate a browserCloud.js network}
 
-\subsection{RayTracing module}
+\subsection{Ray Tracing module}
 
-all sync, no smart pants
+To perform the parallel CPU bound tests, we've developed a module that works in Node.js and in the browser to perform Ray Tracing Tasks. The module works in a synchronous fashion so it performs faster, in another words, there are not techniques to make que module asynchronous that would create an overhead for the processing, in order to avoid stopping javascript event loop, the ray tracing task has to be ran in a sub process.
+
+This module performs the interpretation of a scene designed in CSS, division of the scene in multiple parts (tasks) and reconstruction of the ray traced scene when every task is completed.
+
 
 \section{Summary}
