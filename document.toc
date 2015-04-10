@@ -39,15 +39,15 @@
 \contentsline {section}{\numberline {3.3}API design details}{38}{section.3.3}
 \contentsline {section}{\numberline {3.4}Summary}{39}{section.3.4}
 \contentsline {chapter}{\numberline {4}Implementation}{41}{chapter.4}
-\contentsline {section}{\numberline {4.1}Implementation details}{41}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Browser module}{41}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Signalling server}{41}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}first experiment and key learnings- webrtc-ring}{42}{section.4.2}
-\contentsline {section}{\numberline {4.3}Implementation collaterals}{42}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Testing browserCloud.js}{42}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Visualize the network state}{42}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Simulate a browserCloud.js network}{42}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Summary}{42}{section.4.4}
-\contentsline {chapter}{\numberline {5}figs}{43}{chapter.5}
+\contentsline {section}{\numberline {4.1}Browser module}{41}{section.4.1}
+\contentsline {section}{\numberline {4.2}Signalling server}{41}{section.4.2}
+\contentsline {section}{\numberline {4.3}Key learnings from the earlier iterations - webrtc-ring}{41}{section.4.3}
+\contentsline {section}{\numberline {4.4}Implementation collaterals}{42}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Testing browserCloud.js}{42}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Visualize the network state}{42}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Simulate a browserCloud.js network}{42}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}RayTracing module}{42}{subsection.4.4.4}
+\contentsline {section}{\numberline {4.5}Summary}{42}{section.4.5}
+\contentsline {chapter}{\numberline {5}Evaluation}{43}{chapter.5}
 \contentsline {chapter}{\numberline {6}Conclusion}{49}{chapter.6}
 \contentsline {chapter}{\numberline {7}Future work}{51}{chapter.7}

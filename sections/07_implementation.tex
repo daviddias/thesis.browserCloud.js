@@ -6,36 +6,55 @@
 {\small\it -- James Halliday (substack), founder of browserling, prolific Node.js developer}
 \end{quotation}
 
-We've done a lot of things
-iteration and things
+During the process of developing browserCloud.js, several attempts were created following the Agile methodology, rapidly creating working prototypes and iterating over them. This led to the creation of several open source modules, MIT licensed, having been downloaded in the order of dozens of thousand times until the creation of this document.
 
+Every code artifact was developed following the Unix philosophy, every module attempts to do at most one thing and one thing well, creating small, maintainable and powerful abstractions.
 
-\section{Implementation details}
+In this section, we describe the implementation details of the final code artifacts that compose the browserCloud.js and the collaterals designed and created that although not projected in the beginning, were needed in order to collect the data we were looking to study.
 
-tiny modules
-
-\subsection{Browser module}
+\section{Browser module}
 
 explain how it was built
 browserify
 socket.io
 
 
-\subsection{Signalling server}
+\section{Signalling server}
 
 websockets API
 restful API
 
 
-\section{first experiment and key learnings- webrtc-ring}
+\section{Key learnings from the earlier iterations - webrtc-ring}
 
+During one of the earlier iterations, we've developed a prototype of webrtc-explorer, called webrtc-ring, which although very similiar in routing strategy, each peer only knew about its successor, in another words, each peer only had access to one finger, this originated a system with the following properties:
+
+\begin{itemize}
+    \item overlay structure - 1 dimension Hash Ring
+    \item lookup protocol - Matching key and NodeID
+    \item network parameters - Number of Nodes in the network
+    \item routing table size - 1
+    \item routing complexity - O(log(N))
+    \item join/leave overhead - 2
+\end{itemize}
+
+During the development, we performed tests to evaluate the capacity of the system to distribute work, later discussed on the Evaluation section. We learned that due to the single thread nature of Javascript, running message routing inside the same process that would be use to perform CPU bound tasks could be highly disavantageous for browserCloud.js performance. To overcome this, we introduced Web Workers to the system, independent threads inside the browser to separate communication from CPU bound tasks.
 
 \section{Implementation collaterals}
 
+During the development
+
 \subsection{Testing browserCloud.js}
+
+piri-piri
+
 
 \subsection{Visualize the network state}
 
 \subsection{Simulate a browserCloud.js network}
+
+\subsection{RayTracing module}
+
+all sync, no smart pants
 
 \section{Summary}
