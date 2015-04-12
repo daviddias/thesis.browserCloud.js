@@ -51,7 +51,18 @@ piri-piri
 
 \subsection{Visualize the network state}
 
+Using D3JS, a API library that works as a thin veneer on top of SVG, we've developed an application that grabs the state of the browserCloud.js network and shows a live graphical representation, as seen on Figure~\ref{fig:visualizer}, where each node is represented by a dot and its ID and the arcs being the connections established between the nodes in the network.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figs/visualizer}
+  \caption{Visualization of a browserCloud.js network}
+  \label{fig:visualizer}
+\end{figure}
+
 \subsection{Simulate a browserCloud.js network}
+
+In addition to the visualizer application, one simulator application was developed, were not only a graphical representation is generated, but also, it gives the developer a way to create a new virtual network, without any real peers. We've the option to pick the number of peers we want present and how many and which fingers will be used, so we can analyse different distribution paths and optimize for number of hops between any two peers in the network.
 
 \subsection{Ray Tracing module}
 
@@ -59,5 +70,6 @@ To perform the parallel CPU bound tests, we've developed a module that works in 
 
 This module performs the interpretation of a scene designed in CSS, division of the scene in multiple parts (tasks) and reconstruction of the ray traced scene when every task is completed.
 
-
 \section{Summary}
+
+

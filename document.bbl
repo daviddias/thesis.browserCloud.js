@@ -344,6 +344,10 @@ Vogt, C., M.~Werner, \& T.~Schmidt (2013).
 W3C (2013).
 \newblock {Indexed Database}.
 
+\bibitem[\protect\citeauthoryear{W3C}{W3C}{2014}]{ServiceWorkers}
+W3C (2014).
+\newblock {Service Workers}.
+
 \bibitem[\protect\citeauthoryear{Wallach}{Wallach}{2003}]{Wallach}
 Wallach, D.~S. (2003).
 \newblock {A Survey of Peer-to-Peer Security Issues}.

@@ -3,7 +3,6 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: document.aux
 The style file: chicago.bst
 Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "ServiceWorkers"
 Warning--no journal in Anderson2002
 Warning--page numbers missing in Anderson2002
 Warning--no journal in Bakhtiari
@@ -71,45 +70,45 @@ Warning--page numbers missing in Vishnumurthy
 Warning--no number and no volume in Vogt
 Warning--page numbers missing in Vogt
 Warning--empty publisher in Wallach
-You've used 58 entries,
+You've used 59 entries,
             2861 wiz_defined-function locations,
-            960 strings with 14422 characters,
-and the built_in function-call counts, 42082 in all, are:
-= -- 3483
-> -- 3386
+            962 strings with 14443 characters,
+and the built_in function-call counts, 42545 in all, are:
+= -- 3522
+> -- 3412
 < -- 17
-+ -- 1015
-- -- 1149
-* -- 3703
-:= -- 7707
-add.period$ -- 164
-call.type$ -- 58
-change.case$ -- 449
-chr.to.int$ -- 57
-cite$ -- 125
-duplicate$ -- 1118
-empty$ -- 2326
-format.name$ -- 1308
-if$ -- 7850
++ -- 1021
+- -- 1159
+* -- 3731
+:= -- 7800
+add.period$ -- 166
+call.type$ -- 59
+change.case$ -- 455
+chr.to.int$ -- 58
+cite$ -- 126
+duplicate$ -- 1133
+empty$ -- 2357
+format.name$ -- 1318
+if$ -- 7930
 int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 45
-newline$ -- 278
-num.names$ -- 586
-pop$ -- 410
+newline$ -- 282
+num.names$ -- 596
+pop$ -- 415
 preamble$ -- 1
-purify$ -- 794
+purify$ -- 806
 quote$ -- 0
-skip$ -- 1189
+skip$ -- 1206
 stack$ -- 0
-substring$ -- 1919
-swap$ -- 403
+substring$ -- 1939
+swap$ -- 408
 text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1156
+type$ -- 1176
 warning$ -- 67
-while$ -- 565
+while$ -- 575
 width$ -- 0
-write$ -- 735
-(There were 68 warnings)
+write$ -- 746
+(There were 67 warnings)

@@ -45,9 +45,9 @@
 \contentsline {section}{\numberline {4.4}Implementation collaterals}{42}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Testing browserCloud.js}{42}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Visualize the network state}{42}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Simulate a browserCloud.js network}{42}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}RayTracing module}{42}{subsection.4.4.4}
-\contentsline {section}{\numberline {4.5}Summary}{42}{section.4.5}
-\contentsline {chapter}{\numberline {5}Evaluation}{43}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{49}{chapter.6}
-\contentsline {chapter}{\numberline {7}Future work}{51}{chapter.7}
+\contentsline {subsection}{\numberline {4.4.3}Simulate a browserCloud.js network}{43}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Ray Tracing module}{43}{subsection.4.4.4}
+\contentsline {section}{\numberline {4.5}Summary}{43}{section.4.5}
+\contentsline {chapter}{\numberline {5}Evaluation}{45}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{53}{chapter.6}
+\contentsline {chapter}{\numberline {7}Future work}{55}{chapter.7}
