@@ -1,53 +1,58 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Overview}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Problem Statement}{1}{section.1.2}
-\contentsline {section}{\numberline {1.3}Extended motivation and Roadmap}{3}{section.1.3}
-\contentsline {section}{\numberline {1.4}Research Proposal}{4}{section.1.4}
-\contentsline {section}{\numberline {1.5}Contributions}{4}{section.1.5}
-\contentsline {section}{\numberline {1.6}Publications}{4}{section.1.6}
-\contentsline {section}{\numberline {1.7}Structure of the thesis}{4}{section.1.7}
-\contentsline {chapter}{\numberline {2}Related Work}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}Cloud computing and Open Source Cloud Platforms}{7}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Cloud interoperability}{8}{subsection.2.1.1}
-\contentsline {subsubsection}{\numberline {2.1.1.1}IEEE Intercloud}{9}{subsubsection.2.1.1.1}
-\contentsline {subsubsection}{\numberline {2.1.1.2}pkgcloud}{10}{subsubsection.2.1.1.2}
-\contentsline {subsubsection}{\numberline {2.1.1.3}Eucalyptus}{10}{subsubsection.2.1.1.3}
-\contentsline {section}{\numberline {2.2}Volunteered resource sharing}{11}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Hybrid and Community Clouds}{11}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Cycle and Storage Sharing, using Volunteer Resource Systems}{12}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Peer-to-Peer Networks and Architectures}{13}{subsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.3.1}Unstructured}{13}{subsubsection.2.2.3.1}
-\contentsline {subsubsection}{\numberline {2.2.3.2}Structured with Distributed Hash Tables}{14}{subsubsection.2.2.3.2}
-\contentsline {subsubsection}{\numberline {2.2.3.3}Structured without Distributed Hash Tables}{16}{subsubsection.2.2.3.3}
-\contentsline {subsubsection}{\numberline {2.2.3.4}Fault Tolerance, Load Balancing, Assurance and Trust}{16}{subsubsection.2.2.3.4}
-\contentsline {subsubsection}{\numberline {2.2.3.5}Fault Tolerance, Persistence and Availability}{16}{subsubsection.2.2.3.5}
-\contentsline {subsubsection}{\numberline {2.2.3.6}Load Balancing}{17}{subsubsection.2.2.3.6}
-\contentsline {subsubsection}{\numberline {2.2.3.7}Assurance and Trust}{18}{subsubsection.2.2.3.7}
-\contentsline {section}{\numberline {2.3}Resource sharing using the Web platform}{19}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Web Platform}{19}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Previous attempts on cycle sharing through web platform}{22}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Analysis and discussion}{22}{section.2.4}
-\contentsline {chapter}{\numberline {3}Architecture}{29}{chapter.3}
-\contentsline {section}{\numberline {3.1}Interaction design details}{30}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Peer joins and leaves}{31}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Message routing}{32}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Job Scheduling}{34}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Architecture of the Software stack}{36}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Communication layer}{37}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Service router}{37}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Job scheduler}{38}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}API design details}{38}{section.3.3}
-\contentsline {section}{\numberline {3.4}Summary}{39}{section.3.4}
-\contentsline {chapter}{\numberline {4}Implementation}{41}{chapter.4}
-\contentsline {section}{\numberline {4.1}Browser module}{41}{section.4.1}
-\contentsline {section}{\numberline {4.2}Signalling server}{41}{section.4.2}
-\contentsline {section}{\numberline {4.3}Key learnings from the earlier iterations - webrtc-ring}{41}{section.4.3}
-\contentsline {section}{\numberline {4.4}Implementation collaterals}{42}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Testing browserCloud.js}{42}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Visualize the network state}{42}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Simulate a browserCloud.js network}{43}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}Ray Tracing module}{43}{subsection.4.4.4}
-\contentsline {section}{\numberline {4.5}Summary}{43}{section.4.5}
-\contentsline {chapter}{\numberline {5}Evaluation}{45}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{53}{chapter.6}
-\contentsline {chapter}{\numberline {7}Future work}{55}{chapter.7}
+\contentsline {section}{\numberline {1.1}Background and Motivation}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Problem Statement}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Current Shortcomings}{3}{subsection.1.2.1}
+\contentsline {section}{\numberline {1.3}Research Proposal}{4}{section.1.3}
+\contentsline {section}{\numberline {1.4}Contributions}{4}{section.1.4}
+\contentsline {section}{\numberline {1.5}Structure and Roadmap}{5}{section.1.5}
+\contentsline {section}{\numberline {1.6}Open Source Contributions}{5}{section.1.6}
+\contentsline {section}{\numberline {1.7}Publications, Presentations and References}{6}{section.1.7}
+\contentsline {chapter}{\numberline {2}Related Work}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Cloud computing and Open Source Cloud Platforms}{9}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Cloud interoperability}{10}{subsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.1}IEEE Intercloud}{11}{subsubsection.2.1.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.2}pkgcloud}{12}{subsubsection.2.1.1.2}
+\contentsline {subsubsection}{\numberline {2.1.1.3}Eucalyptus}{12}{subsubsection.2.1.1.3}
+\contentsline {section}{\numberline {2.2}Volunteered resource sharing}{12}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Hybrid and Community Clouds}{13}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Cycle and Storage Sharing, using Volunteer Resource Systems}{13}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Peer-to-Peer Networks and Architectures}{15}{subsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3.1}Unstructured}{15}{subsubsection.2.2.3.1}
+\contentsline {subsubsection}{\numberline {2.2.3.2}Structured with Distributed Hash Tables}{16}{subsubsection.2.2.3.2}
+\contentsline {subsubsection}{\numberline {2.2.3.3}Structured without Distributed Hash Tables}{17}{subsubsection.2.2.3.3}
+\contentsline {subsubsection}{\numberline {2.2.3.4}Fault Tolerance, Load Balancing, Assurance and Trust}{17}{subsubsection.2.2.3.4}
+\contentsline {subsubsection}{\numberline {2.2.3.5}Fault Tolerance, Persistence and Availability}{17}{subsubsection.2.2.3.5}
+\contentsline {subsubsection}{\numberline {2.2.3.6}Load Balancing}{18}{subsubsection.2.2.3.6}
+\contentsline {subsubsection}{\numberline {2.2.3.7}Assurance and Trust}{19}{subsubsection.2.2.3.7}
+\contentsline {section}{\numberline {2.3}Resource sharing using the Web platform}{20}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Web Platform}{20}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Previous attempts on cycle sharing through web platform}{23}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Analysis and discussion}{23}{section.2.4}
+\contentsline {chapter}{\numberline {3}Architecture}{31}{chapter.3}
+\contentsline {section}{\numberline {3.1}Distributed Architecture}{32}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Entities}{32}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Interaction Protocols}{33}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}Peer joins and leaves}{33}{subsubsection.3.1.2.1}
+\contentsline {subsubsection}{\numberline {3.1.2.2}Message routing}{34}{subsubsection.3.1.2.2}
+\contentsline {subsubsection}{\numberline {3.1.2.3}Filling the finger table for optimal minimum number of hops}{37}{subsubsection.3.1.2.3}
+\contentsline {section}{\numberline {3.2}Resource Management}{38}{section.3.2}
+\contentsline {section}{\numberline {3.3}Architecture of the Software stack}{40}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Communication layer}{40}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Service router}{41}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Job scheduler}{41}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}API design}{42}{section.3.4}
+\contentsline {section}{\numberline {3.5}Testing framework}{43}{section.3.5}
+\contentsline {section}{\numberline {3.6}Summary}{43}{section.3.6}
+\contentsline {chapter}{\numberline {4}Implementation}{45}{chapter.4}
+\contentsline {section}{\numberline {4.1}Browser module}{45}{section.4.1}
+\contentsline {section}{\numberline {4.2}Signalling server}{46}{section.4.2}
+\contentsline {section}{\numberline {4.3}Key learnings from the earlier iterations - webrtc-ring}{46}{section.4.3}
+\contentsline {section}{\numberline {4.4}Implementation collaterals}{47}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Testing browserCloud.js}{47}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Visualize the network state}{48}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Simulate a browserCloud.js network}{48}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Ray Tracing module}{49}{subsection.4.4.4}
+\contentsline {section}{\numberline {4.5}Summary}{49}{section.4.5}
+\contentsline {chapter}{\numberline {5}Evaluation}{51}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{59}{chapter.6}
+\contentsline {chapter}{\numberline {7}Future work}{61}{chapter.7}

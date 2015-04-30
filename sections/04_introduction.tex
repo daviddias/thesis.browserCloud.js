@@ -2,18 +2,17 @@
 \chapter{Introduction}\label{ch:intro}
 
 \begin{quotation}
-    "OUT OF THIS WORLD QUOTE".
-    {\small\it 
-        -- ~\footnote{Lehene C. HStack, http://hstack.org/why-were-using-hbase-part-2} }
+    "As Sivers highlighted, the first follower is probably more important than the leader: they validate the insanity. <3 first followers".
+    {\small\it -- Paul Campbell, founder of Tito, curator of ullconf and brio conference}
 \end{quotation}
 
-\section{Overview}
+\section{Background and Motivation}
 
-Today, in the information communications technology landscape, with the introduction of social networks, search engines, Internet of things, which led to innovation on home and vehicle automation, user data has been growing at a large pace. The store, transfer, processing and analysis of all this data brings considerable new knowledge breakthroughs, enabling us to optimize systems towards a better and enhanced experience. However, how to use the information available to achieve these breakthroughs has been one of the main challenges since then. 
+The Web has evolved considerably since its inception, specially in the last few years, with the profileration of the Web Browser, the birth of the Web Platform, leveraging the Browser capabilities to create a ecosystem of APIs and protocols that enabled it to be a host for first class applications. The Browser is the most ubiquitous runtime, making the Web Platform the number one target for developers to build their applications.
 
-\section{Problem Statement}
+The Web, or the World Wide Web, as Sir Tim Berners Lee presented it to the world with the introduction of HTTP, was decentralized by design, every machine could act as a client and a server, however, with time, this panorama changed and although every machine ability to still run a HTTP client or server, due to network topology considerations, mainly NAT, users lost the ability to connect to other user machines as it was intended, having to overcome some obstacles between interoperability of protocols and platforms. In essence, the barrier of entrance to create a P2P environment become so high, that systems moved to a pure centralized model. However, P2P was not forgotten and now more than ever, there is a chance for peers to connect between each other, perform resource discovery and sharing, due to the P2P cabilities brought to the browser when WebRTC was introduced.
 
-The resources required to execute a contiguous and significant analysis of the data available are controlled by a small subset of comapnies and organizations. In order to enable more people to use Big Data analysis, we need to reduce the cost that is inherent to process all this user information, which typically need big amounts of CPU cycles for processing, analysis and inference.
+Today, in the information communications technology landscape, user generated data has been growing at a large pace, with the introduction of social networks, search engines, Internet of things, which led to innovation on home and vehicle automation. The store, transfer, and carry out processing and analysis of all this data brings the need for considerable new breakthroughs, enabling us to optimize systems towards a better and enhanced experience. However, how to use the information available to achieve these breakthroughs has been one of the main challenges since then.
 
 Currently addressing this issues in part, Cloud Computing has revolutionized the computing landscape due to key advantages to developers/users over pre-existing computing paradigms, the main reasons are:
 
@@ -26,27 +25,25 @@ Currently addressing this issues in part, Cloud Computing has revolutionized the
 
 Grid computing had offered before a solution for high CPU bound computations, however it has high entry barriers, being necessary to have a large infrastructure, even if just to execute small or medium size computing jobs. Cloud computing solves this by offering a solution ``pay-as-you-go'', which transformed computing into an utility.
 
-Still, even though we are able to integrate several Cloud providers into an open software stack, Cloud computing relies nowadays on centralized architectures, resorting to data centers, using mainly the Client-Server model. In this work, we pursue a shift in this paradigm.
+Still, even though we are able to integrate several Cloud providers into an open software stack, Cloud computing relies nowadays on centralized architectures, resorting to data centers, using mainly the Client-Server model. In this work, we pursue a shift in this paradigm, bridging the worlds of decentralized communications with efficient resource discovery capabilities, in a platform that is ubiquitous and powerful, the Web Platform.
+
+\section{Problem Statement}
+
+The resources required to execute a continuous, massive and significant analysis of the data available are controlled by a small subset of comapnies and organizations. In order to enable more people to use Big Data analysis, we need to reduce the cost that is inherent to process all this user information, which typically need vast amounts of CPU cycles for processing, analysis and inference.
 
 Unlike the conventional approach to make Cloud Computing `green' (i.e. Green Computing) by improving datacenter's efficiency through expensive and strictly centralized control, our vision entails a shift in perspective, by enabling each user to contribute to this effort, leveraging his/her idle computing resources (sometimes up to 70\% of power wasted), and thus reducing overall environmental footprint. Thus browserCloud.js resources are provided in a voluntary manner by common Internet users that want to share their idle computer cycles and storage available, while browsing the web, without having the concern to setup any application or system to do so.
 
 Community Clouds are not a novelty in the Distributed Systems research area. However, existing models have been developed to follow the client-server model, transporting the data to the place where the computation will take place, which causes big bottlenecks in network traffic, limiting the amount of computed units done in a delimited window of time. One of browserCloud.js goals is exactly to mitigate this bottleneck by taking the computation (the algorithms that will perform operations over the data) to the machines where the data is stored.
 
-\section{Extended motivation and Roadmap}
+\subsection{Current Shortcomings}
 
-Our main goal with this work is to design and implement a system that is able to take advantage of volunteered computer cycles through the most ubiquitous growing platform, the browser. In order to create this system, several components will be developed:
+We've identified several issues with current solutions, most of which inspired us to pursue this research and the development of browserCloud.js, these are:
 
 \begin{itemize}
-    \item An efficient local storage module that offers persistence and availability, using browser storage for fast indexing.
-    \item A distributed job scheduler able to receive jobs and coordinate with the nodes inside the network, without having to recur to a centralized control system.
-    \item A job executioner able to receive different assets to perform the jobs (image/video manipulation, calculation, etc), taking advantage of the dynamic runtime available by the predominant language in the browser, javascript.
-    \item A server to work as the entry point for browser to download the code necessary to run browserCloud.js logic. This is the only point that is considered to be centralized in the network, due to the limitation of browsers being typically behind NAT and not having static IPs
-    \item Structured peer-to-peer overlay network for browsers to communicate directly among themselves, without being necessary to take the data or the computation to a centralized system.
-    \item A client API, RESTful, so it is easy to develop applications for Desktops and mobile platforms without having to change the codebase or building a new SDK
-    \item A command line interface for access like `mountable' partition to the storage in browserCloud.js, able to dispatch jobs in a very Unix way, by piping the results from one task to another task.
+    \item Typical resource sharing networks don't offer an interface for a user to act as a consumer and contributor at the same time, specially when it comes to CPU resource sharing.
+    \item If a user wants to consume resources from a given network, it is almost given that user will have to develop his specific usecase for that runtime or runtimes where their tasks will be executed, interoperability is not a primer.
+    \item There is a high level of entrance for a user to be contribute to a given resource sharing network, typically passes through several steps of software installation and configuration.
 \end{itemize}
-
-These components are fully described in section 4. After its development, a proposed evaluation is going to be executed, according to a set of assessment metrics, enabling us to compare the viability of browserCloud.js as a Cloud provider, comparing to existing centralized Cloud systems.
 
 \section{Research Proposal}
 
@@ -56,19 +53,68 @@ This work will address extending the Web Platform with technologies such as: Web
 
   \textit{``An application is peer-to-peer if it aggregates resources at the network’s edge, and those resources can be anything. It can be content, it can be cycles, it can be storage space, it can be human presence.''}, C.Shirky \cite{Shirky.}
 
-Finally, browserCloud.js has the possibility to grow organically with the number of users. The management of these resources is done by an RESTful API, enabling desktop and mobile apps to use the resources available in a way that's familiar to developers. 
+We've named this system browserCloud.js. It has the possibility to grow organically with the number of users. The management of these resources is done by technologies and protocols present in the Web Platform, enabling desktop and mobile apps to use the resources available in a way that's familiar to developers. 
 
 \section{Contributions}
 
-List of open source modules
-tecnology inspired by
+Our main goal with this work is to design and implement a system that is able to take advantage of volunteered computer cycles through the most ubiquitous growing platform, the browser. In order to create this system, several components will be developed:
 
-\section{Publications}
+\begin{itemize}
+    \item An efficient way to perform resource discovery, without a need for a central indexing.
+    \item A distributed job scheduler able to receive jobs and coordinate with the nodes inside the network, without having to recur to a centralized control system.
+    \item A job executioner able to receive different assets to perform the jobs (image/video manipulation, calculation, etc), taking advantage of the dynamic runtime available by the predominant language in the browser, javascript.
+    \item A server to work as the entry point for browser to download the code necessary to run browserCloud.js logic. This is the only point that is considered to be centralized in the network, due to the limitation of browsers being typically behind NAT and not having static IPs
+    \item Structured peer-to-peer overlay network for browsers to communicate directly among themselves, without being necessary to take the data or the computation to a centralized system.
+\end{itemize}
 
-Talks Delivered 
+These components are fully described in section 3. After its development, a proposed evaluation is going to be executed, according to a set of assessment metrics, enabling us to compare the viability of browserCloud.js.
 
-\section{Structure of the thesis}
+\section{Structure and Roadmap}
 
-\textbf{Document roadmap:} We start by describing the objectives of our solution in Section 2, and then, in Section 3 we present the state of the art for the technologies and areas of study relevant for he proposed work, which are: Cloud computing and Open Source Cloud Platforms (at 3.1), Volunteered resource sharing (at 3.2) and Resource sharing using the Web platform (at 3.3). In Section 4, we present the proposed architecture and respective software stack, moving to the system evaluation present on Section 5.
+We start by presenting in Section 2, the state of the art for the technologies and areas of study relevant for he proposed work, which are: Cloud computing and Open Source Cloud Platforms (at 2.1), Volunteered resource sharing (at 2.2) and Resource sharing using the Web platform (at 2.3). In Section 3, we present thed architecture and respective software stack, moving to Implementation details in Section 4 and system evaluation present on Section 5.
 
+\section{Open Source Contributions}
 
+During the development of browserCloud.js, several Open Source contributions, MIT licensed, were made. Table~\ref{tbl:codecontributions} contains the list of these contributions and respective interest by the Open Source, P2P and Javascript communities based on number of downloads and project stars.
+
+List is: https://gist.github.com/diasdavid/55f5bf71d9494caf6a08 . Will extract the numbers closer to deadline
+
+\begin{table}
+  \centering
+  \begin{tabular}{| c | c | c | c | c |}
+  \hline 
+  Name & URL & Number of downloads/instalations & Number of Github stars & Number of npm stars  \\
+  a & b & c & d & e \\
+  a & b & c & d & e \\
+  a & b & c & d & e \\
+  a & b & c & d & e \\
+  a & b & c & d & e \\
+  a & b & c & d & e \\
+  a & b & c & d & e \\
+  a & b & c & d & e \\
+  a & b & c & d & e \\
+  a & b & c & d & e \\
+  a & b & c & d & e \\
+  a & b & c & d & e \\
+  a & b & c & d & e \\
+  a & b & c & d & e \\
+  a & b & c & d & e \\
+  a & b & c & d & e \\
+  \hline   
+  \end{tabular}
+  \caption{List of Open Source contributions}
+  \label{tbl:codecontributions}
+\end{table}
+
+\section{Publications, Presentations and References}
+
+We've seen a new tendency on the Javascript, Node.js, WebRTC and essencially Web Open Source communities to move to a model where contributions to the ecosystem are measured by their ability to be used by other projects, reviewed and studied from their internals and easy to use, therefore creating the need for simpler interaces, open source code and easy to install/run, inspite the tradicional reports with digests on the analysis done during the development and typically hard to reproduce results.
+
+We've adopted this mindset since the beginning of the development of browserCloud.js, taking the project to the community and collecting feedback early and often, getting other developers excited to use the platform. In this process, we've achieved:
+
+\begin{itemize}
+    \item Invited to the third OpoJS event, where I had the opportunity to give a 50 minutes talk on for more than 140 Web developers and P2P enthusiasts. The video of this talk was later publish, having close to 180 impressions (https://www.youtube.com/watch?v=fNQGGGE\_\_zI)
+    \item WebRTC Weekly Issue \#60 mention, the number one WebRTC newsletter with more than 1000 subscribers.
+    \item Number one article in EchoJS for 3 days in a row and top 5 for 7 days. (http://www.echojs.com/news/14009)
+    \item browserCloud.js demo video - Over 200 impressions. (https://www.youtube.com/watch?v=kjwIjoENCRE)
+\end{itemize}

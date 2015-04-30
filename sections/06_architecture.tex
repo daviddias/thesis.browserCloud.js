@@ -2,11 +2,22 @@
 \chapter{Architecture}\label{ch:architecture}
 
 \begin{quotation}
-“Some fantastic quote”
-{\small\it --  }
+    “Some fantastic quote”
+    {\small\it -- From some fantastic person }
 \end{quotation}
 
-This section describes the architecture designed for the browserCloud.js system. browserCloud.js was designed with with the Unix philosophy, that is, subtracting the unnecessary from a subsystem until it is constructed to perform one thing and one thing well, building more cohese abstractions through composition.
+browserCloud.js proposes a mechanism to find, gather and utilize idle resources present in a P2P overlay network, in which its participants will be joining and connecting to each other through a rendezvous point, as represented in Figure~\ref{fig:b-2}. For a given peer, all that the peer needs to know is that once part of this network, it can submit a job which will be partitioned and distributed across a number of peers available, being responsible for later aggregating the results and delivering them to the user which summoned that job. The user doesn't need to understand how the network is organizer or which peers it is directly connected too, that complexity is abstracted by browserCloud.js.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{figs/birds-eye}
+  \caption{browserCloud.js Overview}
+  \label{fig:b-e}
+\end{figure}
+
+A pratical use case for browserCloud.js is high CPU bound jobs and capable to run in parallel, e.g: image processing, video compressing, data manipulation, map and reduce functions, etc. These parallel tasks are divided by the peers available in the network, leveraging the parallelism to obtain a speed up.
+
+This chapter describes the architecture designed for the browserCloud.js system. browserCloud.js was designed with with the Unix philosophy, that is, subtracting the unnecessary from a subsystem until it is constructed to perform one thing and one thing well, building more cohese abstractions through composition.
 
 browserCloud.js was architectured to meet the following requirements:
 
@@ -27,6 +38,10 @@ The overview of the network architecture can be seen in Figure~\ref{fig:n-a-o}.
   \label{fig:n-a-o}
 \end{figure}
 
+\section{Distributed Architecture}
+
+\subsection{Entities}
+
 There are two different kind of actors in the system:
 
 \begin{itemize}
@@ -34,11 +49,11 @@ There are two different kind of actors in the system:
     \item rendezvous point - The only centralized component in this architecture, its purpose is for the clients to have a way to connect to the overlay network. 
 \end{itemize}
 
-\section{Interaction design details}
+\subsection{Interaction Protocols}
 
 In a browserCloud.js infrastructure, we have three main interaction patterns, the first being when a peer joins or leaves the network, which also we can call membership management, something that in traditionally P2P networks would simply mean an exchange of a pair IP:Port, but in a P2P browser network, a RTCPeerConnection has to be established and kept alive, meaning that an handshaking protocol must be performed. The second pattern is message routing between peers, this has been designed with inspiration on the Chord routing algorithm, studied on the related work. The third interaction demonstrates how to levarage the computer cycles available in the network to process CPU bound jobs.
 
-\subsection{Peer joins and leaves}
+\subsubsection{Peer joins and leaves}
 
 A peer join compromisses of the following steps:
 
@@ -81,7 +96,7 @@ The meta state of the network is always hold in memory by the signalling server,
 \end{figure}
 
 
-\subsection{Message routing}
+\subsubsection{Message routing}
 
 For message routing, we've designed an adaptation of the Chord routing algorithm, a P2P Structured Overlay network, a DHT studied in the related work, with the goal of keeping an efficiency routing and resource lookup with the increase of the number of peers in the network.
 
@@ -119,7 +134,7 @@ In order for messages to find its righteous destination, each peer has to know a
   \label{fig:c-4}
 \end{figure}
 
-However, as specified earlier in the document, we want to achieve a good and stable efficiency when it comes to routing messages inside the DHT as the network grows. To achieve that, we introduce fingers to our peers. A finger is a direct connection to another peer in the network(Figure ~\ref{fig:c-5}, that was picked following a specific distribution, each peer will have 1 to N fingers, where N is the number of bits of the IDs (for this example, N = 3). A finger is always the peer responsible for the "start" value of the interval(see Figure ~\ref{fig:c-6} for reference and formula) and a message will be routed to that finger if it falls inside the interval.
+However, as specified earlier in the document, we want to achieve a good and stable efficiency when it comes to routing messages inside the DHT as the network grows. To achieve that, we introduce fingers to our peers. A finger is a direct connection to another peer in the network(Figure~\ref{fig:c-5}), that was picked following a specific distribution, each peer will have 1 to N fingers, where N is the number of bits of the IDs (for this example, N = 3). A finger is always the peer responsible for the "start" value of the interval(see Figure~\ref{fig:c-6} for reference and formula) and a message will be routed to that finger if it falls inside the interval.
 
 \begin{figure}[h!]
   \centering
@@ -137,13 +152,15 @@ However, as specified earlier in the document, we want to achieve a good and sta
 
 The number of fingers and the fingers we use for a given instance of browserCloud.js are configurable, the reason behind this design decision was that RTCPeerConnections have a significant memory cost, so we have to be considerate in the number of data channels we keep open. In order to give greater flexibility to the developer, we've let the option of picking how many rows of the finger table will be filled by the developer creating a browserCloud.js application, this is also perfect since WebRTC is still a working draft and there might be good developments in resource consumption.
 
+\subsubsection{Filling the finger table for optimal minimum number of hops}
+
+*****************************************************************************
 ******** EXPLAIN HERE WHAT CAN BE THE BEST STRATEGY FOR FINGER PICKING ******
+*****************************************************************************
 
+\section{Resource Management}
 
-
-\subsection{Job Scheduling}
-
-Leveraging the browser's dynamic runtime was a feature we pursue from the beginning of the design for browserCloud.js. A job is divided into individual tasks that are a composition of the function to be executed plus the data which should serve as input for that task, creating a transportable gridlet that can be migrated between browsers and executed by its final destination. A job execution is performed as follows:
+Leveraging the browser's dynamic runtime was a feature we pursue from the beginning of the design for browserCloud.js. A job is divided into individual tasks that are a composition of the function to be executed plus the data which should serve as input for that task, creating a transportable gridlet that can be migrated between browsers and executed by its final destination. A job execution is performed using the algorithm as follows:
 
 \begin{itemize}
     \item 1 - Select in how many units we want to divide a job.
@@ -187,9 +204,17 @@ Service router offers extensibility to browserCloud.js, similar to Job scheduler
 
 The Job scheduler benefits the API of the Service router to implement its logic, this means that although a job scheduler was implemented to fit our design purposes, it could easily be replaced by another job scheduler with different offers and guarantees.
 
-A job consists in the partition of tasks which are enriched with data and sent to other peers to be executed, this tasks, which can be represented as functions (job assets), can be defined in runtime, therefore giving a greater flexibility to the developer that is using this system to run the distributed job they want.
+A job consists in the partition of tasks which are enriched with data and sent to other peers to be executed, this tasks, which can be represented as functions (job assets), can be defined in runtime, therefore giving a greater flexibility to the developer that is using this system to run the distributed job they want. We can describe the work performed to schedule a job, by the following algorithm:
 
-\section{API design details}
+\begin{itemize}
+    \item 1. A user submits a job
+    \item 2. The job is divided in smaller computing units, called tasks, each task compromisses of a segment of the data that is going to be processed and the transformation which is going to be applied, that is, a function.
+    \item 3. These task and data are created
+    \item 4. The peer will request the network for other peers availability, the user has the capability to specify how many peers should be used to process this job. This option is given since different jobs might benefit of more or less partition, depending on the data set.
+    \item 5. The peer who submited the job (the peer that is controlled by the user submitting the job) will receive the individual results for each task as they are ready and transmited. Once all of the results are received, they are aggregated and delivered to the user.
+\end{itemize}
+
+\section{API design}
 
 For the user of browserCloud.js, a simple API was created to perform: peer join, message listening and job scheduling as demonstrated by the following code (which should be interpreted as pseudo-code since the API might change with the release of new versions):
 
@@ -256,6 +281,17 @@ For the user of browserCloud.js, a simple API was created to perform: peer join,
     };
 \end{verbatim}
 \endgroup
+
+\section{Testing framework}
+
+TODO*****
+requirements:
+1. spawn browsers
+2. orchestrate them
+3. collect their events
+4. create a timeline with the events
+5. assess if it happen as expected
+
 
 \section{Summary}
 
