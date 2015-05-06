@@ -1,114 +1,111 @@
 This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: document.aux
-The style file: chicago.bst
-Database file #1: bibliography.bib
-Warning--no journal in Anderson2002
-Warning--page numbers missing in Anderson2002
-Warning--no journal in Bakhtiari
-Warning--no number and no volume in Bakhtiari
-Warning--empty year in Bharambe
-Warning--no journal in Bharambe
-Warning--no number and no volume in Bharambe
-Warning--no number and no volume in Costa2012
-Warning--no journal in Decandia2007
-Warning--no number and no volume in Decandia2007
-Warning--no number and no volume in Definition2003
-Warning--no number and no volume in Desmedt;1998
-Warning--page numbers missing in Desmedt;1998
-Warning--no number and no volume in Duda2013
-Warning--page numbers missing in Duda2013
-Warning--no journal in Filipe2011
-Warning--no number and no volume in Filipe2011
-Warning--page numbers missing in Filipe2011
-Warning--no journal in Golle2001
-Warning--no number and no volume in Golle2001
-Warning--can't use both volume and number fields in Handley
-Warning--empty year in JeffreyDean;SanjayGhemawat
-Warning--no number and no volume in Karger2004
-Warning--no journal in Koloniari2005
-Warning--no number and no volume in Korpela2001
-Warning--no journal in Larson2002
-Warning--no number and no volume in Larson2002
-Warning--page numbers missing in Larson2002
-Warning--no volume for Marti
-Warning--empty year in Maymounkov
-Warning--no journal in Maymounkov
-Warning--no number and no volume in Maymounkov
-Warning--page numbers missing in Maymounkov
-Warning--no journal in Merelo2007
-Warning--no number and no volume in Merelo2007
-Warning--empty institution in Milojicic2003
-Warning--empty year in Navarro
-Warning--empty institution in Navarro
-Warning--no number and no volume in Nurmi2009
-Warning--no journal in Preneel1999
-Warning--no number and no volume in Preneel1999
-Warning--no number and no volume in Ranjan2006
-Warning--no journal in Rao2003
-Warning--empty year in Rieche
-Warning--no number and no volume in Rieche
-Warning--no number and no volume in Ripeanu2002a
-Warning--empty year in Rodrigues
-Warning--no journal in Rodrigues
-Warning--no number and no volume in Rodrigues
-Warning--page numbers missing in Rodrigues
-Warning--no number and no volume in Rowstron2001a
-Warning--no journal in Rowstron2001
-Warning--no number and no volume in Rowstron2001
-Warning--no volume for Ruellan2013
-Warning--empty year in Shirky.
-Warning--no journal in Stoica2001
-Warning--no number and no volume in Stoica2001
-Warning--empty note in Thomson2013
-Warning--no journal in Tilkov2010
-Warning--no number and no volume in Tilkov2010
-Warning--page numbers missing in Tilkov2010
-Warning--no journal in Vishnumurthy
-Warning--no number and no volume in Vishnumurthy
-Warning--page numbers missing in Vishnumurthy
-Warning--no number and no volume in Vogt
-Warning--page numbers missing in Vogt
-Warning--empty publisher in Wallach
-You've used 59 entries,
-            2861 wiz_defined-function locations,
-            962 strings with 14443 characters,
-and the built_in function-call counts, 42545 in all, are:
-= -- 3522
-> -- 3412
-< -- 17
-+ -- 1021
-- -- 1159
-* -- 3731
-:= -- 7800
-add.period$ -- 166
-call.type$ -- 59
-change.case$ -- 455
-chr.to.int$ -- 58
-cite$ -- 126
-duplicate$ -- 1133
-empty$ -- 2357
-format.name$ -- 1318
-if$ -- 7930
-int.to.chr$ -- 2
+The style file: ieeetr.bst
+I couldn't open database file ../bibliography.bib
+---line 238 of file document.aux
+ : \bibdata{../bibliography
+ :                         }
+I'm skipping whatever remains of this command
+I found no database files---while reading file document.aux
+Warning--I didn't find a database entry for "Barraca2011"
+Warning--I didn't find a database entry for "Navarro"
+Warning--I didn't find a database entry for "Shirky"
+Warning--I didn't find a database entry for "Armbrust"
+Warning--I didn't find a database entry for "Nurmi2009"
+Warning--I didn't find a database entry for "Duda2013"
+Warning--I didn't find a database entry for "Clarke2001"
+Warning--I didn't find a database entry for "Larson2002"
+Warning--I didn't find a database entry for "Anderson2002"
+Warning--I didn't find a database entry for "Korpela2001"
+Warning--I didn't find a database entry for "Anderson2015"
+Warning--I didn't find a database entry for "Silva2008"
+Warning--I didn't find a database entry for "Costa2012"
+Warning--I didn't find a database entry for "Rodrigues"
+Warning--I didn't find a database entry for "Ranjan2006"
+Warning--I didn't find a database entry for "Milojicic2003"
+Warning--I didn't find a database entry for "Definition2003"
+Warning--I didn't find a database entry for "T.Klingberg2002"
+Warning--I didn't find a database entry for "Ripeanu2002a"
+Warning--I didn't find a database entry for "Cohen2009"
+Warning--I didn't find a database entry for "Bakhtiari"
+Warning--I didn't find a database entry for "Kargerl"
+Warning--I didn't find a database entry for "Preneel1999"
+Warning--I didn't find a database entry for "D.Eastlake3rdMotorola;P.JonesSystems2001"
+Warning--I didn't find a database entry for "Stoica2001"
+Warning--I didn't find a database entry for "Rowstron2001"
+Warning--I didn't find a database entry for "Zhao2001"
+Warning--I didn't find a database entry for "Maymounkov"
+Warning--I didn't find a database entry for "Handley"
+Warning--I didn't find a database entry for "Bharambe"
+Warning--I didn't find a database entry for "Koloniari2005"
+Warning--I didn't find a database entry for "Wallach"
+Warning--I didn't find a database entry for "Rowstron2001a"
+Warning--I didn't find a database entry for "Decandia2007"
+Warning--I didn't find a database entry for "Byers"
+Warning--I didn't find a database entry for "Rao2003"
+Warning--I didn't find a database entry for "Rieche"
+Warning--I didn't find a database entry for "Karger2004"
+Warning--I didn't find a database entry for "Desmedt;1998"
+Warning--I didn't find a database entry for "Afify"
+Warning--I didn't find a database entry for "Douceura"
+Warning--I didn't find a database entry for "Marti"
+Warning--I didn't find a database entry for "Golle2001"
+Warning--I didn't find a database entry for "Filipe2011"
+Warning--I didn't find a database entry for "Vishnumurthy"
+Warning--I didn't find a database entry for "Google/Mozzila/Opera"
+Warning--I didn't find a database entry for "Ecma2009"
+Warning--I didn't find a database entry for "Zakai2011"
+Warning--I didn't find a database entry for "IanHickson2013"
+Warning--I didn't find a database entry for "Vogt"
+Warning--I didn't find a database entry for "Recommendation2013"
+Warning--I didn't find a database entry for "JeffreyDean;SanjayGhemawat"
+Warning--I didn't find a database entry for "Thomson2013"
+Warning--I didn't find a database entry for "Ruellan2013"
+Warning--I didn't find a database entry for "Merelo2007"
+Warning--I didn't find a database entry for "Tilkov2010"
+Warning--I didn't find a database entry for "Barabasi2001"
+Warning--I didn't find a database entry for "Silva2011"
+Warning--I didn't find a database entry for "ServiceWorkers"
+You've used 0 entries,
+            1876 wiz_defined-function locations,
+            595 strings with 4753 characters,
+and the built_in function-call counts, 20 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 9
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 45
-newline$ -- 282
-num.names$ -- 596
-pop$ -- 415
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
-purify$ -- 806
+purify$ -- 0
 quote$ -- 0
-skip$ -- 1206
+skip$ -- 1
 stack$ -- 0
-substring$ -- 1939
-swap$ -- 408
-text.length$ -- 17
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1176
-warning$ -- 67
-while$ -- 575
+type$ -- 0
+warning$ -- 0
+while$ -- 0
 width$ -- 0
-write$ -- 746
-(There were 67 warnings)
+write$ -- 2
+(There were 2 error messages)
