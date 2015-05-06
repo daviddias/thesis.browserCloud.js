@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {1.4}Contributions}{4}{section.1.4}
 \contentsline {section}{\numberline {1.5}Structure and Roadmap}{5}{section.1.5}
 \contentsline {section}{\numberline {1.6}Open Source Contributions}{5}{section.1.6}
-\contentsline {section}{\numberline {1.7}Publications, Presentations and References}{6}{section.1.7}
+\contentsline {section}{\numberline {1.7}Publications, Presentations and References}{5}{section.1.7}
 \contentsline {chapter}{\numberline {2}Related Work}{9}{chapter.2}
 \contentsline {section}{\numberline {2.1}Cloud computing and Open Source Cloud Platforms}{9}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Cloud interoperability}{10}{subsection.2.1.1}

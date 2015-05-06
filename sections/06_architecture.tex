@@ -2,11 +2,11 @@
 \chapter{Architecture}\label{ch:architecture}
 
 \begin{quotation}
-    “Some fantastic quote”
-    {\small\it -- From some fantastic person }
+    “The possibility of that which has never occurred cannot be determined by opinion—only by an attempt.”
+    {\small\it -- Dee Hock Biography, One From Many}
 \end{quotation}
 
-browserCloud.js proposes a mechanism to find, gather and utilize idle resources present in a P2P overlay network, in which its participants will be joining and connecting to each other through a rendezvous point, as represented in Figure~\ref{fig:b-2}. For a given peer, all that the peer needs to know is that once part of this network, it can submit a job which will be partitioned and distributed across a number of peers available, being responsible for later aggregating the results and delivering them to the user which summoned that job. The user doesn't need to understand how the network is organizer or which peers it is directly connected too, that complexity is abstracted by browserCloud.js.
+browserCloud.js proposes a mechanism to find, gather and utilize idle resources present in a P2P overlay network, in which its participants will be joining and connecting to each other through a rendezvous point, as represented in Figure~\ref{fig:b-e}. For a given peer, all that the peer needs to know is that once part of this network, it can submit a job which will be partitioned and distributed across a number of peers available, being responsible for later aggregating the results and delivering them to the user which summoned that job. The user does not need to understand how the network is organized or which peers it is directly connected too, so that complexity is abstracted by browserCloud.js.
 
 \begin{figure}[h!]
   \centering
@@ -24,21 +24,23 @@ browserCloud.js was architectured to meet the following requirements:
 \begin{itemize}
     \item \textbf{Membership management} - The system has to enable peers to join and leave a current network of browserCloud.js peers or a subset of it. A peer should only have the knowledge of a small of other peers in the network and be available to rail in any other peer that wants to be part of the P2P network.
     \item \textbf{Message routing} - Peers must have a way to communicate with every other peer in the network without the necessity of contacting a centralized service to do so. Messages should be routed between peers, having each peer knowing a subset of the network, guaranteeing in full coverage in this manner.
-    \item \textbf{Job scheduling and results aggregation} - The discovery of computational resources must be performed using a distributed fashing, peers interact between each other to send tasks and retrieve the results for the peer executing the job.
+    \item \textbf{Job scheduling and results aggregation} - The discovery of computational resources must be performed using a distributed approach, peers interact between each other to send tasks and retrieve the results for the peer executing the job.
     \item \textbf{Support dynamic runtime} - Provide flexibility for jobs being executed. This is delivered thanks to the dynamic runtime offered by by peers in browserCloud.js due to the fact that they are standard compliant web browsers and Javascript is the language used.
     \item \textbf{Reduced entrance cost to enable greater adoption} - Designed simple APIs, abstracting the complexity in favor of greater extendability.
 \end{itemize}
 
-The overview of the network architecture can be seen in Figure~\ref{fig:n-a-o}.
+\section{Distributed Architecture}
+
+The overview of the distributed architecture can be seen in Figure~\ref{fig:n-a-o}.
 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.7\textwidth]{figs/network-architecture-overview}
-  \caption{browserCloud.js Network Architecture Overview}
+  \caption{browserCloud.js Distributed Architecture Overview}
   \label{fig:n-a-o}
 \end{figure}
 
-\section{Distributed Architecture}
+
 
 \subsection{Entities}
 
@@ -46,12 +48,12 @@ There are two different kind of actors in the system:
 
 \begin{itemize}
     \item browser - The points on our network that will be able to issue jobs, execute tasks and route messages.
-    \item rendezvous point - The only centralized component in this architecture, its purpose is for the clients to have a way to connect to the overlay network. 
+    \item rendezvous point - The only centralized component in this architecture, its purpose is for the clients to have a way to connect to and join the overlay network. 
 \end{itemize}
 
 \subsection{Interaction Protocols}
 
-In a browserCloud.js infrastructure, we have three main interaction patterns, the first being when a peer joins or leaves the network, which also we can call membership management, something that in traditionally P2P networks would simply mean an exchange of a pair IP:Port, but in a P2P browser network, a RTCPeerConnection has to be established and kept alive, meaning that an handshaking protocol must be performed. The second pattern is message routing between peers, this has been designed with inspiration on the Chord routing algorithm, studied on the related work. The third interaction demonstrates how to levarage the computer cycles available in the network to process CPU bound jobs.
+In a browserCloud.js infrastructure, we have three main interaction patterns, the first being when a peer joins or leaves the network, which also we can call membership management, something that in traditionally P2P networks would simply mean an exchange of a IP:Port pair, but in a P2P browser network, a RTCPeerConnection has to be established and kept alive, meaning that an handshaking protocol must be performed. The second pattern is message routing between peers, this has been designed with inspiration on the Chord\cite{Stoica2001},routing algorithm, studied on the related work. The third interaction demonstrates how to levarage the computer cycles available in the network to process CPU bound jobs.
 
 \subsubsection{Peer joins and leaves}
 
@@ -59,13 +61,13 @@ A peer join compromisses of the following steps:
 
 \begin{itemize}
     \item \textbf{1 - Registration} - When a peer is ready to join the network, it performs the registration action to the custom browserCloud.js signalling server, the server replies with a confirmation and a unique ID for this peer to occupy in the network. This enables the signalling server, which holds the meta data of the current state in the network, to pick the ID in the ID interval that might be less occupied. We can observe this interaction in Figure~\ref{fig:1-p-r}.
-    \item \textbf{2 - New peer available} - As peers join the network, other peers present need to be notified to establish or update their connections to the new best candidates, so that the routing of messages (explained in the next section), remains efficient. For each peer join, a notification of a finger update can be sent to 1 or more peers present, as seen in Figure~\ref{fig:2-p-n}.
-    \item \textbf{3 - Connection establishment between two peers} - In order to establish a connection between two peers, once there is an interest for these to connect, for e.g, in the case of a finger update event. There are two substeps, the first being the SDP offer creation through a technique called "hole punching", where a browser uses one of the WebRTC API to traverse through NAT to obtain its public IP, which is crucial information when two browsers need to establish a direction connection, Figure~\ref{fig:3-p-s}. The second step is the exchange of these SDP offers between browsers and that has to be performed by a centralized service, in browserCloud.js we developed a custom signalling server that handles that part, as seen in Figure~\ref{fig:4-p-c}
+    \item \textbf{2 - New peer available} - As peers join the network, other peers present need to be notified to establish or update their connections to the new best candidates, so that the routing of messages (explained in the next section), remains efficient. For each peer join, a notification with a finger update can be sent to 1 or more peers present, as seen in Figure~\ref{fig:2-p-n}.
+    \item \textbf{3 - Connection establishment between two peers} - In order to establish a connection between two peers, once there is an interest for these to connect, for e.g, in the case of a finger update event. There are two substeps, the first being the SDP offer creation through a technique called "hole punching", where a browser uses one of the WebRTC API to traverse through NAT to obtain its public IP, which is crucial information when two browsers need to establish a direction connection, Figure~\ref{fig:3-p-s}. The second step is the exchange of these SDP offers between browsers and that has to be performed by a centralized service; in browserCloud.js we developed a custom signalling server that handles that part, as seen in Figure~\ref{fig:4-p-c}.
 \end{itemize}
 
-A peer leave is a simplier and organic process, once a peer leaves the network, the RTCPeerConnections objects are destroied, notifying automatically the peers that have to update their finger tables that they should request the signalling server to update the metadata of the state of the network and therefore, issuing new finger-update messages.
+A peer leave is a simpler and organic process, once a peer leaves the network, the RTCPeerConnections objects are closed and destroyed, notifying automatically the peers that have to update their finger tables that they should request the signalling server to update the metadata of the state of the network and therefore, issuing new finger-update messages.
 
-The meta state of the network is always hold in memory by the signalling server, there is no need to keep this state persistence because it can be easily reconstructed, in the event of the signalling server failing, a new instance can be spawn and the peers simply have to register again, but this time with their current IDs.
+The meta state of the network is always held in memory by the signalling server, there is no need to keep this state persistent because it can be easily reconstructed, in the event of the signalling server failing, a new instance can be spawn and the peers simply have to register again, but this time with their current IDs.
 
 \begin{figure}[h!]
   \centering
@@ -98,9 +100,9 @@ The meta state of the network is always hold in memory by the signalling server,
 
 \subsubsection{Message routing}
 
-For message routing, we've designed an adaptation of the Chord routing algorithm, a P2P Structured Overlay network, a DHT studied in the related work, with the goal of keeping an efficiency routing and resource lookup with the increase of the number of peers in the network.
+For message routing, we designed an adaptation of the Chord routing algorithm, a P2P Structured Overlay network, a DHT studied in the related work, with the goal of keeping an efficient routing and resource lookup with the increase of the number of peers in the network.
 
-The ID namespace available in our DHT consists of 48 bit IDs (Figure~\ref{fig:c-1}),this decision was made due to the fact that Javascript only supports 53 bit numbers, to support a greater variaty of IDs, we would have to resort to a big integer third party library, adding unnecessary consuption of computing resources. However, for demonstration purposes, we will explain using a 3 bit ID namespace.
+The ID namespace available in our DHT consists of 48 bit IDs (Figure~\ref{fig:c-1} ), this decision was made due to the fact that Javascript only supports 53 bit numbers, to support a greater variaty of IDs, we would have to resort to a big integer third party library, adding unnecessary consuption of computing resources. However, for demonstration purposes, we will explain using a 3 bit ID namespace.
 
 \begin{figure}[h!]
   \centering
@@ -109,7 +111,7 @@ The ID namespace available in our DHT consists of 48 bit IDs (Figure~\ref{fig:c-
   \label{fig:c-1}
 \end{figure}
 
-In Figure~\ref{fig:c-2}, we a DHT composed of 4 different peers, with IDs 0, 1, 3 and 6. Each one of these peers will be responsible for a segment of the DHT, in another words what this means is that every message that is destined to their segment, will be delivered to respective peer responsabile. A peer is responsible for a segment of IDs greater than the peer that is its predecessor and lesser or equal than its own ID, represented in Figure ~\ref{fig:c-3}. When a peer enters in the network, its ID is generated through a crop of a SHA-1 hash from a random generated number, creating a natural uniform distribution.
+In Figure~\ref{fig:c-2}, we have a DHT composed of 4 different peers, with IDs 0, 1, 3 and 6. Each one of these peers will be responsible for a segment of the DHT, in another words what this means is that every message that is destined to their segment, will be delivered to respective peer responsable. A peer is responsible for a segment of IDs greater than the peer that is its predecessor and lesser or equal than its own ID, represented in Figure ~\ref{fig:c-3}. When a peer enters in the network, its ID is generated through a crop of a SHA-1 hash from a random generated number, creating a natural uniform distribution.
 
 \begin{figure}[h!]
   \centering
@@ -125,7 +127,7 @@ In Figure~\ref{fig:c-2}, we a DHT composed of 4 different peers, with IDs 0, 1, 
   \label{fig:c-3}
 \end{figure}
 
-In order for messages to find its righteous destination, each peer has to know at minimum the peer that is next to it on the DHT, also called "successor" (Figure~\ref{fig:c-4}). Messages will be forward until they reach the peer which compromisses the responsability of being responsible for that message ID.
+In order for messages to find its correct destination, each peer has to know at minimum the peer that is next to it on the DHT, also called "successor" (Figure~\ref{fig:c-4}). Messages will be forward until they reach the peer which compromisses the responsability of being responsible for that message ID.
 
 \begin{figure}[h!]
   \centering
@@ -134,7 +136,7 @@ In order for messages to find its righteous destination, each peer has to know a
   \label{fig:c-4}
 \end{figure}
 
-However, as specified earlier in the document, we want to achieve a good and stable efficiency when it comes to routing messages inside the DHT as the network grows. To achieve that, we introduce fingers to our peers. A finger is a direct connection to another peer in the network(Figure~\ref{fig:c-5}), that was picked following a specific distribution, each peer will have 1 to N fingers, where N is the number of bits of the IDs (for this example, N = 3). A finger is always the peer responsible for the "start" value of the interval(see Figure~\ref{fig:c-6} for reference and formula) and a message will be routed to that finger if it falls inside the interval.
+However, as specified earlier in the document, we want to achieve a good and stable efficiency when it comes to routing messages inside the DHT as the network grows. To achieve that, we introduce fingers in our peers as we mentioned earlier. A finger is a direct connection to another peer in the network (Figure~\ref{fig:c-5}), that was picked following a specific distribution, each peer will have 1 to N fingers, where N is the number of bits of the IDs (for this example, N = 3). A finger is always the peer responsible for the "start" value of the interval (see Figure~\ref{fig:c-6} for reference and formula) and a message will be routed to that finger if it falls inside the interval.
 
 \begin{figure}[h!]
   \centering
@@ -150,7 +152,7 @@ However, as specified earlier in the document, we want to achieve a good and sta
   \label{fig:c-6}
 \end{figure}
 
-The number of fingers and the fingers we use for a given instance of browserCloud.js are configurable, the reason behind this design decision was that RTCPeerConnections have a significant memory cost, so we have to be considerate in the number of data channels we keep open. In order to give greater flexibility to the developer, we've let the option of picking how many rows of the finger table will be filled by the developer creating a browserCloud.js application, this is also perfect since WebRTC is still a working draft and there might be good developments in resource consumption.
+The number of fingers and the fingers we use for a given instance of browserCloud.js are configurable. The reason behind this design decision was that RTCPeerConnections have a significant memory cost, so we have to be considerate in the number of data channels we keep open. In order to give greater flexibility to the developer, we allow the option of picking how many rows of the finger table will be filled by the developer creating a browserCloud.js application. This is also perfect since WebRTC is still a working draft and there might be good developments in resource consumption.
 
 \subsubsection{Filling the finger table for optimal minimum number of hops}
 
@@ -160,7 +162,7 @@ The number of fingers and the fingers we use for a given instance of browserClou
 
 \section{Resource Management}
 
-Leveraging the browser's dynamic runtime was a feature we pursue from the beginning of the design for browserCloud.js. A job is divided into individual tasks that are a composition of the function to be executed plus the data which should serve as input for that task, creating a transportable gridlet that can be migrated between browsers and executed by its final destination. A job execution is performed using the algorithm as follows:
+Leveraging the browser's dynamic runtime was a feature we pursue from the beginning of the design for browserCloud.js. A job is divided into individual tasks that are a composition of the function to be executed plus the data which should serve as input for that task, creating a transportable gridlet that can be migrated between browsers and executed at its final destination. A job execution is performed using the algorithm as follows:
 
 \begin{itemize}
     \item 1 - Select in how many units we want to divide a job.
@@ -190,7 +192,7 @@ The communication layer is responsible for routing messages between peers and es
 
 \begin{itemize}
     \item Holds the connections with other peers.
-    \item Performs the necessarity logic for efficient routing.
+    \item Performs the necessary logic, using fingers, for efficient routing.
     \item Keeps the peer connected to the network by updating its routing table as necessary
 \end{itemize}
 

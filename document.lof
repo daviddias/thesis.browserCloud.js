@@ -10,7 +10,7 @@
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Example of an HTTP2.0 dataflow}}{29}{figure.2.8}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces browserCloud.js Overview}}{31}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces browserCloud.js Network Architecture Overview}}{33}{figure.3.2}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces browserCloud.js Distributed Architecture Overview}}{33}{figure.3.2}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Registration of a peer, signaling itself as available to be part of the P2P network}}{35}{figure.3.3}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces A peer is notified to update his finger table}}{35}{figure.3.4}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Hole punching through NAT to obtain a public IP and create a SDP offer}}{36}{figure.3.5}
