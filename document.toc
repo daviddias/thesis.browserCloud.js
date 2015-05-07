@@ -56,7 +56,7 @@
 \contentsline {section}{\numberline {4.4}Testing framework - piri-piri}{50}{section.4.4}
 \contentsline {section}{\numberline {4.5}Visualize the network state}{50}{section.4.5}
 \contentsline {section}{\numberline {4.6}Simulate a browserCloud.js network}{51}{section.4.6}
-\contentsline {section}{\numberline {4.7}Ray Tracing module}{52}{section.4.7}
+\contentsline {section}{\numberline {4.7}Ray Tracing module}{51}{section.4.7}
 \contentsline {section}{\numberline {4.8}Summary}{52}{section.4.8}
-\contentsline {chapter}{\numberline {5}Evaluation}{53}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{61}{chapter.6}
+\contentsline {chapter}{\numberline {5}Evaluation}{55}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{63}{chapter.6}
