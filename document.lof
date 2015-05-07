@@ -25,7 +25,14 @@
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Normal execution of a browserCloudjs test}}{45}{figure.3.14}
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Possible timeline of events for an request from browser A to browser D and the consequent reply}}{46}{figure.3.15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualization of a browserCloud.js network}}{50}{figure.4.1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Code Structure of webrtc-explorer, the JavaScript module that implements the client code for browserCloudjs}}{48}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Code Structure of the abstraction on top of webrtc-explorer to compute parallel tasks over the browser network}}{48}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Code Structure of the Signalling Server}}{49}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Code Structure for the Testing Framework, named piri-piri}}{50}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Visualization of a browserCloud.js network}}{51}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Code Structure for the Visualizer application}}{51}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Code Structure for the Simulator application}}{52}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Code Structure for the Ray Tracing module}}{52}{figure.4.8}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Time elapsed on a ray-tracing job divided in 2500 computing units}}{57}{figure.5.1}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Time elapsed on a ray-tracing job divided in 25 computing units}}{57}{figure.5.2}

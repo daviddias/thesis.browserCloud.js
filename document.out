@@ -53,11 +53,10 @@
 \BOOKMARK [1][]{section.4.1}{Browser module}{chapter.4}% 53
 \BOOKMARK [1][]{section.4.2}{Signalling server}{chapter.4}% 54
 \BOOKMARK [1][]{section.4.3}{Key learnings from the earlier iterations - webrtc-ring}{chapter.4}% 55
-\BOOKMARK [1][]{section.4.4}{Implementation collaterals}{chapter.4}% 56
-\BOOKMARK [2][]{subsection.4.4.1}{Testing browserCloud.js}{section.4.4}% 57
-\BOOKMARK [2][]{subsection.4.4.2}{Visualize the network state}{section.4.4}% 58
-\BOOKMARK [2][]{subsection.4.4.3}{Simulate a browserCloud.js network}{section.4.4}% 59
-\BOOKMARK [2][]{subsection.4.4.4}{Ray Tracing module}{section.4.4}% 60
-\BOOKMARK [1][]{section.4.5}{Summary}{chapter.4}% 61
-\BOOKMARK [0][]{chapter.5}{Evaluation}{}% 62
-\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 63
+\BOOKMARK [1][]{section.4.4}{Testing framework - piri-piri}{chapter.4}% 56
+\BOOKMARK [1][]{section.4.5}{Visualize the network state}{chapter.4}% 57
+\BOOKMARK [1][]{section.4.6}{Simulate a browserCloud.js network}{chapter.4}% 58
+\BOOKMARK [1][]{section.4.7}{Ray Tracing module}{chapter.4}% 59
+\BOOKMARK [1][]{section.4.8}{Summary}{chapter.4}% 60
+\BOOKMARK [0][]{chapter.5}{Evaluation}{}% 61
+\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 62
