@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {1.4}Contributions}{4}{section.1.4}
 \contentsline {section}{\numberline {1.5}Structure and Roadmap}{5}{section.1.5}
 \contentsline {section}{\numberline {1.6}Open Source Contributions}{5}{section.1.6}
-\contentsline {section}{\numberline {1.7}Publications, Presentations and References}{5}{section.1.7}
+\contentsline {section}{\numberline {1.7}Publications, Presentations and References}{6}{section.1.7}
 \contentsline {chapter}{\numberline {2}Related Work}{9}{chapter.2}
 \contentsline {section}{\numberline {2.1}Cloud computing and Open Source Cloud Platforms}{9}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Cloud interoperability}{10}{subsection.2.1.1}
@@ -36,23 +36,28 @@
 \contentsline {subsubsection}{\numberline {3.1.2.2}Message routing}{34}{subsubsection.3.1.2.2}
 \contentsline {subsubsection}{\numberline {3.1.2.3}Filling the finger table for optimal minimum number of hops}{37}{subsubsection.3.1.2.3}
 \contentsline {section}{\numberline {3.2}Resource Management}{38}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Job Submission}{38}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Job Execution}{40}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}Architecture of the Software stack}{40}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Communication layer}{40}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Service router}{41}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Job scheduler}{41}{subsection.3.3.3}
 \contentsline {section}{\numberline {3.4}API design}{42}{section.3.4}
-\contentsline {section}{\numberline {3.5}Testing framework}{43}{section.3.5}
-\contentsline {section}{\numberline {3.6}Summary}{43}{section.3.6}
-\contentsline {chapter}{\numberline {4}Implementation}{45}{chapter.4}
-\contentsline {section}{\numberline {4.1}Browser module}{45}{section.4.1}
-\contentsline {section}{\numberline {4.2}Signalling server}{46}{section.4.2}
-\contentsline {section}{\numberline {4.3}Key learnings from the earlier iterations - webrtc-ring}{46}{section.4.3}
-\contentsline {section}{\numberline {4.4}Implementation collaterals}{47}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Testing browserCloud.js}{47}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Visualize the network state}{48}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Simulate a browserCloud.js network}{48}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}Ray Tracing module}{49}{subsection.4.4.4}
-\contentsline {section}{\numberline {4.5}Summary}{49}{section.4.5}
-\contentsline {chapter}{\numberline {5}Evaluation}{51}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{59}{chapter.6}
-\contentsline {chapter}{\numberline {7}Future work}{61}{chapter.7}
+\contentsline {subsection}{\numberline {3.4.1}API calls signatures}{42}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}API Usage Flow}{42}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Testing framework requirement}{43}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}browserCloudjs quality test workflow}{44}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}browserCloudjs quality test assessment}{45}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Summary}{46}{section.3.6}
+\contentsline {chapter}{\numberline {4}Implementation}{47}{chapter.4}
+\contentsline {section}{\numberline {4.1}Browser module}{47}{section.4.1}
+\contentsline {section}{\numberline {4.2}Signalling server}{48}{section.4.2}
+\contentsline {section}{\numberline {4.3}Key learnings from the earlier iterations - webrtc-ring}{48}{section.4.3}
+\contentsline {section}{\numberline {4.4}Implementation collaterals}{49}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Testing browserCloud.js}{49}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Visualize the network state}{49}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Simulate a browserCloud.js network}{50}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Ray Tracing module}{50}{subsection.4.4.4}
+\contentsline {section}{\numberline {4.5}Summary}{51}{section.4.5}
+\contentsline {chapter}{\numberline {5}Evaluation}{53}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{61}{chapter.6}

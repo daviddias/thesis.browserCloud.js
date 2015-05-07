@@ -21,15 +21,16 @@
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Minimum number of connections for messages to be routed properly}}{38}{figure.3.10}
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Example of peer with ID = 0 fingers}}{39}{figure.3.11}
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Peer with ID=0 finger table}}{39}{figure.3.12}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Software layers at the peer level}}{40}{figure.3.13}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Software layers at the peer level}}{41}{figure.3.13}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Normal execution of a browserCloudjs test}}{45}{figure.3.14}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Possible timeline of events for an request from browser A to browser D and the consequent reply}}{46}{figure.3.15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualization of a browserCloud.js network}}{49}{figure.4.1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualization of a browserCloud.js network}}{50}{figure.4.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Time elapsed on a ray-tracing job divided in 2500 computing units}}{55}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Time elapsed on a ray-tracing job divided in 25 computing units}}{55}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Time elapsed on a ray-tracing job divided in 2500 computing units (with induced web RTT delay)}}{56}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Time elapsed on a ray-tracing job divided in 25 computing units (with induced web RTT delay)}}{56}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Average time for a task execution for a job fragmented in 2500 computing units}}{57}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Average Round Trip Time between an two nodes in a 10 browser network}}{57}{figure.5.6}
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Time elapsed on a ray-tracing job divided in 2500 computing units}}{57}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Time elapsed on a ray-tracing job divided in 25 computing units}}{57}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Time elapsed on a ray-tracing job divided in 2500 computing units (with induced web RTT delay)}}{58}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Time elapsed on a ray-tracing job divided in 25 computing units (with induced web RTT delay)}}{58}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Average time for a task execution for a job fragmented in 2500 computing units}}{59}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Average Round Trip Time between an two nodes in a 10 browser network}}{59}{figure.5.6}
 \addvspace {10\p@ }

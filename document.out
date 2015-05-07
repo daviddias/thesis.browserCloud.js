@@ -36,23 +36,28 @@
 \BOOKMARK [3][]{subsubsection.3.1.2.2}{Message routing}{subsection.3.1.2}% 36
 \BOOKMARK [3][]{subsubsection.3.1.2.3}{Filling the finger table for optimal minimum number of hops}{subsection.3.1.2}% 37
 \BOOKMARK [1][]{section.3.2}{Resource Management}{chapter.3}% 38
-\BOOKMARK [1][]{section.3.3}{Architecture of the Software stack}{chapter.3}% 39
-\BOOKMARK [2][]{subsection.3.3.1}{Communication layer}{section.3.3}% 40
-\BOOKMARK [2][]{subsection.3.3.2}{Service router}{section.3.3}% 41
-\BOOKMARK [2][]{subsection.3.3.3}{Job scheduler}{section.3.3}% 42
-\BOOKMARK [1][]{section.3.4}{API design}{chapter.3}% 43
-\BOOKMARK [1][]{section.3.5}{Testing framework}{chapter.3}% 44
-\BOOKMARK [1][]{section.3.6}{Summary}{chapter.3}% 45
-\BOOKMARK [0][]{chapter.4}{Implementation}{}% 46
-\BOOKMARK [1][]{section.4.1}{Browser module}{chapter.4}% 47
-\BOOKMARK [1][]{section.4.2}{Signalling server}{chapter.4}% 48
-\BOOKMARK [1][]{section.4.3}{Key learnings from the earlier iterations - webrtc-ring}{chapter.4}% 49
-\BOOKMARK [1][]{section.4.4}{Implementation collaterals}{chapter.4}% 50
-\BOOKMARK [2][]{subsection.4.4.1}{Testing browserCloud.js}{section.4.4}% 51
-\BOOKMARK [2][]{subsection.4.4.2}{Visualize the network state}{section.4.4}% 52
-\BOOKMARK [2][]{subsection.4.4.3}{Simulate a browserCloud.js network}{section.4.4}% 53
-\BOOKMARK [2][]{subsection.4.4.4}{Ray Tracing module}{section.4.4}% 54
-\BOOKMARK [1][]{section.4.5}{Summary}{chapter.4}% 55
-\BOOKMARK [0][]{chapter.5}{Evaluation}{}% 56
-\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 57
-\BOOKMARK [0][]{chapter.7}{Future work}{}% 58
+\BOOKMARK [2][]{subsection.3.2.1}{Job Submission}{section.3.2}% 39
+\BOOKMARK [2][]{subsection.3.2.2}{Job Execution}{section.3.2}% 40
+\BOOKMARK [1][]{section.3.3}{Architecture of the Software stack}{chapter.3}% 41
+\BOOKMARK [2][]{subsection.3.3.1}{Communication layer}{section.3.3}% 42
+\BOOKMARK [2][]{subsection.3.3.2}{Service router}{section.3.3}% 43
+\BOOKMARK [2][]{subsection.3.3.3}{Job scheduler}{section.3.3}% 44
+\BOOKMARK [1][]{section.3.4}{API design}{chapter.3}% 45
+\BOOKMARK [2][]{subsection.3.4.1}{API calls signatures}{section.3.4}% 46
+\BOOKMARK [2][]{subsection.3.4.2}{API Usage Flow}{section.3.4}% 47
+\BOOKMARK [1][]{section.3.5}{Testing framework requirement}{chapter.3}% 48
+\BOOKMARK [2][]{subsection.3.5.1}{browserCloudjs quality test workflow}{section.3.5}% 49
+\BOOKMARK [2][]{subsection.3.5.2}{browserCloudjs quality test assessment}{section.3.5}% 50
+\BOOKMARK [1][]{section.3.6}{Summary}{chapter.3}% 51
+\BOOKMARK [0][]{chapter.4}{Implementation}{}% 52
+\BOOKMARK [1][]{section.4.1}{Browser module}{chapter.4}% 53
+\BOOKMARK [1][]{section.4.2}{Signalling server}{chapter.4}% 54
+\BOOKMARK [1][]{section.4.3}{Key learnings from the earlier iterations - webrtc-ring}{chapter.4}% 55
+\BOOKMARK [1][]{section.4.4}{Implementation collaterals}{chapter.4}% 56
+\BOOKMARK [2][]{subsection.4.4.1}{Testing browserCloud.js}{section.4.4}% 57
+\BOOKMARK [2][]{subsection.4.4.2}{Visualize the network state}{section.4.4}% 58
+\BOOKMARK [2][]{subsection.4.4.3}{Simulate a browserCloud.js network}{section.4.4}% 59
+\BOOKMARK [2][]{subsection.4.4.4}{Ray Tracing module}{section.4.4}% 60
+\BOOKMARK [1][]{section.4.5}{Summary}{chapter.4}% 61
+\BOOKMARK [0][]{chapter.5}{Evaluation}{}% 62
+\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 63
