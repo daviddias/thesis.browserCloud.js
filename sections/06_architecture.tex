@@ -40,8 +40,6 @@ The overview of the distributed architecture can be seen in Figure~\ref{fig:n-a-
   \label{fig:n-a-o}
 \end{figure}
 
-
-
 \subsection{Entities}
 
 There are two different kind of actors in the system:
@@ -96,7 +94,6 @@ The meta state of the network is always held in memory by the signalling server,
   \caption{Establishment of a RTCPeerConnection through the custom Signalling Server}
   \label{fig:4-p-c}
 \end{figure}
-
 
 \subsubsection{Message routing}
 
@@ -157,12 +154,21 @@ The number of fingers and the fingers we use for a given instance of browserClou
 \subsubsection{Filling the finger table for optimal minimum number of hops}
 
 *****************************************************************************
+*****************************************************************************
+*****************************************************************************
 ******** EXPLAIN HERE WHAT CAN BE THE BEST STRATEGY FOR FINGER PICKING ******
 *****************************************************************************
+*****************************************************************************
+*****************************************************************************
+
 
 \section{Resource Management}
 
-Leveraging the browser's dynamic runtime was a feature we pursue from the beginning of the design for browserCloud.js. A job is divided into individual tasks that are a composition of the function to be executed plus the data which should serve as input for that task, creating a transportable gridlet that can be migrated between browsers and executed at its final destination. A job execution is performed using the algorithm as follows:
+Leveraging the browser's dynamic runtime was a feature we pursue from the beginning of the design for browserCloud.js. A job is divided into individual tasks that are a composition of the function to be executed plus the data which should serve as input for that task, creating a transportable gridlet that can be migrated between browsers and executed at its final destination.
+
+\subsection{Job Submission}
+
+A job execution is performed using the algorithm as follows:
 
 \begin{itemize}
     \item 1 - Select in how many units we want to divide a job.
@@ -172,6 +178,18 @@ Leveraging the browser's dynamic runtime was a feature we pursue from the beginn
     \item 5 - Send this gridlets to the network to be routed to the browser that is going to execute them.
     \item 6 - browser compute the results and send them back to the job issuer.
     \item 7 - the browser that submited the job gathers all the tasks results and constructs the job result.
+\end{itemize}
+
+\subsection{Job Execution}
+
+A job consists in the partition of tasks which are enriched with data and sent to other peers to be executed, this tasks, which can be represented as functions (job assets), can be defined in runtime, therefore giving a greater flexibility to the developer that is using this system to run the distributed job they want. We can describe the work performed to schedule a job, by the following algorithm:
+
+\begin{itemize}
+    \item 1. A user submits a job
+    \item 2. The job is divided in smaller computing units, called tasks, each task compromisses of a segment of the data that is going to be processed and the transformation which is going to be applied, that is, a function.
+    \item 3. These task and data are created
+    \item 4. The peer will request the network for other peers availability, the user has the capability to specify how many peers should be used to process this job. This option is given since different jobs might benefit of more or less partition, depending on the data set.
+    \item 5. The peer who submited the job (the peer that is controlled by the user submitting the job) will receive the individual results for each task as they are ready and transmited. Once all of the results are received, they are aggregated and delivered to the user.
 \end{itemize}
 
 \section{Architecture of the Software stack}
@@ -206,19 +224,38 @@ Service router offers extensibility to browserCloud.js, similar to Job scheduler
 
 The Job scheduler benefits the API of the Service router to implement its logic, this means that although a job scheduler was implemented to fit our design purposes, it could easily be replaced by another job scheduler with different offers and guarantees.
 
-A job consists in the partition of tasks which are enriched with data and sent to other peers to be executed, this tasks, which can be represented as functions (job assets), can be defined in runtime, therefore giving a greater flexibility to the developer that is using this system to run the distributed job they want. We can describe the work performed to schedule a job, by the following algorithm:
-
-\begin{itemize}
-    \item 1. A user submits a job
-    \item 2. The job is divided in smaller computing units, called tasks, each task compromisses of a segment of the data that is going to be processed and the transformation which is going to be applied, that is, a function.
-    \item 3. These task and data are created
-    \item 4. The peer will request the network for other peers availability, the user has the capability to specify how many peers should be used to process this job. This option is given since different jobs might benefit of more or less partition, depending on the data set.
-    \item 5. The peer who submited the job (the peer that is controlled by the user submitting the job) will receive the individual results for each task as they are ready and transmited. Once all of the results are received, they are aggregated and delivered to the user.
-\end{itemize}
-
 \section{API design}
 
 For the user of browserCloud.js, a simple API was created to perform: peer join, message listening and job scheduling as demonstrated by the following code (which should be interpreted as pseudo-code since the API might change with the release of new versions):
+
+\subsection{API calls signatures}
+
+\textit{Function signatures}
+\begingroup
+\scriptsize
+\begin{verbatim}
+    peer.register(); // Register this peer in the network
+
+    peer.participate(<configuration object>);
+    // configuration object should include the URL of the Signalling Server which serves as a rendezvous point for the browserCloudjs instance we want to run our job on. 
+
+    peer.execute(<data for the job>, <task that shall be run for each item on the input data set>, <number of peers we want to distribute our job on>, <callback for when the job is finished>);
+
+\end{verbatim}
+\endgroup
+
+\textit{Events signatures}
+\begingroup
+\scriptsize
+\begin{verbatim}
+    peer.events.on('registered', <callback>);
+    peer.events.on('ready', <callback>);
+    peer.events.on('message', <callback>);
+
+\end{verbatim}
+\endgroup
+
+\subsection{API Usage Flow}
 
 \textit{Peer join}
 \begingroup
@@ -246,7 +283,6 @@ For the user of browserCloud.js, a simple API was created to perform: peer join,
 \end{verbatim}
 \endgroup
 
-
 \textit{Listen for messages}
 \begingroup
 \scriptsize
@@ -257,7 +293,6 @@ For the user of browserCloud.js, a simple API was created to perform: peer join,
     });
 \end{verbatim}
 \endgroup
-
 
 \textit{Execute a job}
 \begingroup
@@ -284,16 +319,54 @@ For the user of browserCloud.js, a simple API was created to perform: peer join,
 \end{verbatim}
 \endgroup
 
-\section{Testing framework}
+\section{Testing framework requirement}
 
-TODO*****
-requirements:
-1. spawn browsers
-2. orchestrate them
-3. collect their events
-4. create a timeline with the events
-5. assess if it happen as expected
+As a collateral but relevant and fruitful effort, we have also designed a testing framework, in order to be able to cope with browserCloudjs needs for quality assurance. 
 
+There are a panoply of excellent browser testing frameworks and services available today, however their focus is on testing browser implementations, namely CSS, HTML and JavaScript, and user interactions of the apps their are testing (e.g. clicks, mouse movements, what the user sees on the page).
+
+When it comes to testing to test a decentralized browser app or library, the focus stops being how a browser implements a specific behaviour, but how the decentralized network handles node joins and leaves and if nodes are effectively communicating between each other. In this scenario, we have several events that the server never sees or that the server never instructs the clients to do, so we need to create a new way to coordinate the browser joins and leaves and also how they interact between each other remotely.
+
+There are a specific set of requirements we needed our testing framework to fulfil, these are:
+
+\begin{itemize}
+    \item Have N browsers available, where 1<=N<=virtually unlimited - Most browser testing services only let you spawn a couple of browsers at a time, our solution aims to launch several browsers and/or tabs to load a webpage.
+    \item Serve a custom web page for the desired test - So that the developer does not have to provision it before hand and for each test..
+    \item Instruct browsers on demand - The ability to send commands to be executed by each browser, depending on the type of test we are running and what events have triggered so far.
+    \item Gather information and evaluate the state as a whole - collect the events and data generated by each browser and assess if the order was correct with pseudo external consistency.
+\end{itemize}
+
+\subsection{browserCloudjs quality test workflow}
+
+In order to evaluate that a browserCloudjs instance is working as desired, we've designed the following workflow, which can also be seen in Figure~\ref{fig:t-f-1}:
+
+\begin{itemize}
+    \item 1 - A Web Server is started by the Control Center, serving the static assets that container our browserCloudjs module that will be run in a browser.
+    \item 2 - The number of required browsers for the test being executed, are spawned. In our example in Figure~\ref{fig:t-f-1}, we see that number is 2.  
+    \item 3 - Once the browser loads the web page containing the browserCloudjs module, the Control Center starts sending commands to each browser to execute.
+    \item 4 - Since the messages and data transfered between browsers happens in a side channel, browsers report to the Control Center which events were triggered.
+    \item 5 - Once all the commands were executed, the Control Center assesses the order in which these events happened and asserts if the behavior was the expected.
+\end{itemize}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{figs/testing-framework-1}
+  \caption{Normal execution of a browserCloudjs test}
+  \label{fig:t-f-1}
+\end{figure}
+
+\subsection{browserCloudjs quality test assessment} 
+
+browserCloudjs tests are not linear, a message can be routed between any two browsers through several combinations, depending on the current size of the network and the respective IDs of those browsers, which will influence how their finger table looks like.
+
+In Figure~\ref{fig:t-f-2}, we have an example of two browsers communicating between each other. We can see that some of the browser between will have the responsability to forward the message, while others, will be idle. With the design of the testing framework, we wanted to make sure we have a way to take a snapshot of the events that happened in the DHT, so that we can infer if the message was forwared throught the right peers, by analysing each peer finger table.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{figs/testing-framework-2}
+  \caption{Possible timeline of events for an request from browser A to browser D and the consequent reply}
+  \label{fig:t-f-2}
+\end{figure}
 
 \section{Summary}
 
