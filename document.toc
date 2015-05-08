@@ -60,11 +60,11 @@
 \contentsline {section}{\numberline {4.8}Summary}{53}{section.4.8}
 \contentsline {chapter}{\numberline {5}Evaluation}{55}{chapter.5}
 \contentsline {section}{\numberline {5.1}Qualitative assessment}{55}{section.5.1}
-\contentsline {section}{\numberline {5.2}Quantitative assessment}{55}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}The setup}{55}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.2}Quantitative assessment}{56}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}The setup}{56}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Goals}{56}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Results}{56}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Analysis}{56}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Inference}{59}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Summary}{61}{section.5.3}
+\contentsline {subsection}{\numberline {5.2.3}Results}{57}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Analysis}{58}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Inference}{60}{subsection.5.2.5}
+\contentsline {section}{\numberline {5.3}Summary}{62}{section.5.3}
 \contentsline {chapter}{\numberline {6}Conclusion}{63}{chapter.6}
