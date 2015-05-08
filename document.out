@@ -59,4 +59,12 @@
 \BOOKMARK [1][]{section.4.7}{Ray Tracing module}{chapter.4}% 59
 \BOOKMARK [1][]{section.4.8}{Summary}{chapter.4}% 60
 \BOOKMARK [0][]{chapter.5}{Evaluation}{}% 61
-\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 62
+\BOOKMARK [1][]{section.5.1}{Qualitative assessment}{chapter.5}% 62
+\BOOKMARK [1][]{section.5.2}{Quantitative assessment}{chapter.5}% 63
+\BOOKMARK [2][]{subsection.5.2.1}{The setup}{section.5.2}% 64
+\BOOKMARK [2][]{subsection.5.2.2}{Goals}{section.5.2}% 65
+\BOOKMARK [2][]{subsection.5.2.3}{Results}{section.5.2}% 66
+\BOOKMARK [2][]{subsection.5.2.4}{Analysis}{section.5.2}% 67
+\BOOKMARK [2][]{subsection.5.2.5}{Inference}{section.5.2}% 68
+\BOOKMARK [1][]{section.5.3}{Summary}{chapter.5}% 69
+\BOOKMARK [0][]{chapter.6}{Conclusion}{}% 70

@@ -34,10 +34,10 @@
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Code Structure for the Simulator application}}{53}{figure.4.7}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Code Structure for the Ray Tracing module}}{53}{figure.4.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Time elapsed on a ray-tracing job divided in 2500 computing units}}{59}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Time elapsed on a ray-tracing job divided in 25 computing units}}{59}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Time elapsed on a ray-tracing job divided in 2500 computing units (with induced web RTT delay)}}{60}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Time elapsed on a ray-tracing job divided in 25 computing units (with induced web RTT delay)}}{60}{figure.5.4}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Time elapsed on a ray-tracing job divided in 25 computing units}}{57}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Time elapsed on a ray-tracing job divided in 2500 computing units}}{58}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Time elapsed on a ray-tracing job divided in 25 computing units (with induced web RTT delay)}}{59}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Time elapsed on a ray-tracing job divided in 2500 computing units (with induced web RTT delay)}}{60}{figure.5.4}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Average time for a task execution for a job fragmented in 2500 computing units}}{61}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Average Round Trip Time between an two nodes in a 10 browser network}}{61}{figure.5.6}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Average Round Trip Time between an two nodes in a 10 browser network}}{62}{figure.5.6}
 \addvspace {10\p@ }
