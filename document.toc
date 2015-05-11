@@ -27,13 +27,13 @@
 \contentsline {section}{\numberline {2.3}Resource sharing using the Web platform}{20}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Web Platform}{20}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Previous attempts on cycle sharing through web platform}{23}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Analysis and discussion}{23}{section.2.4}
+\contentsline {section}{\numberline {2.4}Summary}{23}{section.2.4}
 \contentsline {chapter}{\numberline {3}Architecture}{31}{chapter.3}
 \contentsline {section}{\numberline {3.1}Distributed Architecture}{32}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Entities}{32}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.1}Entities}{33}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Interaction Protocols}{33}{subsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.2.1}Peer joins and leaves}{33}{subsubsection.3.1.2.1}
-\contentsline {subsubsection}{\numberline {3.1.2.2}Message routing}{34}{subsubsection.3.1.2.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}Peer joins and leaves}{34}{subsubsection.3.1.2.1}
+\contentsline {subsubsection}{\numberline {3.1.2.2}Message routing}{35}{subsubsection.3.1.2.2}
 \contentsline {subsubsection}{\numberline {3.1.2.3}Filling the finger table for optimal minimum number of hops}{37}{subsubsection.3.1.2.3}
 \contentsline {section}{\numberline {3.2}Resource Management}{38}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Job Submission}{38}{subsection.3.2.1}

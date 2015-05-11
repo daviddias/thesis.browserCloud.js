@@ -8,9 +8,9 @@
 
 \section{Background and Motivation}
 
-The Web has evolved considerably since its inception, specially in the last few years, with the profileration of the Web Browser, the birth of the Web Platform\footnote{https://www.webplatform.org/}, leveraging the Browser capabilities to create a ecosystem of APIs and protocols that enabled it to be a host for first class applications. The Browser is the most ubiquitous runtime, making the Web Platform the number one target for developers to build their applications.
+The Web has evolved considerably since its inception, specially in the last few years, with the proliferation of the Web Browser, the birth of the Web Platform\footnote{https://www.webplatform.org/}, leveraging the Browser capabilities to create a ecosystem of APIs and protocols that enabled it to be a host for first class applications. The Browser is the most ubiquitous runtime, making the Web Platform the number one target for developers to build their applications.
 
-The Web, or the World Wide Web, as \textit{Sir} Tim Berners Lee presented it to the world with the introduction of HTTP, was decentralized by design, every machine could act as a client and a server, however, with time, this panorama changed and although every machine ability to still run a HTTP client or server, due to network topology considerations, mainly NAT, users progressively lost the ability to connect to other user machines as it was intended, having to overcome some obstacles between interoperability of protocols and platforms. In essence, the barrier of entrance to create a P2P environment became so high, that systems moved to a pure centralized model. However, P2P was not forgotten and now more than ever, there is a chance for peers to connect between each other, perform resource discovery and sharing, due to the P2P cabilities brought to the browser when WebRTC was introduced.
+The Web, or the World Wide Web, as \textit{Sir} Tim Berners Lee presented it to the world with the introduction of HTTP, was decentralized by design, every machine could act as a client and a server, however, with time, this panorama changed and although every machine ability to still run a HTTP client or server, due to network topology considerations, mainly NAT, users progressively lost the ability to connect to other user machines as it was intended, having to overcome some obstacles between interoperability of protocols and platforms. In essence, the barrier of entrance to create a P2P environment became so high, that systems moved to a pure centralized model. However, P2P was not forgotten and now more than ever, there is a chance for peers to connect between each other, perform resource discovery and sharing, due to the P2P capabilities brought to the browser when WebRTC was introduced.
 
 Today, in the information communications technology landscape, user generated data has been growing at a large pace, with the introduction of social networks, search engines, Internet of Things, which led to innovation on home and vehicle automation. The storage, transfer, and carry out of processing and analysis of all this data brings the need for considerable new breakthroughs, enabling us to optimize systems towards a better and enhanced experience. However, how to use the information available to achieve these breakthroughs has been one of the main challenges since then.
 
@@ -33,19 +33,19 @@ The resources required to execute a continuous, massive and significant analysis
 
 Unlike the conventional approach to make Cloud Computing `green' (i.e. Green Computing) by improving datacenter's efficiency through expensive and strictly centralized control, our vision entails a shift in perspective, by enabling each user to contribute to this effort, leveraging his/her idle computing resources (sometimes up to 70\% of power wasted), and thus reducing overall environmental footprint. Thus browserCloud.js resources are provided in a voluntary manner by common Internet users that want to share their idle computer cycles and storage available, while browsing the web, without having the concern to setup any application or system to do so.
 
-Community Clouds\cite{Barraca2011}\cite{Navarro}, are not a complete novelty in the Distributed Systems research area. However, existing models have been developed to follow the client-server model, transfering the data to the place where the computation will take place, which causes big bottlenecks in network traffic, limiting the amount of computed units done in a delimited window of time. One of browserCloud.js goals is exactly to mitigate this bottleneck by taking the computation (the algorithms that will perform operations over the data) to the machines where the data is stored.
+Community Clouds\cite{Barraca2011}\cite{Navarro}, are not a complete novelty in the Distributed Systems research area. However, existing models have been developed to follow the client-server model, transferring the data to the place where the computation will take place, which causes big bottlenecks in network traffic, limiting the amount of computed units done in a delimited window of time. One of browserCloud.js goals is exactly to mitigate this bottleneck by taking the computation (the algorithms that will perform operations over the data) to the machines where the data is stored.
 
 
 \subsection{Current Shortcomings}
 
-We've identified several issues with current solutions, most of which inspired us to pursue this research and the development of browserCloud.js, these are:
+We have identified several issues with current solutions, most of which inspired us to pursue this research and the development of browserCloud.js, these are:
 
 \begin{itemize}
     \item Typical resource sharing networks do not offer an interface for a user to act as a consumer and contributor at the same time, specially when it comes to CPU resource sharing.
     \item If a user wants to consume resources from a given network, it is almost certain that user will have to develop his specific usecase for that runtime or runtimes where their tasks will be executed, interoperability is not a prime concern.
-    \item There is a high level of entrance cost for a user to contribute to a given resource sharing network, typically passes through several steps of software installation and configuration.
-    \item Good load balacing strategies for volunteer computing networks are based on centralized control, in a explicit manner, often not using the resources available efficiently and effectively.
-    \item Centralized Computing platforms have scability problems as the network and usage grows.
+    \item There is a high level of entrance cost for a user to contribute to a given resource sharing network, typically it requires going through several steps of software installation and configuration.
+    \item Good load balancing strategies for volunteer computing networks are based on centralized control, in a explicit manner, often not using the resources available efficiently and effectively.
+    \item Centralized Computing platforms have scalability problems as the network and resource usage grows.
 \end{itemize}
 
 \section{Research Proposal}
@@ -54,9 +54,9 @@ To accomplish this, we propose a new approach to abandon the classic centralized
 
 This work will address extending the Web Platform with technologies such as: WebRTC, Emscripten, Javascript and IndexedDB to create a structured peer-to-peer overlay network, federating ad-hoc personal resources into a geo-distributed cloud infrastructure, representing the definition made by C.Shirky of what an peer-to-peer means:
 
-  \textit{``An application is peer-to-peer if it aggregates resources at the network’s edge, and those resources can be anything. It can be content, it can be cycles, it can be storage space, it can be human presence.''}, C.Shirky \cite{Shirky}
+  \textit{``An application is peer-to-peer if it aggregates resources at the network’s edge, and those resources can be anything. It can be content, it can be cycles, it can be storage space, it can be human presence.''}, C.Shirky \cite{Shirky.}
 
-We've named this system browserCloud.js. It has the possibility to grow organically with the number of users. The management of these resources is done by technologies and protocols present in the Web Platform, enabling desktop and mobile apps to use the resources available in a way that is familiar to developers. 
+We have named this system browserCloud.js. It has the possibility to grow organically with the number of users. The management of these resources is done by technologies and protocols present in the Web Platform, enabling desktop and mobile apps to use the resources available in a way that is familiar to developers.
 
 \section{Contributions}
 
@@ -78,31 +78,29 @@ We start by presenting in Chapter 2, the state of the art for the technologies a
 
 During the development of browserCloud.js, several Open Source contributions, MIT licensed, were made. Table~\ref{tbl:codecontributions} contains the list of these contributions and respective initial interest and impact by the Open Source, P2P and Javascript communities based on number of downloads and project stars.
 
-
-TODO: List is: https://gist.github.com/diasdavid/55f5bf71d9494caf6a08 . Will extract the numbers closer to deadline
-
 \begin{table}
   \centering
-  \begin{tabular}{| c | c | c | c | c |}
-  \hline 
-  Name & URL & Number of downloads/instalations & Number of Github stars & Number of npm stars  \\
-  a & b & c & d & e \\
-  a & b & c & d & e \\
-  a & b & c & d & e \\
-  a & b & c & d & e \\
-  a & b & c & d & e \\
-  a & b & c & d & e \\
-  a & b & c & d & e \\
-  a & b & c & d & e \\
-  a & b & c & d & e \\
-  a & b & c & d & e \\
-  a & b & c & d & e \\
-  a & b & c & d & e \\
-  a & b & c & d & e \\
-  a & b & c & d & e \\
-  a & b & c & d & e \\
-  a & b & c & d & e \\
-  \hline   
+  \begin{tabular}{| l | l | c | c |}
+  \hline
+  Name &  Number of downloads/instalations & Number of Github stars  \\
+  webrtc-explorer & 592 & 39 \\
+  webrtc-explorer-signalling-server & NA & 11 \\
+  webrtc-explorer-visualizer & NA & 10 \\
+  webrtc-explorer-simulator & NA & 9 \\
+  webrtc-explorer-browser-process & 87 & 8 \\
+  piri-piri & 427 & 13 \\ 
+  piri-piri.client & 329 & 9 \\
+  simple-raytracer & 945 & 17 \\
+  dht-id & 190 & 11 \\
+  canela & 537 & 9 \\
+  raytracer-browser-p2p & NA & 8 \\
+  webrtc-chord & 649 & 8 \\
+  webrtc-chord-signalling-server & NA & 9 \\
+  webrtc-chord-uui & 130 & 9 \\
+  webrtc-ring & 394 & 13 \\
+  webrtc-ring-signalling-server & NA & 8 \\
+  Totals & 4280 & 344 \\ 
+  \hline
   \end{tabular}
   \caption{List of Open Source contributions}
   \label{tbl:codecontributions}
