@@ -34,15 +34,14 @@
 \contentsline {subsection}{\numberline {3.1.2}Interaction Protocols}{33}{subsection.3.1.2}
 \contentsline {subsubsection}{\numberline {3.1.2.1}Peer joins and leaves}{34}{subsubsection.3.1.2.1}
 \contentsline {subsubsection}{\numberline {3.1.2.2}Message routing}{35}{subsubsection.3.1.2.2}
-\contentsline {subsubsection}{\numberline {3.1.2.3}Filling the finger table for optimal minimum number of hops}{37}{subsubsection.3.1.2.3}
-\contentsline {section}{\numberline {3.2}Resource Management}{38}{section.3.2}
+\contentsline {section}{\numberline {3.2}Resource Management}{37}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Job Submission}{38}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Job Execution}{40}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Job Execution}{39}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}Architecture of the Software stack}{40}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Communication layer}{40}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Service router}{41}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Job scheduler}{41}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}API design}{42}{section.3.4}
+\contentsline {section}{\numberline {3.4}API design}{41}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}API calls signatures}{42}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}API Usage Flow}{42}{subsection.3.4.2}
 \contentsline {section}{\numberline {3.5}Testing framework requirement}{43}{section.3.5}
@@ -52,20 +51,25 @@
 \contentsline {chapter}{\numberline {4}Implementation}{47}{chapter.4}
 \contentsline {section}{\numberline {4.1}Browser module}{47}{section.4.1}
 \contentsline {section}{\numberline {4.2}Signalling server}{49}{section.4.2}
-\contentsline {section}{\numberline {4.3}Key learnings from the earlier iterations - webrtc-ring}{49}{section.4.3}
+\contentsline {section}{\numberline {4.3}Key learnings from the earlier iterations - webrtc-ring}{50}{section.4.3}
 \contentsline {section}{\numberline {4.4}Testing framework - piri-piri}{50}{section.4.4}
-\contentsline {section}{\numberline {4.5}Visualize the network state}{50}{section.4.5}
+\contentsline {section}{\numberline {4.5}Visualize the network state}{51}{section.4.5}
 \contentsline {section}{\numberline {4.6}Simulate a browserCloud.js network}{51}{section.4.6}
-\contentsline {section}{\numberline {4.7}Ray Tracing module}{51}{section.4.7}
+\contentsline {section}{\numberline {4.7}Ray Tracing module}{52}{section.4.7}
 \contentsline {section}{\numberline {4.8}Summary}{53}{section.4.8}
 \contentsline {chapter}{\numberline {5}Evaluation}{55}{chapter.5}
 \contentsline {section}{\numberline {5.1}Qualitative assessment}{55}{section.5.1}
 \contentsline {section}{\numberline {5.2}Quantitative assessment}{56}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}The setup}{56}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Goals}{56}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.2}Goals}{57}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Results}{57}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Analysis}{58}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.4}Analysis}{57}{subsection.5.2.4}
 \contentsline {subsection}{\numberline {5.2.5}Inference}{60}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Summary}{62}{section.5.3}
-\contentsline {chapter}{\numberline {6}Conclusion}{63}{chapter.6}
-\contentsline {subsection}{\numberline {6.0.1}Future Work}{64}{subsection.6.0.1}
+\contentsline {section}{\numberline {5.3}Finger Table Optimization for minimum number of hops between any two peers}{62}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Pick the first 16 fingers from a 48bit Finger Table}{64}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Pick 16 fingers equality spaced in a 48bit Finger Table}{64}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Pick 16 fingers using a geometric distribuion with decreasing density}{64}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Inference}{64}{subsection.5.3.4}
+\contentsline {section}{\numberline {5.4}Summary}{64}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusion}{65}{chapter.6}
+\contentsline {subsection}{\numberline {6.0.1}Future Work}{66}{subsection.6.0.1}

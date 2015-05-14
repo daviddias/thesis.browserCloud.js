@@ -152,12 +152,6 @@ However, as specified earlier in the document, we want to achieve a good and sta
 
 The number of fingers and the fingers we use for a given instance of browserCloud.js are configurable. The reason behind this design decision was that RTCPeerConnections have a significant memory cost, so we have to be considerate in the number of data channels we keep open. In order to give greater flexibility to the developer, we allow the option of picking how many rows of the finger table will be filled by the developer creating a browserCloud.js application. This is also perfect since WebRTC is still a working draft and there might be good developments in resource consumption.
 
-\subsubsection{Filling the finger table for optimal minimum number of hops}
-
-*****************************************************************************
-******** EXPLAIN HERE WHAT CAN BE THE BEST STRATEGY FOR FINGER PICKING ******
-*****************************************************************************
-
 \section{Resource Management}
 
 Leveraging the browser's dynamic runtime was a feature we pursue from the beginning of the design for browserCloud.js. A job is divided into individual tasks that are a composition of the function to be executed plus the data which should serve as input for that task, creating a transportable gridlet that can be migrated between browsers and executed at its final destination.

@@ -22,6 +22,8 @@ In a qualitative perspective, browserCloudjs performs successfully the following
     \item browserCloudjs solves the decentralized communication problem between browsers in a scalable way, giving the opportunity for new scenarios to be developed on top of it through its modular and pluggable approach.
 \end{itemize}
 
+We've developed a Demo video of browserCloudjs working, this video can be seen at https://www.youtube.com/watch?v=kjwIjoENCR .
+
 \section{Quantitative assessment}
 
 In this section we evaluate browserCloud.js via real executions on top of increasing number of browsers executing locally, to assess the limits of current Javascript engines on typical desktop machines, and with micro-benchmarks to determine the speedups that can be achieved in distributed executions with one browser per individual desktop machine.
@@ -129,9 +131,122 @@ There are also some other performance bottlenecks we noticed that arise from the
   \item Logging - Since V8 runs in a single thread, any synchronous operation will block the event loop and add delay to the whole processing, although these logs are essential for us to assess the efficiency of the infrastructure, they are not vital to the job.
   \item Delay added - One technique we used to simulate the network delay is to use the `setTimeout' native function of V8's JavaScript implementation, since this function is unable to receive floating millisecond values. Moreover, since `setTimeout' does not necessarily guarantee that the function will be executed in X amount of milliseconds, due to the nature of the event loop, there is always an extra delay added implicitly to the operation in the order of 1 to 3 ms.
   \item Tasks can not be sent in parallel - A node has to send each individual computing unit sequentially and independently, meaning that if we divide a job into 2000 for e.g, each task will have to wait for the previous to be sent.
+  \item We've noticed a considerable machine resoures bottle neck when we had more than 40 data channels present in same machine - This means that is is unviable to levarage the full 48 fingers space our finger table has the capacity, since one fingers equals 2 data channels (one in and one out).
 \end{itemize}
 
 These bottlenecks were studied and will be tackled in future work, one of the solutions proposed is to use Service Workers\footnote{http://www.w3.org/TR/2014/WD-service-workers-20141118} for full multithreaded operation inside browserCloud.js.
+
+\section{Finger Table Optimization for minimum number of hops between any two peers}
+
+With our evaluation, we learned that a browser reaches a machine resource bottle neck when it comes to memory and CPU, when using more than 40 data channels simultaneously. As mentioned earlier, a finger in our Finger Table represents two data channels for a browser, one out and another in. This gives us the opportunity to study what can be the best approach in terms of finger selection from the options available, so we can optimize for the number of hops. We've picked 16 fingers (32 simultaneous data channels) as our limit per peer and studied the three following approaches:
+
+\begin{itemize}
+    \item A - Pick the first 16 fingers from a 48bit Finger Table
+    \item B - Pick 16 fingers equality spaced in a 48bit Finger Table
+    \item C - Pick 16 fingers using a geometric distribuion with decreasing density
+\end{itemize}
+
+For each of these approaches, we've evaluated the jump between a node and its fingers, the number of hops between a given peer and the peers between it and its fingers and finally, we measured the number minimum and the maximum of hops between any two peers.
+
+\subsection{Pick the first 16 fingers from a 48bit Finger Table}
+
+As we can observe in Table\ref{tab:table-a}, with this distribution with get a good minimum numer of hops between fingers of 1, but if a peer is beyond our finger table, we can reach a result of having to jump 33 additional hops in order to find that finger.
+
+\begin{table}
+    \centering
+    \begin{tabular}{| c | c | c | c |}
+    \hline
+        Finger Level &  Finger Picked & Jump & Aditional hops for peers between fingers \\
+        0 & 0 & 1 & 1 \\
+        1 & 1 & 2 & 1 \\
+        2 & 2 & 4 & 1 \\
+        3 & 3 & 8 & 1 \\
+        4 & 4 & 16 & 1 \\
+        5 & 5 & 32 & 1 \\
+        6 & 6 & 64 & 1 \\
+        7 & 7 & 128 & 1 \\
+        8 & 8 & 256 & 1 \\
+        9 & 9 & 512 & 1 \\
+        10 & 10 & 1024 & 1 \\
+        11 & 11 & 2048 & 1 \\
+        12 & 12 & 4096 & 1 \\
+        13 & 13 & 8192 & 1 \\
+        14 & 14 & 16384 & 1 \\
+        15 & 15 & 32768 & 1 \\
+        END & 48 & 281474976710656 & 33 \\
+    \hline
+    \end{tabular}
+    \caption{Finger Table Distribution for first 16 fingers from a 48bit Finger Table}
+    \label{tbl:table-a}
+\end{table}
+
+\subsection{Pick 16 fingers equality spaced in a 48bit Finger Table}
+
+In this linear distribuition, seen in Table\ref{tab:table-b}, we have obtained a good stability when it comes to minimum and maximum of additional hops for peers between fingers, being constant of 3.
+
+\begin{table}
+    \centering
+    \begin{tabular}{| c | c | c | c |}
+    \hline
+        Finger Level &  Finger Picked & Jump & Aditional hops for peers between fingers \\
+        0 & 0 & 1 & 3 \\
+        1 & 3 & 8 & 3 \\
+        2 & 6 & 64 & 3 \\
+        3 & 9 & 512 & 3 \\
+        4 & 12 & 4096 & 3 \\
+        5 & 15 & 32768 & 3 \\
+        6 & 18 & 262144 & 3 \\
+        7 & 21 & 2097152 & 3 \\
+        8 & 24 & 16777216 & 3 \\
+        9 & 27 & 134217728 & 3 \\
+        10 & 30 & 1073741824 & 3 \\
+        11 & 33 & 8589934592 & 3 \\
+        12 & 36 & 68719476736 & 3 \\
+        13 & 39 & 549755713888 & 3 \\
+        14 & 42 & 4398046511104 & 3 \\
+        15 & 45 & 35184372088832 & 3 \\
+        END & 48 & 281474976710656 & 3 \\
+    \hline
+    \end{tabular}
+    \caption{Finger Table Distribution for 16 fingers equality spaced in a 48bit Finger Table}
+    \label{tbl:table-b}
+\end{table}
+
+\subsection{Pick 16 fingers using a geometric distribuion with decreasing density}
+
+By using a non linear distribution, we have managed to decrease the optimal case for minimum additional hops necessary for peers between fingers, however, there was a tradeoff for fingers that are in the last section of our Finger Table, having an increased number of additional hops, comparing to the previous approach, as we can observe in Table~\ref{tab:table-c}.
+
+\begin{table}
+    \centering
+    \begin{tabular}{| c | c | c | c |}
+    \hline
+        Finger Level &  Finger Picked & Jump & Aditional hops for peers between fingers \\
+        0 & 0 & 1 & 1 \\
+        1 & 1 & 2 & 1 \\
+        2 & 2 & 4 & 1 \\
+        3 & 3 & 8 & 1 \\
+        4 & 4 & 16 & 2 \\
+        5 & 6 & 64 & 2 \\
+        6 & 8 & 256 & 2 \\
+        7 & 10 & 1024 & 2 \\
+        8 & 12 & 4096 & 4 \\
+        9 & 16 & 65536 & 4 \\
+        10 & 20 & 1048576 & 4 \\
+        11 & 24 & 16777216 & 4 \\
+        12 & 28 & 268435456 & 4 \\
+        13 & 33 & 8589934592 & 5 \\
+        14 & 38 & 274877906944 & 5 \\
+        15 & 43 & 8796093022208 & 5 \\
+        END & 48 & 281474976710656 & 5 \\
+    \hline
+    \end{tabular}
+    \caption{Finger Table Distribution for 16 fingers using a geometric distribuion with decreasing density}
+    \label{tbl:table-c}
+\end{table}
+
+\subsection{Inference}
+
+From these 3 approaches, the second and the third approach have more interesting results, however, in order to pick the best for browserCloudjs, we have also to consider the number of total peers and what kind of messages are being used. For e.g, for a browserCloudjs instance focused on distributed computing, the second approach can be more interesting due to the natural implicit way of the network to load balance itself, due to the hashing function properties, however for a browserCloudjs instance focused on message routing or object storage/lookups, if a replication strategy such as DynamoDB or PAST is used, that is, replicating the objects to the following peers, having the knowledge of the consequent peers might be advantageous due to reduced number of hops for replica updates.
 
 \section{Summary}
 

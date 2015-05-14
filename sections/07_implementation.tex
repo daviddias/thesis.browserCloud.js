@@ -48,6 +48,8 @@ There are two technologies used in this module, other than the raw Javascript AP
     \item socket.io - socket.io is the most reliable and famous open source implementation of WebSocket API for the browser..
 \end{itemize}
 
+One of the implementation decisions made that influences the design of our routing algorithm, was to stick with 48 bit IDs for our peers, the reason behind this decision was to avoid having to introduce a bignum library, which would consume a great deal of resources for actions (message routing) that happen constantly.
+
 \section{Signalling server}
 
 The signalling server offers two Web APIs, one being a WebSockets API and the other a RESTful API. The design decision behind these two APIs was mainly because since the network evolves with time, we needed a way to be able to push, on demand, new information to browsers, for example, when a new peer needs to be railed in, or when the Signalling Server acts as a rendezvous point for SDP data exchange between browsers so they can establish a RTCPeerConnection. Figure~\ref{fig:d-s-s} shows the Code Structure for this application.
