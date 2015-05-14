@@ -8,5 +8,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces CAPTION}}{64}{table.5.1}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Finger Table Distribution for first 16 fingers from a 48bit Finger Table}}{64}{table.5.1}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Finger Table Distribution for 16 fingers equality spaced in a 48bit Finger Table}}{65}{table.5.2}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Finger Table Distribution for 16 fingers using a geometric distribuion with decreasing density}}{65}{table.5.3}
 \addvspace {10\p@ }

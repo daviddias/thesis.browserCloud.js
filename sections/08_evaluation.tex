@@ -22,7 +22,7 @@ In a qualitative perspective, browserCloudjs performs successfully the following
     \item browserCloudjs solves the decentralized communication problem between browsers in a scalable way, giving the opportunity for new scenarios to be developed on top of it through its modular and pluggable approach.
 \end{itemize}
 
-We've developed a Demo video of browserCloudjs working, this video can be seen at https://www.youtube.com/watch?v=kjwIjoENCR .
+We have developed a Demo video of browserCloudjs working, this video can be seen at https://www.youtube.com/watch?v=kjwIjoENCR .
 
 \section{Quantitative assessment}
 
@@ -46,7 +46,7 @@ Following our motivation to build browserCloudjs in the first place, that is, to
 
 \subsection{Results}
 
-We've perfomed tests in order to assess:
+We have perfomed tests in order to assess:
 
 \begin{itemize}
     \item Time elapsed during a distributed ray-tracing job, checking for how it changed when we increased the number of browsers and the level of granularity in which we divided the job. Seen in Figures~\ref{fig:ray25}~,~\ref{fig:ray2500}~,~\ref{fig:ray25time}~and~\ref{fig:ray2500time}.
@@ -131,14 +131,15 @@ There are also some other performance bottlenecks we noticed that arise from the
   \item Logging - Since V8 runs in a single thread, any synchronous operation will block the event loop and add delay to the whole processing, although these logs are essential for us to assess the efficiency of the infrastructure, they are not vital to the job.
   \item Delay added - One technique we used to simulate the network delay is to use the `setTimeout' native function of V8's JavaScript implementation, since this function is unable to receive floating millisecond values. Moreover, since `setTimeout' does not necessarily guarantee that the function will be executed in X amount of milliseconds, due to the nature of the event loop, there is always an extra delay added implicitly to the operation in the order of 1 to 3 ms.
   \item Tasks can not be sent in parallel - A node has to send each individual computing unit sequentially and independently, meaning that if we divide a job into 2000 for e.g, each task will have to wait for the previous to be sent.
-  \item We've noticed a considerable machine resoures bottle neck when we had more than 40 data channels present in same machine - This means that is is unviable to levarage the full 48 fingers space our finger table has the capacity, since one fingers equals 2 data channels (one in and one out).
+  \item We have noticed a considerable machine resoures bottle neck when we had more than 40 data channels present in same machine - This means that is is unviable to levarage the full 48 fingers space our finger table has the capacity, since one fingers equals 2 data channels (one in and one out).
 \end{itemize}
 
 These bottlenecks were studied and will be tackled in future work, one of the solutions proposed is to use Service Workers\footnote{http://www.w3.org/TR/2014/WD-service-workers-20141118} for full multithreaded operation inside browserCloud.js.
 
 \section{Finger Table Optimization for minimum number of hops between any two peers}
 
-With our evaluation, we learned that a browser reaches a machine resource bottle neck when it comes to memory and CPU, when using more than 40 data channels simultaneously. As mentioned earlier, a finger in our Finger Table represents two data channels for a browser, one out and another in. This gives us the opportunity to study what can be the best approach in terms of finger selection from the options available, so we can optimize for the number of hops. We've picked 16 fingers (32 simultaneous data channels) as our limit per peer and studied the three following approaches:
+With our evaluation, we learned that a browser reaches a machine resource bottle neck when it comes to memory and CPU, when using more than 40 data channels simultaneously. As mentioned earlier, a finger in our Finger Table represents two data channels for a browser, one out and another in. This gives us the opportunity to study what can be the best approach in terms of finger selection from the options available, so we can optimize for the number of hops. We have picked 16 fingers (32 simultaneous data channels) as our limit per peer and studied the three following approaches:
+
 
 \begin{itemize}
     \item A - Pick the first 16 fingers from a 48bit Finger Table
@@ -146,11 +147,11 @@ With our evaluation, we learned that a browser reaches a machine resource bottle
     \item C - Pick 16 fingers using a geometric distribuion with decreasing density
 \end{itemize}
 
-For each of these approaches, we've evaluated the jump between a node and its fingers, the number of hops between a given peer and the peers between it and its fingers and finally, we measured the number minimum and the maximum of hops between any two peers.
+For each of these approaches, we have evaluated the jump between a node and its fingers, the number of hops between a given peer and the peers between it and its fingers and finally, we measured the number minimum and the maximum of hops between any two peers.
 
 \subsection{Pick the first 16 fingers from a 48bit Finger Table}
 
-As we can observe in Table\ref{tab:table-a}, with this distribution with get a good minimum numer of hops between fingers of 1, but if a peer is beyond our finger table, we can reach a result of having to jump 33 additional hops in order to find that finger.
+As we can observe in Table~\ref{tbl:table-a}, with this distribution with get a good minimum numer of hops between fingers of 1, but if a peer is beyond our finger table, we can reach a result of having to jump 33 additional hops in order to find that finger.
 
 \begin{table}
     \centering
@@ -182,7 +183,7 @@ As we can observe in Table\ref{tab:table-a}, with this distribution with get a g
 
 \subsection{Pick 16 fingers equality spaced in a 48bit Finger Table}
 
-In this linear distribuition, seen in Table\ref{tab:table-b}, we have obtained a good stability when it comes to minimum and maximum of additional hops for peers between fingers, being constant of 3.
+In this linear distribuition, seen in Table~\ref{tbl:table-b}, we have obtained a good stability when it comes to minimum and maximum of additional hops for peers between fingers, being constant of 3.
 
 \begin{table}
     \centering
@@ -214,7 +215,7 @@ In this linear distribuition, seen in Table\ref{tab:table-b}, we have obtained a
 
 \subsection{Pick 16 fingers using a geometric distribuion with decreasing density}
 
-By using a non linear distribution, we have managed to decrease the optimal case for minimum additional hops necessary for peers between fingers, however, there was a tradeoff for fingers that are in the last section of our Finger Table, having an increased number of additional hops, comparing to the previous approach, as we can observe in Table~\ref{tab:table-c}.
+By using a non linear distribution, we have managed to decrease the optimal case for minimum additional hops necessary for peers between fingers, however, there was a tradeoff for fingers that are in the last section of our Finger Table, having an increased number of additional hops, comparing to the previous approach, as we can observe in Table~\ref{tbl:table-c}.
 
 \begin{table}
     \centering
@@ -250,4 +251,4 @@ From these 3 approaches, the second and the third approach have more interesting
 
 \section{Summary}
 
-In this Chapter, we've discussed and presented our results when it comes to fullfilling the requirements we had initially to browserCloudjs. Starting with a qualitiative assessmentment, where we evaluate how browserCloudjs behaves and what functionalities does it offer, passing to a quantitative assessment, verifying that indeed there are speedups achieved by using browserCloudjs.
+In this Chapter, we have discussed and presented our results when it comes to fullfilling the requirements we had initially to browserCloudjs. Starting with a qualitiative assessmentment, where we evaluate how browserCloudjs behaves and what functionalities does it offer, passing to a quantitative assessment, verifying that indeed there are speedups achieved by using browserCloudjs.

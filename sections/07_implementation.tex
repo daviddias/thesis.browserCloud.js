@@ -111,7 +111,7 @@ Using D3JS, a API library that works as a thin veneer on top of SVG, we have dev
 
 \section{Simulate a browserCloud.js network}
 
-In addition to the visualizer application, one simulator application was developed, were not only a graphical representation is generated, but also, it gives the developer a way to create a new virtual network, without any real peers. We've the option to pick the number of peers we want present and how many and which fingers will be used, so we can analyse different distribution paths and optimize for number of hops between any two peers in the network. Figure~\ref{fig:d-s} shows the Code Structure for this application.
+In addition to the visualizer application, one simulator application was developed, were not only a graphical representation is generated, but also, it gives the developer a way to create a new virtual network, without any real peers. We have the option to pick the number of peers we want present and how many and which fingers will be used, so we can analyse different distribution paths and optimize for number of hops between any two peers in the network. Figure~\ref{fig:d-s} shows the Code Structure for this application.
 
 
 \begin{figure}[h!]
@@ -123,7 +123,7 @@ In addition to the visualizer application, one simulator application was develop
 
 \section{Ray Tracing module}
 
-To perform the parallel CPU bound tests, we've developed a module that works in Node.js and in the browser to perform Ray Tracing Tasks. The module works in a synchronous fashion so it performs faster, in another words, there are not techniques to make que module asynchronous that would create an overhead for the processing, in order to avoid stopping javascript event loop, the ray tracing task has to be run in a sub process.
+To perform the parallel CPU bound tests, we have developed a module that works in Node.js and in the browser to perform Ray Tracing Tasks. The module works in a synchronous fashion so it performs faster, in another words, there are not techniques to make que module asynchronous that would create an overhead for the processing, in order to avoid stopping javascript event loop, the ray tracing task has to be run in a sub process.
 
 This module performs the interpretation of a scene designed in CSS, division of the scene in multiple parts (tasks) and reconstruction of the ray traced scene when every task is completed. We can observe in Figure~\ref{fig:d-s-r}, how this module is structured
 
