@@ -24,7 +24,6 @@ Warning--page numbers missing in Filipe2011
 Warning--no journal in Golle2001
 Warning--no number and no volume in Golle2001
 Warning--can't use both volume and number fields in Handley
-Warning--empty year in JeffreyDean;SanjayGhemawat
 Warning--no number and no volume in Karger2004
 Warning--no journal in Koloniari2005
 Warning--no number and no volume in Korpela2001
@@ -39,7 +38,6 @@ Warning--page numbers missing in Maymounkov
 Warning--no journal in Merelo2007
 Warning--no number and no volume in Merelo2007
 Warning--empty institution in Milojicic2003
-Warning--empty year in Navarro
 Warning--empty institution in Navarro
 Warning--no number and no volume in Nurmi2009
 Warning--no journal in Preneel1999
@@ -57,7 +55,6 @@ Warning--no number and no volume in Rowstron2001a
 Warning--no journal in Rowstron2001
 Warning--no number and no volume in Rowstron2001
 Warning--no volume for Ruellan2013
-Warning--empty year in Shirky.
 Warning--no journal in Stoica2001
 Warning--no number and no volume in Stoica2001
 Warning--empty note in Thomson2013
@@ -70,45 +67,45 @@ Warning--page numbers missing in Vishnumurthy
 Warning--no number and no volume in Vogt
 Warning--page numbers missing in Vogt
 Warning--empty publisher in Wallach
-You've used 59 entries,
+You've used 54 entries,
             2861 wiz_defined-function locations,
-            962 strings with 14443 characters,
-and the built_in function-call counts, 42545 in all, are:
-= -- 3522
-> -- 3412
+            942 strings with 14036 characters,
+and the built_in function-call counts, 40242 in all, are:
+= -- 3327
+> -- 3282
 < -- 17
-+ -- 1021
-- -- 1159
-* -- 3731
-:= -- 7800
-add.period$ -- 166
-call.type$ -- 59
-change.case$ -- 455
-chr.to.int$ -- 58
-cite$ -- 126
-duplicate$ -- 1133
-empty$ -- 2357
-format.name$ -- 1318
-if$ -- 7930
++ -- 991
+- -- 1109
+* -- 3597
+:= -- 7338
+add.period$ -- 156
+call.type$ -- 54
+change.case$ -- 425
+chr.to.int$ -- 53
+cite$ -- 118
+duplicate$ -- 1058
+empty$ -- 2205
+format.name$ -- 1268
+if$ -- 7533
 int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 45
-newline$ -- 282
-num.names$ -- 596
-pop$ -- 415
+newline$ -- 262
+num.names$ -- 546
+pop$ -- 366
 preamble$ -- 1
-purify$ -- 806
+purify$ -- 746
 quote$ -- 0
-skip$ -- 1206
+skip$ -- 1145
 stack$ -- 0
-substring$ -- 1939
-swap$ -- 408
+substring$ -- 1839
+swap$ -- 383
 text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1176
-warning$ -- 67
-while$ -- 575
+type$ -- 1076
+warning$ -- 64
+while$ -- 525
 width$ -- 0
-write$ -- 746
-(There were 67 warnings)
+write$ -- 694
+(There were 64 warnings)

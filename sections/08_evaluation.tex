@@ -131,7 +131,7 @@ There are also some other performance bottlenecks we noticed that arise from the
   \item Tasks can not be sent in parallel - A node has to send each individual computing unit sequentially and independently, meaning that if we divide a job into 2000 for e.g, each task will have to wait for the previous to be sent.
 \end{itemize}
 
-These bottlenecks were studied and will be tackled in future work, one of the solutions proposed is to use Service Workers\cite{ServiceWorkers} for full multithreaded operation inside browserCloud.js.
+These bottlenecks were studied and will be tackled in future work, one of the solutions proposed is to use Service Workers\footnote{http://www.w3.org/TR/2014/WD-service-workers-20141118} for full multithreaded operation inside browserCloud.js.
 
 \section{Summary}
 

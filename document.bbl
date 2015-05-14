@@ -61,8 +61,8 @@ Byers, J., J.~Considine, \& M.~Mitzenmacher (2003).
 Clarke, I., O.~Sandberg, B.~Wiley, \& T.~Hong (2001).
 \newblock {Freenet: A distributed anonymous information storage and retrieval
   system}.
-\newblock In H.~Federrath (Ed.), {\em Designing Privacy Enhancing \ldots}, pp.\
-   46--66. Springer Berlin Heidelberg.
+\newblock In H.~Federrath (Ed.), {\em Designing Privacy}, pp.\  46--66.
+  Springer Berlin Heidelberg.
 
 \bibitem[\protect\citeauthoryear{Cohen}{Cohen}{2009}]{Cohen2009}
 Cohen, B. (2009).
@@ -136,16 +136,6 @@ Handley, M. \& R.~Karp (2001).
   Applications, technologies, architectures, and protocols for computer
   communications}, Volume~21, pp.\  161--172.
 
-\bibitem[\protect\citeauthoryear{{Ian Hickson}}{{Ian
-  Hickson}}{2013}]{IanHickson2013}
-{Ian Hickson} (2013).
-\newblock {WebRTC 1.0: Real-time Communication Between Browsers}.
-
-\bibitem[\protect\citeauthoryear{{Jeffrey Dean; Sanjay Ghemawat}}{{Jeffrey
-  Dean; Sanjay Ghemawat}}{}]{JeffreyDean;SanjayGhemawat}
-{Jeffrey Dean; Sanjay Ghemawat}.
-\newblock {LevelDB}.
-
 \bibitem[\protect\citeauthoryear{Karger, Leightonl, Lewinl, Lehman, \&
   Panigrahy}{Karger et~al.}{1997}]{Kargerl}
 Karger, D., T.~Leightonl, D.~Lewinl, E.~Lehman, \& R.~Panigrahy (1997).
@@ -208,8 +198,8 @@ Milojicic, D.~S., V.~Kalogeraki, R.~Lukose, K.~Nagaraja, J.~Pruyne, B.~Richard,
 \newblock {Peer-to-Peer Computing}.
 \newblock Technical report.
 
-\bibitem[\protect\citeauthoryear{Navarro}{Navarro}{}]{Navarro}
-Navarro, L.
+\bibitem[\protect\citeauthoryear{Navarro}{Navarro}{2012}]{Navarro}
+Navarro, L. (2012).
 \newblock {Experimental research on community networks}.
 \newblock Technical report.
 
@@ -284,11 +274,6 @@ Ruellan, H. \& R.~Peon (2013).
 \newblock {\em draft-ietf-httpbis-header-compression-04 (work in
   progress)\/}~(c), 1--57.
 
-\bibitem[\protect\citeauthoryear{Shirky}{Shirky}{}]{Shirky.}
-Shirky, C.
-\newblock {Clay shirky’s writings about the internet. In
-  http://www.shirky.com/}.
-
 \bibitem[\protect\citeauthoryear{Silva, Veiga, \& Ferreira}{Silva
   et~al.}{2008}]{Silva2008}
 Silva, J.~a.~N., L.~Veiga, \& P.~Ferreira (2008, October).
@@ -339,14 +324,6 @@ Vishnumurthy, V., S.~Chandrakumar, \& G.~Emin (2003).
 Vogt, C., M.~Werner, \& T.~Schmidt (2013).
 \newblock {Leveraging WebRTC for P2P Content Distribution in Web Browsers}.
 \newblock {\em 21st IEEE Internanicoal Conference\/}.
-
-\bibitem[\protect\citeauthoryear{W3C}{W3C}{2013}]{Recommendation2013}
-W3C (2013).
-\newblock {Indexed Database}.
-
-\bibitem[\protect\citeauthoryear{W3C}{W3C}{2014}]{ServiceWorkers}
-W3C (2014).
-\newblock {Service Workers}.
 
 \bibitem[\protect\citeauthoryear{Wallach}{Wallach}{2003}]{Wallach}
 Wallach, D.~S. (2003).
