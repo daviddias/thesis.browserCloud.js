@@ -13,10 +13,13 @@ In a qualitative perspective, browserCloudjs performs successfully the following
 
 \begin{itemize}
     \item Efficient resource discovery through peer-2-peer routing over a structured overlay network, using a DHT.
-    \item Distribute Jobs through the peers available, submiting, coordinating and aggregating the results.
-    \item Remove the need for centralized indexes or points of control. There is still a need of a rendezvous point to enable new peer joins, however the data transmited, computed and stored inside the network is peers responsability.
-    \item Enable every machine equiped with a WebRTC enabled browser to be part of a browserCloudjs instance. In 2013, the number of WebRTC capable devices already exceed one billion\footnote{Google I/O presentation in 2013 - https://bloggeek.me/webrtc-next-billion/}
-    \item Enable peers to both participate and contribute to a job and at the same time submiting and requesting the network to process their own.
+    \item Distribute Jobs through the peers available, submitting, coordinating and aggregating the results.
+    \item Remove the need for centralized indexes or points of control. There is still a need of a rendezvous point to enable new peer joins, however the data transmitted, computed and stored inside the network is peer's responsability.
+
+    \item Enable every machine equiped with a WebRTC enabled browser to be part of a browserCloudjs instance. In 2013, the number of WebRTC capable devices already exceed one billion\footnote{Google I/O presentation in 2013 - https://bloggeek.me/webrtc-next-billion/}.
+
+    \item Enable peers to both participate and contribute to a job and at the same time submitting and requesting the network to process their own.
+
     \item Enable browsers to be part of one or more browserCloudjs instance.
     \item browserCloudjs' Job Scheduler is job agnostic, this means that different types of jobs can be executed on demand without any previous configuration or preparation.
     \item browserCloudjs solves the decentralized communication problem between browsers in a scalable way, giving the opportunity for new scenarios to be developed on top of it through its modular and pluggable approach.
@@ -30,18 +33,18 @@ In this section we evaluate browserCloud.js via real executions on top of increa
 
 \subsection{The setup}
 
-In order to assess the potential of the proposed system, we have built a ray-tracing application, adapted from algorithms available, written in full vanilla JavaScript, that can be run on any typical modern browser engine. This algorithm allows us to stress-test the CPU,  and the possibility to obtain advantages through processing parallelism. We need this to understand whether the expected speeds up resulting from distributing the tasks through the browserCloud.js peers network, are not hindered by loosing efficiency due to message routing on the overlay Network.
+In order to assess the potential of the proposed system, we have built a ray-tracing application, adapted from algorithms available, written in full vanilla JavaScript, that can be run on any typical modern browser engine. This algorithm allows us to stress-test the CPU,  and the possibility to obtain advantages through processing parallelism. We need this to understand whether the expected speed ups resulting from distributing the tasks through the browserCloud.js peers network, are not hindered by loosing efficiency due to message routing on the overlay network.
 
 The setup used during the tests was a system running Chrome version 39 on a Intel Processor Code i7 2.3Ghz with 16Gb of RAM. The STUN server used was provided by Google.
 
 \subsection{Goals}
 
-Following our motivation to build browserCloudjs in the first place, that is, to provide a way to take advantage of the volunteer computing paradigm, using the idle resources available on user machines, leveraging the capabilities that offered to us by the Web Platform, we set ouselves with some goals to proove if our solution is viable, through:
+Following our motivation to build browserCloudjs in the first place, that is, to provide a way to take advantage of the volunteer computing paradigm, using the idle resources available on user machines, leveraging the capabilities that are offered to us by the Web Platform, we set ouselves with some goals to proove if our solution is viable, through:
 
 \begin{itemize}
     \item Measuring the time lapsed for a single browser to compute a CPU bound job and several browsers to compute that same job, but in parallel.
-    \item Measuring the RTT time between any of two browsers in the network and evaluate as routing efficiency evolves with the increase in number of browser
-    \item Assessing if there are significant speedups
+    \item Measuring the RTT time between any of two browsers in the network and evaluate as routing efficiency evolves with the increase in number of browsers.
+    \item Assessing if there are significant speedups.
 \end{itemize}
 
 \subsection{Results}
@@ -49,8 +52,8 @@ Following our motivation to build browserCloudjs in the first place, that is, to
 We have perfomed tests in order to assess:
 
 \begin{itemize}
-    \item Time elapsed during a distributed ray-tracing job, checking for how it changed when we increased the number of browsers and the level of granularity in which we divided the job. Seen in Figures~\ref{fig:ray25}~,~\ref{fig:ray2500}~,~\ref{fig:ray25time}~and~\ref{fig:ray2500time}.
-    \item How much time each ray-tracing task takes. Seen in Figure~\ref{fig:avgtimeexec}.
+    \item Time elapsed during a distributed ray-tracing job, checking for how it changed when we increased the number of browsers and the level of granularity in which we divided the job. This is illustrated in Figures~\ref{fig:ray25}~,~\ref{fig:ray2500}~,~\ref{fig:ray25time}~and~\ref{fig:ray2500time}.
+    \item How much time each ray-tracing task takes. Illustrated in Figure~\ref{fig:avgtimeexec}.
     \item What is the average round trip time between any of two browsers in a 10 browser network. Observed in Figure~\ref{fig:rtt}.
 \end{itemize}
 
@@ -103,7 +106,7 @@ We have perfomed tests in order to assess:
 
 The standard ray-tracing job using the algorithm developed, running in a single browser takes as median 23610.434ms to complete. As we can see in Figures~\ref{fig:ray2500}~and~\ref{fig:ray2500time}, our system excels in delivering faster results by dividing the job up to 2500 computational units (or tasks) and requesting from the browsers available in the network to compute those (i.e., a rectangle of the resulting output image). This is expected as ray-tracing is a known case of an embarrassingly parallel application.
 
-One fact interesting to note is that we obtained much better results by reducing the granularity of which ray-tracing job was divided into, as we can see on Figures~\ref{fig:ray25}~and~\ref{fig:ray25time}. This happens due to two factors: a) the first is that since we have a lower number of tasks to be run by other browsers, we reduce the message routing overhead between nodes (i.e., resource discovery does not take so long); b) the second factor is that since this system was tested using a single machine and a networked simulated delay. When the number of tasks is too large, the workers in the browser are in fact competing for CPU resources (to execute tasks and to forward messages among them). This creates a scenario, where more nodes/workers actually  make the system slower, since this is a much more strict and resource constrained scenario, than a real example with browsers executing in different machines.
+One fact interesting to note is that we obtained much better results by reducing the granularity of which ray-tracing job was divided into, as we can see on Figures~\ref{fig:ray25}~and~\ref{fig:ray25time}. This happens due to two factors: a) the first is that since we have a lower number of tasks to be run by other browsers, we reduce the message routing overhead between nodes (i.e., resource discovery does not take so long); b) the second factor is that since this system was tested using a single machine and a networked simulated delay. When the number of tasks is too large, the workers in the browser are in fact competing for CPU resources (to execute tasks and to forward messages among them), and therefore not taking advantage of the full parallelism potential there would be a fully distributed situation. This creates a scenario, where more nodes/workers actually  make the system slower, since this is a much more strict and resource constrained scenario, than a real example with browsers executing in different machines.
 
 In a real world example, the actual execution time would be bounded by:\\
 
@@ -123,14 +126,14 @@ It is important to note that in Figure~\ref{fig:avgtimeexec}, we can see several
 
 As we have discussed in the previous sections, we did managed to reach significant speedup between 2 and close to 5 times for our experiment, using only volunteer resources, that is a reduction between 50\% and 76\%.
 
-When distributing a job through a multiple node network, one of the aspects we observed was that we can influence overall efficiency by adjusting how much resources we are going to take from the network to process the job, in this case, how much browsers. We also can influence it by deciding how much fine-grained each task it will be: the smaller the computation unit, the more we can distribute tasks through the network, with a natural trade-off of adding more task generation and messaging overhead, with diminishing returns when more and more, and smaller tasks are created. This has led us to understand and consider the opportunity for a premature job optimization tool, where a job would be particioned and distributed, depending on its size and complexity, with the goal of meeting the optimal point of the trade-off.
+When distributing a job through a multiple node network, one of the aspects we observed was that we can influence overall efficiency by adjusting how many resources we are going to take from the network to process the job, in this case, how much browsers. We also can influence it by deciding how much fine-grained each task it will be: the smaller the computation unit, the more we can distribute tasks through the network, with a natural trade-off of adding more task generation and messaging overhead, with diminishing returns when more and more, and smaller tasks are created. This has led us to understand and consider the opportunity for a preleminary job optimization tool, where a job would be particioned and distributed, depending on its size and complexity, with the goal of meeting the optimal point of the trade-off.
 
 There are also some other performance bottlenecks we noticed that arise from the single threaded nature of JavaScript engines. These aspects are considered in our performance evaluation, such as:
 
 \begin{itemize}
-  \item Logging - Since V8 runs in a single thread, any synchronous operation will block the event loop and add delay to the whole processing, although these logs are essential for us to assess the efficiency of the infrastructure, they are not vital to the job.
+  \item Logging - Since V8 runs in a single thread, any synchronous operation will block the event loop and add delay to the whole processing; although these logs are essential for us to assess the efficiency of the infrastructure, they are not vital to the job.
   \item Delay added - One technique we used to simulate the network delay is to use the `setTimeout' native function of V8's JavaScript implementation, since this function is unable to receive floating millisecond values. Moreover, since `setTimeout' does not necessarily guarantee that the function will be executed in X amount of milliseconds, due to the nature of the event loop, there is always an extra delay added implicitly to the operation in the order of 1 to 3 ms.
-  \item Tasks can not be sent in parallel - A node has to send each individual computing unit sequentially and independently, meaning that if we divide a job into 2000 for e.g, each task will have to wait for the previous to be sent.
+  \item Tasks can not be sent in parallel - A node has to send each individual computing unit sequentially and independently, meaning that if we divide a job into 2000 tasks for e.g, each task will have to wait for the previous to be sent.
   \item We have noticed a considerable machine resoures bottle neck when we had more than 40 data channels present in same machine - This means that is is unviable to levarage the full 48 fingers space our finger table has the capacity, since one fingers equals 2 data channels (one in and one out).
 \end{itemize}
 
@@ -245,10 +248,10 @@ By using a non linear distribution, we have managed to decrease the optimal case
     \label{tbl:table-c}
 \end{table}
 
-\subsection{Inference}
+\subsection{Analysis}
 
 From these 3 approaches, the second and the third approach have more interesting results, however, in order to pick the best for browserCloudjs, we have also to consider the number of total peers and what kind of messages are being used. For e.g, for a browserCloudjs instance focused on distributed computing, the second approach can be more interesting due to the natural implicit way of the network to load balance itself, due to the hashing function properties, however for a browserCloudjs instance focused on message routing or object storage/lookups, if a replication strategy such as DynamoDB or PAST is used, that is, replicating the objects to the following peers, having the knowledge of the consequent peers might be advantageous due to reduced number of hops for replica updates.
 
 \section{Summary}
 
-In this Chapter, we have discussed and presented our results when it comes to fullfilling the requirements we had initially to browserCloudjs. Starting with a qualitiative assessmentment, where we evaluate how browserCloudjs behaves and what functionalities does it offer, passing to a quantitative assessment, verifying that indeed there are speedups achieved by using browserCloudjs.
+In this Chapter, we have discussed and presented our results when it comes to fullfilling the requirements we had initially to browserCloudjs. Starting with a qualitiative assessmentment, where we evaluate how browserCloudjs behaves and what functionalities does it offer, passing to a quantitative assessment, verifying that indeed there are speedups achieved by using browserCloudjs, by leveraging idle cycles available in the network, and requiring no software installation for adoption, just the use of a browser.
