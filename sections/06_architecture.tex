@@ -317,7 +317,7 @@ For the user of browserCloud.js, a simple API was created to perform: peer join,
 
 As an initially only lateral but highly required and useful effort, we have also designed a testing framework, in order to be able to cope with browserCloudjs needs for quality assurance.
 
-There are a panoply of excellent browser testing frameworks and services available today, however their focus is mainly on testing browser implementations, namely CSS, HTML and JavaScript, and user interactions of the apps their are testing (e.g. clicks, mouse movements, what the user sees on the page).
+There are a panoply of excellent browser testing frameworks and services available today, however their focus is mainly on testing browser implementations, namely CSS, HTML and JavaScript, and user interactions of the apps their are testing (e.g. clicks, mouse movements, what the user sees on the page). One thing important to note is that today, any Quality Assurance done for any WebRTC service that provide a platform for conference calls and team communications, is done by regular user testing, without any automated way to load test the platform.
 
 When it comes to testing to test a decentralized browser app or library, the focus stops being how a browser implements a specific behaviour, but how the decentralized network handles node joins and leaves, and whether nodes are effectively communicating between each other. In this scenario, we have several events that the server never sees or that the server never instructs the clients to do, so we need to create a new way to coordinate the browser joins and leaves and also how they interact between each other remotely.
 
