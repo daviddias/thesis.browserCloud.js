@@ -44,8 +44,8 @@ Barraca, J.~a.~P., A.~Matos, \& R.~L. Aguiar (2011, April).
 \newblock {\em Wireless Personal Communications\/}~{\em 58\/}(1), 31--48.
 
 \bibitem[\protect\citeauthoryear{Bharambe, Agrawal, \& Seshan}{Bharambe
-  et~al.}{}]{Bharambe}
-Bharambe, A.~R., M.~Agrawal, \& S.~Seshan.
+  et~al.}{2004}]{Bharambe}
+Bharambe, A.~R., M.~Agrawal, \& S.~Seshan (2004).
 \newblock {Mercury : Supporting Scalable Multi-Attribute Range Queries}.
 \newblock pp.\  353--366.
 
@@ -178,8 +178,8 @@ Marti, S. \& H.~Garcia-molina (2006, March).
 \newblock {\em Computer Networks\/}~(April 2005), 472--484.
 
 \bibitem[\protect\citeauthoryear{Maymounkov \& Mazi\`{e}res}{Maymounkov \&
-  Mazi\`{e}res}{}]{Maymounkov}
-Maymounkov, P. \& D.~Mazi\`{e}res.
+  Mazi\`{e}res}{2002}]{Maymounkov}
+Maymounkov, P. \& D.~Mazi\`{e}res (2002).
 \newblock {Kademlia: A Peer-to-peer Information System Based on the XOR
   Metric}.
 
@@ -235,8 +235,8 @@ Rao, A., K.~Lakshminarayanan, S.~Surana, \& R.~Karp (2003).
 \newblock ~{\em 0225660}, 68--79.
 
 \bibitem[\protect\citeauthoryear{Rieche, Petrak, \& Wehrle}{Rieche
-  et~al.}{}]{Rieche}
-Rieche, S., L.~Petrak, \& K.~Wehrle.
+  et~al.}{2004}]{Rieche}
+Rieche, S., L.~Petrak, \& K.~Wehrle (2004).
 \newblock {A thermal-dissipation-based approach for balancing data load in
   distributed hash tables}.
 \newblock {\em 29th Annual IEEE International Conference on Local Computer
@@ -249,8 +249,8 @@ Ripeanu, M. (2002).
   Computing\/}, 99--100.
 
 \bibitem[\protect\citeauthoryear{Rodrigues \& Ferreira}{Rodrigues \&
-  Ferreira}{}]{Rodrigues}
-Rodrigues, R. \& P.~Ferreira.
+  Ferreira}{2007}]{Rodrigues}
+Rodrigues, R. \& P.~Ferreira (2007).
 \newblock {GiGi : An Ocean of Gridlets on a “ Grid-for-the-Masses ”}.
 
 \bibitem[\protect\citeauthoryear{Rowstron \& Druschel}{Rowstron \&

@@ -109,7 +109,7 @@ The ID namespace available in our DHT consists of 48 bit IDs (Figure~\ref{fig:c-
   \label{fig:c-1}
 \end{figure}
 
-In Figure~\ref{fig:c-2}, we have a DHT composed of 4 different peers, with IDs 0, 1, 3 and 6. Each one of these peers will be responsible for a segment of the DHT, in another words what this means is that every message that is destined to their segment, will be delivered to respective peer responsable. A peer is responsible for a segment of IDs greater than the peer that is its predecessor and lesser or equal than its own ID, represented in Figure ~\ref{fig:c-3}. When a peer enters in the network, its ID is generated through a crop of a SHA-1 hash from a random generated number, creating a natural uniform distribution.
+In Figure~\ref{fig:c-2}, we have a DHT composed of 4 different peers, with IDs 0, 1, 3 and 6. Each one of these peers will be responsible for a segment of the DHT, in another words what this means is that every message that is destined to their segment, will be delivered to respective peer responsable. A peer is responsible for a segment of IDs greater than the peer that is its predecessor and lesser or equal than its own ID, represented in Figure ~\ref{fig:c-3}. When a peer enters in the network, the ID is generated through a crop of a SHA-1 hash from a random generated number, creating a natural uniform distribution.
 
 \begin{figure}[h!]
   \centering
@@ -125,7 +125,7 @@ In Figure~\ref{fig:c-2}, we have a DHT composed of 4 different peers, with IDs 0
   \label{fig:c-3}
 \end{figure}
 
-In order for messages to find its correct destination, each peer has to know at minimum the peer that is next to it on the DHT, also called "successor" (Figure~\ref{fig:c-4}). Messages will be forward until they reach the peer which compromisses the responsability of being responsible for that message ID.
+In order for messages to find their correct destination, each peer has to know at minimum the peer that is next to it on the DHT, also called "successor" (Figure~\ref{fig:c-4}). Messages will be forward until they reach the peer which compromisses the responsability of being responsible for that message ID.
 
 \begin{figure}[h!]
   \centering

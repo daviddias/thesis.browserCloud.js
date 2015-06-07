@@ -72,7 +72,7 @@ Although OpenStack is free and open source, there is an underlying illusion that
 
 \subsubsection{IEEE Intercloud}\label{par:IEEE Intercloud}
 
-pushes forward a new Cloud Computing design pattern, with the possibility to federate several clouds operated by enterprise or other providers, increasing the scalability and portability of applications. This federation is known as `Intercloud' in which IEEE is creating technical standards (IEEE P2302) with interoperability in its core goals. Currently IEEE has already available an Testbed, the IEEE Intercloud Testbed, which provides a global lab for testing Intercloud interoperability features.
+IEEE Intercloud pushes forward a new Cloud Computing design pattern, with the possibility to federate several clouds operated by enterprise or other providers, increasing the scalability and portability of applications. This federation is known as `Intercloud' in which IEEE is creating technical standards (IEEE P2302) with interoperability in its core goals. Currently IEEE has already available an Testbed, the IEEE Intercloud Testbed, which provides a global lab for testing Intercloud interoperability features.
 
 The envisioned Intercloud architecture categorizes its components into three main parts, see in Figure~\ref{fig:IEEE Intercloud Testbed Architecture}:
 
@@ -83,29 +83,29 @@ The envisioned Intercloud architecture categorizes its components into three mai
 \end{itemize}
 
  
-\begin{figure}[hb]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=0.88\textwidth]{img/testbed-technology.jpg}
+    \includegraphics[width=0.7\textwidth]{img/testbed-technology.jpg}
     \caption{IEEE Intercloud Testbed Architecture}
     \label{fig:IEEE Intercloud Testbed Architecture}
 \end{figure}
 
 \subsubsection{pkgcloud}\label{par:pkgcloud}
 
-is an open source standard library that abstracts differences between several cloud providers, by offering a unified vocabulary for services like storage, compute, DNS, load balancers, so the application developer does not have to be concerned with creating different implementations for each cloud. Instead, just make the provision in the one that is most cost-effective. Currently, it only supports applications built using Node.js.
+An open source standard library that abstracts differences between several cloud providers, by offering a unified vocabulary for services like storage, compute, DNS, load balancers, so the application developer does not have to be concerned with creating different implementations for each cloud. Instead, just make the provision in the one that is most cost-effective. Currently, it only supports applications built using Node.js.
 
 \subsubsection{Eucalyptus}\label{par:Eucalyptus}
 
-is a free and open source software to build Amazon Web Services Cloud like architectures for a private and/or hybrid Clouds. From the three solutions described, Eucalyptus is the one that is more deeply entangled with the concept of a normal Cloud, packing a: Client-side API, a Cloud Controller, S3 storage compliant modules, a cluster controller and a node controller, as seen in Figure~\ref{fig:eucalyptus}. Eucalyptus has all the components to build an entire cloud, however, since its compatible, specially, with Amazon Cloud, we can use Eucalyptus to migrate our services, or provision Amazon services, and work without having to deal with the application or the system itself.
+A free and open source software to build Amazon Web Services Cloud like architectures for a private and/or hybrid Clouds. From the three solutions described, Eucalyptus is the one that is more deeply entangled with the concept of a normal Cloud, packing a: Client-side API, a Cloud Controller, S3 storage compliant modules, a cluster controller and a node controller, as seen in Figure~\ref{fig:eucalyptus}. Eucalyptus has all the components to build an entire cloud, however, since it is compatible, specially, with Amazon Cloud, we can use Eucalyptus to migrate our services, or provision Amazon services, and work without having to deal with the application or the system itself.
 
-\begin{figure}[hb]
+\begin{figure}[h!]
   \centering
-  \includegraphics[width=0.95\textwidth]{img/eucalyptus-architecture.png}
+  \includegraphics[width=0.7\textwidth]{img/eucalyptus-architecture.png}
   \caption{Eucalyptus Architecture}
   \label{fig:eucalyptus}
 \end{figure}
 
-This hybrid model provides a desired environment for a development, test and deploy stack, that can support Amazon Cloud with the elasticity necessary to sustain service during spikes. This way, a company that has its private cloud does not need to over provision in advance.
+This hybrid model provides a desired environment for a development, test and deploy stack, that can support Amazon Cloud with the elasticity necessary to sustain service during spikes. This way, a company that has a private cloud does not need to over provision in advance.
 
 % 
 %---------{Volunteered resource sharing}--------------------------
@@ -145,9 +145,9 @@ Another interesting research on this field is moving the logic necessary for pro
 \subsection{Peer-to-Peer Networks and Architectures}  
 Efficient resource discovery mechanisms are fundamental for a distributed system success, such as grid computing, cycle sharing or web application's infrastructures\cite{Ranjan2006}, although in the centralized model, by keeping data bounded inside a data center, we have a stable and scalable way for resource discovery, this does not happen in a P2P network, where peers churn rate can vary greatly, there is no way to start new machines on demand for high periods of activity, the machines present are heterogeneous and so is their Internet connectivity, creating an unstable and unreliable environment. To overcome these challenges, several researches have been made to optimize how data is organized across all the nodes, improving the performance, stability and the availability of resources. The following paragraphs will describe the current state of the art P2P organizations, typically categorized in P2P literature as Unstructured or Structured\cite{Milojicic2003}, illustrated in Figure~\ref{fig:Different types of P2P Overlay networks organizations}.
 
-\begin{figure}[bh!]
+\begin{figure}[h!]
   \begin{center}
-    \includegraphics[width=0.75\textwidth]{./img/p2porganizations.jpg}
+    \includegraphics[width=0.70\textwidth]{./img/p2porganizations.jpg}
   \end{center}
   \caption{Different types of P2P Overlay networks organizations}
   \label{fig:Different types of P2P Overlay networks organizations}
@@ -173,7 +173,7 @@ Evaluating the DHT Structured P2P networks raises identifiable issues, that resu
 Table \ref{table:p2pdht}, showcases a comparison of the studied DHT algorithms.
 
 
-\begin{table}[hb]
+\begin{table}[h!]
     \begin{center}
 
         \begin{tabular}{| p{1.3cm} | p{2.0cm} | p{2.9cm} | p{3.2cm} | p{1.6cm} | p{1.8cm} | p{1.8cm} |}
@@ -260,9 +260,9 @@ in an optimal state, can be defined as having each node sharing roughly 1/N of t
 
 S. Rieche, H. Niedermayer, S. Götz and  K. Wehrle from the University of Tübingen, made a study comparing this different approaches in a scenario using the CHORD routing algorithm, using a SHA-1 as the hashing function, with 4096 nodes and 100.000 to 1.000.000 documents and executing up to 25 runs per test, the results can be observed in the Figure ~\ref{fig:lbcomp}
 
-\begin{figure}[hb]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=1\textwidth]{img/lb.jpg}
+    \includegraphics[width=0.7\textwidth]{img/lb.jpg}
     \caption{Load balancing approaches comparison}
     \label{fig:lbcomp}
 \end{figure}
@@ -324,18 +324,18 @@ Since the introduction of AJAX\cite{Google/Mozzila/Opera}, the web has evolved i
 
 \textbf{Emscripten}\cite{Zakai2011}, a LLVM(Low Level Virtual Machine) to JavaScript compiler, enabled native performance on Web apps by compiling any language that can be converted to LLVM bytecode, for example C/C++, into JavaScript. This tool enabled native game speed on the browser, where two of the major examples are the project Codename: ``BananaBread''\footnote{Mozilla, BananaBread,  URL: https://developer.mozilla.org/en/demos/detail/bananabread, seen in December 2013} and ``Epic Citadel''\footnote{Mozilla, Epic Citadel,  URL: http://www.unrealengine.com/html5/, seen in December 2013}, in which Mozilla used Ecmascripten to port the entire Unreal Engine 3 to JavaScript. In Figure~\ref{fig:dan}, we can see a comparison of the performance of several algorithms, running on Dalvik, Android Java runtime, asm.js, the subset of Javascript that the code in C/C++ is transformed into when compiled with Emscripten and Native, the same C/C++ but running on a native environment. The results are very interesting, specially in the first test, where asm.js outperforms native. The explanation for this is due to the fact that BinaryTrees use a significant amount of `malloc' invocations, which is an expensive system call, where in asm.js, the code uses typed arrays, using `machine memory', which is flat allocated in the beginning of the execution for the entire run.
 
-\begin{figure}[hb]
+\begin{figure}[h!]
   \centering
-  \includegraphics[width=0.8\textwidth]{img/Dalvik-vs-ASM-vs-Native-edited}
+  \includegraphics[width=0.65\textwidth]{img/Dalvik-vs-ASM-vs-Native-edited}
   \caption{Dalvik vs. ASM.js vs. Native performance}
   \label{fig:dan}
 \end{figure}
 
 \textbf{WebRTC}\footnote{http://www.w3.org/TR/2013/WD-webrtc-20130910/}, a technology being developed by Google, Mozilla and Opera, with the goal of enabling Real-Time Communications in the browser via a JavaScript API. WebRTC brings to the browser the possibility of peer-to-peer interoperability. Peers perform their handshake through a `Signaling Server'. The signaling server will exchange the `ICE(Interactive Connectivity Establishment) candidates' of each peer as this serves as an invite so a data-channel can be opened, a visualization of this process can be seen in Figure~\ref{fig:webrtc}. Since most of the browsers sit behind NAT, there is another server, named `Turn'(Relay), which tells to each browser their public IP in the network. WebRTC, although being built with the goal of real-time voice and video communications, has also been shown as a viable technology do distribute content, as seen in PeerCDN and SwarmCDN\cite{Vogt}.
 
-\begin{figure}[hb]
+\begin{figure}[h!]
   \centering
-  \includegraphics[width=0.7\textwidth]{img/webrtc.png}
+  \includegraphics[width=0.65\textwidth]{img/webrtc.png}
   \caption{Example of a WebRTC session initiation}
   \label{fig:webrtc}
 \end{figure}
@@ -359,16 +359,16 @@ One of the latest improvements being built for the Web Platform is the new HTTP 
   \item Retrocompatibility - HTTP2.0 respects the common headers defined by HTTP1.1, it doesn't include any change in the semantics.
 \end{itemize}
 
-\begin{figure}[hb]
+\begin{figure}[h!]
   \centering
-  \includegraphics[width=0.75\textwidth]{img/http2binaryframing.png}
+  \includegraphics[width=0.65\textwidth]{img/http2binaryframing.png}
   \caption{HTTP2.0 Binary framing}
   \label{fig:binaryframing}
 \end{figure}
 
-\begin{figure}[hb]
+\begin{figure}[h!]
   \centering
-  \includegraphics[width=0.75\textwidth]{img/http2dataflow.png}
+  \includegraphics[width=0.65\textwidth]{img/http2dataflow.png}
   \caption{Example of an HTTP2.0 dataflow}
   \label{fig:http2dataflow}
 \end{figure}

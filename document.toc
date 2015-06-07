@@ -13,63 +13,63 @@
 \contentsline {subsubsection}{\numberline {2.1.1.1}IEEE Intercloud}{11}{subsubsection.2.1.1.1}
 \contentsline {subsubsection}{\numberline {2.1.1.2}pkgcloud}{12}{subsubsection.2.1.1.2}
 \contentsline {subsubsection}{\numberline {2.1.1.3}Eucalyptus}{12}{subsubsection.2.1.1.3}
-\contentsline {section}{\numberline {2.2}Volunteered resource sharing}{12}{section.2.2}
+\contentsline {section}{\numberline {2.2}Volunteered resource sharing}{13}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Hybrid and Community Clouds}{13}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Cycle and Storage Sharing, using Volunteer Resource Systems}{13}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.2}Cycle and Storage Sharing, using Volunteer Resource Systems}{14}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Peer-to-Peer Networks and Architectures}{15}{subsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.3.1}Unstructured}{15}{subsubsection.2.2.3.1}
-\contentsline {subsubsection}{\numberline {2.2.3.2}Structured with Distributed Hash Tables}{16}{subsubsection.2.2.3.2}
-\contentsline {subsubsection}{\numberline {2.2.3.3}Structured without Distributed Hash Tables}{17}{subsubsection.2.2.3.3}
-\contentsline {subsubsection}{\numberline {2.2.3.4}Fault Tolerance, Load Balancing, Assurance and Trust}{17}{subsubsection.2.2.3.4}
-\contentsline {subsubsection}{\numberline {2.2.3.5}Fault Tolerance, Persistence and Availability}{17}{subsubsection.2.2.3.5}
-\contentsline {subsubsection}{\numberline {2.2.3.6}Load Balancing}{18}{subsubsection.2.2.3.6}
-\contentsline {subsubsection}{\numberline {2.2.3.7}Assurance and Trust}{19}{subsubsection.2.2.3.7}
-\contentsline {section}{\numberline {2.3}Resource sharing using the Web platform}{20}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Web Platform}{20}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Previous attempts on cycle sharing through web platform}{23}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Summary}{23}{section.2.4}
-\contentsline {chapter}{\numberline {3}Architecture}{31}{chapter.3}
-\contentsline {section}{\numberline {3.1}Distributed Architecture}{32}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Entities}{33}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Interaction Protocols}{33}{subsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.2.1}Peer joins and leaves}{34}{subsubsection.3.1.2.1}
-\contentsline {subsubsection}{\numberline {3.1.2.2}Message routing}{35}{subsubsection.3.1.2.2}
-\contentsline {section}{\numberline {3.2}Resource Management}{37}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Job Submission}{38}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Job Execution}{39}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Architecture of the Software stack}{40}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Communication layer}{40}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Service router}{41}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Job scheduler}{41}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}API design}{41}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}API calls signatures}{42}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}API Usage Flow}{42}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5}Testing framework requirement}{43}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}browserCloudjs quality test workflow}{44}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}browserCloudjs quality test assessment}{45}{subsection.3.5.2}
-\contentsline {section}{\numberline {3.6}Summary}{46}{section.3.6}
-\contentsline {chapter}{\numberline {4}Implementation}{47}{chapter.4}
-\contentsline {section}{\numberline {4.1}Browser module}{47}{section.4.1}
-\contentsline {section}{\numberline {4.2}Signalling server}{49}{section.4.2}
-\contentsline {section}{\numberline {4.3}Key learnings from the earlier iterations - webrtc-ring}{50}{section.4.3}
-\contentsline {section}{\numberline {4.4}Testing framework - piri-piri}{50}{section.4.4}
-\contentsline {section}{\numberline {4.5}Visualize the network state}{51}{section.4.5}
-\contentsline {section}{\numberline {4.6}Simulate a browserCloud.js network}{51}{section.4.6}
-\contentsline {section}{\numberline {4.7}Ray Tracing module}{52}{section.4.7}
-\contentsline {section}{\numberline {4.8}Summary}{53}{section.4.8}
-\contentsline {chapter}{\numberline {5}Evaluation}{55}{chapter.5}
-\contentsline {section}{\numberline {5.1}Qualitative assessment}{55}{section.5.1}
-\contentsline {section}{\numberline {5.2}Quantitative assessment}{56}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}The setup}{56}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Goals}{57}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Results}{57}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Analysis}{57}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Inference}{60}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Finger Table Optimization for minimum number of hops between any two peers}{62}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Pick the first 16 fingers from a 48bit Finger Table}{63}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Pick 16 fingers equality spaced in a 48bit Finger Table}{64}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Pick 16 fingers using a geometric distribuion with decreasing density}{64}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Analysis}{64}{subsection.5.3.4}
-\contentsline {section}{\numberline {5.4}Summary}{66}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusion}{67}{chapter.6}
-\contentsline {section}{\numberline {6.1}Future Work}{68}{section.6.1}
+\contentsline {subsubsection}{\numberline {2.2.3.1}Unstructured}{16}{subsubsection.2.2.3.1}
+\contentsline {subsubsection}{\numberline {2.2.3.2}Structured with Distributed Hash Tables}{17}{subsubsection.2.2.3.2}
+\contentsline {subsubsection}{\numberline {2.2.3.3}Structured without Distributed Hash Tables}{18}{subsubsection.2.2.3.3}
+\contentsline {subsubsection}{\numberline {2.2.3.4}Fault Tolerance, Load Balancing, Assurance and Trust}{18}{subsubsection.2.2.3.4}
+\contentsline {subsubsection}{\numberline {2.2.3.5}Fault Tolerance, Persistence and Availability}{19}{subsubsection.2.2.3.5}
+\contentsline {subsubsection}{\numberline {2.2.3.6}Load Balancing}{19}{subsubsection.2.2.3.6}
+\contentsline {subsubsection}{\numberline {2.2.3.7}Assurance and Trust}{20}{subsubsection.2.2.3.7}
+\contentsline {section}{\numberline {2.3}Resource sharing using the Web platform}{22}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Web Platform}{22}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Previous attempts on cycle sharing through web platform}{26}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Summary}{27}{section.2.4}
+\contentsline {chapter}{\numberline {3}Architecture}{29}{chapter.3}
+\contentsline {section}{\numberline {3.1}Distributed Architecture}{30}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Entities}{31}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Interaction Protocols}{31}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}Peer joins and leaves}{32}{subsubsection.3.1.2.1}
+\contentsline {subsubsection}{\numberline {3.1.2.2}Message routing}{33}{subsubsection.3.1.2.2}
+\contentsline {section}{\numberline {3.2}Resource Management}{35}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Job Submission}{36}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Job Execution}{37}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Architecture of the Software stack}{38}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Communication layer}{38}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Service router}{39}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Job scheduler}{39}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}API design}{39}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}API calls signatures}{40}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}API Usage Flow}{40}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Testing framework requirement}{41}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}browserCloudjs quality test workflow}{42}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}browserCloudjs quality test assessment}{43}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Summary}{44}{section.3.6}
+\contentsline {chapter}{\numberline {4}Implementation}{45}{chapter.4}
+\contentsline {section}{\numberline {4.1}Browser module}{45}{section.4.1}
+\contentsline {section}{\numberline {4.2}Signalling server}{47}{section.4.2}
+\contentsline {section}{\numberline {4.3}Key learnings from the earlier iterations - webrtc-ring}{48}{section.4.3}
+\contentsline {section}{\numberline {4.4}Testing framework - piri-piri}{48}{section.4.4}
+\contentsline {section}{\numberline {4.5}Visualize the network state}{49}{section.4.5}
+\contentsline {section}{\numberline {4.6}Simulate a browserCloud.js network}{49}{section.4.6}
+\contentsline {section}{\numberline {4.7}Ray Tracing module}{50}{section.4.7}
+\contentsline {section}{\numberline {4.8}Summary}{51}{section.4.8}
+\contentsline {chapter}{\numberline {5}Evaluation}{53}{chapter.5}
+\contentsline {section}{\numberline {5.1}Qualitative assessment}{53}{section.5.1}
+\contentsline {section}{\numberline {5.2}Quantitative assessment}{54}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}The setup}{54}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Goals}{55}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Results}{55}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Analysis}{55}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Inference}{58}{subsection.5.2.5}
+\contentsline {section}{\numberline {5.3}Finger Table Optimization for minimum number of hops between any two peers}{60}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Pick the first 16 fingers from a 48bit Finger Table}{61}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Pick 16 fingers equality spaced in a 48bit Finger Table}{62}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Pick 16 fingers using a geometric distribuion with decreasing density}{62}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Analysis}{62}{subsection.5.3.4}
+\contentsline {section}{\numberline {5.4}Summary}{64}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusion}{65}{chapter.6}
+\contentsline {section}{\numberline {6.1}Future Work}{66}{section.6.1}

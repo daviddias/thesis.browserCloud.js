@@ -1,0 +1,107 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: document.aux
+The style file: chicago.bst
+Database file #1: bibliography.bib
+Warning--no journal in Anderson2002
+Warning--page numbers missing in Anderson2002
+Warning--no journal in Bakhtiari
+Warning--no number and no volume in Bakhtiari
+Warning--no journal in Bharambe
+Warning--no number and no volume in Bharambe
+Warning--no number and no volume in Costa2012
+Warning--no journal in Decandia2007
+Warning--no number and no volume in Decandia2007
+Warning--no number and no volume in Definition2003
+Warning--no number and no volume in Desmedt;1998
+Warning--page numbers missing in Desmedt;1998
+Warning--no number and no volume in Duda2013
+Warning--page numbers missing in Duda2013
+Warning--no journal in Filipe2011
+Warning--no number and no volume in Filipe2011
+Warning--page numbers missing in Filipe2011
+Warning--no journal in Golle2001
+Warning--no number and no volume in Golle2001
+Warning--can't use both volume and number fields in Handley
+Warning--no number and no volume in Karger2004
+Warning--no journal in Koloniari2005
+Warning--no number and no volume in Korpela2001
+Warning--no journal in Larson2002
+Warning--no number and no volume in Larson2002
+Warning--page numbers missing in Larson2002
+Warning--no volume for Marti
+Warning--no journal in Maymounkov
+Warning--no number and no volume in Maymounkov
+Warning--page numbers missing in Maymounkov
+Warning--no journal in Merelo2007
+Warning--no number and no volume in Merelo2007
+Warning--empty institution in Milojicic2003
+Warning--empty institution in Navarro
+Warning--no number and no volume in Nurmi2009
+Warning--no journal in Preneel1999
+Warning--no number and no volume in Preneel1999
+Warning--no number and no volume in Ranjan2006
+Warning--no journal in Rao2003
+Warning--no number and no volume in Rieche
+Warning--no number and no volume in Ripeanu2002a
+Warning--no journal in Rodrigues
+Warning--no number and no volume in Rodrigues
+Warning--page numbers missing in Rodrigues
+Warning--no number and no volume in Rowstron2001a
+Warning--no journal in Rowstron2001
+Warning--no number and no volume in Rowstron2001
+Warning--no volume for Ruellan2013
+Warning--no journal in Stoica2001
+Warning--no number and no volume in Stoica2001
+Warning--empty note in Thomson2013
+Warning--no journal in Tilkov2010
+Warning--no number and no volume in Tilkov2010
+Warning--page numbers missing in Tilkov2010
+Warning--no journal in Vishnumurthy
+Warning--no number and no volume in Vishnumurthy
+Warning--page numbers missing in Vishnumurthy
+Warning--no number and no volume in Vogt
+Warning--page numbers missing in Vogt
+Warning--empty publisher in Wallach
+You've used 54 entries,
+            2861 wiz_defined-function locations,
+            942 strings with 14036 characters,
+and the built_in function-call counts, 40258 in all, are:
+= -- 3327
+> -- 3282
+< -- 17
++ -- 991
+- -- 1109
+* -- 3605
+:= -- 7342
+add.period$ -- 156
+call.type$ -- 54
+change.case$ -- 425
+chr.to.int$ -- 53
+cite$ -- 114
+duplicate$ -- 1058
+empty$ -- 2209
+format.name$ -- 1268
+if$ -- 7537
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 45
+newline$ -- 262
+num.names$ -- 546
+pop$ -- 334
+preamble$ -- 1
+purify$ -- 746
+quote$ -- 0
+skip$ -- 1177
+stack$ -- 0
+substring$ -- 1839
+swap$ -- 383
+text.length$ -- 17
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1076
+warning$ -- 60
+while$ -- 525
+width$ -- 0
+write$ -- 698
+(There were 60 warnings)
